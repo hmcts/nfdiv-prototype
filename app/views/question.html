@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/index",
+  serviceName: "Apply for a divorce",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#1",
+      text: "Sign out"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/form-handler" method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Has your marriage broken down irretrievably? 
+                </h1>
+              </legend>
+              <div id="changed-name-hint" class="govuk-hint">
+                  You can only get a divorce in England or Wales if your marriage has broken down irretrievably. This means it cannot be saved. 
+                </div>
+                <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Contact us for help
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+      </div>
+    </details>
+
+{% endblock %}
