@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Are you married or in a civil partnership?  - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="sign_in.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/broken_down_irretrievably" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Are you married or in a civil partnership? 
+                  </h1>
+                </legend>
+                  <div id="sign-in-hint" class="govuk-hint">
+                  You can use this service to apply to end a marriage or civil partnership.  
+                  </div> 
+                  
+                 <!-- <p class="govuk-body"> The court needs an email address so that it can send your husband or wife documents relating to the divorce. </p> -->
+                        
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="married" name="married" type="radio" value="married">
+                    <label class="govuk-label govuk-radios__label" for="married">
+                      I’m married
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="married-2" name="married" type="radio" value="civil-partnership">
+                    <label class="govuk-label govuk-radios__label" for="married-2">
+                      I’m in a civil partnership
+                    </label>
+                  </div>
+                </div> 
+                 
+              </fieldset>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   No agents are available, please try again later.
+  </div>
+</details>
+
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Has your marriage broken down irretrievably? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="married_or_civil_partnership.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/postal_address" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Has your marriage broken down irretrievably?
+                  </h1>
+                </legend>
+                  <div id="sign-in-hint" class="govuk-hint">
+                  You can only get a divorce in England or Wales if your marriage has broken down irretrievably. This means it cannot be saved. 
+                  </div> 
+                  
+                 <!-- <p class="govuk-body"> You can only get a divorce in England or Wales if your marriage has broken down irretrievably. This means it cannot be saved. </p> -->
+                  
+                  <!--
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                      No
+                    </label>
+                  </div>
+                </div> 
+                  
+                  <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="changed-name">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                          No
+                        </label>
+                      </div>
+                    </div> -->
+                  
+                  
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="broken-down" name="broken-down" type="radio" value="yes" data-aria-controls="conditional-broken-down">
+                        <label class="govuk-label govuk-radios__label" for="broken-down">
+                          Yes, my marriage has broken down irretrievably 
+                        </label>
+                      </div>
+                    
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="broken-down-2" name="broken-down" type="radio" value="no" data-aria-controls="conditional-broken-down-2">
+                        <label class="govuk-label govuk-radios__label" for="broken-down-2">
+                          No, my marriage has not broken down irretrievably
+                        </label>
+                      </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
+                        <div class="govuk-warning-text">
+                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                          <strong class="govuk-warning-text__text">
+                            <span class="govuk-warning-text__assistive">Warning</span>
+                            Your marriage must have broken down irretrievably for you to get a divorce in England or Wales. 
+                          </strong>
+                        </div>
+
+                      </div>
+                    </div>
+              </fieldset>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   No agents are available, please try again later.
+  </div>
+</details>
+
+{% endblock %}

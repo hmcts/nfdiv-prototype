@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you have your marriage certificate with you now? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="email_address.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/email_address" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you have your marriage certificate with you now?
+                  </h1>
+                </legend>
+                  <div id="sign-in-hint" class="govuk-hint">
+                  You’ll be asked to upload a digital photo of the certificate. You can use your phone to take the picture, if it has a camera.  
+                  </div> 
+                  
+                  <div class="govuk-inset-text">
+                      It must be a photo of the original marriage certificate or a certified copy. If the original certificate is not in English, you’ll need to provide a certified translation.
+                    </div>
+                  
+                 <!-- <p class="govuk-body">You’ll be asked to upload a digital photo of the certificate. You can use your phone to take the picture, if it has a camera.</p> 
+                    
+                 <p class="govuk-body">It must be a photo of the original marriage certificate or a certified copy. If the original certificate is not in English, you’ll need to provide a certified translation.</p>-->
+                  
+                  
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="marriage-certificate" name="marriage-certificate" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate">
+                      Yes, I have my marriage certificate   
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="marriage-certificate-2" name="marriage-certificate" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate-2">
+                      No, I do not have my marriage certificate 
+                    </label>
+                  </div>
+                </div> 
+                 
+              </fieldset>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   No agents are available, please try again later.
+  </div>
+</details>
+
+{% endblock %}
