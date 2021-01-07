@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="broken_down_irretrievably.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        You cannot get a divorce  
+      </h1>
+
+      <p>Your marriage must have broken down irretrievably. This is the only legal ground for which you can get a divorce in England or Wales.
+      </p>
+
+      <p>If your marriage has not broken down irretrievably you may want to consider other options. Relationship advice and counselling is available from private therapists and charities such as <a href="#">Relate</a>.</p>
+        
+      <p><a href="#">Exit service</a></p>
+
+    </div>
+  </div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+{% endblock %}
