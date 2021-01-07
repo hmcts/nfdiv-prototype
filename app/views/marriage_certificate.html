@@ -28,7 +28,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/email_address" method="post" novalidate>
+        <form action="/sign_in" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -37,28 +37,24 @@
                     Do you have your marriage certificate with you now?
                   </h1>
                 </legend>
-                  <div id="sign-in-hint" class="govuk-hint">
+                  
+                  <p class="govuk-body">
                   You’ll be asked to upload a digital photo of the certificate later in this application. You can use your phone to take the picture, if it has a camera.   
-                  </div> 
+                  </p> 
                   
                   <div class="govuk-inset-text">
                       It must be a photo of the original marriage certificate or a <a class="govuk-link" href="#">certified copy</a>. If the original certificate is not in English, you’ll need to provide a <a class="govuk-link" href="#">certified translation</a>.
                     </div>
                   
-                 <!-- <p class="govuk-body">You’ll be asked to upload a digital photo of the certificate. You can use your phone to take the picture, if it has a camera.</p> 
-                    
-                 <p class="govuk-body">It must be a photo of the original marriage certificate or a certified copy. If the original certificate is not in English, you’ll need to provide a certified translation.</p>-->
-                  
-                  
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="marriage-certificate" name="marriage-certificate" type="radio" value="yes">
-                    <label class="govuk-label govuk-radios__label" for="marriage-certificate">
+                    <input class="govuk-radios__input" id="marriage-certificate-1" name="marriage-certificate" type="radio" value="true">
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate-1">
                       Yes, I have my marriage certificate   
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="marriage-certificate-2" name="marriage-certificate" type="radio" value="no">
+                    <input class="govuk-radios__input" id="marriage-certificate-2" name="marriage-certificate" type="radio" value="false">
                     <label class="govuk-label govuk-radios__label" for="marriage-certificate-2">
                       No, I do not have my marriage certificate 
                     </label>
