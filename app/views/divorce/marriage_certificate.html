@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Do you have a postal address for your husband or wife? - GOV.UK
+  Apply for a divorce - Do you have your marriage certificate with you now? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,55 +21,42 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="broken_down_irretrievably.html">Back</a>
+  <a class="govuk-back-link" href="marriage_date.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/email_address" method="post" novalidate>
+        <form action="/sign_in" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                      Do you have an address for your husband or wife?
-                    <!--Do you have a postal address for your husband or wife? -->
+                    Do you have your marriage certificate with you now?
                   </h1>
                 </legend>
                   
                   <p class="govuk-body">
-                  You will be asked to provide your husband or wife’s address later in this application. This is so the court can send them information and documents relating to the divorce.
-                  </p>
+                  You’ll be asked to upload a digital photo of the certificate later in this application. You can use your phone to take the picture, if it has a camera.   
+                  </p> 
                   
                   <div class="govuk-inset-text">
-                   The address can be their postal address or their solicitor’s address. It can be UK or international. It cannot be their work address.
-                  </div>
-                  
-                  <!--
-                  <div id="sign-in-hint" class="govuk-hint">
-                  You will be asked to provide their postal address or their solicitor’s address. This can be a UK or an international address. It cannot be their place of work. 
-                      <br><br/>
-                  This is so the court can send your husband or wife information and documents relating to the divorce.
-                  </div> -->
-                  
-                 <!-- <p class="govuk-body"> You will be asked to provide their postal address or their solicitor’s address. This can be a UK or an international address. It cannot be their place of work. </p> 
-                    
-                 <p class="govuk-body"> This is so the court can send your husband or wife information and documents relating to the divorce.</p>-->
-                  
+                      It must be a photo of the original marriage certificate or a <a class="govuk-link" href="#">certified copy</a>. If the original certificate is not in English, you’ll need to provide a <a class="govuk-link" href="#">certified translation</a>.
+                    </div>
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="postal-address-1" name="postal-address" type="radio" value="true">
-                    <label class="govuk-label govuk-radios__label" for="postal-address-1">
-                      Yes, I have their address 
+                    <input class="govuk-radios__input" id="marriage-certificate-1" name="marriage-certificate" type="radio" value="true" {{ checked("marriage-certificate", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate-1">
+                      Yes, I have my marriage certificate   
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="postal-address-2" name="postal-address" type="radio" value="false">
-                    <label class="govuk-label govuk-radios__label" for="postal-address-2">
-                      No, I do not have their address 
+                    <input class="govuk-radios__input" id="marriage-certificate-2" name="marriage-certificate" type="radio" value="false" {{ checked("marriage-certificate", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate-2">
+                      No, I do not have my marriage certificate 
                     </label>
                   </div>
                 </div> 
@@ -83,6 +70,8 @@
         </form>
       </div>
     </div>
+
+<p><a href="#">Save and close</a></p>
 
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
