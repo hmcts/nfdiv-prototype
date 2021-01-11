@@ -34,7 +34,7 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Has your marriage broken down irretrievably? (it cannot be saved) 
+                    Your marriage 
                   </h1>
                 </legend>
                   
@@ -47,21 +47,25 @@
                   Your marriage must have broken down irretrievably for you to get a divorce. This means it cannot be saved. 
                   </p>
                   
+                  <p class="govuk-body">
+                  Has your marriage broken down irretrievably?  
+                  </p>
+                  
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="broken-down-1" name="broken-down" type="radio" value="true" data-aria-controls="conditional-broken-down-1" {{ checked("broken-down", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="broken-down-1">
-                          Yes, my marriage has broken down irretrievably 
+                        <input class="govuk-radios__input" id="broken-down-3" name="broken-down-v2" type="radio" value="true" data-aria-controls="conditional-broken-down-3" {{ checked("broken-down-v2", "true") }}>
+                        <label class="govuk-label govuk-radios__label" for="broken-down-3">
+                          Yes
                         </label>
                       </div>
                     
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="broken-down-2" name="broken-down" type="radio" value="false" data-aria-controls="conditional-broken-down-2" {{ checked("broken-down", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="broken-down-2">
-                          No, my marriage has not broken down irretrievably
+                        <input class="govuk-radios__input" id="broken-down-4" name="broken-down-v2" type="radio" value="false" data-aria-controls="conditional-broken-down-4" {{ checked("broken-down-v2", "false") }}>
+                        <label class="govuk-label govuk-radios__label" for="broken-down-4">
+                          No
                         </label>
                       </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-4">
                         <div class="govuk-warning-text">
                           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                           <strong class="govuk-warning-text__text">
@@ -99,7 +103,7 @@
             </ul>
         <h2 class="govuk-heading-m">Send us a message</h2>
             <ul class="govuk-list">
-                <li><a class="govuk-link" href="/divorce/broken_down_irretrievably_2">Send us a message</a></li>
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
                 <li>We aim to get back to you within 5 working days</li>
             </ul>
         <h2 class="govuk-heading-m">Telephone</h2>
