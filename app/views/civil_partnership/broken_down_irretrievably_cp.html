@@ -2,7 +2,7 @@
 {% from "govuk/components/header/macro.njk" import govukHeader %}
 
 {% block pageTitle %}
-  Apply for a divorce - Has your relationship broken down irretrievably? - GOV.UK
+  Apply for a divorce - Has your relationship irretrievably broken down (it cannot be saved)? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -73,31 +73,26 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Has your relationship broken down irretrievably (it cannot be saved)?
+                    Has your relationship irretrievably broken down (it cannot be saved)?
                   </h1>
                 </legend>
                   
-                  <!--
-                  <div id="sign-in-hint" class="govuk-hint">
-                  You can only get a divorce in England or Wales if your marriage has broken down irretrievably. This means it cannot be saved. 
-                  </div> -->
-                  
                   <p class="govuk-body">
-                  Your relationship must have broken down irretrievably for you to end a civil partnership. This means it cannot be saved. 
+                  Your relationship must have irretrievably broken down for you to end a civil partnership. This means it cannot be saved. 
                   </p>
                   
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="broken-down-1" name="broken-down-cp" type="radio" value="true" data-aria-controls="conditional-broken-down-1" {{ checked("broken-down-cp", "true") }}>
                         <label class="govuk-label govuk-radios__label" for="broken-down-1">
-                          Yes, my relationship has broken down irretrievably 
+                          Yes, my relationship has irretrievably broken down
                         </label>
                       </div>
                     
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="broken-down-2" name="broken-down-cp" type="radio" value="false" data-aria-controls="conditional-broken-down-2" {{ checked("broken-down-cp", "false") }}>
                         <label class="govuk-label govuk-radios__label" for="broken-down-2">
-                          No, my relationship has not broken down irretrievably
+                          No, my relationship has not irretrievably broken down
                         </label>
                       </div>
                       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
@@ -105,7 +100,7 @@
                           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                           <strong class="govuk-warning-text__text">
                             <span class="govuk-warning-text__assistive">Warning</span>
-                            Your relationship must have broken down irretrievably for you to end a civil partnership in England or Wales. This is the law.  
+                            Your relationship must have irretrievably broken down for you to end a civil partnership. This is the law in England and Wales.
                           </strong>
                         </div>
 
@@ -121,7 +116,7 @@
       </div>
     </div>
 
-<p><a href="#">Save and close</a></p>
+<p><a href="#">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 
