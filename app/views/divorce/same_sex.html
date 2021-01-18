@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Has your marriage irretrievably broken down (it cannot be saved)? - GOV.UK
+  Apply for a divorce - Were you a same-sex couple when you got married? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,52 +21,38 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/divorce/husband_or_wife">Back</a>
+<a class="govuk-back-link" href="/divorce/husband_or_wife_2">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/postal_address" method="post" novalidate>
+        <form action="/divorce/broken_down_irretrievably_2" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Has your marriage irretrievably broken down (it cannot be saved)?
+                      Were you a same-sex couple when you got married?
                   </h1>
                 </legend>
                   
-                  <p class="govuk-body">
-                  Your marriage must have irretrievably broken down for you to get a divorce. This means it cannot be saved. 
-                  </p>
-                  
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="broken-down-1" name="broken-down" type="radio" value="true" data-aria-controls="conditional-broken-down-1" {{ checked("broken-down", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="broken-down-1">
-                          Yes, my marriage has irretrievably broken down
-                        </label>
-                      </div>
-                    
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="broken-down-2" name="broken-down" type="radio" value="false" data-aria-controls="conditional-broken-down-2" {{ checked("broken-down", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="broken-down-2">
-                          No, my marriage has not irretrievably broken down
-                        </label>
-                      </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
-                        <div class="govuk-warning-text">
-                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                          <strong class="govuk-warning-text__text">
-                            <span class="govuk-warning-text__assistive">Warning</span>
-                            Your marriage must have irretrievably broken down for you to get a divorce. This is the law in England and Wales.  
-                          </strong>
-                        </div>
-
-                      </div>
-                    </div>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="same-sex-1" name="same-sex" type="radio" value="true" {{ checked("same-sex", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="same-sex-1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="same-sex-2" name="same-sex" type="radio" value="false" {{ checked("same-sex", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="same-sex-2">
+                      No 
+                    </label>
+                  </div>
+                </div> 
+                 
               </fieldset>
             </div>
 

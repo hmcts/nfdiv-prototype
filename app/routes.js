@@ -16,6 +16,20 @@ router.post('/divorce/postal_address', function (req, res) {
   }
 })
 
+router.post('/divorce/postal_address_2', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['broken-down-v2']
+
+  if (over18 === 'false') {
+    res.redirect('/divorce/cannot_divorce_2')
+  } else {
+    res.redirect('/divorce/postal_address_2')
+  }
+})
+
 router.post('/divorce/marriage_date', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
@@ -30,6 +44,20 @@ router.post('/divorce/marriage_date', function (req, res) {
   }
 })
 
+router.post('/divorce/marriage_date_2', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['postal-address-v2']
+
+  if (over18 === 'false') {
+    res.redirect('/divorce/need_postal_address_2')
+  } else {
+    res.redirect('/divorce/marriage_date_2')
+  }
+})
+
 router.post('/sign_in', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
@@ -41,6 +69,20 @@ router.post('/sign_in', function (req, res) {
     res.redirect('/divorce/no_marriage_cert')
   } else {
     res.redirect('/sign_in')
+  }
+})
+
+router.post('/sign_in_2', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['marriage-certificate-v2']
+
+  if (over18 === 'false') {
+    res.redirect('/divorce/no_marriage_cert_2')
+  } else {
+    res.redirect('/sign_in_2')
   }
 })
 

@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
-{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Do you have your civil partnership certificate with you? - GOV.UK
+  Apply to end a civil partnership - Were you a same-sex couple when you formed your civil partnership? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,43 +60,34 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="civil_partnership_date.html">Back</a>
+<a class="govuk-back-link" href="/civil_partnership/husband_or_wife">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/sign_in" method="post" novalidate>
+        <form action="/civil_partnership/broken_down_irretrievably_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Do you have your civil partnership certificate with you?
+                      Were you a same-sex couple when you formed your civil partnership?
                   </h1>
                 </legend>
                   
-                  <p class="govuk-body">
-                  You’ll be asked to upload a digital photo of the certificate later in this application. You can use your phone to take the picture, if it has a camera.   
-                  </p> 
-                  
-                  <div class="govuk-inset-text">
-                      <p>It must be a photo of the original civil partnership certificate or a <a class="govuk-link" href="https://www.gov.uk/certifying-a-document">certified copy</a>. </p>
-                      <p>If the original certificate is not in English, you’ll need to provide a <a class="govuk-link" href="https://www.gov.uk/order-copy-birth-death-marriage-certificate" rel="noreferrer noopener" target="_blank">certified translation (opens in a new tab)</a>.</p>
-                    </div>
-                  
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="cp-certificate-1" name="cp-certificate" type="radio" value="true" {{ checked("cp-certificate", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="cp-certificate-1">
-                      Yes, I have my civil partnership certificate   
+                    <input class="govuk-radios__input" id="same-sex-3" name="same-sex-cp" type="radio" value="true" {{ checked("same-sex-cp", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="same-sex-3">
+                      Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="cp-certificate-2" name="cp-certificate" type="radio" value="false" {{ checked("cp-certificate", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="cp-certificate-2">
-                      No, I do not have my civil partnership certificate 
+                    <input class="govuk-radios__input" id="same-sex-4" name="same-sex-cp" type="radio" value="false" {{ checked("same-sex-cp", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="same-sex-4">
+                      No 
                     </label>
                   </div>
                 </div> 

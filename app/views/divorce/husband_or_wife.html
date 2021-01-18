@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Has your marriage irretrievably broken down (it cannot be saved)? - GOV.UK
+  Apply for a divorce - Who are you divorcing? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,53 +21,54 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/divorce/husband_or_wife">Back</a>
+<div class="govuk-!-padding-bottom-8"></div>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/postal_address" method="post" novalidate>
+        <form action="/divorce/broken_down_irretrievably" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Has your marriage irretrievably broken down (it cannot be saved)?
+                      Who are you divorcing?
                   </h1>
                 </legend>
                   
-                  <p class="govuk-body">
-                  Your marriage must have irretrievably broken down for you to get a divorce. This means it cannot be saved. 
-                  </p>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="husband-wife-1" name="husband-wife" type="radio" value="true" {{ checked("husband-wife", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="husband-wife-1">
+                      My husband 
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="husband-wife-2" name="husband-wife" type="radio" value="false" {{ checked("husband-wife", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="husband-wife-2">
+                      My wife 
+                    </label>
+                  </div>
+                </div> 
                   
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="broken-down-1" name="broken-down" type="radio" value="true" data-aria-controls="conditional-broken-down-1" {{ checked("broken-down", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="broken-down-1">
-                          Yes, my marriage has irretrievably broken down
-                        </label>
-                      </div>
-                    
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="broken-down-2" name="broken-down" type="radio" value="false" data-aria-controls="conditional-broken-down-2" {{ checked("broken-down", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="broken-down-2">
-                          No, my marriage has not irretrievably broken down
-                        </label>
-                      </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
-                        <div class="govuk-warning-text">
-                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                          <strong class="govuk-warning-text__text">
-                            <span class="govuk-warning-text__assistive">Warning</span>
-                            Your marriage must have irretrievably broken down for you to get a divorce. This is the law in England and Wales.  
-                          </strong>
-                        </div>
-
-                      </div>
-                    </div>
               </fieldset>
+            </div>
+            
+            <div class="govuk-form-group">
+            <h2 class="govuk-heading-s">
+                Select the following if it applies to you: 
+            </h2>
+                  
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="same-sex" name="same-sex" type="checkbox" value="same-sex-true">
+                    <label class="govuk-label govuk-checkboxes__label" for="same-sex">
+                      We were a same sex couple when we got married
+                    </label>
+                  </div>  
+                </div>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
