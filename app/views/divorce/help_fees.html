@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Who are you divorcing? - GOV.UK
+  Apply for a divorce - Do you need help paying the fee for your divorce? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,54 +21,47 @@
   </p>
 </div>
 
-<div class="govuk-!-padding-bottom-8"></div>
+<a class="govuk-back-link" href="#">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/broken_down_irretrievably" method="post" novalidate>
+        <form action="/divorce/help_fees_number" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                      Who are you divorcing?
+                      Do you need help paying the fee for your divorce?
                   </h1>
                 </legend>
                   
+                <p>This divorce application costs £550. You may be able to get help paying the fee if you:</p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>are on certain benefits <i>or</i></li>
+                    <li>have a little or no savings <i>or</i></li>
+                    <li>have low income</li>
+                  </ul>  
+                  
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="husband-wife-1" name="husband-wife" type="radio" value="true" {{ checked("husband-wife", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="husband-wife-1">
-                      My husband 
+                    <input class="govuk-radios__input" id="same-sex-1" name="same-sex" type="radio" value="true" {{ checked("same-sex", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="same-sex-1">
+                      Yes, I need help paying the fee	
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="husband-wife-2" name="husband-wife" type="radio" value="false" {{ checked("husband-wife", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="husband-wife-2">
-                      My wife 
+                    <input class="govuk-radios__input" id="same-sex-2" name="same-sex" type="radio" value="false" {{ checked("same-sex", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="same-sex-2">
+                      No, I do not need help paying the fee  
                     </label>
                   </div>
                 </div> 
-                  
+                 
               </fieldset>
-            </div>
-            
-            <div class="govuk-form-group">
-            <h2 class="govuk-heading-s">
-                Select the following if it applies to you: 
-            </h2>
-                  
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="same-sex" name="same-sex" type="checkbox" value="same-sex-true">
-                    <label class="govuk-label govuk-checkboxes__label" for="same-sex">
-                      We were the same sex when we got married
-                    </label>
-                  </div>  
-                </div>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
