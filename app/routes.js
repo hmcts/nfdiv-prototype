@@ -86,6 +86,34 @@ router.post('/divorce/end_page_1', function (req, res) {
   }
 })
 
+router.post('/divorce/end_page_2', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['help-fee-v2']
+
+  if (over18 === 'true') {
+    res.redirect('/divorce/help_fees_number_2')
+  } else {
+    res.redirect('/divorce/end_page_2')
+  }
+})
+
+router.post('/divorce/end_page_2_2', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['help-fees-number-v2']
+
+  if (over18 === 'false') {
+    res.redirect('/divorce/help_fees_apply_2')
+  } else {
+    res.redirect('/divorce/end_page_2_2')
+  }
+})
+
 // Branching - CIVIL PARTNERSHIP
 router.post('/civil_partnership/civil_partnership_date', function (req, res) {
   // Get the answer from session data
