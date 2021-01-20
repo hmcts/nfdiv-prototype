@@ -21,14 +21,14 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="#">Back</a>
+<a class="govuk-back-link" href="marriage_certificate.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/help_fees_number" method="post" novalidate>
+        <form action="/divorce/end_page" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -48,14 +48,14 @@
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="same-sex-1" name="same-sex" type="radio" value="true" {{ checked("same-sex", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="same-sex-1">
+                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="true" {{ checked("help-fees", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-1">
                       Yes, I need help paying the fee	
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="same-sex-2" name="same-sex" type="radio" value="false" {{ checked("same-sex", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="same-sex-2">
+                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="false" {{ checked("help-fees", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-2">
                       No, I do not need help paying the fee  
                     </label>
                   </div>

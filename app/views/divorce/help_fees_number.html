@@ -28,7 +28,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/help_fees_apply" method="post" novalidate>
+        <form action="/divorce/end_page_1" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -40,7 +40,7 @@
                   
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-number-1" name="help-fees-number" type="radio" value="true" data-aria-controls="conditional-contact">
+                    <input class="govuk-radios__input" id="help-fees-number-1" name="help-fees-number" type="radio" value="true" data-aria-controls="conditional-contact" {{ checked("help-fees-number", "true") }}>
                     <label class="govuk-label govuk-radios__label" for="help-fees-number-1">
                       Yes
                     </label>
@@ -59,7 +59,7 @@
                       <div id="help-fee-number-hint" class="govuk-hint">
                           For example, HWF-A1B-23C
                         </div>    
-                      <input class="govuk-input govuk-!-width-one-third" id="help-fees-input" name="help-fees-input" type="hwf-number" spellcheck="false"></div>
+                      <input class="govuk-input govuk-!-width-one-third" id="help-fees-input" name="help-fees-input" type="hwf-number" spellcheck="false" value="{{ data['help-fees-input'] }}"></div>
                   </div>
                   
                   <div class="govuk-radios__item">
