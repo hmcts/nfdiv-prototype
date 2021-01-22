@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - You can use the English or Welsh courts to get a divorce - GOV.UK
+  Apply for a divorce - Do you have your marriage certificate with you now? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,27 +21,47 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="life_based_in_uk.html">Back</a>
+  <a class="govuk-back-link" href="marriage_date.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/address_private" method="post" novalidate>
+        <form action="/divorce/help_fees" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    You can use the English or Welsh courts to get a divorce
+                    Do you have your marriage certificate with you?
                   </h1>
                 </legend>
                   
                   <p class="govuk-body">
-                  ADD PARAGRAPH TEXT 
-                  </p>
+                  You’ll be asked to upload a digital photo of the certificate later in this application. You can use your phone to take the picture, if it has a camera.   
+                  </p> 
                   
+                  <div class="govuk-inset-text">
+                      <p>It must be a photo of the original marriage certificate or a <a class="govuk-link" href="https://www.gov.uk/order-copy-birth-death-marriage-certificate" rel="noreferrer noopener" target="_blank">certified copy (opens in a new tab)</a>. </p>
+                      <p>If the original certificate is not in English, you’ll need to provide a <a class="govuk-link" href="https://www.gov.uk/certifying-a-document">certified translation</a>.</p>
+                    </div>
+                  
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="marriage-certificate-1" name="marriage-certificate" type="radio" value="true" {{ checked("marriage-certificate", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate-1">
+                      Yes, I have my marriage certificate   
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="marriage-certificate-2" name="marriage-certificate" type="radio" value="false" {{ checked("marriage-certificate", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate-2">
+                      No, I do not have my marriage certificate 
+                    </label>
+                  </div>
+                </div> 
+                 
               </fieldset>
             </div>
 
