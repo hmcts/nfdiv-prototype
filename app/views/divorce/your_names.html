@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Who are you divorcing? - GOV.UK
+  Apply for a divorce - Your names - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,64 +21,66 @@
   </p>
 </div>
 
-<div class="govuk-!-padding-bottom-8"></div>
+  <a class="govuk-back-link" href="#">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/broken_down_irretrievably" method="post" novalidate>
+        <h1 class="govuk-heading-l">Your names</h1>
+
+        <form action="/divorce/names_on_cert" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                      Who are you divorcing?
-                  </h1>
-                </legend>
-                  
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="husband-wife-1" name="husband-wife" type="radio" value="true" {{ checked("husband-wife", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="husband-wife-1">
-                      My husband 
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="husband-wife-2" name="husband-wife" type="radio" value="false" {{ checked("husband-wife", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="husband-wife-2">
-                      My wife 
-                    </label>
-                  </div>
-                </div> 
-                  
-              </fieldset>
+            <label class="govuk-label govuk-label--m" for="passport-number">
+              Enter your name 
+            </label>
+            <label class="govuk-label" for="width-20">
+                First name(s)
+            </label> 
+            <div id="passport-number-hint" class="govuk-hint">
+              Include all middle names here
+            </div>  
+            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
             </div>
             
             <div class="govuk-form-group">
-            <h2 class="govuk-heading-s">
-                Select the following if it applies to you: 
-            </h2>
-                  
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="same-sex" name="same-sex" type="checkbox" value="same-sex-true">
-                    <label class="govuk-label govuk-checkboxes__label" for="same-sex">
-                      We were a same-sex couple when we got married
-                    </label>
-                  </div>  
-                </div>
+            <label class="govuk-label" for="width-20">
+                Last name(s)
+            </label>  
+            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="passport-number">
+              Enter your husband’s name 
+            </label>
+            <label class="govuk-label" for="width-20">
+                Husband’s first name(s)
+            </label> 
+            <div id="passport-number-hint" class="govuk-hint">
+              Include all middle names here
+            </div>  
+            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
             </div>
+            
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="width-20">
+                Husband’s last name(s)
+            </label>  
+            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+          </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>
 
-<p><a href="#">Save and sign out</a></p>
+<p><a href="/divorce/wrong_marriage_date">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 

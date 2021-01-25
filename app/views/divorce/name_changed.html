@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Have you changed your name since you got married? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="/divorce/names_on_cert">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="#" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Have you changed your name since you got married?
+                  </h1>
+                </legend>
+                  
+                  <p class="govuk-body">
+                  Ther court needs to know if you changed your name when you got married, or if you've changed it since 
+                  </p>
+                  
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                    
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="broken-down-2" name="broken-down" type="radio" value="true" data-aria-controls="conditional-broken-down-2" {{ checked("broken-down", "true") }}>
+                        <label class="govuk-label govuk-radios__label" for="broken-down-2">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
+                        
+                          <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                              <h1 class="govuk-fieldset__heading">
+                                How would you like to be contacted?
+                              </h1>
+                            </legend>
+                            <div id="contact-hint" class="govuk-hint">
+                              Select all options that are relevant to you.
+                            </div>
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                  Email
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="contact-by-email">
+                                    Email address
+                                  </label>
+                                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
+
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-2">
+                                <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                                  Phone
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="contact-by-phone">
+                                    Phone number
+                                  </label>
+                                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel"></div>
+
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
+                                <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                                  Text message
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="contact-by-text">
+                                    Mobile phone number
+                                  </label>
+                                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel"></div>
+
+                              </div>
+                            </div>
+
+                          </fieldset>
+                        </div>
+                          
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="broken-down-1" name="broken-down" type="radio" value="false" data-aria-controls="conditional-broken-down-1" {{ checked("broken-down", "false") }}>
+                        <label class="govuk-label govuk-radios__label" for="broken-down-1">
+                          No
+                        </label>
+                      </div>
+                    
+                      </div>
+                    </div>
+              </fieldset>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

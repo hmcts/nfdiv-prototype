@@ -67,7 +67,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/same_sex" method="post" novalidate>
+        <form action="/civil_partnership/broken_down_irretrievably_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -93,6 +93,21 @@
                 </div> 
                  
               </fieldset>
+            </div>
+            
+            <div class="govuk-form-group">
+            <h2 class="govuk-heading-s">
+                Select the following if it applies to you: 
+            </h2>
+                  
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="same-sex" name="same-sex" type="checkbox" value="same-sex-true">
+                    <label class="govuk-label govuk-checkboxes__label" for="same-sex">
+                      We were a same-sex couple when we formed a civil partnership
+                    </label>
+                  </div>  
+                </div>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">

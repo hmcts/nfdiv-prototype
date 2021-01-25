@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
-{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Has your relationship irretrievably broken down (it cannot be saved)? - GOV.UK
+  Apply to end a civil partnership - Did you form your civil partnership with your [husband/wife] in the UK? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,52 +60,42 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/civil_partnership/husband_or_wife">Back</a>
+  <a class="govuk-back-link" href="#">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/civil_partnership_date" method="post" novalidate>
+        <form action="/divorce/jurisdiction" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Has your relationship irretrievably broken down (it cannot be saved)?
+                    Did you form your civil partnership with your [husband/wife] in the UK?
                   </h1>
                 </legend>
                   
                   <p class="govuk-body">
-                  Your relationship must have irretrievably broken down for you to end a civil partnership. This means it cannot be saved. 
+                  The UK is made up of England, Scotland, Wales and Northern Ireland. 
                   </p>
                   
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios govuk-radios--inline">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="broken-down-1" name="broken-down-cp" type="radio" value="true" data-aria-controls="conditional-broken-down-1" {{ checked("broken-down-cp", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="broken-down-1">
-                          Yes, my relationship has irretrievably broken down
+                        <input class="govuk-radios__input" id="marry-uk-1" name="marry-uk" type="radio" value="true" {{ checked("marry-uk", "true") }}>
+                        <label class="govuk-label govuk-radios__label" for="marry-uk-1">
+                          Yes
                         </label>
                       </div>
-                    
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="broken-down-2" name="broken-down-cp" type="radio" value="false" data-aria-controls="conditional-broken-down-2" {{ checked("broken-down-cp", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="broken-down-2">
-                          No, my relationship has not irretrievably broken down
+                        <input class="govuk-radios__input" id="marry-uk-2" name="marry-uk" type="radio" value="false" {{ checked("marry-uk", "false") }}>
+                        <label class="govuk-label govuk-radios__label" for="marry-uk-2">
+                          No
                         </label>
-                      </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
-                        <div class="govuk-warning-text">
-                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                          <strong class="govuk-warning-text__text">
-                            <span class="govuk-warning-text__assistive">Warning</span>
-                            Your relationship must have irretrievably broken down for you to end a civil partnership. This is the law in England and Wales.
-                          </strong>
-                        </div>
-
                       </div>
                     </div>
+                  
               </fieldset>
             </div>
 
@@ -133,7 +123,7 @@
             </ul>
         <h2 class="govuk-heading-m">Send us a message</h2>
             <ul class="govuk-list">
-                <li><a class="govuk-link" href="/divorce/broken_down_irretrievably_2">Send us a message</a></li>
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
                 <li>We aim to get back to you within 5 working days</li>
             </ul>
         <h2 class="govuk-heading-m">Telephone</h2>
