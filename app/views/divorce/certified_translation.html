@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Your names on your marriage certificate - GOV.UK
+  Apply for a divorce - Do you have a ‘certified translation’ of your marriage certificate? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,53 +21,48 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="english_cert.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Your names on your marriage certificate</h1>
+        <form action="/divorce/certified_translation" method="post" novalidate>
 
-        <form action="/divorce/name_changed" method="post" novalidate>
-            
-            <p class="govuk-body">
-                  The court needs to know the exact names that appear on your marriage certificate. These are the names you both used before you were married, such as maiden names. 
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you have a ‘certified translation’ of your marriage certificate? 
+                  </h1>
+                </legend>
+                  
+                  <p class="govuk-body">
+                  You need to provide an English translation of your marriage certificate. The translation has to be certified as ‘true and accurate’ by the translator.  
                   </p>
-            
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                Copy the marriage certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.
-              </strong>
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your full name from the marriage certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your [husband’s / wife's] full name from the marriage certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div> 
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+                  
+                  <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="english-certificate-1" name="english-certificate" type="radio" value="true" {{ checked("english-certificate", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="english-certificate-1">
+                      Yes, I have a certified translation  
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="english-certificate-2" name="english-certificate" type="radio" value="false" {{ checked("english-certificate", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="english-certificate-2">
+                      No, I do not have a certified translation  
+                    </label>
+                  </div>
+                </div> 
+                  
+              </fieldset>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
         </form>
       </div>
     </div>
