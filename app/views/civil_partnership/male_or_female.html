@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Who are you in a civil partnership with? - GOV.UK
+  Apply to end a civil partnership - Are you male or female? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -73,7 +73,7 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                      Who are you in a civil partnership with?
+                      Are you male or female?
                   </h1>
                 </legend>
                   
@@ -81,13 +81,13 @@
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="husband-wife-5" name="husband-wife-cp" type="radio" value="true" {{ checked("husband-wife-cp", "true") }}>
                     <label class="govuk-label govuk-radios__label" for="husband-wife-5">
-                      My husband 
+                      Male 
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="husband-wife-6" name="husband-wife-cp" type="radio" value="false" {{ checked("husband-wife-cp", "false") }}>
                     <label class="govuk-label govuk-radios__label" for="husband-wife-6">
-                      My wife 
+                      Female 
                     </label>
                   </div>
                 </div> 
@@ -104,7 +104,7 @@
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="same-sex" name="same-sex" type="checkbox" value="same-sex-true">
                     <label class="govuk-label govuk-checkboxes__label" for="same-sex">
-                      We were a same-sex couple when we formed a civil partnership
+                      We were a same-sex couple when we formed our civil partnership
                     </label>
                   </div>  
                 </div>

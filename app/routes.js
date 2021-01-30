@@ -86,7 +86,7 @@ router.post('/divorce/help_fees_number', function (req, res) {
   }
 })
 
-router.post('/divorce/jurisdiction', function (req, res) {
+router.post('/divorce/jurisdiction-page', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -100,7 +100,7 @@ router.post('/divorce/jurisdiction', function (req, res) {
   }
 })
 
-router.post('/divorce/certified_translation_2', function (req, res) {
+router.post('/divorce/where_you_married_2', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -108,7 +108,7 @@ router.post('/divorce/certified_translation_2', function (req, res) {
   const over18 = req.session.data['english-certificate']
 
   if (over18 === 'true') {
-    res.redirect('/divorce/certified_translation_2')
+    res.redirect('/divorce/where_you_married_2')
   } else {
     res.redirect('/divorce/certified_translation_1')
   }
