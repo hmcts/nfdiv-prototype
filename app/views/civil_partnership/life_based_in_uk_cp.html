@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Where you got married - GOV.UK
+  Apply to end a civil partnership - Is your life mainly based in England or Wales? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,41 +21,48 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="english_cert.html">Back</a>
+  <a class="govuk-back-link" href="/civil_partnership/jurisdiction">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Where you got married</h1>
-
-        <form action="/divorce/jurisdiction" method="post" novalidate>
+        <form action="/civil_partnership/jurisdiction_confirmation_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="country-english-lang">
-              Enter the country you got married
-            </label>
-              <div id="country-english-lang-hint" class="govuk-hint">
-              For example, United States
-            </div>
-            <input class="govuk-input govuk-input--width-20" id="country-english-lang-1" name="country-english-lang" type="text" aria-describedby="country-english-lang-hint" value="{{ data['country-english-lang'] }}">
-            </div> 
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="place-english-lang">
-              Enter the place you got married
-            </label>
-              <div id="place-english-lang-hint" class="govuk-hint">
-              Enter the place exactly as it appears on your certificate.  
-            </div>
-            <input class="govuk-input govuk-input--width-20" id="place-english-lang-1" name="place-english-lang" type="text" aria-describedby="place-english-lang-hint" value="{{ data['place-english-lang'] }}">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Is your life mainly based in England or Wales?
+                  </h1>
+                </legend>
+                  
+                  <p class="govuk-body">
+                  This may include working, owning property, having children in school, or your main family life taking place in England or Wales.  
+                  </p>
+                  
+                  <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="life-based-uk-3" name="life-based-uk-cp" type="radio" value="true" {{ checked("life-based-uk-cp", "true") }}>
+                        <label class="govuk-label govuk-radios__label" for="life-based-uk-3">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="life-based-uk-4" name="life-based-uk-cp" type="radio" value="false" {{ checked("life-based-uk-cp", "false") }}>
+                        <label class="govuk-label govuk-radios__label" for="life-based-uk-4">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  
+              </fieldset>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
         </form>
       </div>
     </div>

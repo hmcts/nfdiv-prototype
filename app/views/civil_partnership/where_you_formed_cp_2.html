@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Did you form your civil partnership in the UK? - GOV.UK
+  Apply to end a civil partnership - Where you formed your civil partnership - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,48 +60,41 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="help_fees_cp.html">Back</a>
+  <a class="govuk-back-link" href="english_cert_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/jurisdiction-page" method="post" novalidate>
+        <h1 class="govuk-heading-l">Where you formed your civil partnership</h1>
+
+        <form action="/civil_partnership/jurisdiction" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Did you form your civil partnership in the UK?
-                  </h1>
-                </legend>
-                  
-                  <p class="govuk-body">
-                  The UK is made up of England, Scotland, Wales and Northern Ireland. 
-                  </p>
-                  
-                  <div class="govuk-radios govuk-radios--inline">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="marry-uk-1" name="cp-uk" type="radio" value="true" {{ checked("cp-uk", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="cp-uk-1">
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="cp-uk-2" name="cp-uk" type="radio" value="false" {{ checked("cp-uk", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="cp-uk-2">
-                          No
-                        </label>
-                      </div>
-                    </div>
-                  
-              </fieldset>
+            <label class="govuk-label govuk-label--m" for="country-english-lang-cp">
+              Enter the country you formed your civil partnership in 
+            </label>
+              <div id="country-english-lang-hint" class="govuk-hint">
+              For example, United States
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="country-english-lang-4" name="country-english-lang-cp" type="text" aria-describedby="country-english-lang-hint" value="{{ data['country-english-lang-cp'] }}">
+            </div> 
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="place-english-lang">
+              Enter the place you formed your civil partnership in 
+            </label>
+              <div id="place-english-lang-hint" class="govuk-hint">
+              Enter the place exactly as it appears on your certificate.  
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="place-english-lang-4" name="place-english-lang-cp" type="text" aria-describedby="place-english-lang-hint" value="{{ data['place-english-lang-cp'] }}">
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>

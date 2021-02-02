@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
-{% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Did you form your civil partnership in the UK? - GOV.UK
+ Apply to end a civil partnership - You need to get a ‘certified translation’ of your civil partnership certificate  - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -45,7 +44,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-
 <div class="govuk-phase-banner">
   <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -60,53 +58,28 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="help_fees_cp.html">Back</a>
+  <a class="govuk-back-link" href="certified_translation_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/jurisdiction-page" method="post" novalidate>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-          <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Did you form your civil partnership in the UK?
-                  </h1>
-                </legend>
-                  
-                  <p class="govuk-body">
-                  The UK is made up of England, Scotland, Wales and Northern Ireland. 
-                  </p>
-                  
-                  <div class="govuk-radios govuk-radios--inline">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="marry-uk-1" name="cp-uk" type="radio" value="true" {{ checked("cp-uk", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="cp-uk-1">
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="cp-uk-2" name="cp-uk" type="radio" value="false" {{ checked("cp-uk", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="cp-uk-2">
-                          No
-                        </label>
-                      </div>
-                    </div>
-                  
-              </fieldset>
-            </div>
+      <h1 class="govuk-heading-xl">
+        You need to get a ‘certified translation’ of your civil partnership certificate 
+      </h1>
 
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-        </form>
-      </div>
+      <p>You need to get your civil partnership certificate translated into English and <a href="https://www.gov.uk/certifying-a-document#certifying-a-translation" class="govuk-link">certified by a translator</a>. They will certify that the translation is true and accurate.</p>
+
+      <p>Then you need to get the translated document certified by a ‘notary public’.  You can find a notary public through the <a href="https://www.thenotariessociety.org.uk" class="govuk-link">Notaries Society</a> or the <a href="https://scrivener-notaries.org.uk/" class="govuk-link">Society of Scrivener Notaries</a>.</p>
+        
+      <p>When you have your certified translated certificate, then you can return to this application. You will be asked to upload a photo of it later, or post it in.</p>
+        
+      <p><a href="#">Save and sign out</a></p>
+
     </div>
-
-<p><a href="#">Save and sign out</a></p>
+  </div>
 
 <div class="govuk-!-padding-bottom-4"></div>
 
@@ -133,5 +106,4 @@
             </ul>
     </div>
 </details>
-
 {% endblock %}

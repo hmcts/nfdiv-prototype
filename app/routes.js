@@ -186,6 +186,48 @@ router.post('/civil_partnership/help_fees_number', function (req, res) {
   }
 })
 
+router.post('/civil_partnership/jurisdiction-page', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['cp-uk']
+
+  if (over18 === 'true') {
+    res.redirect('/civil_partnership/jurisdiction')
+  } else {
+    res.redirect('/civil_partnership/english_cert_cp')
+  }
+})
+
+router.post('/civil_partnership/where_you_formed_cp_2', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['english-certificate-cp']
+
+  if (over18 === 'true') {
+    res.redirect('/civil_partnership/where_you_formed_cp_2')
+  } else {
+    res.redirect('/civil_partnership/certified_translation_cp')
+  }
+})
+
+router.post('/civil_partnership/where_you_formed_cp_1', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['cert-translation-cp-no']
+
+  if (over18 === 'true') {
+    res.redirect('/civil_partnership/where_you_formed_cp_1')
+  } else {
+    res.redirect('/civil_partnership/need_certified_translation_cp')
+  }
+})
+
 // Add your routes here - above the module.exports line
 
 module.exports = router

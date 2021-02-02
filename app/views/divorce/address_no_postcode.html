@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Is your original marriage certificate in English? - GOV.UK
+  Apply for a divorce - When did you get married? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,43 +21,54 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="marry_in_uk.html">Back</a>
+  <a class="govuk-back-link" href="broken_down_irretrievably.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/where_you_married_2" method="post" novalidate>
+        <form action="/divorce/marriage_certificate" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="marriage-date-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Is your original marriage certificate in English?
+                    When did you get married?
                   </h1>
                 </legend>
                   
-                  <div class="govuk-inset-text">
-                      <p>If your original certificate contains an English version, select ‘yes’.</p>
-                        <p>If you have an English translation as a separate document, select ‘no’.</p>
-                    </div>
+                  <p class="govuk-body">
+                  Enter the date from your marriage certificate. 
+                  </p>
                   
-                  <div class="govuk-radios govuk-radios--inline">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-certificate-1" name="english-certificate" type="radio" value="true" {{ checked("english-certificate", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="english-certificate-1">
-                      Yes  
-                    </label>
+                <div id="marriage-date-hint" class="govuk-hint">
+                  For example, 31 3 2002
+                </div>
+                <div class="govuk-date-input" id="marriage-date">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="marriage-date-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="marriage-date-day" name="marriage-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['marriage-date-day'] }}"></div>
                   </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-certificate-2" name="english-certificate" type="radio" value="false" {{ checked("english-certificate", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="english-certificate-2">
-                      No 
-                    </label>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="marriage-date-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="marriage-date-month" name="marriage-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['marriage-date-month'] }}"></div>
                   </div>
-                </div> 
-                  
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="marriage-date-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="marriage-date-year" name="marriage-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['marriage-date-year'] }}"></div>
+                  </div>
+                </div>
+
               </fieldset>
             </div>
 
@@ -68,7 +79,7 @@
       </div>
     </div>
 
-<p><a href="#">Save and sign out</a></p>
+<p><a href="/divorce/wrong_marriage_date">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 

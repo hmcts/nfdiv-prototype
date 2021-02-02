@@ -33,23 +33,23 @@
         <form action="/divorce/jurisdiction" method="post" novalidate>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
+            <label class="govuk-label govuk-label--m" for="country-english-lang">
               Enter the country you got married
             </label>
-              <div id="passport-number-hint" class="govuk-hint">
+              <div id="country-english-lang-hint" class="govuk-hint">
               For example, France
             </div>
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+            <input class="govuk-input govuk-input--width-20" id="country-english-lang-2" name="country-english-lang" type="text" aria-describedby="country-english-lang-hint" value="{{ data['country-english-lang'] }}">
             </div> 
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
+            <label class="govuk-label govuk-label--m" for="place-english-lang">
               Enter the place you got married
             </label>
-              <div id="passport-number-hint" class="govuk-hint">
-              Enter the place exactly as it appears on your translated certificate. For example, XXXXX 
+              <div id="place-english-lang-hint" class="govuk-hint">
+              Enter the place exactly as it appears on your translated certificate.
             </div>
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+            <input class="govuk-input govuk-input--width-20" id="place-english-lang-2" name="place-english-lang" type="text" aria-describedby="place-english-lang-hint" value="{{ data['place-english-lang'] }}">
             </div>
 
           <button class="govuk-button" data-module="govuk-button">

@@ -29,31 +29,48 @@
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form action="/divorce/name_changed_deed" method="post" novalidate>
+            
+             <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Did you change your name when you got married?
+                      </h1>
+                    </legend>
+                    <div id="changed-name-hint" class="govuk-hint">
+                      For example, from a maiden name
+                    </div>
+                    <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="true">
+                        <label class="govuk-label govuk-radios__label" for="changed-name" {{ checked("changed-name", "true") }}>
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="false">
+                        <label class="govuk-label govuk-radios__label" for="changed-name-2" {{ checked("changed-name", "false") }}>
+                          No
+                        </label>
+                      </div>
+                    </div>
 
-          <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Did you change your name when you got married?
-                  </h1>
-                </legend>
-                  
+                  </fieldset>
+                </div>
+
+                 
                 <!--  <p class="govuk-body">
                   Ther court needs to know if you changed your name when you got married.
                   </p> -->
                   
-                  <div id="passport-number-hint" class="govuk-hint">
-              For example, from your maiden name
-            </div>
-                  
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <!--<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="true" data-aria-controls="conditional-contact">
                     <label class="govuk-label govuk-radios__label" for="contact">
                       Yes
                     </label>
                   </div>
-                 <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
                         
@@ -85,17 +102,15 @@
                       </fieldset>
                     </div>
 
-                  </div> -->
+                  </div> 
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="false" data-aria-controls="conditional-contact-2">
                     <label class="govuk-label govuk-radios__label" for="contact-2">
                       No
                     </label>
                   </div>
-                </div>
+                </div> -->
                     
-              </fieldset>
-            </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
