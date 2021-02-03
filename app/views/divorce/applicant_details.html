@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Your names on your marriage certificate - GOV.UK
+  Apply for a divorce - Applicant details pages  - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,53 +21,31 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="name_changed_deed.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Your names on your marriage certificate</h1>
+        <form action="/divorce/respondent_email" method="post" novalidate>
 
-        <form action="/divorce/name_changed" method="post" novalidate>
-            
-            <p class="govuk-body">
-                  These are the names you and your {husband / wife} used before you were married. They can sometimes be different from your current names. For example, if {you / your wife} had a maiden name. 
+          <div class="govuk-form-group">
+              
+                  <h1 class="govuk-heading-l">
+                    Applicant details pages 
+                  </h1>
+                
+                  
+                  <p class="govuk-body">
+                  Holding pages for applicant contact details.  
                   </p>
-            
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                Copy the marriage certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.
-              </strong>
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your full name from the marriage certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your {husband’s / wife's} full name from the marriage certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div> 
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+                 
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
         </form>
       </div>
     </div>

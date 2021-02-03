@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Your names on your civil partnership certificate - GOV.UK
+  Apply to end a civil partnership - You need to prove that your name has changed - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,53 +60,65 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="name_changed_deed_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Your names on your civil partnership certificate</h1>
+        <form action="/civil_partnership/applicant_details_cp" method="post" novalidate>
 
-        <form action="/civil_partnership/name_changed_cp" method="post" novalidate>
-            
-            <p class="govuk-body">
-                  These are the names you and your civil partner used before you formed your civil partnership. They can sometimes be different from your current names. For example, if your civil partner had a maiden name. 
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    You need to prove that your name has changed
+                  </h1>
+                </legend>
+                  
+                  <p class="govuk-body">
+                  You can upload a photo of the deed poll or statutory declaration later in this online service. Or if you changed your name another way then you can upload a copy of that document.  
                   </p>
-            
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                Copy the civil partnership certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.
-              </strong>
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your full name from the civil partnership certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your civil partner's full name from the civil partnership certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div> 
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+                  
+                  <p class="govuk-body">
+                  If you cannot upload a photo of the document, then you can post it to the court. You will be given the address after you have completed this application. 
+                  </p>
+                  
+                  <!--<div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="life-in-uk-1" name="life-in-uk" type="radio" value="true" {{ checked("life-in-uk", "true") }}>
+                        <label class="govuk-label govuk-radios__label" for="life-in-uk-1">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="life-in-uk-2" name="life-in-uk" type="radio" value="false" {{ checked("life-in-uk", "false") }}>
+                        <label class="govuk-label govuk-radios__label" for="life-in-uk-2">
+                          No
+                        </label>
+                      </div>
+                    </div> -->
+                  
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          I do not have a document proving that I changed my name
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+                          <div class="govuk-!-padding-bottom-4"></div>
+                          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                      </div>
+                    </details>
+                  
+              </fieldset>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
         </form>
       </div>
     </div>

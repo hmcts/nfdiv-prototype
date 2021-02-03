@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Your names on your civil partnership certificate - GOV.UK
+  Apply to end a civil partnership - Have you changed your name since forming your civil partnership? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,53 +60,46 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="name_changed_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Your names on your civil partnership certificate</h1>
-
-        <form action="/civil_partnership/name_changed_cp" method="post" novalidate>
+        <form action="/civil_partnership/applicant_holding_cp" method="post" novalidate>
             
-            <p class="govuk-body">
-                  These are the names you and your civil partner used before you formed your civil partnership. They can sometimes be different from your current names. For example, if your civil partner had a maiden name. 
-                  </p>
-            
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                Copy the civil partnership certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.
-              </strong>
-            </div>
+             <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-cp-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Have you changed your name since forming your civil partnership?
+                      </h1>
+                    </legend>
+                    <div id="changed-name-hint-cp" class="govuk-hint">
+                      For example by deed poll, statutory declaration or another way. 
+                    </div>
+                    <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name-cp-3" name="changed-name-since-cp" type="radio" value="true">
+                        <label class="govuk-label govuk-radios__label" for="changed-name-cp-3" {{ checked("changed-name-since-cp", "true") }}>
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name-cp-4" name="changed-name-since-cp" type="radio" value="false">
+                        <label class="govuk-label govuk-radios__label" for="changed-name-cp-4" {{ checked("changed-name-since-cp", "false") }}>
+                          No
+                        </label>
+                      </div>
+                    </div>
 
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your full name from the civil partnership certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+                  </fieldset>
             </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your civil partner's full name from the civil partnership certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div> 
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-            </div>
-
+         
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
         </form>
       </div>
     </div>

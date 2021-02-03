@@ -128,6 +128,34 @@ router.post('/divorce/where_you_married_1', function (req, res) {
   }
 })
 
+router.post('/divorce/applicant_holding', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['changed-name-since']
+
+  if (over18 === 'false') {
+    res.redirect('/divorce/applicant_details')
+  } else {
+    res.redirect('/divorce/deed_poll')
+  }
+})
+
+router.post('/divorce/respondent_postal_address', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['respondent-address']
+
+  if (over18 === 'true') {
+    res.redirect('/divorce/respondent_postal_address')
+  } else {
+    res.redirect('/divorce/other_court_cases')
+  }
+})
+
 
 // Branching - CIVIL PARTNERSHIP
 router.post('/civil_partnership/civil_partnership_date', function (req, res) {
@@ -225,6 +253,20 @@ router.post('/civil_partnership/where_you_formed_cp_1', function (req, res) {
     res.redirect('/civil_partnership/where_you_formed_cp_1')
   } else {
     res.redirect('/civil_partnership/need_certified_translation_cp')
+  }
+})
+
+router.post('/civil_partnership/applicant_holding_cp', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['changed-name-since-cp']
+
+  if (over18 === 'false') {
+    res.redirect('/civil_partnership/applicant_details_cp')
+  } else {
+    res.redirect('/civil_partnership/deed_poll_cp')
   }
 })
 

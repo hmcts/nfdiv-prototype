@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Your names on your civil partnership certificate - GOV.UK
+  Apply to end a civil partnership - Other court cases relating your marriage, property or children - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,53 +60,60 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="address_2_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Your names on your civil partnership certificate</h1>
-
-        <form action="/civil_partnership/name_changed_cp" method="post" novalidate>
-            
-            <p class="govuk-body">
-                  These are the names you and your civil partner used before you formed your civil partnership. They can sometimes be different from your current names. For example, if your civil partner had a maiden name. 
-                  </p>
-            
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                Copy the civil partnership certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.
-              </strong>
-            </div>
+        <form action="#" method="post" novalidate>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your full name from the civil partnership certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your civil partner's full name from the civil partnership certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div> 
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Other court cases relating your civil partnership, property or children 
+                  </h1>
+                </legend>
+                  
+                  <p class="govuk-body">
+                  The court needs to know if there are any other legal proceedings related to your civil partnership, property or children. This includes any legal proceedings that are:   
+                  </p> 
+                  
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>ongoing, finished or abandoned</li>
+                    <li>between you and your civil partner</li>
+                    <li>between you, your civil partner and anyone else </li>
+                  </ul> 
+                  
+                  <h2 class="govuk-heading-m">Are there, or have there ever been, any other legal proceedings relating to your civil partnership, property or children? </h2>
+                  
+                  <div id="other-cases" class="govuk-hint">
+                Do not include legal proceedings that may happen in the future. 
+              </div>
+                  
+                <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="other_court_cases-cp-1" name="other_court_cases-cp" type="radio" value="true" {{ checked("other_court_cases-cp", "true") }}>
+                        <label class="govuk-label govuk-radios__label" for="other_court_cases-cp-1">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="other_court_cases-cp-2" name="other_court_cases-cp" type="radio" value="false" {{ checked("other_court_cases-cp", "false") }}>
+                        <label class="govuk-label govuk-radios__label" for="other_court_cases-cp-2">
+                          No
+                        </label>
+                      </div>
+                    </div> 
+                 
+              </fieldset>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
         </form>
       </div>
     </div>

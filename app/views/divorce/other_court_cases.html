@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - You need to prove that your name has changed - GOV.UK
+  Apply for a divorce - Other court cases relating your marriage, property or children - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,59 +21,54 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="name_changed_deed.html">Back</a>
+  <a class="govuk-back-link" href="address_2.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/applicant_details" method="post" novalidate>
+        <form action="#" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    You need to prove that your name has changed
+                    Other court cases relating your marriage, property or children 
                   </h1>
                 </legend>
                   
                   <p class="govuk-body">
-                  You can upload a photo of the deed poll or statutory declaration later in this online service. Or if you changed your name another way then you can upload a copy of that document.  
-                  </p>
+                  The court needs to know if there are any other legal proceedings related to your marriage, property or children. This includes any legal proceedings that are:   
+                  </p> 
                   
-                  <p class="govuk-body">
-                  If you cannot upload a photo of the document, then you can post it to the court. You will be given the address after you have completed this application. 
-                  </p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>ongoing, finished or abandoned</li>
+                    <li>between you and your {husband / wife}</li>
+                    <li>between you, your {husband / wife} and anyone else </li>
+                  </ul> 
                   
-                  <!--<div class="govuk-radios govuk-radios--inline">
+                  <h2 class="govuk-heading-m">Are there, or have there ever been, any other legal proceedings relating to your marriage, property or children? </h2>
+                  
+                  <div id="other-cases" class="govuk-hint">
+                Do not include legal proceedings that may happen in the future. 
+              </div>
+                  
+                <div class="govuk-radios govuk-radios--inline">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="life-in-uk-1" name="life-in-uk" type="radio" value="true" {{ checked("life-in-uk", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="life-in-uk-1">
+                        <input class="govuk-radios__input" id="other_court_cases-1" name="other_court_cases" type="radio" value="true" {{ checked("other_court_cases", "true") }}>
+                        <label class="govuk-label govuk-radios__label" for="other_court_cases-1">
                           Yes
                         </label>
                       </div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="life-in-uk-2" name="life-in-uk" type="radio" value="false" {{ checked("life-in-uk", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="life-in-uk-2">
+                        <input class="govuk-radios__input" id="other_court_cases-2" name="other_court_cases" type="radio" value="false" {{ checked("other_court_cases", "false") }}>
+                        <label class="govuk-label govuk-radios__label" for="other_court_cases-2">
                           No
                         </label>
                       </div>
-                    </div> -->
-                  
-                  <details class="govuk-details" data-module="govuk-details">
-                      <summary class="govuk-details__summary">
-                        <span class="govuk-details__summary-text">
-                          I do not have a document proving that I changed my name
-                        </span>
-                      </summary>
-                      <div class="govuk-details__text">
-                        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
-                          <div class="govuk-!-padding-bottom-4"></div>
-                          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                      </div>
-                    </details>
-                  
+                    </div> 
+                 
               </fieldset>
             </div>
 

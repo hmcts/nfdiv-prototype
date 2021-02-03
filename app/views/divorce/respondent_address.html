@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Your names on your marriage certificate - GOV.UK
+  Apply for a divorce - Do you have your {husband’s / wife’s} address? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,53 +21,52 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="respondent_email.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Your names on your marriage certificate</h1>
-
-        <form action="/divorce/name_changed" method="post" novalidate>
-            
-            <p class="govuk-body">
-                  These are the names you and your {husband / wife} used before you were married. They can sometimes be different from your current names. For example, if {you / your wife} had a maiden name. 
-                  </p>
-            
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                Copy the marriage certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.
-              </strong>
-            </div>
+        <form action="/divorce/respondent_postal_address" method="post" novalidate>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your full name from the marriage certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your {husband’s / wife's} full name from the marriage certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div> 
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you have your {husband’s / wife’s} address?
+                  </h1>
+                </legend>
+                  
+                  <p class="govuk-body">
+                  The court needs to know where to send information and documents relating to the divorce.   
+                  </p> 
+                  
+                  <div class="govuk-inset-text">
+                      <p>The address can be their postal address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission.</p>
+                    </div>
+                  
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="true" {{ checked("respondent-address", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-1">
+                      Yes, I have their address   
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-2" name="respondent-address" type="radio" value="false" {{ checked("respondent-address", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                      No, I do not have their address
+                    </label>
+                  </div>
+                </div> 
+                 
+              </fieldset>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
         </form>
       </div>
     </div>
