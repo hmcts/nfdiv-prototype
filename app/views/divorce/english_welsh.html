@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - What is your home address? - GOV.UK
+  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,47 +28,31 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/address_2" method="post" novalidate>
+        <form action="#" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" role="group" aria-describedby="marriage-date-hint">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    What is your home address?
+                    Do you need emails and letters in English or Welsh?
                   </h1>
                 </legend>
                   
-                  <p class="govuk-body">
-                  Enter the date from your marriage certificate. 
-                  </p>
-                  
-                <div id="marriage-date-hint" class="govuk-hint">
-                  For example, 31 3 2002
-                </div>
-                <div class="govuk-date-input" id="marriage-date">
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="marriage-date-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="marriage-date-day" name="marriage-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['marriage-date-day'] }}"></div>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="english-welsh-1" name="english-welsh" type="radio" value="english" {{ checked("english-welsh", "english") }}>
+                    <label class="govuk-label govuk-radios__label" for="english-welsh-1">
+                      English  
+                    </label>
                   </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="marriage-date-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="marriage-date-month" name="marriage-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['marriage-date-month'] }}"></div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="english-welsh-2" name="english-welsh" type="radio" value="welsh" {{ checked("english-welsh", "welsh") }}>
+                    <label class="govuk-label govuk-radios__label" for="english-welsh-2">
+                      Welsh 
+                    </label>
                   </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="marriage-date-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="marriage-date-year" name="marriage-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['marriage-date-year'] }}"></div>
-                  </div>
-                </div>
-
+                </div> 
+                 
               </fieldset>
             </div>
 
@@ -79,7 +63,7 @@
       </div>
     </div>
 
-<p><a href="/divorce/wrong_marriage_date">Save and sign out</a></p>
+<p><a href="#">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 
