@@ -27,21 +27,19 @@
 {% block content %}
 
 
-
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-          <form action="/divorce/jurisdiction_confirmation" method="post" novalidate>
-        
+        <h1 class="govuk-heading-l">Are your lives based in England or Wales?</h1>
+          
+          <p>The court needs to know whether you and your {husband’s / wife’s} lives are based in England or Wales. This may include working, owning property, having children in school, or your main family life taking place in England or Wales.</p>
+
+        <form action="/divorce/jurisdiction_confirmation" method="post" novalidate>
+
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Is your life mainly based in England or Wales?
-                  </h1>
-                </legend>
-            <p class="govuk-body">
-              This may include working, owning property, having children in school, or your main family life taking place in England or Wales.
-            </p>
+            <label class="govuk-label govuk-label--m" for="passport-number">
+              Is your life mainly based in England or Wales? 
+            </label>
+            
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="life-based-uk-1" name="life-based-uk" type="radio" value="true" {{ checked("life-based-uk", "true") }}>
@@ -56,33 +54,27 @@
                      </label>
                 </div>
             </div>
-            </fieldset>
           </div>
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                Is your {husband's / wife's} life mainly based in England or Wales?
-              </legend>
-              <div id="expiry-hint" class="govuk-hint">
-                This may include working, owning property, having children in school, or your main family life taking place in England or Wales.
-              </div>
-              <div class="govuk-radios govuk-radios--inline">
+            <label class="govuk-label govuk-label--m" for="passport-number">
+              Is your {husband's / wife's} life mainly based in England or Wales? 
+            </label>
+            
+            <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="life-based-uk-1" name="life-based-uk" type="radio" value="true" {{ checked("life-based-uk", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="life-based-uk-1">
+                    <input class="govuk-radios__input" id="life-based-uk-3" name="life-based-uk-partner" type="radio" value="true" {{ checked("life-based-uk-partner", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="life-based-uk-3">
                     Yes
                     </label>
                 </div>
                   <div class="govuk-radios__item">
-                     <input class="govuk-radios__input" id="life-based-uk-2" name="life-based-uk" type="radio" value="false" {{ checked("life-based-uk", "false") }}>
-                     <label class="govuk-label govuk-radios__label" for="life-based-uk-2">
+                     <input class="govuk-radios__input" id="life-based-uk-4" name="life-based-uk-partner" type="radio" value="false" {{ checked("life-based-uk-partner", "false") }}>
+                     <label class="govuk-label govuk-radios__label" for="life-based-uk-4">
                      No
                      </label>
                 </div>
             </div>
-
-            </fieldset>
           </div>
 
           <button class="govuk-button" data-module="govuk-button">
@@ -92,8 +84,6 @@
         </form>
       </div>
     </div>
-
-
 
 <p><a href="#">Save and sign out</a></p>
 
