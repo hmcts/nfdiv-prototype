@@ -36,12 +36,55 @@
                     You can use the English or Welsh courts to get a divorce
                   </h1>
                 
-                  
                   <p class="govuk-body">
-                  Your answers indicate that you can apply for a divorce in England or Wales. You can continue with your application. 
+                  Your answers indicate that you can apply for a divorce in England or Wales because both of you are 'habitually resident'. 
                   </p>
                   
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Read more about habitual residence
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    If your life is mainly based in England or Wales then you're what is legally known as 'habitually resident'.
+                  </div>
+                  <div class="govuk-details__text">
+                    This may include working, owning property, having children in school, or your main family life taking place in England or Wales.
+                  </div>
+                  <div class="govuk-details__text">
+                    The examples above aren't a complete list of what makes up habitual residence, and just because some of them apply to you doesn't mean you're habitually resident. If you're not sure, you should get legal advice. 
+                  </div>
+              </details>
               
+            </div>
+            
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                      Do you want to add more connections to England and Wales?
+                  </h1>
+                </legend>
+                  
+                <p>You only need to do this if your husband may disagree that both of you are habitually resident.</p>
+                  
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="true" {{ checked("help-fees", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-1">
+                      I'm confident that connection is right	
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="false" {{ checked("help-fees", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-2">
+                      I'm not sure, and I want to add more connections
+                    </label>
+                  </div>
+                </div> 
+                 
+              </fieldset>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
