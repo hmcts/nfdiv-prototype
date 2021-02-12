@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
+  Apply for a divorce - Your consent to receive emails   - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,52 +21,48 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="name_changed_deed.html">Back</a>
+  <a class="govuk-back-link" href="applicant_phone_number.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="#" method="post" novalidate>
-
+        <form action="/divorce/respondent_email" method="post" novalidate>
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    What language do you want to receive emails and documents in? 
-                  </h1>
-                </legend>
-                  
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-welsh-1" name="english-welsh" type="radio" value="english" {{ checked("english-welsh", "english") }}>
-                    <label class="govuk-label govuk-radios__label" for="english-welsh-1">
-                      English  
+            <h1 class="govuk-heading-l">Your consent to receive emails</h1>
+              
+              <p class="govuk-body">
+              You have to agree to receive emails to use the online divorce service. The emails will contain information and updates, and links to court documents relating to the divorce. 
+            </p>
+              
+              <p class="govuk-body">
+              Emails will be sent to: email address
+            </p>
+              
+              <p class="govuk-body">
+              Your email address will not be shared with your {husband / wife}. 
+            </p>
+              
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="app-email-address-1" name="app-email-address" type="checkbox" value="checked" {{ checked("app-email-address", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="app-email-address-1">
+                      I agree that the divorce service can send me notifications and serve (deliver) court documents to me by email. 
                     </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-welsh-2" name="english-welsh" type="radio" value="welsh" {{ checked("english-welsh", "welsh") }}>
-                    <label class="govuk-label govuk-radios__label" for="english-welsh-2">
-                      Welsh 
-                    </label>
-                  </div>
-                </div> 
-                 
-              </fieldset>
-            </div>
+                  </div>  
+                </div>
+            </div>  
 
-            <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
-                Continue
-              </a>
-            
-            <a href="/divorce/applicant_postal_address_v2" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
-                Continue v2
-              </a>
-            
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
         </form>
       </div>
     </div>
+    
 
 <p><a href="#">Save and sign out</a></p>
 
