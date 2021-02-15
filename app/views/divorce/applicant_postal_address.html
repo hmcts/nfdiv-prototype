@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
+  Apply for a divorce - Enter your address - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,52 +21,47 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="name_changed_deed.html">Back</a>
+  <a class="govuk-back-link" href="english_welsh.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="#" method="post" novalidate>
+        <h1 class="govuk-heading-l">Enter your address</h1>
+
+        <form action="/divorce/applicant_address_select" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    What language do you want to receive emails and documents in? 
-                  </h1>
-                </legend>
-                  
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-welsh-1" name="english-welsh" type="radio" value="english" {{ checked("english-welsh", "english") }}>
-                    <label class="govuk-label govuk-radios__label" for="english-welsh-1">
-                      English  
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-welsh-2" name="english-welsh" type="radio" value="welsh" {{ checked("english-welsh", "welsh") }}>
-                    <label class="govuk-label govuk-radios__label" for="english-welsh-2">
-                      Welsh 
-                    </label>
-                  </div>
-                </div> 
-                 
-              </fieldset>
+              
+           <label class="govuk-label" for="address-postcode">
+              Enter a UK postcode
+            </label>
+                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" value="{{ data['address-postcode'] }}">
             </div>
 
-            <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
-                Continue
-              </a>
+          <button class="govuk-button" data-module="govuk-button">
+            Find address
+          </button>
             
-            <a href="/divorce/applicant_address_private" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
-                Continue v2
-              </a>
-            
+            <p class="govuk-body">
+              <a href="/divorce/applicant_address_no_postcode" class="govuk-link">I cannot enter a UK postcode</a>
+            </p>
+
         </form>
       </div>
     </div>
+
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="private-address-1" name="private-address" type="checkbox" value="checked" {{ checked("private-address", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="private-address-1">
+                      Keep my address private from my {husband / wife} 
+                    </label>
+                  </div>  
+                </div>
+            </div>
 
 <p><a href="#">Save and sign out</a></p>
 

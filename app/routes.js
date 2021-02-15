@@ -136,7 +136,7 @@ router.post('/divorce/applicant_holding', function (req, res) {
   const over18 = req.session.data['changed-name-since']
 
   if (over18 === 'false') {
-    res.redirect('/divorce/applicant_details')
+    res.redirect('/divorce/english_welsh')
   } else {
     res.redirect('/divorce/deed_poll')
   }
@@ -149,13 +149,26 @@ router.post('/divorce/respondent_postal_address', function (req, res) {
 
   const over18 = req.session.data['respondent-address']
 
-  if (over18 === 'true') {
-    res.redirect('/divorce/respondent_postal_address')
+  if (over18 === 'false') {
+    res.redirect('/divorce/respondent_no_address')
   } else {
-    res.redirect('/divorce/other_court_cases')
+    res.redirect('/divorce/respondent_postal_address')
   }
 })
 
+router.post('/divorce/respondent_address', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['no-email-address']
+
+  if (over18 == 'checked') {
+    res.redirect('/divorce/respondent_address_no_email')
+  } else {
+    res.redirect('/divorce/respondent_address')
+  }
+})
 
 // Branching - CIVIL PARTNERSHIP
 router.post('/civil_partnership/civil_partnership_date', function (req, res) {
@@ -267,6 +280,20 @@ router.post('/civil_partnership/applicant_holding_cp', function (req, res) {
     res.redirect('/civil_partnership/applicant_details_cp')
   } else {
     res.redirect('/civil_partnership/deed_poll_cp')
+  }
+})
+
+router.post('/civil_partnership/respondent_address_cp', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['no-email-address-cp']
+
+  if (over18 == 'checked') {
+    res.redirect('/civil_partnership/respondent_address_no_email_cp')
+  } else {
+    res.redirect('/civil_partnership/respondent_address_cp')
   }
 })
 

@@ -30,14 +30,14 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Enter your {husband’s / wife’s} address</h1>
 
-        <form action="/divorce/address_2" method="post" novalidate>
+        <form action="/divorce/respondent_address_select" method="post" novalidate>
 
           <div class="govuk-form-group">
               
            <label class="govuk-label" for="address-postcode">
               Enter a UK postcode
             </label>
-                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+                <input class="govuk-input govuk-input--width-10" id="rep-address-postcode" name="rep-address-postcode" type="text" autocomplete="postal-code" value="{{ data['rep-address-postcode'] }}">
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
@@ -45,7 +45,7 @@
           </button>
             
             <p class="govuk-body">
-              <a href="/divorce/address_no_postcode" class="govuk-link">I cannot enter a UK postcode</a>
+              <a href="/divorce/respondent_address_no_postcode" class="govuk-link">I cannot enter a UK postcode</a>
             </p>
 
         </form>

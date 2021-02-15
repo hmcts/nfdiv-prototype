@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Enter your {husband’s / wife’s} address - GOV.UK
+  Apply for a divorce - Enter your address - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,19 +21,19 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="address_2.html">Back</a>
+  <a class="govuk-back-link" href="applicant_address_select_v2.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/other_court_cases" method="post" novalidate>
+        <form action="/divorce/applicant_phone_number" method="post" novalidate>
 
           <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Enter your {husband’s / wife’s} address
+                  Enter your address
                 </h1>
               </legend>
 
