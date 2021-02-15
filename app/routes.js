@@ -178,9 +178,9 @@ router.post('/divorce/other_court_cases', function (req, res) {
   const over18 = req.body['papers-served']
 
   if (over18 == 'checked') {
-    res.redirect('/divorce/respondent_postal_address')
+    res.redirect('/divorce//other_court_cases')
   } else {
-    res.redirect('/divorce/other_court_cases')
+    res.redirect('/divorce/respondent_postal_address')
   }
 })
 
