@@ -33,26 +33,30 @@
         <form action="/divorce/respondent_address" method="post" novalidate>
 
           <div class="govuk-form-group">
-            
+
             <p class="govuk-body">
-                This is so the court can send them information and updates relating to the divorce. It’s important to provide their email address so updates and documents can be sent to them online. 
+                It’s important you provide their email address so the court can ‘serve’ (deliver) documents to them online. The emails will also contain information and updates relating to the divorce.  
             </p>
-              
+
            <label class="govuk-label" for="width-20">
                Your {husband's / wife’s} email address
+
             </label> 
               
             <input class="govuk-input" id="res-email" name="res-email" value="{{ data['res-email'] }}" type="email" spellcheck="false" autocomplete="email">
+
             </div>
-            
+
             <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
+
                     <input class="govuk-checkboxes__input" id="no-email-address-1" name="no-email-address" type="checkbox" value="checked" {{ checked("no-email-address", "checked") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="no-email-address-1">
                       I do not know their email address 
+
                     </label>
-                  </div>  
+                  </div>
                 </div>
             </div>
 
