@@ -54,9 +54,11 @@
         <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="postal-address" name="postal-address" type="checkbox" value="postal-address-false">
-                    <label class="govuk-label govuk-checkboxes__label" for="postal-address">
-                      I want to apply to have the papers ‘served’ (delivered) to them another way  
+
+                    <input class="govuk-checkboxes__input" id="papers-served" name="papers-served" type="checkbox" value="checked" {{ checked("papers-served", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="papers-served">
+                      I want to apply to have the papers ‘served’ (sent to them) another way  
+
                     </label>
                   </div>
                 </div>

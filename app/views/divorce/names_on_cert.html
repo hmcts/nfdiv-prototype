@@ -45,23 +45,23 @@
             </div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
+            <label class="govuk-label govuk-label--m" for="app-name-cert">
               Copy your full name from the marriage certificate 
             </label>
-            <div id="passport-number-hint" class="govuk-hint">
+            <div id="app-name-cert-hint" class="govuk-hint">
               Include all the text related to the name
             </div>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+            <input class="govuk-input govuk-input--width-20" id="app-name-cert" name="app-name-cert" type="text" aria-describedby="app-name-cert-hint" value="{{ data['app-name-cert'] }}">
             </div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
+            <label class="govuk-label govuk-label--m" for="res-name-cert">
               Copy your {husband’s / wife's} full name from the marriage certificate 
             </label>
-            <div id="passport-number-hint" class="govuk-hint">
+            <div id="res-name-cert-hint" class="govuk-hint">
               Include all the text related to the name
             </div> 
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+            <input class="govuk-input govuk-input--width-20" id="res-name-cert" name="res-name-cert" type="text" aria-describedby="res-name-cert-hint" value="{{ data['res-name-cert'] }}">
             </div>
 
           <button class="govuk-button" data-module="govuk-button">

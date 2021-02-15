@@ -33,43 +33,43 @@
         <form action="/divorce/names_on_cert" method="post" novalidate>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
+            <label class="govuk-label govuk-label--m" for="app-first-name">
               Enter your name 
             </label>
            <label class="govuk-label" for="width-20">
                Your first name(s)
             </label> 
-              <div id="passport-number-hint" class="govuk-hint">
+              <div id="app-first-name-hint" class="govuk-hint">
               Include your middle name(s)
             </div>
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+            <input class="govuk-input govuk-input--width-20" id="app-first-name" name="app-first-name" type="text" aria-describedby="app-first-name-hint" value="{{ data['app-first-name'] }}">
             </div>
             
             <div class="govuk-form-group">
             <label class="govuk-label" for="width-20">
                Your last name(s)
             </label>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+            <input class="govuk-input govuk-input--width-20" id="app-last-name" name="app-last-name" type="text" value="{{ data['app-last-name'] }}">
           </div> 
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
+            <label class="govuk-label govuk-label--m" for="res-first-name">
               Enter your {husband’s/wife's} name 
             </label>
             <label class="govuk-label" for="width-20">
                Your {Husband’s/Wife's} first name(s)
             </label> 
-              <div id="passport-number-hint" class="govuk-hint">
+              <div id="res-first-name-hint" class="govuk-hint">
               Include their middle name(s)
             </div>
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+            <input class="govuk-input govuk-input--width-20" id="res-first-name" name="res-first-name" type="text" aria-describedby="res-first-name-hint" value="{{ data['res-first-name'] }}">
             </div>
             
             <div class="govuk-form-group">
             <label class="govuk-label" for="width-20">
                Your {Husband’s/Wife's} last name(s)
             </label>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
+            <input class="govuk-input govuk-input--width-20" id="res-last-name" name="res-last-name" type="text" value="{{ data['res-last-name'] }}">
           </div> 
 
           <button class="govuk-button" data-module="govuk-button">

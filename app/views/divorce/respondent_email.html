@@ -21,7 +21,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="applicant_address_select.html">Back</a>
+  <a class="govuk-back-link" href="applicant_consent.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -40,9 +40,11 @@
 
            <label class="govuk-label" for="width-20">
                Your {husband's / wife’s} email address
-            </label>
 
-            <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" autocomplete="email">
+            </label> 
+              
+            <input class="govuk-input" id="res-email" name="res-email" value="{{ data['res-email'] }}" type="email" spellcheck="false" autocomplete="email">
+
             </div>
 
             <div class="govuk-form-group">
