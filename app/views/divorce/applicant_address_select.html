@@ -47,11 +47,11 @@
               </label>
               <select class="govuk-select govuk-!-width-three-quarters" id="address-select" name="address-select">
                 <option>5 addresses found</option>
-                <option>1 Main Street, London, {{ data['postcode'] }} </option>
-                <option>2 Main Street, London, {{ data['postcode'] }} </option>
-                <option>3 Main Street, London, {{ data['postcode'] }} </option>
-                <option>4 Main Street, London, {{ data['postcode'] }} </option>
-                <option>5 Main Street, London, {{ data['postcode'] }} </option>
+                <option>1 Main Street, London, {{ data['address-postcode'] }} </option>
+                <option>2 Main Street, London, {{ data['address-postcode'] }} </option>
+                <option>3 Main Street, London, {{ data['address-postcode'] }} </option>
+                <option>4 Main Street, London, {{ data['address-postcode'] }} </option>
+                <option>5 Main Street, London, {{ data['address-postcode'] }} </option>
               </select>
           </div>
 
@@ -66,7 +66,7 @@
         <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="private-address-1" name="private-address" type="checkbox" value="checked" {{ checked("private-address", "checked") }}>
+                    <input class="govuk-checkboxes__input" id="private-address-2" name="private-address-2" type="checkbox" value="checked" {{ checked("private-address-2", "checked") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="private-address-1">
                       Keep my address private from my {husband / wife} 
                     </label>
