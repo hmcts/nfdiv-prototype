@@ -40,16 +40,17 @@
                     <div id="changed-name-hint" class="govuk-hint">
                       For example, from a maiden name
                     </div>
+                      
                     <div class="govuk-radios govuk-radios--inline">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="true">
-                        <label class="govuk-label govuk-radios__label" for="changed-name" {{ checked("changed-name", "true") }}>
+                        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="true" {{ checked("changed-name", "true") }}>
+                        <label class="govuk-label govuk-radios__label" for="changed-name-1">
                           Yes
                         </label>
                       </div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="false">
-                        <label class="govuk-label govuk-radios__label" for="changed-name-2" {{ checked("changed-name", "false") }}>
+                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="false" {{ checked("changed-name", "false") }}>
+                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
                           No
                         </label>
                       </div>

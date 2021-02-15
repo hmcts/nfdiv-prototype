@@ -170,6 +170,20 @@ router.post('/divorce/respondent_address', function (req, res) {
   }
 })
 
+router.post('/divorce/other_court_cases', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['papers-served']
+
+  if (over18 == 'checked') {
+    res.redirect('/divorce/respondent_postal_address')
+  } else {
+    res.redirect('/divorce/other_court_cases')
+  }
+})
+
 // Branching - CIVIL PARTNERSHIP
 router.post('/civil_partnership/civil_partnership_date', function (req, res) {
   // Get the answer from session data
