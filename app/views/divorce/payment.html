@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Other court cases relating your marriage, property or children - GOV.UK
+  Apply for a divorce - Payment - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,56 +21,20 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="address_2.html">Back</a>
+  <a class="govuk-back-link" href="claim_costs.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="#" method="post" novalidate>
-
-          <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Other court cases relating your marriage, property or children 
+        <form action="/divorce/confirmation" method="post" novalidate>
+            
+            <h1 class="govuk-heading-xl">
+                    Payment
                   </h1>
-                </legend>
-                  
-                  <p class="govuk-body">
-                  The court needs to know if there are any other legal proceedings related to your marriage, property or children. This includes any legal proceedings that are:   
-                  </p> 
-                  
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>ongoing, finished or abandoned</li>
-                    <li>between you and your {husband / wife}</li>
-                    <li>between you, your {husband / wife} and anyone else </li>
-                  </ul> 
-                  
-                  <h2 class="govuk-heading-m">Are there, or have there ever been, any other legal proceedings relating to your marriage, property or children? </h2>
-                  
-                  <div id="other-cases" class="govuk-hint">
-                Do not include legal proceedings that may happen in the future. 
-              </div>
-                  
-                <div class="govuk-radios govuk-radios--inline">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="other_court_cases-1" name="other_court_cases" type="radio" value="true" {{ checked("other_court_cases", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="other_court_cases-1">
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="other_court_cases-2" name="other_court_cases" type="radio" value="false" {{ checked("other_court_cases", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="other_court_cases-2">
-                          No
-                        </label>
-                      </div>
-                    </div> 
-                 
-              </fieldset>
-            </div>
+
+          
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
@@ -78,10 +42,6 @@
         </form>
       </div>
     </div>
-
-<p><a href="#">Save and sign out</a></p>
-
-<div class="govuk-!-padding-bottom-4"></div>
 
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
