@@ -9,7 +9,7 @@ router.post('/divorce/marriage_date', function (req, res) {
 
   const over18 = req.session.data['broken-down']
 
-  if (over18 === 'false') {
+  if (over18 === 'No') {
     res.redirect('/divorce/cannot_divorce')
   } else {
     res.redirect('/divorce/marriage_date')
@@ -37,7 +37,7 @@ router.post('/divorce/help_fees', function (req, res) {
 
   const over18 = req.session.data['marriage-certificate']
 
-  if (over18 === 'false') {
+  if (over18 === 'No') {
     res.redirect('/divorce/no_marriage_cert')
   } else {
     res.redirect('/divorce/help_fees')
@@ -65,7 +65,7 @@ router.post('/divorce/marry_in_uk', function (req, res) {
 
   const over18 = req.session.data['help-fees']
 
-  if (over18 === 'true') {
+  if (over18 === 'I need help paying the fee') {
     res.redirect('/divorce/help_fees_number')
   } else {
     res.redirect('/divorce/marry_in_uk')
@@ -93,7 +93,7 @@ router.post('/divorce/jurisdiction-page', function (req, res) {
 
   const over18 = req.session.data['marry-uk']
 
-  if (over18 === 'true') {
+  if (over18 === 'Yes') {
     res.redirect('/divorce/jurisdiction')
   } else {
     res.redirect('/divorce/english_cert')
@@ -170,7 +170,7 @@ router.post('/divorce/respondent_address', function (req, res) {
   }
 })
 
-router.post('/divorce/other_court_cases', function (req, res) {
+router.post('/divorce/other-court-cases', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -178,9 +178,23 @@ router.post('/divorce/other_court_cases', function (req, res) {
   const over18 = req.body['papers-served']
 
   if (over18 == 'checked') {
-    res.redirect('/divorce//other_court_cases')
+    res.redirect('/divorce/other_court_cases')
   } else {
     res.redirect('/divorce/respondent_postal_address')
+  }
+})
+
+router.post('/divorce/money-property', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['other-court-cases']
+
+  if (over18 === 'false') {
+    res.redirect('/divorce/money_property')
+  } else {
+    res.redirect('/divorce/other_court_cases_details')
   }
 })
 

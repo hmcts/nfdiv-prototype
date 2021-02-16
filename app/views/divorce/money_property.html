@@ -31,12 +31,10 @@
         <form action="/divorce/claim_costs" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
+              
+                  <h1 class="govuk-heading-l">
                     Dividing your money and property
                   </h1>
-                </legend>
                   
                   <p class="govuk-body">
                   If you agree with your husband about how to split your money, property, pensions and other assets, you can make your agreement legally binding. This is known as asking the court to make a ‘consent order’. You apply for a consent order separately by filling out a ‘D81’ paper application form   
@@ -54,23 +52,51 @@
                 This is known as applying for a ‘financial order’. 
               </div>
                   
-                <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="other_court_cases-1" name="other_court_cases" type="radio" value="true" {{ checked("other_court_cases", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="other_court_cases-1">
+                        <input class="govuk-radios__input" id="money_property" name="money_property" type="radio" value="Yes, I want the court to decide " data-aria-controls="conditional-money_property" {{ checked("money_property", "Yes, I want the court to decide") }}>
+                        <label class="govuk-label govuk-radios__label" for="money_property">
                           Yes, I want the court to decide 
                         </label>
                       </div>
+                      
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="other_court_cases-2" name="other_court_cases" type="radio" value="false" {{ checked("other_court_cases", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="other_court_cases-2">
+                        <input class="govuk-radios__input" id="money_property-2" name="money_property" type="radio" value="No, I do not want the court to decide" data-aria-controls="conditional-money_property-2" {{ checked("money_property", "No, I do not want the court to decide") }}>
+                        <label class="govuk-label govuk-radios__label" for="money_property-2">
                           No, I do not want the court to decide
                         </label>
+                      </div> 
+              
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-money_property">
+                        <div class="govuk-form-group">
+                        
+                            <div class="govuk-!-padding-bottom-2"></div>
+                            
+                      <h2 class="govuk-heading-m">
+                            What will the financial order relate to?  
+                        </h2>    
+                        
+                      <div class="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="money_property-type" name="money_property-type" type="checkbox" value="Our money and property" {{ checked("money_property-type", "Our money and property") }}>
+                            <label class="govuk-label govuk-checkboxes__label" for="money_property-type">
+                              Our money and property 
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="money_property-type-2" name="money_property-type" type="checkbox" value="Our children’s money and property" {{ checked("money_property-type", "Our children’s money and property") }}>
+                            <label class="govuk-label govuk-checkboxes__label" for="money_property-type-2">
+                              Our children’s money and property 
+                            </label>
+                          </div>
+                        </div>
+
                       </div>
-                    </div> 
+                      
+                      </div>
                  
-              </fieldset>
             </div>
+              </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue

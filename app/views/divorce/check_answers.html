@@ -27,142 +27,224 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+    <div class="govuk-grid-column-full-from-desktop">
 
       <h1 class="govuk-heading-xl">Check your answers</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+      <h2 class="govuk-heading-m">Heading</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Name
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Who are you divorcing?
           </dt>
           <dd class="govuk-summary-list__value">
-            Sarah Philips
+            {{ data['husband-wife'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> name</span>
+              <span class="govuk-visually-hidden"> who are you divorcing</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date of birth
+            Type of relationship
           </dt>
           <dd class="govuk-summary-list__value">
-            5 January 1978
+            {{ data['same-sex'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> date of birth</span>
+              <span class="govuk-visually-hidden"> type of relationship</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Contact information
+            Has your marriage irretrievably broken down (it cannot be saved)?
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
+            {{ data['broken-down'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> contact information</span>
+              <span class="govuk-visually-hidden"> marriage irretrievably broken down</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Contact details
+            Date of marriage
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>07700 900457</p>
-            <p>sarah.phillips@example.com</p>
+            {{ data['marriage-date-day'] }} / {{ data['marriage-date-month'] }} / {{ data['marriage-date-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> contact details</span>
+              <span class="govuk-visually-hidden"> date of marriage</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you have your marriage certificate with you?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['marriage-certificate'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> marriage certificate</span>
+            </a>
+          </dd>
+        </div>  
+      </dl>
+
+      <h2 class="govuk-heading-m">Help paying divorce fee</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Do you need help paying the fee for your divorce?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['help-fees'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> help paying the fee</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with Fees number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['help-fees-input'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> help with fees number</span>
             </a>
           </dd>
         </div>
       </dl>
-
-      <h2 class="govuk-heading-m">Application details</h2>
+        
+      <h2 class="govuk-heading-m">Your connections to England and Wales</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Previous application number
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Did you get married in the UK?
           </dt>
           <dd class="govuk-summary-list__value">
-            502135326
+            {{ data['marry-uk'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> previous application number</span>
+              <span class="govuk-visually-hidden"> married in the uk</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence type
+            Is your life mainly based in England or Wales?
           </dt>
           <dd class="govuk-summary-list__value">
-            For personal use
+            {{ data['life-based-uk'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> licence type</span>
+              <span class="govuk-visually-hidden"> your life mainly based in england or wales</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Home address
+            Is your husband's or wife's life mainly based in England or Wales?
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
+            {{ data['life-based-uk-partner'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> home address</span>
+              <span class="govuk-visually-hidden"> husband's or wife's life mainly based in england or wales</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How you're connected to England and Wales
+          </dt>
+          <dd class="govuk-summary-list__value">
+            My partner and I are both habitually resident in England and Wales
+            <div class="govuk-!-padding-bottom-4"></div>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  See the legal version
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                The Applicant and the Respondent are habitually resident in England and Wales
+              </div>
+            </details>  
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>   
+      </dl> 
+      
+      <h2 class="govuk-heading-m">About you and your husband or wife</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Do you need help paying the fee for your divorce?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['help-fees'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> help paying the fee</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence period
+            Help with Fees number
           </dt>
           <dd class="govuk-summary-list__value">
-            Valid for 6 months
+            {{ data['help-fees-input'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> licence period</span>
+              <span class="govuk-visually-hidden"> help with fees number</span>
             </a>
           </dd>
         </div>
-      </dl>
+      </dl>        
 
       <h2 class="govuk-heading-m">Now send your application</h2>
 
       <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-      <form action="/confirmation" method="post" novalidate>
+      <form action="/divorce/payment" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
