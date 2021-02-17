@@ -37,14 +37,14 @@
                   </h1>
                   
                   <p class="govuk-body">
-                  If you agree with your husband about how to split your money, property, pensions and other assets, you can make your agreement legally binding. This is known as asking the court to make a ‘consent order’. You apply for a consent order separately by filling out a ‘D81’ paper application form   
+                  It’s usually more straightforward and less expensive if you agree with your husband or wife on how to divide your money and property. There are mediation services available to help you come to an agreement. You will be given links to further guidance after you have submitted your application.    
                   </p> 
                   
                   <p class="govuk-body">
-                  If you disagree with your husband about money and property then you can ask the court to decide for you. This is known as applying for a ‘financial order’. The court needs to know now if you are planning on applying for a financial order. </p>
+                  If you do agree then you can make the agreement legally binding. This is known as asking the court to make a ‘consent order’. You apply for a consent order separately by filling out a ‘D81’ paper application form. </p>
                   
                   <p class="govuk-body">
-                  The court does not need to know if you are planning on applying for a consent order. </p>
+                  If you disagree then you can ask the court to decide for you. This is known as applying for a ‘financial order’. The court needs to know now if you are planning on applying for a financial order. </p>
                   
                   <h2 class="govuk-heading-m">Do you want the court to decide how to divide your money and property?  </h2>
                   
@@ -54,14 +54,14 @@
                   
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="money_property" name="money_property" type="radio" value="Yes, I want the court to decide " data-aria-controls="conditional-money_property" {{ checked("money_property", "Yes, I want the court to decide") }}>
+                        <input class="govuk-radios__input" id="money_property" name="money_property" type="radio" value="I want the court to decide " data-aria-controls="conditional-money_property" {{ checked("money_property", "I want the court to decide") }}>
                         <label class="govuk-label govuk-radios__label" for="money_property">
                           Yes, I want the court to decide 
                         </label>
                       </div>
                       
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="money_property-2" name="money_property" type="radio" value="No, I do not want the court to decide" data-aria-controls="conditional-money_property-2" {{ checked("money_property", "No, I do not want the court to decide") }}>
+                        <input class="govuk-radios__input" id="money_property-2" name="money_property" type="radio" value="I do not want the court to decide" data-aria-controls="conditional-money_property-2" {{ checked("money_property", "I do not want the court to decide") }}>
                         <label class="govuk-label govuk-radios__label" for="money_property-2">
                           No, I do not want the court to decide
                         </label>
@@ -73,8 +73,11 @@
                             <div class="govuk-!-padding-bottom-2"></div>
                             
                       <h2 class="govuk-heading-m">
-                            What will the financial order relate to?  
-                        </h2>    
+                            What will the financial order relate to?
+                          <div id="contact-hint" class="govuk-hint">
+                          Select all that apply 
+                        </div>
+                        </h2>         
                         
                       <div class="govuk-checkboxes">
                           <div class="govuk-checkboxes__item">

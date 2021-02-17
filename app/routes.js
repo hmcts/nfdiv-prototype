@@ -128,17 +128,17 @@ router.post('/divorce/where_you_married_1', function (req, res) {
   }
 })
 
-router.post('/divorce/applicant_holding', function (req, res) {
+router.post('/divorce/english-welsh', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const over18 = req.session.data['changed-name-since']
+  const over18 = req.session.data['changed-name']
 
-  if (over18 === 'false') {
+  if (over18 === 'No') {
     res.redirect('/divorce/english_welsh')
   } else {
-    res.redirect('/divorce/deed_poll')
+    res.redirect('/divorce/name_changed_deed')
   }
 })
 
@@ -149,7 +149,7 @@ router.post('/divorce/respondent_postal_address', function (req, res) {
 
   const over18 = req.session.data['respondent-address']
 
-  if (over18 === 'false') {
+  if (over18 === 'No, I do not have their address') {
     res.redirect('/divorce/respondent_no_address')
   } else {
     res.redirect('/divorce/respondent_postal_address')
@@ -191,7 +191,7 @@ router.post('/divorce/money-property', function (req, res) {
 
   const over18 = req.session.data['other-court-cases']
 
-  if (over18 === 'false') {
+  if (over18 === 'No') {
     res.redirect('/divorce/money_property')
   } else {
     res.redirect('/divorce/other_court_cases_details')
