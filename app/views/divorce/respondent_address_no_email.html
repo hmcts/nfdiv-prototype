@@ -34,7 +34,7 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Do you have your {husband’s / wife’s} address?
+                    Do you have your husband’s or wife’s address?
                   </h1>
                 </legend>
                   
@@ -51,13 +51,13 @@
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="true" {{ checked("respondent-address", "true") }}>
+                    <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="Yes, I have their address" {{ checked("respondent-address", "Yes, I have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-1">
                       Yes, I have their address   
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-2" name="respondent-address" type="radio" value="false" {{ checked("respondent-address", "false") }}>
+                    <input class="govuk-radios__input" id="respondent-address-2" name="respondent-address" type="radio" value="No, I do not have their address" {{ checked("respondent-address", "No, I do not have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-2">
                       No, I do not have their address
                     </label>
