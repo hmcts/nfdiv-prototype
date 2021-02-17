@@ -44,18 +44,18 @@
                   <div class="govuk-inset-text">
                       <p>The address can be their postal address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission.</p>
                       <p>
-                      You can use their last-known address if you do not know their current address.</p>
+                      If you do not know their current address then you can use their last-known address.</p>
                     </div>
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="true" {{ checked("respondent-address", "true") }}>
+                    <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="Yes, I have their address" {{ checked("respondent-address", "Yes, I have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-1">
                       Yes, I have their address   
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-2" name="respondent-address" type="radio" value="false" {{ checked("respondent-address", "false") }}>
+                    <input class="govuk-radios__input" id="respondent-address-2" name="respondent-address" type="radio" value="No, I do not have their address" {{ checked("respondent-address", "No, I do not have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-2">
                       No, I do not have their address
                     </label>

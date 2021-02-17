@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Have you changed your name since getting married? - GOV.UK
+  Apply for a divorce - How did you change your name? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,34 +28,69 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/applicant_holding" method="post" novalidate>
+        <form action="/divorce/english_welsh" method="post" novalidate>
             
              <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h1 class="govuk-fieldset__heading">
-                        Have you changed your name since getting married?
+                  
+                      <h1 class="govuk-heading-l">
+                        How did you change your name? 
                       </h1>
-                    </legend>
-                    <div id="changed-name-hint" class="govuk-hint">
-                      For example by deed poll, statutory declaration or another way. 
-                    </div>
-                    <div class="govuk-radios govuk-radios--inline">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name-3" name="changed-name-since" type="radio" value="true" {{ checked("changed-name-since", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="changed-name-3">
-                          Yes
-                        </label>
+                    
+                    
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-changed-name" name="how-changed-name" type="radio" value="By sending my marriage certificate to the relevant authorities" {{ checked("how-changed-name", "By sending my marriage certificate to the relevant authorities") }}>
+                    <label class="govuk-label govuk-radios__label" for="how-changed-name">
+                      By sending my marriage certificate to the relevant authorities 
+                    </label>
+                  </div>
+                          
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-changed-name-2" name="how-changed-name" type="radio" value="By deed poll" data-aria-controls="conditional-how-changed-name-2" {{ checked("how-changed-name", "By deed poll") }}>
+                    <label class="govuk-label govuk-radios__label" for="how-changed-name-2">
+                      By deed poll 
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-changed-name-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="name-change-deed">
+                        The court needs to see the deed poll document. You can upload a photo or scan later in this application, or you can post it. 
+                      </label>
                       </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name-4" name="changed-name-since" type="radio" value="false" {{ checked("changed-name-since", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="changed-name-4">
-                          No
-                        </label>
-                      </div>
-                    </div>
 
-                  </fieldset>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-changed-name-3" name="how-changed-name" type="radio" value="By ‘statutory declaration’" data-aria-controls="conditional-how-changed-name-3" {{ checked("how-changed-name", "By ‘statutory declaration’") }}>
+                    <label class="govuk-label govuk-radios__label" for="how-changed-name-3">
+                      By ‘statutory declaration’ 
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-changed-name-3">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="name-change-statutory">
+                        The court needs to see the statutory declaration document. You can upload a photo or scan later in this application, or you can post it. 
+                      </label>
+                      </div>
+
+                  </div>
+                          
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-changed-name-4" name="how-changed-name" type="radio" value="Another way" data-aria-controls="conditional-how-changed-name-4" {{ checked("how-changed-name", "Another way") }}>
+                    <label class="govuk-label govuk-radios__label" for="how-changed-name-4">
+                      Another way 
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-changed-name-4">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="name-change-other">
+                        Provide details of when and how you changed your name. You will be asked to upload a photo or scan of the documents that prove you changed your name later in this application, or you can post them in. If you do not have any documents, explain why here.
+                      </label>
+                        <div class="govuk-!-padding-bottom-4"></div>
+                          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                      </div>
+
+                  </div>          
+                </div>
             </div>
          
           <button class="govuk-button" data-module="govuk-button">
