@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Did you change your name when you formed your civil partnership? - GOV.UK
+  Apply to end a civil partnership - Do you need the court to keep your address private from your civil partner? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,100 +60,49 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/civil_partnership/names_on_cert_cp">Back</a>
+  <a class="govuk-back-link" href="english_welsh.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/name_changed_deed_cp" method="post" novalidate>
-            
-             <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-cp-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h1 class="govuk-fieldset__heading">
-                        Did you change your name when you formed your civil partnership?
-                      </h1>
-                    </legend>
-                    <div id="changed-name-cp-hint" class="govuk-hint">
-                      For example, from a maiden name
-                    </div>
-                    <div class="govuk-radios govuk-radios--inline">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name-cp" name="changed-name-cp" type="radio" value="true">
-                        <label class="govuk-label govuk-radios__label" for="changed-name-cp" {{ checked("changed-name-cp", "true") }}>
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name-cp-2" name="changed-name-cp" type="radio" value="false">
-                        <label class="govuk-label govuk-radios__label" for="changed-name-cp-2" {{ checked("changed-name-cp", "false") }}>
-                          No
-                        </label>
-                      </div>
-                    </div>
+        <form action="/divorce/applicant_postal_address_v2" method="post" novalidate>
 
-                  </fieldset>
-                </div>
-
-                 
-                <!--  <p class="govuk-body">
-                  Ther court needs to know if you changed your name when you got married.
-                  </p> -->
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you need the court to keep your address private from your civil partner?
+                  </h1>
+                </legend>
                   
-                <!--<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="true" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                    <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                        
-                          <h2 class="govuk-heading-m">
-                            How did you change your name?
-                          </h2>
-                        
-                        <div class="govuk-checkboxes">
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste">
-                              Marriage Certificate
-                            </label>
-                          </div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                              Deed poll or statutiry declaration
-                            </label>
-                          </div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                              Other
-                            </label>
-                          </div>
-                        </div> 
-
-                      </fieldset>
+                  <p class="govuk-body">
+                    A copy of your divorce application will be sent to your civil partner. If you do not want them to know your address, then you can ask the court to keep it private.  
+                  </p>
+                  
+                <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="address-private-1" name="address-private" type="radio" value="Keep my address private" {{ checked("address-private", "Keep my address private") }}>
+                        <label class="govuk-label govuk-radios__label" for="address-private-1">
+                          Keep my address private 
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="address-private-2" name="address-private" type="radio" value="I do not not need my address kept private" {{ checked("address-private", "I do not not need my address kept private") }}>
+                        <label class="govuk-label govuk-radios__label" for="address-private-2">
+                          I do not not need my address kept private 
+                        </label>
+                      </div>
                     </div>
-
-                  </div> 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="false" data-aria-controls="conditional-contact-2">
-                    <label class="govuk-label govuk-radios__label" for="contact-2">
-                      No
-                    </label>
-                  </div>
-                </div> -->
-                    
+                  
+              </fieldset>
+            </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+            
         </form>
       </div>
     </div>

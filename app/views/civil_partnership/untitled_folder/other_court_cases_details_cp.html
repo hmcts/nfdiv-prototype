@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Is your life mainly based in England or Wales? - GOV.UK
+  Apply for a divorce - Details of the other legal proceedings - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,43 +21,43 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/civil_partnership/jurisdiction">Back</a>
+  <a class="govuk-back-link" href="other_court_cases.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/jurisdiction_confirmation_cp" method="post" novalidate>
+        <form action="/divorce/money_property" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Is your life mainly based in England or Wales?
+                      
+                  <h1 class="govuk-heading-l">
+                    Details of the other legal proceedings
                   </h1>
-                </legend>
-                  
+                
                   <p class="govuk-body">
-                  This may include working, owning property, having children in school, or your main family life taking place in England or Wales.  
+                  The court needs to know the details of the other legal proceedings. Provide as much information as possible, such as: 
                   </p>
-                  
-                  <div class="govuk-radios govuk-radios--inline">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="life-based-uk-3" name="life-based-uk-cp" type="radio" value="true" {{ checked("life-based-uk-cp", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="life-based-uk-3">
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="life-based-uk-4" name="life-based-uk-cp" type="radio" value="false" {{ checked("life-based-uk-cp", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="life-based-uk-4">
-                          No
-                        </label>
-                      </div>
+                
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>the names of the people involved</li>
+                        <li>the case number(s)</li>
+                        <li>if the proceedings are ongoing or if they’ve finished</li>
+                        <li>what the proceedings are about</li>
+                        <li>the name and address of the court, including the country</li>
+                        <li>the date the proceedings began</li>
+                        <li>the dates of any hearings that have been scheduled</li>
+                        <li>the details of any orders that have been made</li>
+                      </ul>
+
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="more-detail">
+                        Provide details about the other legal proceedings. 
+                      </label>
+                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
                     </div>
-                  
-              </fieldset>
+
             </div>
 
           <button class="govuk-button" data-module="govuk-button">

@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Other court cases relating your marriage, property or children - GOV.UK
+  Apply to end a civil partnership - Do you want to claim costs from your civil partner? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,55 +60,65 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="address_2_cp.html">Back</a>
+  <a class="govuk-back-link" href="money_property.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="#" method="post" novalidate>
+        <form action="/divorce/upload" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Other court cases relating your civil partnership, property or children 
+              
+                  <h1 class="govuk-heading-l">
+                    Do you want to claim costs from your civil partner? 
                   </h1>
-                </legend>
+                
                   
                   <p class="govuk-body">
-                  The court needs to know if there are any other legal proceedings related to your civil partnership, property or children. This includes any legal proceedings that are:   
+                  You can ask the court to consider whether your civil partner should pay some or all of the costs related to ending your civil partnership. These costs could include the application fee, solicitors fees, or any additional court fees.    
                   </p> 
+              
+                  <p class="govuk-body">
+                  You do not have to provide details of the costs now. You can send these at a later stage, when you know what the costs will be.    
+                  </p>
+              
                   
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>ongoing, finished or abandoned</li>
-                    <li>between you and your civil partner</li>
-                    <li>between you, your civil partner and anyone else </li>
-                  </ul> 
+                  <div class="govuk-inset-text">
+                      This is only asking you about costs relating to ending your civil partnership. How you divide money and property is dealt with separately.  
+                    </div>
                   
-                  <h2 class="govuk-heading-m">Are there, or have there ever been, any other legal proceedings relating to your civil partnership, property or children? </h2>
-                  
-                  <div id="other-cases" class="govuk-hint">
-                Do not include legal proceedings that may happen in the future. 
-              </div>
-                  
-                <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="other_court_cases-cp-1" name="other_court_cases-cp" type="radio" value="true" {{ checked("other_court_cases-cp", "true") }}>
-                        <label class="govuk-label govuk-radios__label" for="other_court_cases-cp-1">
-                          Yes
+                        <input class="govuk-radios__input" id="claim-costs-1" name="claim-costs" type="radio" value="Yes, I want to apply to claim costs" data-aria-controls="conditional-claim-costs" {{ checked("claim-costs", "Yes, I want to apply to claim costs") }}>
+                        <label class="govuk-label govuk-radios__label" for="claim-costs-1">
+                          Yes, I want to apply to claim costs
                         </label>
                       </div>
+                    
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-claim-costs">
+                       <p class="govuk-body">
+                  <strong>You still need to pay the fee when you submit this application.</strong>    
+                  </p>
+                        
+                        <!-- <div class="govuk-warning-text">
+                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                          <strong class="govuk-warning-text__text">
+                            <span class="govuk-warning-text__assistive">Warning</span>
+                            You still need to pay the fee when you submit this application.  
+                          </strong>
+                        </div> -->
+                      </div>
+                    
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="other_court_cases-cp-2" name="other_court_cases-cp" type="radio" value="false" {{ checked("other_court_cases-cp", "false") }}>
-                        <label class="govuk-label govuk-radios__label" for="other_court_cases-cp-2">
-                          No
+                        <input class="govuk-radios__input" id="claim-costs-2" name="claim-costs" type="radio" value="No, I do not want to apply to claim costs" data-aria-controls="conditional-claim-costs-2" {{ checked("claim-costs", "No, I do not want to apply to claim costs") }}>
+                        <label class="govuk-label govuk-radios__label" for="claim-costs-2">
+                          No, I do not want to apply to claim costs
                         </label>
                       </div>
-                    </div> 
+                    </div>
                  
-              </fieldset>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">

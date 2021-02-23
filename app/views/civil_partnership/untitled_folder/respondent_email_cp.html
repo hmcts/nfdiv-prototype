@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Do you have your civil partner’s address? - GOV.UK
+  Apply to end a civil partnership - Enter your civil partner’s email address - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,54 +60,66 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_email_cp.html">Back</a>
+  <a class="govuk-back-link" href="english_welsh.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/respondent_postal_address_cp" method="post" novalidate>
+        <h1 class="govuk-heading-l">Enter your civil partner’s email address</h1>
+
+        <form action="/divorce/applicant_postal_address" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Do you have your civil partner’s address?
-                  </h1>
-                </legend>
-                  
-                  <p class="govuk-body">
-                  The court needs to know where to send information and documents relating to the ending your civil partnership.   
-                  </p> 
-                  
-                   <div class="govuk-inset-text">
-                      <p>The address can be their postal address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission.</p>
-                      <p>
-                      You can use their last-known address if you do not know their current address.</p>
-                    </div>
-                  
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-cp-1" name="respondent-address-cp" type="radio" value="true" {{ checked("respondent-address-cp", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-cp-1">
-                      Yes, I have their address   
+
+            <p class="govuk-body">
+                It’s important you provide their email address so the court can ‘serve’ (deliver) documents to them online. The emails will also contain information and updates relating to ending your civil partnership.  
+            </p>
+              
+              <div class="govuk-inset-text">
+                If you use their work email address, you should ask their permission first. 
+                </div>
+
+           <label class="govuk-label" for="width-20">
+               Your civil partner’s email address
+
+            </label> 
+              
+            <input class="govuk-input" id="res-email" name="res-email" value="{{ data['res-email'] }}" type="email" spellcheck="false" autocomplete="email">
+
+            </div>
+
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+
+                    <input class="govuk-checkboxes__input" id="no-email-address-1" name="no-email-address" type="checkbox" value="checked" {{ checked("no-email-address", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="no-email-address-1">
+                      I do not know their email address 
+
                     </label>
                   </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-cp-2" name="respondent-address-cp" type="radio" value="false" {{ checked("respondent-address-cp", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-cp-2">
-                      No, I do not have their address
+                </div>
+            </div>
+            
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+
+                    <input class="govuk-checkboxes__input" id="no-email-serve" name="no-email-serve" type="checkbox" value="checked" {{ checked("no-email-serve", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="no-email-serve">
+                      I do not want to ‘serve’ (deliver) the ending a civil partnership papers to them by email  
+
                     </label>
                   </div>
-                </div> 
-                 
-              </fieldset>
+                </div>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>

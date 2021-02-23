@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Enter your civil partner’s address - GOV.UK
+  Apply to end a civil partnership - Enter your address - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,55 +60,60 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_postal_address_cp.html">Back</a>
+  <a class="govuk-back-link" href="applicant_address_select_v2.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Enter your civil partner’s address</h1>
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/divorce/applicant_phone_number" method="post" novalidate>
 
-    <form action="/civil_partnership/other_court_cases_cp" method="post" novalidate>
+          <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Enter your address
+                </h1>
+              </legend>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"> Postcode
-          </legend>
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-!-font-weight-bold" for="change-postcode">{{ data['address-postcode'] }}</label>
-              <p class="postcode_change"><a class="govuk-link" href="respondent_postal_address_cp.html" aria-label="change postcode">Change</a></p>
-            </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="address-line-1">
+                  Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+                </label>
+                <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1"></div>
 
-          <div class="govuk-form-group">
-              <label class="govuk-label" for="address-select">
-              Select an address
-              </label>
-              <select class="govuk-select govuk-!-width-three-quarters" id="address-select" name="address-select">
-                <option>5 addresses found</option>
-                <option>1 Main Street, London, {{ data['postcode'] }} </option>
-                <option>2 Main Street, London, {{ data['postcode'] }} </option>
-                <option>3 Main Street, London, {{ data['postcode'] }} </option>
-                <option>4 Main Street, London, {{ data['postcode'] }} </option>
-                <option>5 Main Street, London, {{ data['postcode'] }} </option>
-              </select>
-          </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="address-line-2">
+                  <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+                </label>
+                <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2"></div>
 
-          <div class="govuk-form-group">
-            <p>
-              <a class="govuk-link" href="/civil_partnership/address_manual_cp.html">I cannot find the address in the list</a>
-            </p>
-          </div>
-        </fieldset>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="address-town">
+                  Town or city
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="address-county">
+                  County
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="address-postcode">
+                  Postcode
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+            </fieldset>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
       </div>
-
-      <button type="submit" class="govuk-button">
-        Continue
-      </button>
-
-    </form>
-  </div>
-</div>
+    </div>
 
 <p><a href="/divorce/wrong_marriage_date">Save and sign out</a></p>
 
