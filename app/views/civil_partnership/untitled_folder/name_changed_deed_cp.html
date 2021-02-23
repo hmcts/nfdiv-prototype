@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - You need to prove that your name has changed - GOV.UK
+  Apply to end a civil partnership - How did you change your name? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,43 +60,65 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="name_changed_deed_cp.html">Back</a>
+  <a class="govuk-back-link" href="/divorce/name_changed">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/applicant_details_cp" method="post" novalidate>
+        <form action="/divorce/applicant_phone_number" method="post" novalidate>
+            
+             <div class="govuk-form-group">
+                  
+                      <h1 class="govuk-heading-l">
+                        How did you change your name? 
+                      </h1>
+                    
+                    <p class="govuk-body">The court needs to know how you changed your name so it knows which document to check.</p>
+                 
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-changed-name" name="how-changed-name" type="radio" value="By sending my marriage certificate to the relevant authorities" {{ checked("how-changed-name", "By sending my marriage certificate to the relevant authorities") }}>
+                    <label class="govuk-label govuk-radios__label" for="how-changed-name">
+                      By sending off my civil partnersihp certificate
+                    </label>
+                  </div>
+                          
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-changed-name-2" name="how-changed-name" type="radio" value="By deed poll" data-aria-controls="conditional-how-changed-name-2" {{ checked("how-changed-name", "By deed poll") }}>
+                    <label class="govuk-label govuk-radios__label" for="how-changed-name-2">
+                      By deed poll or ‘statutory declaration’
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-changed-name-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="name-change-deed">
+                        The court needs to see the deed poll or ‘statutory declaration’ document. You can upload a photo or scan later in this application, or you can post it. 
+                      </label>
+                      </div>
 
-          <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    You need to prove that your name has changed
-                  </h1>
-                </legend>
-                  
-                  <p class="govuk-body">
-                  You need to send the deed poll or ‘statutory declaration’ that proves you changed your name, to the court. You can upload a photo or scan of the document later in this application, or you can post it. You’ll receive the address later.  
-                  </p>
-                  
-                  <details class="govuk-details" data-module="govuk-details">
-                      <summary class="govuk-details__summary">
-                        <span class="govuk-details__summary-text">
-                          I changed my name another way
-                        </span>
-                      </summary>
-                      <div class="govuk-details__text">
-                        Enter details of when and how you changed your name. You can also upload a photo or scan of any document relating to the name change later in this application, or you can post it. If you do not have any documents, explain why here. 
-                          <div class="govuk-!-padding-bottom-4"></div>
+                  </div>
+                          
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-changed-name-4" name="how-changed-name" type="radio" value="Another way" data-aria-controls="conditional-how-changed-name-4" {{ checked("how-changed-name", "Another way") }}>
+                    <label class="govuk-label govuk-radios__label" for="how-changed-name-4">
+                      Another way 
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-changed-name-4">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="name-change-other">
+                        Provide details of when and how you changed your name. You will be asked to upload a photo or scan of the documents that prove you changed your name later in this application, or you can post them in. If you do not have any documents, explain why here.
+                      </label>
+                        <div class="govuk-!-padding-bottom-4"></div>
                           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
                       </div>
-                    </details>
-                  
-              </fieldset>
-            </div>
 
+                  </div>          
+                </div>
+            </div>
+         
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>

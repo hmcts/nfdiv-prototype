@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Your names on your civil partnership certificate - GOV.UK
+  Apply to end a civil partnership - Enter your civil partner’s address - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,58 +60,57 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="respondent_postal_address.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Your names on your civil partnership certificate</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Enter your civil partner’s address</h1>
 
-        <form action="/civil_partnership/name_changed_cp" method="post" novalidate>
-            
-            <p class="govuk-body">
-                  These are the names you and your civil partner used before you formed your civil partnership. They can sometimes be different from your current names. For example, if your civil partner had a maiden name. 
-                  </p>
-            
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                Copy the civil partnership certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.
-              </strong>
+    <form action="/divorce/other_court_cases" method="post" novalidate>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"> Postcode
+          </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-font-weight-bold" for="change-postcode">{{ data['rep-address-postcode'] }}</label>
+              <p class="postcode_change"><a class="govuk-link" href="respondent_postal_address.html" aria-label="change postcode">Change</a></p>
             </div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your full name from the civil partnership certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div>  
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-            </div>
+              <label class="govuk-label" for="address-select">
+              Select an address
+              </label>
+              <select class="govuk-select govuk-!-width-three-quarters" id="address-select" name="address-select">
+                <option>5 addresses found</option>
+                <option>1 Main Street, London, {{ data['rep-address-postcode'] }} </option>
+                <option>2 Main Street, London, {{ data['rep-address-postcode'] }} </option>
+                <option>3 Main Street, London, {{ data['rep-address-postcode'] }} </option>
+                <option>4 Main Street, London, {{ data['rep-address-postcode'] }} </option>
+                <option>5 Main Street, London, {{ data['rep-address-postcode'] }} </option>
+              </select>
+          </div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Copy your civil partner's full name from the civil partnership certificate 
-            </label>
-            <div id="passport-number-hint" class="govuk-hint">
-              Include all the text related to the name
-            </div> 
-            <input class="govuk-input govuk-input--width-20" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-            </div>
-
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-
-        </form>
+            <p>
+              <a class="govuk-link" href="/divorce/respondent_address_manual.html">I cannot find the address in the list</a>
+            </p>
+          </div>
+        </fieldset>
       </div>
-    </div>
 
-<p><a href="#">Save and sign out</a></p>
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+    </form>
+  </div>
+</div>
+
+<p><a href="/divorce/wrong_marriage_date">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 
