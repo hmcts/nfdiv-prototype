@@ -60,53 +60,32 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="applicant_address_select_v2.html">Back</a>
+  <a class="govuk-back-link" href="applicant_postal_address_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/applicant_phone_number" method="post" novalidate>
+        <form action="/civil_partnership/respondent_email_cp" method="post" novalidate>
 
-          <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  Enter your address
-                </h1>
-              </legend>
-
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-line-1">
-                  Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-                </label>
-                <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1"></div>
-
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-line-2">
-                  <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-                </label>
-                <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2"></div>
-
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-town">
-                  Town or city
-                </label>
-                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
-
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-county">
-                  County
-                </label>
-                <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
-
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-postcode">
-                  Postcode
-                </label>
-                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
-
-            </fieldset>
+          <div class="govuk-form-group">
+              
+                  <h1 class="govuk-heading-l">
+                    Enter your address
+                  </h1>
+                
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="more-detail">
+                        Full address
+                      </label>
+                      <textarea class="govuk-textarea" id="more-detail-cp" name="more-detail-cp" rows="8"></textarea>
+                    </div>
+                </div>
+            
+            <p class="govuk-body">
+              <a href="applicant_postal_address_cp.html" class="govuk-link">Enter postcode</a>
+            </p>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
@@ -115,7 +94,7 @@
       </div>
     </div>
 
-<p><a href="/divorce/wrong_marriage_date">Save and sign out</a></p>
+<p><a href="#">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 
