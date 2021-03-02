@@ -133,7 +133,7 @@ router.post('/divorce/applicant-phone-number', function (req, res) {
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const over18 = req.session.data['changed-name']
+  const over18 = req.session.data['surname']
 
   if (over18 === 'No') {
     res.redirect('/divorce/applicant_phone_number')
@@ -297,17 +297,17 @@ router.post('/civil_partnership/where_you_formed_cp_1', function (req, res) {
   }
 })
 
-router.post('/civil_partnership/applicant_holding_cp', function (req, res) {
+router.post('/civil_partnership/applicant-phone-number-cp', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const over18 = req.session.data['changed-name-since-cp']
+  const over18 = req.session.data['surname']
 
-  if (over18 === 'false') {
-    res.redirect('/civil_partnership/applicant_details_cp')
+  if (over18 === 'No') {
+    res.redirect('/civil_partnership/applicant_phone_number_cp')
   } else {
-    res.redirect('/civil_partnership/deed_poll_cp')
+    res.redirect('/civil_partnership/name_changed_deed_cp')
   }
 })
 
