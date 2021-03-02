@@ -60,7 +60,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="jurisdiction_confirmation.html">Back</a>
+  <a class="govuk-back-link" href="jurisdiction_confirmation_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -69,27 +69,20 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Your names</h1>
 
-        <form action="/divorce/names_on_cert" method="post" novalidate>
+        <form action="/civil_partnership/names_on_cert_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="app-first-name">
               Enter your name 
             </label>
            <label class="govuk-label" for="width-20">
-               Your first name(s)
+               Your first and middle name(s)
             </label> 
-              <div id="app-first-name-hint" class="govuk-hint">
+             <!-- <div id="app-first-name-hint" class="govuk-hint">
               Include your middle name(s)
-            </div>
+            </div> -->
             <input class="govuk-input govuk-input--width-20" id="app-first-name" name="app-first-name" type="text" aria-describedby="app-first-name-hint" value="{{ data['app-first-name'] }}">
             </div>
-            
-            <div class="govuk-form-group">
-            <label class="govuk-label" for="width-20">
-               Your middle name(s)
-            </label>  
-            <input class="govuk-input govuk-input--width-20" id="app-middle-name" name="app-middle-name" type="text" value="{{ data['app-middle-name'] }}">
-          </div>
             
             <div class="govuk-form-group">
             <label class="govuk-label" for="width-20">
@@ -104,18 +97,11 @@
               Enter your civil partner’s name 
             </label>
             <label class="govuk-label" for="width-20">
-               Your civil partner’s first name(s)
+               Your civil partner’s first and middle name(s)
             </label> 
             <input class="govuk-input govuk-input--width-20" id="res-first-name" name="res-first-name" type="text" aria-describedby="res-first-name-hint" value="{{ data['res-first-name'] }}">
             </div>
-            
-            <div class="govuk-form-group">
-            <label class="govuk-label" for="width-20">
-               Your civil partner’s middle name(s)
-            </label>  
-            <input class="govuk-input govuk-input--width-20" id="res-middle-name" name="res-middle-name" type="text" value="{{ data['res-middle-name'] }}">
-          </div> 
-            
+     
             <div class="govuk-form-group">
             <label class="govuk-label" for="width-20">
                Your civil partner’s last name(s)

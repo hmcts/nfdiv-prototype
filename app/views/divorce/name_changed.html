@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Have you changed your name since getting married? - GOV.UK
+  Apply for a divorce - Changes to your name - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -33,88 +33,61 @@
              <div class="govuk-form-group">
                   
                       <h1 class="govuk-heading-l">
-                        Have you changed your name since getting married?
+                        Changes to your name 
                       </h1>
                     
                     
-                      <p class="govuk-body">The court needs to know if you have changed your name, either:</p>
+                      <p class="govuk-body">The court needs to know if you have changed your name.</p>
 
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>when you got married (for example, changing your surname)</li>
-                    <li>since you got married (for example, changing your name by deed poll)</li>
-                  </ul> 
-                      
-                    <div class="govuk-radios govuk-radios--inline">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="Yes" {{ checked("changed-name", "Yes") }}>
-                        <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="No" {{ checked("changed-name", "No") }}>
-                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                          No
-                        </label>
-                      </div>
-                    </div>
-
-                  
+                  <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="surname">
+              Did you change your last name when you got married?  
+            </label>
+                      <div id="changed-name-hint" class="govuk-hint">
+      For example, from a maiden name
+    </div>
+            
+            <div class="govuk-radios govuk-radios--inline">
+                 <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="surname-1" name="surname" type="radio" value="Yes" {{ checked("surname", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="surname-1">
+                    Yes
+                    </label>
                 </div>
-
-                 
-                <!--  <p class="govuk-body">
-                  Ther court needs to know if you changed your name when you got married.
-                  </p> -->
-                  
-                <!--<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="true" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
-                      Yes
+                     <input class="govuk-radios__input" id="surname-2" name="surname" type="radio" value="No" {{ checked("surname", "No") }}>
+                     <label class="govuk-label govuk-radios__label" for="surname-2">
+                     No
+                     </label>
+                </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="part-of-your-name">
+              Have you changed any part of your name since getting married? 
+            </label>
+              
+              <div id="changed-name-hint" class="govuk-hint">
+      For example, by deed poll 
+    </div>
+            
+            <div class="govuk-radios govuk-radios--inline">
+                 <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="part-of-your-name-1" name="part-of-your-name" type="radio" value="Yes" {{ checked("part-of-your-name", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="part-of-your-name-1">
+                    Yes
                     </label>
-                  </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                    <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                        
-                          <h2 class="govuk-heading-m">
-                            How did you change your name?
-                          </h2>
-                        
-                        <div class="govuk-checkboxes">
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste">
-                              Marriage Certificate
-                            </label>
-                          </div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                              Deed poll or statutiry declaration
-                            </label>
-                          </div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                              Other
-                            </label>
-                          </div>
-                        </div> 
-
-                      </fieldset>
-                    </div>
-
-                  </div> 
+                </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="false" data-aria-controls="conditional-contact-2">
-                    <label class="govuk-label govuk-radios__label" for="contact-2">
-                      No
-                    </label>
-                  </div>
-                </div> -->
-                    
+                     <input class="govuk-radios__input" id="part-of-your-name-2" name="part-of-your-name" type="radio" value="No" {{ checked("part-of-your-name", "No") }}>
+                     <label class="govuk-label govuk-radios__label" for="part-of-your-name-2">
+                     No
+                     </label>
+                </div>
+            </div>
+          </div>
+         </div>           
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
