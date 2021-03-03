@@ -163,7 +163,7 @@ router.post('/divorce/respondent_address', function (req, res) {
 
   const over18 = req.body['no-email-address']
 
-  if (over18 == 'checked') {
+  if (over18 == 'I do not know their email address') {
     res.redirect('/divorce/respondent_address_no_email')
   } else {
     res.redirect('/divorce/respondent_address')

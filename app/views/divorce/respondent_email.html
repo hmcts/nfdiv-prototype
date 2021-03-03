@@ -21,7 +21,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="english_welsh.html">Back</a>
+  <a class="govuk-back-link" href="applicant_address_select_v2.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -30,7 +30,7 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Enter your husband's or wife’s email address</h1>
 
-        <form action="/divorce/applicant_postal_address" method="post" novalidate>
+        <form action="/divorce/respondent_address" method="post" novalidate>
 
           <div class="govuk-form-group">
 
@@ -55,7 +55,7 @@
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
 
-                    <input class="govuk-checkboxes__input" id="no-email-address-1" name="no-email-address" type="checkbox" value="checked" {{ checked("no-email-address", "checked") }}>
+                    <input class="govuk-checkboxes__input" id="no-email-address-1" name="no-email-address" type="checkbox" value="I do not know their email address" {{ checked("no-email-address", "I do not know their email address") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="no-email-address-1">
                       I do not know their email address 
 
