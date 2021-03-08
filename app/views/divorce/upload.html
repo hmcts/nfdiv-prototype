@@ -39,7 +39,9 @@
                   </p>
             
             <ul class="govuk-list govuk-list--bullet">
-                        <li>your original marriage certificate </li>
+                <li>your original marriage certificate </li>
+                <li>a certified translation of your foreign marriage certificate </li>
+                <li>proof that you changed your name, for example a deed poll or ‘statutory declaration’</li>
                       </ul>
             
             <div class="govuk-inset-text">
@@ -92,19 +94,43 @@
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
                 <label class="govuk-label govuk-checkboxes__label" for="contact">
-                  I cannot upload my document
+                  I cannot upload some or all of my documents
                 </label>
               </div>
               <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
                 <div class="govuk-form-group">
                     <div class="govuk-!-padding-bottom-2"></div>
-                  <label class="govuk-label" for="contact-by-email">
-                    You can post or email your documents to the court. If you post them you must send the original documents or certified copies. You will not receive them back. You’ll receive details of how to send them after you have submitted your application.
-                  </label>
-                    <br>
-                    <label class="govuk-label">
-                        Continue with your application. 
+                    
+                    <h2 class="govuk-heading-m">Which document can you not upload? </h2>
+                  
+                  <div id="other-cases" class="govuk-hint">
+                Select all that apply 
+              </div>
+                  
+                  <div class="govuk-form-group">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="cant-upload" name="cant-upload" type="checkbox" value="My marriage certificate" {{ checked("cant-upload", "My marriage certificate") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="cant-upload">
+                          My marriage certificate 
                         </label>
+                      </div>
+                      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="cant-upload-1" name="cant-upload" type="checkbox" value="Proof that I changed my name"  {{ checked("cant-upload", "Proof that I changed my name ") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="cant-upload-1">
+                          Proof that I changed my name 
+                        </label>
+                      </div>
+                  </div>
+                    <div>
+                  <p class="govuk-body">
+                    You can post or email your documents to the court. If you post them you must send the original documents or certified copies. You will not receive them back. You’ll receive details of how to send them after you have submitted your application.
+                  </p>
+                    <br>
+                    <p class="govuk-body">
+                        Continue with your application. 
+                        </p>
+                    </div>
                   </div>
               </div>
             </div>

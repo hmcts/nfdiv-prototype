@@ -470,17 +470,17 @@
         </div>
       </dl>    
 
-      <h2 class="govuk-heading-m">Confirm the following</h2>
-
-      
         
-      
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Confirm before submitting</h2>
+
         <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" style="background-color: white" id="app-email-address-1" name="app-email-address" type="checkbox" value="checked" {{ checked("app-email-address", "checked") }}>
-                    <label class="govuk-label govuk-checkboxes__label" for="app-email-address-1">
-                      I confirm that:  
+                    <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
+                      I confirm that I’m applying to the court to:  
                     </label>
                   </div>  
                 </div>
@@ -488,26 +488,44 @@
         
           <div class="govuk-form-group">
                 <ul class="govuk-list govuk-list--bullet" style="text-align: left">
-                    <li>I’m applying to the court for my marriage to be dissolved (get a divorce).</li>
-                    <li>I believe that the facts stated in this application are true.</li>
-                   <!-- <li>order my wife or husband to pay some or all of the divorce costs</li>
-                    <li>decide how our money and property will be split (known as a financial order)</li> -->
+                    <li>dissolve my marriage (get a divorce) </li>
+                   <li>order my wife or husband to pay costs associated with the divorce </li>
+                    <li>decide how our money and property will be split (known as a financial order)</li>
                   </ul> 
             </div>
         
         <p class="govuk-body">
-                  The first statement is your formal application to the court (known as 'the prayer'). The second is your statement of truth.
+                  This confirms what you are asking the court to do. It’s known as ‘the prayer’. 
+                  </p>
+        
+        <div class="govuk-!-padding-bottom-4"></div>
+        
+        <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked" {{ checked("statement-truth", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
+                      I believe that the facts stated in this application are true   
+                    </label>
+                  </div>  
+                </div>
+            </div>
+        
+        <p class="govuk-body">
+                  This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.  
                   </p>
         
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
             <span class="govuk-warning-text__assistive">Warning</span>
-            You could be fined or imprisoned for contempt of court if you deliberately submit false information.
+            You could be fined or imprisoned if you deliberately submit false information.
           </strong>
         </div>
-        
-        <div class="govuk-!-padding-bottom-4"></div>
+          
+            </div>
+  </div>
+       
 
       <form action="/divorce/payment" method="post" novalidate>
 
