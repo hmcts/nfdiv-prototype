@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Enter your {husband / wife’s} email address - GOV.UK
+  Apply for a divorce - Applying to serve (deliver) the papers another way - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,53 +21,37 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="applicant_address_select_v2.html">Back</a>
+  <a class="govuk-back-link" href="respondent_no_address.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Enter your husband's or wife’s email address</h1>
-
-        <form action="/divorce/respondent_address" method="post" novalidate>
+        <form action="/divorce/other_court_cases" method="post" novalidate>
 
           <div class="govuk-form-group">
-
-            <p class="govuk-body">
-                It’s important you provide their email address so the court can ‘serve’ (deliver) documents to them online. If you do not provide an email address, the divorce papers will need to be served (delivered) by post. The emails will also contain information and updates relating to the divorce.  
-            </p>
               
-              <div class="govuk-inset-text">
-                If you use their work email address, you should ask their permission first. 
-                </div>
-
-           <label class="govuk-label" for="width-20">
-               Your husband's or wife’s email address
-
-            </label> 
+                  <h1 class="govuk-heading-l">
+                    Applying to serve (deliver) the papers another way
+                  </h1>
+                  
+                  <p class="govuk-body">
+                  You will have to apply for the court to serve (deliver) the divorce papers to your husband or wife another way. This is because you did not provide their postal address. You could apply to use the email address you provided, or apply to serve them by text message or social media.   
+                  </p>
+                  
+                  <p class="govuk-body">
+                  You have to make a separate application, which will be reviewed by a judge. It will cost £50. 
+                    You will be given a link to the form after you have submitted this application. </p>
               
-            <input class="govuk-input" id="res-email" name="res-email" value="{{ data['res-email'] }}" type="email" spellcheck="false" autocomplete="email">
-
+              <p class="govuk-body">
+                  Continue with your divorce application</p>
+                             
             </div>
-
-            <div class="govuk-form-group">
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-
-                    <input class="govuk-checkboxes__input" id="no-email-1" name="no-email" type="checkbox" value="I do not know their email address" >
-                    <label class="govuk-label govuk-checkboxes__label" for="no-email-1">
-                      I do not know their email address 
-
-                    </label>
-                  </div>
-                </div>
-            </div>
-
+              
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
         </form>
       </div>
     </div>
