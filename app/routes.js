@@ -305,7 +305,7 @@ router.post('/civil_partnership/jurisdiction-page', function (req, res) {
   const over18 = req.session.data['cp-uk']
 
   if (over18 === 'true') {
-    res.redirect('/civil_partnership/jurisdiction')
+    res.redirect('/civil_partnership/jurisdiction_cp')
   } else {
     res.redirect('/civil_partnership/english_cert_cp')
   }
