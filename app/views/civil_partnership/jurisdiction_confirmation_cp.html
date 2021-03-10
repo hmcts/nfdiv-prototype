@@ -60,14 +60,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="life_based_in_uk.html">Back</a>
+  <a class="govuk-back-link" href="life_based_in_uk_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/your_names" method="post" novalidate>
+        <form action="/civil_partnership/your_names_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               
@@ -110,14 +110,14 @@
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="true" {{ checked("help-fees", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-1">
+                    <input class="govuk-radios__input" id="jurisdiction-cp-1" name="jurisdiction-cp" type="radio" value="I'm confident that connection is right" {{ checked("help-fees", "I'm confident that connection is right") }}>
+                    <label class="govuk-label govuk-radios__label" for="jurisdiction-cp-1">
                       I'm confident that connection is right	
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="false" {{ checked("help-fees", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-2">
+                    <input class="govuk-radios__input" id="jurisdiction-cp-2" name="jurisdiction-cp" type="radio" value="I'm not sure, and I want to add more connections" {{ checked("help-fees", "I'm not sure, and I want to add more connections") }}>
+                    <label class="govuk-label govuk-radios__label" for="jurisdiction-cp-2">
                       I'm not sure, and I want to add more connections
                     </label>
                   </div>

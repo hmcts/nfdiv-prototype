@@ -60,7 +60,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="jurisdiction.html">Back</a>
+  <a class="govuk-back-link" href="jurisdiction_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -73,7 +73,7 @@
           
           <p>The court needs to know whether you and your civil partner’s lives are based in England or Wales. This may include working, owning property, having children in school, or your main family life taking place in England or Wales.</p>
 
-        <form action="/divorce/jurisdiction_confirmation" method="post" novalidate>
+        <form action="/civil_partnership/jurisdiction_confirmation_cp" method="post" novalidate>
 
 
           <div class="govuk-form-group">
@@ -83,14 +83,14 @@
             
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="life-based-uk-1" name="life-based-uk" type="radio" value="Yes" {{ checked("life-based-uk", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="life-based-uk-1">
+                    <input class="govuk-radios__input" id="llife-based-uk-cp-1" name="life-based-uk-cp" type="radio" value="Yes" {{ checked("life-based-uk-cp", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="life-based-uk-cp-1">
                     Yes
                     </label>
                 </div>
                   <div class="govuk-radios__item">
-                     <input class="govuk-radios__input" id="life-based-uk-2" name="life-based-uk" type="radio" value="No" {{ checked("life-based-uk", "No") }}>
-                     <label class="govuk-label govuk-radios__label" for="life-based-uk-2">
+                     <input class="govuk-radios__input" id="life-based-uk-cp-2" name="life-based-uk-cp" type="radio" value="No" {{ checked("life-based-uk-cp", "No") }}>
+                     <label class="govuk-label govuk-radios__label" for="life-based-uk-cp-2">
                      No
                      </label>
                 </div>
@@ -104,14 +104,14 @@
             
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="life-based-uk-3" name="life-based-uk-partner" type="radio" value="Yes" {{ checked("life-based-uk-partner", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="life-based-uk-3">
+                    <input class="govuk-radios__input" id="life-based-uk-cp-3" name="life-based-uk-cp-partner" type="radio" value="Yes" {{ checked("life-based-uk-cp-partner", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="life-based-uk-cp-3">
                     Yes
                     </label>
                 </div>
                   <div class="govuk-radios__item">
-                     <input class="govuk-radios__input" id="life-based-uk-4" name="life-based-uk-partner" type="radio" value="No" {{ checked("life-based-uk-partner", "No") }}>
-                     <label class="govuk-label govuk-radios__label" for="life-based-uk-4">
+                     <input class="govuk-radios__input" id="life-based-uk-cp-4" name="life-based-uk-cp-partner" type="radio" value="No" {{ checked("life-based-uk-cp-partner", "No") }}>
+                     <label class="govuk-label govuk-radios__label" for="life-based-uk-cp-4">
                      No
                      </label>
                 </div>
