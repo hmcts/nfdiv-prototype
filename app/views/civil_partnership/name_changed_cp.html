@@ -78,7 +78,7 @@ v{% extends "layout.html" %}
                       <p class="govuk-body">The court needs to know if you have changed your name.</p>
 
                   <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="surname">
+            <label class="govuk-label govuk-label--m" for="surname-cp">
               Did you change your last name when you formed your civil partnership?  
             </label>
                       <div id="changed-name-hint" class="govuk-hint">
@@ -87,14 +87,14 @@ v{% extends "layout.html" %}
             
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="surname-1" name="surname" type="radio" value="Yes" {{ checked("surname", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="surname-1">
+                    <input class="govuk-radios__input" id="surname-cp-1" name="surname-cp" type="radio" value="Yes" {{ checked("surname-cp", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="surname-cp-1">
                     Yes
                     </label>
                 </div>
                   <div class="govuk-radios__item">
-                     <input class="govuk-radios__input" id="surname-2" name="surname" type="radio" value="No" {{ checked("surname", "No") }}>
-                     <label class="govuk-label govuk-radios__label" for="surname-2">
+                     <input class="govuk-radios__input" id="surname-cp-2" name="surname-cp" type="radio" value="No" {{ checked("surname-cp", "No") }}>
+                     <label class="govuk-label govuk-radios__label" for="surname-cp-2">
                      No
                      </label>
                 </div>
@@ -102,7 +102,7 @@ v{% extends "layout.html" %}
           </div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="part-of-your-name">
+            <label class="govuk-label govuk-label--m" for="part-of-your-name-cp">
               Have you changed any part of your name since forming your civil partnership? 
             </label>
               
@@ -112,14 +112,14 @@ v{% extends "layout.html" %}
             
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="part-of-your-name-1" name="part-of-your-name" type="radio" value="Yes" {{ checked("part-of-your-name", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="part-of-your-name-1">
+                    <input class="govuk-radios__input" id="part-of-your-name-cp-1" name="part-of-your-name-cp" type="radio" value="Yes" {{ checked("part-of-your-name-cp", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="part-of-your-name-cp-1">
                     Yes
                     </label>
                 </div>
                   <div class="govuk-radios__item">
-                     <input class="govuk-radios__input" id="part-of-your-name-2" name="part-of-your-name" type="radio" value="No" {{ checked("part-of-your-name", "No") }}>
-                     <label class="govuk-label govuk-radios__label" for="part-of-your-name-2">
+                     <input class="govuk-radios__input" id="part-of-your-name-cp-2" name="part-of-your-name-cp" type="radio" value="No" {{ checked("part-of-your-name-cp", "No") }}>
+                     <label class="govuk-label govuk-radios__label" for="part-of-your-name-cp-2">
                      No
                      </label>
                 </div>
