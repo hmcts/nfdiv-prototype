@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Enter your civil partner’s postal address - GOV.UK
+  Apply to end a civil partnership - How to apply for a financial order - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,33 +60,35 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_postal_address_cp.html">Back</a>
+  <a class="govuk-back-link" href="financial_order_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/other_court_cases_cp" method="post" novalidate>
+        <form action="/civil_partnership/claim_costs_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               
                   <h1 class="govuk-heading-l">
-                    Enter your civil partner’s postal address
+                    How to apply for a financial order  
                   </h1>
-                
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">
-                        Full address
-                      </label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
-                    </div>
-                </div>
-            
-            <p class="govuk-body">
-              <a href="respondent_postal_address_cp.html" class="govuk-link">Enter UK postcode</a>
-            </p>
-
+                  
+                  <p class="govuk-body">
+                  You will need to complete another form (Form A) and pay an additional fee of £255 to formally start financial proceedings.    
+              </p>   
+              
+              <div class="govuk-inset-text">
+                  You will be given a link to Form A and more guidance after you have submitted this ending your civil partnership application. You can get legal advice or ask a solicitor to draft a financial order for you.     
+              </div> 
+              
+              <p class="govuk-body">
+                  Continue with your application to end your civil partnership  
+              </p>
+              
+            </div>
+              
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>

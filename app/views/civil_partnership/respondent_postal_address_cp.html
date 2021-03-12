@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Enter your civil partner’s address - GOV.UK
+  Apply to end a civil partnership - Enter your civil partner’s postal address - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,23 +60,23 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_address.html">Back</a>
+  <a class="govuk-back-link" href="respondent_address_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Enter your civil partner’s address</h1>
+        <h1 class="govuk-heading-l">Enter your civil partner’s postal address</h1>
 
-        <form action="/divorce/respondent_address_select" method="post" novalidate>
+        <form action="/civil_partnership/respondent_address_select_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               
            <label class="govuk-label" for="address-postcode">
               Enter a UK postcode
             </label>
-                <input class="govuk-input govuk-input--width-10" id="rep-address-postcode" name="rep-address-postcode" type="text" autocomplete="postal-code" value="{{ data['rep-address-postcode'] }}">
+                <input class="govuk-input govuk-input--width-10" id="rep-address-postcode-cp" name="rep-address-postcode-cp" type="text" autocomplete="postal-code-cp" value="{{ data['rep-address-postcode-cp'] }}">
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
@@ -84,7 +84,7 @@
           </button>
             
             <p class="govuk-body">
-              <a href="/divorce/respondent_address_no_postcode" class="govuk-link">I cannot enter a UK postcode</a>
+              <a href="/civil_partnership/respondent_address_no_postcode_cp" class="govuk-link">I cannot enter a UK postcode</a>
             </p>
 
         </form>

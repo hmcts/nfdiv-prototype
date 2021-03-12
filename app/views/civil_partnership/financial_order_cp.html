@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Enter your civil partner’s postal address - GOV.UK
+  Apply to end a civil partnership - Do you want to apply for a financial order? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,32 +60,95 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_postal_address_cp.html">Back</a>
+  <a class="govuk-back-link" href="money_property_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/civil_partnership/other_court_cases_cp" method="post" novalidate>
+        <form action="/civil_partnership/financial_order_details_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               
                   <h1 class="govuk-heading-l">
-                    Enter your civil partner’s postal address
+                    Do you want to apply for a financial order?  
                   </h1>
                 
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">
-                        Full address
-                      </label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
-                    </div>
-                </div>
-            
-            <p class="govuk-body">
-              <a href="respondent_postal_address_cp.html" class="govuk-link">Enter UK postcode</a>
-            </p>
+                  
+                  <p class="govuk-body">
+                  If you disagree about dividing your money and property then you can ask the court to decide for you. This is known as applying for a financial order. The court needs to know now, if you want to apply. The application itself is done separately using another form, and costs an additional £255.      
+                  </p>
+              
+              <h2 class="govuk-heading-s">If you select yes: </h2>
+                  
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>you do not have to proceed with the application for a financial order.</li>
+                    <li>you can proceed with the application for a financial order at any time, so long as your civil partner is still alive. </li>
+                  </ul> 
+                  
+                  <h2 class="govuk-heading-s">If you select no:</h2>
+              
+              <ul class="govuk-list govuk-list--bullet">
+                    <li>you can still apply for a financial order in the future. </li>
+                    <li>you’ll only be able to apply until you remarry or form a new civil partnership (this does not apply to pension sharing or pension compensation orders, which can be applied at any time).</li>
+                  </ul>
+              
+              <h2 class="govuk-heading-m">Do you want to apply for a financial order?</h2>
+              
+              <p class="govuk-body">
+                  The application itself will be done separately, after you have submitted this ending a civil partnership application.     
+                  </p>
+                  
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="financial-order-cp" name="financial-order-cp" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order-cp" {{ checked("financial-order-cp", "Yes, I want to apply for a financial order") }}>
+                        <label class="govuk-label govuk-radios__label" for="financial-order-cp">
+                          Yes, I want to apply for a financial order 
+                        </label>
+                      </div>
+                      
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="financial-order-cp-2" name="financial-order-cp" type="radio" value="No, I do not want to apply for a financial order" data-aria-controls="conditional-financial-order-cp-2" {{ checked("financial-order-cp", "No, I do not want to apply for a financial order") }}>
+                        <label class="govuk-label govuk-radios__label" for="financial-order-cp-2">
+                          No, I do not want to apply for a financial order 
+                        </label>
+                      </div>
+                      
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-financial-order-cp">
+                        <div class="govuk-form-group">
+                            
+                            <div class="govuk-!-padding-bottom-2"></div>
+                        
+                      <h2 class="govuk-heading-m">
+                            Who is the financial order for?  
+                        </h2> 
+                            
+                            <div id="changed-name-hint" class="govuk-hint">
+      Select all that apply
+    </div>
+                        
+                      <div class="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="financial-order-type-cp" name="financial-order-type-cp" type="checkbox" value="Me" {{ checked("financial-order-type-cp", "Me") }}>
+                            <label class="govuk-label govuk-checkboxes__label" for="financial-order-type-cp">
+                              Me
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="financial-order-type-cp-2" name="financial-order-type-cp" type="checkbox" value="My children" {{ checked("financial-order-type-cp", "My children") }}>
+                            <label class="govuk-label govuk-checkboxes__label" for="financial-order-type-cp-2">
+                              My children
+                            </label>
+                          </div>
+                        </div>
+
+                      </div>
+                      
+                      </div>
+                 
+            </div>
+          </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
