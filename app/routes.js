@@ -423,6 +423,34 @@ router.post('/civil_partnership/financial_order_details_cp', function (req, res)
   }
 })
 
+router.post('/civil_partnership/respondent-postal-address-cp', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['papers-served-email-cp']
+
+  if (over18 == 'checked') {
+    res.redirect('/civil_partnership/email_service_cp')
+  } else {
+    res.redirect('/civil_partnership/respondent_postal_address_cp')
+  }
+})
+
+router.post('/civil_partnership/alternative_service_cp', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['papers-served-cp']
+
+  if (over18 == 'checked') {
+    res.redirect('/civil_partnership/alternative_service_cp')
+  } else {
+    res.redirect('/civil_partnership/respondent_postal_address_cp')
+  }
+})
+
 // Add your routes here - above the module.exports line
 
 module.exports = router
