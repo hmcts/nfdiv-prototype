@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Do you have your civil partner’s address? - GOV.UK
+  Apply to end a civil partnership - Do you have your civil partner’s postal address? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,44 +60,44 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_email.html">Back</a>
+  <a class="govuk-back-link" href="respondent_email_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/respondent_postal_address" method="post" novalidate>
+        <form action="/civil_partnership/respondent_no_address_no_email_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Do you have your civil partner’s address?
+                    Do you have your civil partner’s postal address?
                   </h1>
                 </legend>
                   
                   <p class="govuk-body">
-                  The court needs to know where to send information and documents relating to ending your civil partnership.   
+                  It’s important you provide your husband’s or wife’s address. You did not provide their email address and the court needs a way to ‘serve’ (deliver) the ending your civil partnership papers to them.   
                   </p> 
                   
                   <div class="govuk-inset-text">
-                      <p>The address can be their postal address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission.</p>
+                      <p>It can be their home address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission. </p>
                       
-                      <p>If you do not know their current address then you can use their last-known address. It’s important that you provide an address where they can receive court documents. </p>
+                      <p>If you do not know their current address then you can use their last-known address. If they do not respond at the address you provide, then you will need to make a separate application to serve (deliver) the papers to them another way. </p>
                       
                     </div>
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="Yes, I have their address" {{ checked("respondent-address", "Yes, I have their address") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-1">
+                    <input class="govuk-radios__input" id="respondent-address-cp-3" name="respondent-address-no-email-cp" type="radio" value="Yes, I have their address" {{ checked("respondent-address-no-email-cp", "Yes, I have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-cp-3">
                       Yes, I have their address   
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-2" name="respondent-address" type="radio" value="No, I do not have their address" {{ checked("respondent-address", "No, I do not have their address") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                    <input class="govuk-radios__input" id="respondent-address-cp-4" name="respondent-address-no-email-cp" type="radio" value="No, I do not have their address" {{ checked("respondent-address-no-email-cp", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-cp-4">
                       No, I do not have their address
                     </label>
                   </div>

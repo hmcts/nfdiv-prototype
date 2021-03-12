@@ -344,7 +344,7 @@ router.post('/civil_partnership/applicant-phone-number-cp', function (req, res) 
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const over18 = req.session.data['surname']
+  const over18 = req.session.data['surname-cp']
 
   if (over18 === 'No') {
     res.redirect('/civil_partnership/applicant_phone_number_cp')
@@ -364,6 +364,34 @@ router.post('/civil_partnership/respondent_address_cp', function (req, res) {
     res.redirect('/civil_partnership/respondent_address_no_email_cp')
   } else {
     res.redirect('/civil_partnership/respondent_address_cp')
+  }
+})
+
+router.post('/civil_partnership/respondent_postal_address_cp', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['respondent-address-cp']
+
+  if (over18 === 'No, I do not have their address') {
+    res.redirect('/civil_partnership/respondent_no_address_cp')
+  } else {
+    res.redirect('/civil_partnership/respondent_postal_address_cp')
+  }
+})
+
+router.post('/civil_partnership/respondent_no_address_no_email_cp', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['respondent-address-no-email-cp']
+
+  if (over18 === 'Yes, I have their address') {
+    res.redirect('/civil_partnership/respondent_postal_address_cp')
+  } else {
+    res.redirect('/civil_partnership/respondent_no_address_no_email_cp')
   }
 })
 

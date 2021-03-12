@@ -60,7 +60,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="english_welsh.html">Back</a>
+  <a class="govuk-back-link" href="applicant_address_select_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -69,12 +69,12 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Enter your civil partner’s email address</h1>
 
-        <form action="/divorce/applicant_postal_address" method="post" novalidate>
+        <form action="/civil_partnership/respondent_address_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
 
             <p class="govuk-body">
-                It’s important you provide their email address so the court can ‘serve’ (deliver) documents to them online. The emails will also contain information and updates relating to the divorce. If you do not provide an email address, the divorce papers will be served (delivered) by post.   
+                It’s important you provide their email address so the court can ‘serve’ (deliver) documents to them online. If you do not provide an email address, the papers will need to be served (delivered) by post.  
             </p>
               
               <div class="govuk-inset-text">
@@ -86,7 +86,7 @@
 
             </label> 
               
-            <input class="govuk-input" id="res-email" name="res-email" value="{{ data['res-email'] }}" type="email" spellcheck="false" autocomplete="email">
+            <input class="govuk-input" id="res-email-cp" name="res-email-cp" value="{{ data['res-email-cp'] }}" type="email" spellcheck="false" autocomplete="email">
 
             </div>
 
@@ -94,8 +94,8 @@
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
 
-                    <input class="govuk-checkboxes__input" id="no-email-address-1" name="no-email-address" type="checkbox" value="checked" {{ checked("no-email-address", "checked") }}>
-                    <label class="govuk-label govuk-checkboxes__label" for="no-email-address-1">
+                    <input class="govuk-checkboxes__input" id="no-email-address-cp-1" name="no-email-address-cp" type="checkbox" value="checked">
+                    <label class="govuk-label govuk-checkboxes__label" for="no-email-address-cp-1">
                       I do not know their email address 
 
                     </label>
