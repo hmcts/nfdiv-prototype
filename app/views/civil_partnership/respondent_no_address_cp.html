@@ -58,7 +58,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_address.html">Back</a>
+  <a class="govuk-back-link" href="respondent_address_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -71,7 +71,7 @@
       </h1>
 
 
-    <form action="/divorce/other-court-cases" method="post" novalidate>    
+    <form action="/civil_partnership/respondent-postal-address-cp" method="post" novalidate>    
 
       <p>Save your application and try to find their address. It can be their postal address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission.
       </p>
@@ -94,19 +94,11 @@
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
 
-                    <input class="govuk-checkboxes__input" id="papers-served" name="papers-served" type="checkbox" data-aria-controls="conditional-papers-served" value="checked" {{ checked("papers-served", "checked") }}>
-                    <label class="govuk-label govuk-checkboxes__label" for="papers-served">
+                    <input class="govuk-checkboxes__input" id="papers-served-email-cp" name="papers-served-email-cp" type="checkbox" value="checked" {{ checked("papers-served-email-cp", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="papers-served-email-cp">
                       I want to apply to have the papers ‘served’ (sent to them) another way  
 
                     </label>
-                  </div>
-                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-papers-served">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="papers-served">
-                        <strong>You will be given the link to apply after you have submitted this divorce application. </strong>
-                      </label>
-                      </div>
-
                   </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Other court cases relating your marriage, property or children - GOV.UK
+  Apply to end a civil partnership - Check your answers - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,7 +60,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="upload">Back</a>
+  <a class="govuk-back-link" href="upload_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -70,12 +70,12 @@
 
       <h1 class="govuk-heading-xl">Check your answers</h1>
 
-      <h2 class="govuk-heading-m">About your marriage</h2>
+      <h2 class="govuk-heading-m">About your civil partnership</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Who are you divorcing?
+            Are you male or female?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['husband-wife'] }}
@@ -103,7 +103,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Has your marriage irretrievably broken down (it cannot be saved)?
+            Has your relationship irretrievably broken down (it cannot be saved)?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['broken-down'] }}
@@ -117,7 +117,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date of marriage
+            When did you form your civil partnership?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['marriage-date-day'] }} / {{ data['marriage-date-month'] }} / {{ data['marriage-date-year'] }}
@@ -131,7 +131,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Do you have your marriage certificate with you?
+            Do you have your civil partnership certificate with you?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['marriage-certificate'] }}
@@ -150,7 +150,7 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Did you get married in the UK?
+            Did you form your civil partnership in the UK?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['marry-uk'] }}
@@ -178,7 +178,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Is your husband's or wife's life mainly based in England or Wales?
+            Is your civil partner’s life mainly based in England or Wales?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['life-based-uk-partner'] }}
@@ -213,12 +213,12 @@
         </div>   
       </dl> 
       
-      <h2 class="govuk-heading-m">About you and your husband or wife</h2>
+      <h2 class="govuk-heading-m">About you and your civil partner</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Your name
+            Your full name
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['app-first-name'] }} {{ data['app-last-name'] }}
@@ -232,7 +232,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Your husband's or wife's name
+            Your civil partner's full name
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['res-first-name'] }} {{ data['res-last-name'] }}
@@ -246,7 +246,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Your name from the marriage certificate
+            Your name from the civil partnership certificate
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['app-name-cert'] }}
@@ -260,7 +260,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Your husband's or wife's name from the marriage certificate
+            Your civil partner's name from the civil partnership certificate
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['res-name-cert'] }}
@@ -274,7 +274,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Have you changed your name since getting married?
+            Did you change your last name when you formed your civil partnership?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['changed-name'] }}
@@ -302,7 +302,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Do you need the court to keep your address private from your husband or wife?
+            Do you need your postal address kept private from your civil partner?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['address-private'] }}
@@ -346,7 +346,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Your husband's or wife's email address
+            Your civil partners's email address
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['res-email'] }}
@@ -360,7 +360,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Do you have your husband’s or wife’s address?
+            Do you have your civil partner’s address?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['respondent-address'] }}
@@ -374,7 +374,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Your husband's or wife's address
+            Your civil partner’s address
           </dt>
           <dd class="govuk-summary-list__value">
             1 Main Street
@@ -390,7 +390,7 @@
         </div>  
       </dl>
         
-      <h2 class="govuk-heading-m">About your divorce</h2>
+      <h2 class="govuk-heading-m">About your civil partnership</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -423,7 +423,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Claim costs from your husband or wife
+            Claim costs from your civil partner
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['claim-costs'] }}
@@ -445,7 +445,7 @@
             Uploaded documents
           </dt>
           <dd class="govuk-summary-list__value">
-            Marriage certifiate 
+            Civil partnership certifiate 
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -461,7 +461,7 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Do you need help paying the fee for your divorce?
+            Do you need help paying the fee for ending your civil partnership?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['help-fees'] }}
@@ -489,17 +489,16 @@
         </div>
       </dl>    
 
-      <h2 class="govuk-heading-m">Confirm the following</h2>
+      <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Confirm before continuing</h2>
 
-      
-        
-      
         <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" style="background-color: white" id="app-email-address-1" name="app-email-address" type="checkbox" value="checked" {{ checked("app-email-address", "checked") }}>
-                    <label class="govuk-label govuk-checkboxes__label" for="app-email-address-1">
-                      I confirm that:  
+                    <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
+                      I confirm that I’m applying to the court to:  
                     </label>
                   </div>  
                 </div>
@@ -507,28 +506,47 @@
         
           <div class="govuk-form-group">
                 <ul class="govuk-list govuk-list--bullet" style="text-align: left">
-                    <li>I’m applying to the court for my marriage to be dissolved (get a divorce).</li>
-                    <li>I believe that the facts stated in this application are true.</li>
-                   <!-- <li>order my wife or husband to pay some or all of the divorce costs</li>
-                    <li>decide how our money and property will be split (known as a financial order)</li> -->
+                    <li>end my civil partnership </li>
+                   <li>order my civil partner to pay costs associated with ending my my civil partnership </li>
+                    <li>decide how our money and property will be split (known as a financial order)</li>
                   </ul> 
             </div>
         
         <p class="govuk-body">
-                  The first statement is your formal application to the court (known as 'the prayer'). The second is your statement of truth.
+                  This confirms what you are asking the court to do. It’s known as ‘the prayer’. 
+                  </p>
+        
+        <div class="govuk-!-padding-bottom-4"></div>
+        
+        <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked" {{ checked("statement-truth", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
+                      I believe that the facts stated in this application are true   
+                    </label>
+                  </div>  
+                </div>
+            </div>
+        
+        <p class="govuk-body">
+                  This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.  
                   </p>
         
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
             <span class="govuk-warning-text__assistive">Warning</span>
-            You could be fined or imprisoned for contempt of court if you deliberately submit false information.
+            You could be fined or imprisoned if you deliberately submit false information.
           </strong>
         </div>
+          
+            </div>
+  </div>
         
         <div class="govuk-!-padding-bottom-4"></div>
 
-      <form action="/divorce/payment" method="post" novalidate>
+      <form action="/civil_partnership/payment_cp" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
