@@ -60,14 +60,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="applicant_phone_number.html">Back</a>
+  <a class="govuk-back-link" href="applicant_phone_number_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/respondent_email" method="post" novalidate>
+        <form action="/civil_partnership/applicant_address_private_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -79,14 +79,14 @@
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-welsh" name="english-welsh" type="radio" value="English" {{ checked("english-welsh", "English") }}>
-                    <label class="govuk-label govuk-radios__label" for="english-welsh">
+                    <input class="govuk-radios__input" id="english-welsh-cp" name="english-welsh-cp" type="radio" value="English" {{ checked("english-welsh-cp", "English") }}>
+                    <label class="govuk-label govuk-radios__label" for="english-welsh-cp">
                       English  
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-welsh-1" name="english-welsh" type="radio" value="Welsh" {{ checked("english-welsh", "Welsh") }}>
-                    <label class="govuk-label govuk-radios__label" for="english-welsh-1">
+                    <input class="govuk-radios__input" id="english-welsh-cp-1" name="english-welsh-cp" type="radio" value="Welsh" {{ checked("english-welsh-cp", "Welsh") }}>
+                    <label class="govuk-label govuk-radios__label" for="english-welsh-cp-1">
                       Welsh 
                     </label>
                   </div>

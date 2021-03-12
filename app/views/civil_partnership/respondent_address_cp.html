@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Do you have your civil partner’s address? - GOV.UK
+  Apply to end a civil partnership - Do you have your civil partner’s postal address? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -60,14 +60,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="applicant_address_select.html">Back</a>
+  <a class="govuk-back-link" href="respondent_email_cp.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/respondent_postal_address" method="post" novalidate>
+        <form action="/civil_partnership/respondent_postal_address_cp" method="post" novalidate>
 
           <div class="govuk-form-group">
               
@@ -77,25 +77,26 @@
                 
                   
                   <p class="govuk-body">
-                  It’s important you provide your civil partner’s address. The court needs to ‘serve’ (deliver) the divorce papers to them, and you did not provide their email address.    
+                  The court needs your civil partner’s address, to notify them about the ending a civil partnership.    
                   </p> 
                   
                   <div class="govuk-inset-text">
-                      <p>The address can be their postal address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission.</p>
+                      <p> It can be their home address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission. </p>
+                      
                       <p>
-                      If you do not know their current address then you can use their last-known address. If they do not respond at the address you provide, then you will need to make a separate application to serve (deliver) the papers another way. </p>
+                      If you do not know their current address then you can use their last-known address.</p>
                     </div>
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="Yes, I have their address" {{ checked("respondent-address", "Yes, I have their address") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-1">
+                    <input class="govuk-radios__input" id="respondent-address-cp-1" name="respondent-address-cp" type="radio" value="Yes, I have their address" {{ checked("respondent-address-cp", "Yes, I have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-cp-1">
                       Yes, I have their address   
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-2" name="respondent-address" type="radio" value="No, I do not have their address" {{ checked("respondent-address", "No, I do not have their address") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                    <input class="govuk-radios__input" id="respondent-address-cp-2" name="respondent-address-cp" type="radio" value="No, I do not have their address" {{ checked("respondent-address-cp", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-cp-2">
                       No, I do not have their address
                     </label>
                   </div>

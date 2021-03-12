@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a divorce - You need to get their address - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="respondent_address_no_email.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        You need to get their address
+      </h1>
+
+
+    <form action="/divorce/alternative_service" method="post" novalidate>    
+
+      <p>Save your application and try to find their address. It can be their postal address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission.
+      </p>
+
+        <p>To find their address you could try contacting their: </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>relatives</li>
+            <li>friends</li>
+            <li>last-known employer</li>
+            <li>trade union or professional organisation</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">If you cannot get their address</h2>
+
+
+        <p>If you know you cannot get their address then you can apply to have the divorce papers ‘served’ (delivered) to them another way. For example by email, text message or social media. This is a separate application which will be reviewed by a judge and cost an additional £50. </p>
+
+        <div class="govuk-form-group">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+
+                    <input class="govuk-checkboxes__input" id="papers-served" name="papers-served" type="checkbox" value="checked" {{ checked("papers-served", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="papers-served">
+                      I want to apply to have the papers ‘served’ (sent to them) another way  
+
+                    </label>
+                  </div>
+                </div>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+      <p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+{% endblock %}
