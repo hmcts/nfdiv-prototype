@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Dividing your money and property - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="other_court_cases.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/divorce/financial_order" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              
+                  <h1 class="govuk-heading-l">
+                    Dividing your money and property
+                  </h1>
+                  
+                  <p class="govuk-body">
+                  It’s usually more straightforward and less expensive if you agree with your husband or wife on how to divide your savings, property, pensions and other assets. There are mediation services available to help you come to an agreement. You’ll be given links to more information after you have submitted this application.      
+                  </p>
+              
+                <h2 class="govuk-heading-m">If you agree about dividing money and property </h2>
+                  
+                  <p class="govuk-body">
+                  You can ask the court to make your agreement legally binding. This is known as applying for a ‘consent order’. There is an additional fee of £50. You can get legal advice or ask a solicitor to draft a consent order for you. You will be given links to further guidance after you have submitted this application.</p>
+                  
+              <h2 class="govuk-heading-m">If you disagree about dividing money and property </h2>
+              
+              <p class="govuk-body">
+                  You can ask the court to decide for you. This is known as applying for a ‘financial order’. You can also apply for a financial order for your children, if appropriate. The court can also order maintenance payments to be made.</p>
+              
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Read more about child maintenance and financial orders
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    The court can only make financial orders for children under certain circumstances. You can come to an agreement with your husband or wife and make it legally binding with a consent order, or you can use the Child Maintenance Service.  
+                  </div>
+                  <div class="govuk-details__text">
+                    The application for a financial order is done separately, using another form. It costs an additional £255. You will be asked on the next page whether you want to apply.  
+                  </div>
+                </details>   
+            </div>
+              
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

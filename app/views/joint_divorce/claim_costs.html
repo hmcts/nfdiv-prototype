@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you want to claim divorce costs from your husband or wife?  - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="money_property.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/divorce/upload" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              
+                  <h1 class="govuk-heading-l">
+                    Do you want to claim divorce costs from your husband or wife? 
+                  </h1>
+                
+                  
+                  <p class="govuk-body">
+                  You can ask the court to consider whether your husband or wife should pay some or all of the costs related to your divorce. These costs could include the application fee, solicitors fees, or any additional court fees.    
+                  </p> 
+              
+                  <p class="govuk-body">
+                  You do not have to provide details of the costs now.    
+                  </p>
+              
+                  
+                  <div class="govuk-inset-text">
+                      This is only asking you about costs relating to the divorce. How you divide money and property is dealt with separately.  
+                    </div>
+                  
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="claim-costs-1" name="claim-costs" type="radio" value="Yes, I want to apply to claim costs" data-aria-controls="conditional-claim-costs" {{ checked("claim-costs", "Yes, I want to apply to claim costs") }}>
+                        <label class="govuk-label govuk-radios__label" for="claim-costs-1">
+                          Yes, I want to apply to claim costs
+                        </label>
+                      </div>
+                    
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-claim-costs">
+                       <p class="govuk-body">
+                  <strong>You still need to pay the fee when you submit this application.</strong>    
+                  </p>
+                        
+                        <!-- <div class="govuk-warning-text">
+                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                          <strong class="govuk-warning-text__text">
+                            <span class="govuk-warning-text__assistive">Warning</span>
+                            You still need to pay the fee when you submit this application.  
+                          </strong>
+                        </div> -->
+                      </div>
+                    
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="claim-costs-2" name="claim-costs" type="radio" value="No, I do not want to apply to claim costs" data-aria-controls="conditional-claim-costs-2" {{ checked("claim-costs", "No, I do not want to apply to claim costs") }}>
+                        <label class="govuk-label govuk-radios__label" for="claim-costs-2">
+                          No, I do not want to apply to claim costs
+                        </label>
+                      </div>
+                    </div>
+                 
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
