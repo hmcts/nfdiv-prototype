@@ -451,6 +451,217 @@ router.post('/civil_partnership/alternative_service_cp', function (req, res) {
   }
 })
 
+// Branching - DIVORCE
+router.post('/joint_divorce/marriage_date', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['broken-down']
+
+  if (over18 === 'No') {
+    res.redirect('/joint_divorce/cannot_divorce')
+  } else {
+    res.redirect('/joint_divorce/marriage_date')
+  }
+})
+
+router.post('/joint_divorce/sole_or_joint', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['marriage-certificate']
+
+  if (over18 === 'Neither of us have it') {
+    res.redirect('/joint_divorce/no_marriage_cert')
+  } else {
+    res.redirect('/joint_divorce/sole_or_joint')
+  }
+})
+
+router.post('/joint_divorce/marry_in_uk', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['help-fees']
+
+  if (over18 === 'I need help paying the fee') {
+    res.redirect('/joint_divorce/help_fees_number')
+  } else {
+    res.redirect('/joint_divorce/marry_in_uk')
+  }
+})
+
+router.post('/joint_divorce/help_fees_number', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['help-fees-number']
+
+  if (over18 === 'false') {
+    res.redirect('/joint_divorce/help_fees_apply')
+  } else {
+    res.redirect('/joint_divorce/marry_in_uk')
+  }
+})
+
+router.post('/joint_divorce/jurisdiction-page', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['marry-uk']
+
+  if (over18 === 'Yes') {
+    res.redirect('/joint_divorce/jurisdiction')
+  } else {
+    res.redirect('/joint_divorce/english_cert')
+  }
+})
+
+router.post('/joint_divorce/where_you_married_2', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['english-certificate']
+
+  if (over18 === 'true') {
+    res.redirect('/joint_divorce/where_you_married_2')
+  } else {
+    res.redirect('/joint_divorce/certified_translation_1')
+  }
+})
+
+router.post('/joint_divorce/where_you_married_1', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['cert-translation-no']
+
+  if (over18 === 'true') {
+    res.redirect('/joint_divorce/where_you_married_1')
+  } else {
+    res.redirect('/joint_divorce/need_certified_translation')
+  }
+})
+
+router.post('/joint_divorce/applicant-phone-number', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['surname']
+
+  if (over18 === 'No') {
+    res.redirect('/joint_divorce/applicant_phone_number')
+  } else {
+    res.redirect('/joint_divorce/name_changed_deed')
+  }
+})
+
+router.post('/joint_divorce/respondent_postal_address', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['respondent-address']
+
+  if (over18 === 'No, I do not have their address') {
+    res.redirect('/joint_divorce/respondent_no_address')
+  } else {
+    res.redirect('/joint_divorce/respondent_postal_address')
+  }
+})
+
+router.post('/joint_divorce/respondent_no_address_no_email', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['respondent-address-no-email']
+
+  if (over18 === 'Yes, I have their address') {
+    res.redirect('/joint_divorce/respondent_postal_address')
+  } else {
+    res.redirect('/joint_divorce/respondent_no_address_no_email')
+  }
+})
+
+router.post('/joint_divorce/respondent_address', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['no-email']
+
+  if (over18 == 'I do not know their email address') {
+    res.redirect('/joint_divorce/respondent_address_no_email')
+  } else {
+    res.redirect('/joint_divorce/respondent_address')
+  }
+})
+
+router.post('/joint_divorce/respondent-postal-address', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['papers-served-email']
+
+  if (over18 == 'checked') {
+    res.redirect('/joint_divorce/email_service')
+  } else {
+    res.redirect('/joint_divorce/respondent_postal_address')
+  }
+})
+
+router.post('/joint_divorce/alternative_service', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['papers-served']
+
+  if (over18 == 'checked') {
+    res.redirect('/joint_divorce/alternative_service')
+  } else {
+    res.redirect('/joint_divorce/respondent_postal_address')
+  }
+})
+
+router.post('/joint_divorce/money-property', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['other-court-cases']
+
+  if (over18 === 'No') {
+    res.redirect('/joint_divorce/money_property')
+  } else {
+    res.redirect('/joint_divorce/other_court_cases_details')
+  }
+})
+
+router.post('/joint_divorce/financial_order_details', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['financial-order']
+
+  if (over18 === 'No, I do not want to apply for a financial order') {
+    res.redirect('/joint_divorce/claim_costs')
+  } else {
+    res.redirect('/joint_divorce/financial_order_details')
+  }
+})
+
 // Add your routes here - above the module.exports line
 
 module.exports = router
