@@ -37,7 +37,7 @@ router.post('/divorce/help_fees', function (req, res) {
 
   const over18 = req.session.data['marriage-certificate']
 
-  if (over18 === 'No') {
+  if (over18 === 'No, I do not have my marriage certificate with me') {
     res.redirect('/divorce/no_marriage_cert')
   } else {
     res.redirect('/divorce/help_fees')
