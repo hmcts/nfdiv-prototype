@@ -36,7 +36,7 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Who are you divorcing?
+            Who are you applying to divorce?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['husband-wife'] }}
@@ -44,13 +44,13 @@
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> who are you divorcing</span>
+              <span class="govuk-visually-hidden"> who are you applying to divorcing</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Type of relationship
+            Same-sex couples
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['same-sex'] }}
@@ -58,7 +58,7 @@
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> type of relationship</span>
+              <span class="govuk-visually-hidden"> same-sex couples</span>
             </a>
           </dd>
         </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date of marriage
+            When did you get married?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['marriage-date-day'] }} / {{ data['marriage-date-month'] }} / {{ data['marriage-date-year'] }}
@@ -86,7 +86,7 @@
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> date of marriage</span>
+              <span class="govuk-visually-hidden"> when did you get married</span>
             </a>
           </dd>
         </div>
@@ -103,7 +103,40 @@
               <span class="govuk-visually-hidden"> marriage certificate</span>
             </a>
           </dd>
-        </div>  
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How do you want to apply for the divorce?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['sole-joint'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> how do you want to apply for the divorce</span>
+            </a>
+          </dd>
+        </div>   
+      </dl>
+        
+        <h2 class="govuk-heading-m">How the court will contact your husband or wife</h2>
+        
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Your husband's or wife's email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['res-email'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> respondent email address</span>
+            </a>
+          </dd>
+        </div>
       </dl>
         
       <h2 class="govuk-heading-m">Your connections to England and Wales</h2>
@@ -253,7 +286,7 @@
         
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">    
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
+          <dt class="govuk-summary-list__key" style="width:60%">
             What language do you want to receive emails and documents in?
           </dt>
           <dd class="govuk-summary-list__value">
@@ -312,54 +345,7 @@
         </div>
         </dl>
         
-        <h2 class="govuk-heading-m">How the court will contact your husband or wife</h2>
         
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Your husband's or wife's email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['res-email'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> respondent email address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Do you have your husband’s or wife’s address?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['respondent-address'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> do you have your husband’s or wife’s address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Your husband's or wife's address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            1 Main Street
-            <br>London
-            <br>{{ data['rep-address-postcode'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> respondent address</span>
-            </a>
-          </dd>
-        </div>  
-      </dl>
         
       <h2 class="govuk-heading-m">Other court cases </h2>
 
@@ -384,7 +370,7 @@
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">    
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
+          <dt class="govuk-summary-list__key" style="width:60%">
             Dividing your money and property
           </dt>
           <dd class="govuk-summary-list__value">
@@ -403,7 +389,7 @@
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
+          <dt class="govuk-summary-list__key" style="width:60%">
             Claim costs from your husband or wife
           </dt>
           <dd class="govuk-summary-list__value">
@@ -471,7 +457,7 @@
       </dl>    
 
         
-    <div class="govuk-grid-row">
+   <!-- <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-m">Confirm before continuing</h2>
 
@@ -524,10 +510,10 @@
         </div>
           
             </div>
-  </div>
+  </div> -->
        
 
-      <form action="/joint_divorce/payment" method="post" novalidate>
+      <form action="/joint_divorce/sign_in_coapplicant" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
