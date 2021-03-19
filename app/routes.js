@@ -451,7 +451,7 @@ router.post('/civil_partnership/alternative_service_cp', function (req, res) {
   }
 })
 
-// Branching - DIVORCE
+// Branching - JOINT DIVORCE
 router.post('/joint_divorce/marriage_date', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
@@ -473,7 +473,7 @@ router.post('/joint_divorce/sole_or_joint', function (req, res) {
 
   const over18 = req.session.data['marriage-certificate']
 
-  if (over18 === 'Neither of us have it') {
+  if (over18 === 'No, I do not have my marriage certificate with me') {
     res.redirect('/joint_divorce/no_marriage_cert')
   } else {
     res.redirect('/joint_divorce/sole_or_joint')
