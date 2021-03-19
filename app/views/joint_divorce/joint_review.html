@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Are you male or female? - GOV.UK
+  Apply for a divorce - Dividing your money and property - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,49 +28,26 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/broken_down_irretrievably" method="post" novalidate>
+        <form action="/joint_divorce/joint_overview" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                      Who are you applying to divorce?
+              
+                  <h1 class="govuk-heading-l">
+                    You need to review your joint application
                   </h1>
-                </legend>
                   
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="husband-wife-1" name="husband-wife" type="radio" value="My husband" {{ checked("husband-wife", "My husband") }}>
-                    <label class="govuk-label govuk-radios__label" for="husband-wife-1">
-                      My husband 
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="husband-wife-2" name="husband-wife" type="radio" value="My wife" {{ checked("husband-wife", "My wife") }}>
-                    <label class="govuk-label govuk-radios__label" for="husband-wife-2">
-                      My wife 
-                    </label>
-                  </div>
-                </div> 
+                  <p class="govuk-body">
+                  Your husband or wife has created a divorce application. They have indicated they want to submit it jointly with you. A joint application is when you submit the application together. It’s usually appropriate if both you and your husband or wife agree with getting a divorce.        
+                  </p>
                   
-              </fieldset>
-            </div>
-            
-            <div class="govuk-form-group">
-            <h2 class="govuk-heading-s">
-                Same-sex couples  
-            </h2>
-                  
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="same-sex" name="same-sex" type="checkbox" value="Same sex" {{ checked("same-sex", "Same sex") }}>
-                    <label class="govuk-label govuk-checkboxes__label" for="same-sex">
-                      We were a same-sex couple when we got married
-                    </label>
-                  </div>  
-                </div>
-            </div>
+                  <p class="govuk-body">
+                  You need to review the application they have created. If you agree with the information they have entered, then it can be submitted. If you do not agree then you will be told what to do next at that point.</p>
+                 
+                  <p class="govuk-body">
+                  First you will need to provide some information which is specific to you. </p>
 
+            </div>
+              
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
