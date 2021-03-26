@@ -79,7 +79,6 @@
             
             <ul class="govuk-list govuk-list--bullet">
                         <li>your original civil partnership certificate </li>
-                <li>your original foreign civil partnership certificate </li>
                 <li>a certified translation of your foreign civil partnership certificate </li>
                 <li>proof that you changed your name, for example a deed poll or ‘statutory declaration’</li>
                       </ul>
@@ -157,8 +156,22 @@
                       </div>
                       
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="cant-upload-cp-1" name="cant-upload-cp" type="checkbox" value="Proof that I changed my name"  {{ checked("cant-upload-cp", "Proof that I changed my name ") }}>
+                        <input class="govuk-checkboxes__input" id="cant-upload-cp-1" name="cant-upload-cp" type="checkbox" value="My original foreign civil partnership certificate"  {{ checked("cant-upload-cp", "My original foreign civil partnership certificate") }}>
                         <label class="govuk-label govuk-checkboxes__label" for="cant-upload-cp-1">
+                          My original foreign civil partnership certificate  
+                        </label>
+                      </div>
+                      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="cant-upload-cp-2" name="cant-upload-cp" type="checkbox" value="A certified translation of my foreign civil partnership certificate"  {{ checked("cant-upload-cp", "A certified translation of my foreign civil partnership certificate") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="cant-upload-cp-2">
+                          A certified translation of my foreign civil partnership certificate
+                        </label>
+                      </div>
+                      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="cant-upload-cp-4" name="cant-upload-cp" type="checkbox" value="Proof that I changed my name"  {{ checked("cant-upload-cp", "Proof that I changed my name ") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="cant-upload-cp-4">
                           Proof that I changed my name 
                         </label>
                       </div>
