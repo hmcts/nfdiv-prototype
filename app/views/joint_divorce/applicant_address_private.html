@@ -31,33 +31,32 @@
         <form action="/joint_divorce/applicant_postal_address_v2" method="post" novalidate>
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Do you need your postal address kept private from your husband or wife?
+              
+                  <h1 class="govuk-heading-l">
+                    Do you need your contact details kept private from your husband or wife?
                   </h1>
-                </legend>
+                
                   
-                 <!-- <p class="govuk-body">
-                    A copy of your divorce application will be sent to your husband or wife. If you do not want them to know your address, then you can ask the court to keep it private.  
-                  </p>-->
+                <p>
+                    The court can keep your address, email address and phone number private from your husband or wife.   
+                  </p>
                   
                 <div class="govuk-radios govuk-radios--inline">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="address-private-1" name="address-private" type="radio" value="Keep my address private" {{ checked("address-private", "Keep my address private") }}>
                         <label class="govuk-label govuk-radios__label" for="address-private-1">
-                          Keep my address private 
+                          Keep my contact details private 
                         </label>
                       </div>
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="address-private-2" name="address-private" type="radio" value="I do not not need my address kept private" {{ checked("address-private", "I do not not need my address kept private") }}>
                         <label class="govuk-label govuk-radios__label" for="address-private-2">
-                          I do not not need my address kept private 
+                          I do not need my contact details kept private 
                         </label>
                       </div>
                     </div>
                   
-              </fieldset>
+              
             </div>
 
           <button class="govuk-button" data-module="govuk-button">

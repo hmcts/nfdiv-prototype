@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply to end a civil partnership - Do you need your postal address kept private from your civil partner?  - GOV.UK
+  Apply to end a civil partnership - Do you need your contact details kept private from your civil partner?  - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -72,25 +72,24 @@
           <div class="govuk-form-group">
               
                   <h1 class="govuk-heading-l">
-                    Do you need your postal address kept private from your civil partner?
+                    Do you need your contact details kept private from your civil partner? 
                   </h1>
                 
-                  
-                  <!--<p class="govuk-body">
-                    A copy of your divorce application will be sent to your civil partner. If you do not want them to know your address, then you can ask the court to keep it private.  
-                  </p>-->
+                 <p>
+                    The court can keep your address, email address and phone number private from your civil partner.   
+                  </p>
                   
                 <div class="govuk-radios govuk-radios--inline">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="address-private-1-cp" name="address-private-cp" type="radio" value="Keep my address private" {{ checked("address-private-cp", "Keep my address private") }}>
                         <label class="govuk-label govuk-radios__label" for="address-private-1-cp">
-                          Keep my address private 
+                          Keep my contact details private 
                         </label>
                       </div>
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="address-private-2-cp" name="address-private-cp" type="radio" value="I do not not need my address kept private" {{ checked("address-private-cp", "I do not not need my address kept private") }}>
                         <label class="govuk-label govuk-radios__label" for="address-private-2-cp">
-                          I do not not need my address kept private 
+                          I do not need my contact details kept private 
                         </label>
                       </div>
                     </div>
