@@ -21,14 +21,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/marriage_certificate">Back</a>
+  <a class="govuk-back-link" href="/divorce/marriage_certificate">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/email_address" method="post" novalidate>
+        <form action="/divorce/help_fees" method="post" novalidate>
 
           <div class="govuk-form-group">
               
@@ -43,7 +43,7 @@
               <h2 class="govuk-heading-s">Applying as a sole applicant </h2>
                   
                 <p class="govuk-body">
-                  If you apply as a sole applicant, your husband or wife responds to your divorce application after you have submitted it. You will be applying on your own.         
+                  If you apply as a sole applicant, your husband or wife responds to your divorce application after you have submitted it. You will be applying on your own.        
                   </p> 
                   
                   <h2 class="govuk-heading-s">Applying jointly, with your husband or wife</h2>
@@ -59,14 +59,14 @@
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="sole-joint" name="sole-joint" type="radio" value="I want to apply on my own, as a sole applicant" {{ checked("sole-joint", "I want to apply on my own, as a sole applicant") }}>
-                        <label class="govuk-label govuk-radios__label" for="sole-joint">
+                        <label class="govuk-label govuk-radios__label" for="financial-order">
                           I want to apply on my own, as a sole applicant  
                         </label>
                       </div>
                       
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="sole-joint-2" name="sole-joint" type="radio" value="I want to apply jointly, with my husband or wife"  {{ checked("sole-joint", "I want to apply jointly, with my husband or wife") }}>
-                        <label class="govuk-label govuk-radios__label" for="sole-joint-2">
+                        <label class="govuk-label govuk-radios__label" for="financial-order-2">
                           I want to apply jointly, with my husband or wife 
                         </label>
                       </div>      
