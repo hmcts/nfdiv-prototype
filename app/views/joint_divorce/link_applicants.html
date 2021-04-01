@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
-{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {% block pageTitle %}
-  Apply for a divorce - Dividing your money and property - GOV.UK
+  Apply for a divorce - Enter these details from the email - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,36 +21,43 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/joint_divorce/link_applicants">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/sign_in_coapplicant">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/broken_down_co_app" method="post" novalidate>
+        <h1 class="govuk-heading-l">Enter these details from the email</h1>
+
+        <form action="/joint_divorce/joint_review" method="post" novalidate>
+            
+            <p>Enter the reference number and access code from the court's email.</p>
 
           <div class="govuk-form-group">
-              
-                  <h1 class="govuk-heading-l">
-                    You need to review your joint application
-                  </h1>
-                  
-                  <p class="govuk-body">
-                  Your husband or wife has created a divorce application. They have indicated they want to submit it jointly with you. A joint application is when you submit the application together. It’s usually appropriate if both you and your husband or wife agree with getting a divorce.        
-                  </p>
-                  
-                  <p class="govuk-body">
-                  You need to review the application they have created. If you agree with the information they have entered, then it can be submitted. If you do not agree then you will be told what to do next at that point.</p>
-                 
-                  <p class="govuk-body">
-                  First you will need to provide some information which is specific to you. </p>
-
+            <label class="govuk-label govuk-label--m" for="joint-ref">
+              Reference number
+            </label>
+              <div id="joint-ref-hint" class="govuk-hint">
+              This is a 16-digit number
             </div>
-              
+            <input class="govuk-input govuk-input--width-20" id="joint-ref" name="joint-ref" type="text" aria-describedby="joint-ref-hint" value="{{ data['joint-ref'] }}">
+            </div> 
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="joint-access-code">
+              Access code
+            </label>
+              <div id="joint-access-code-hint" class="govuk-hint">
+              Your code is 8 characters long 
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="joint-access-code" name="joint-access-code" type="text" aria-describedby="joint-access-code-hint" value="{{ data['joint-access-code'] }}">
+            </div>
+
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>
