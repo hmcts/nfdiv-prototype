@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - How to apply for a financial order - GOV.UK
+  Apply for a divorce - Do you need your postal address kept private from your husband or wife? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,38 +21,48 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/financial_order.html">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/english_welsh_co_app.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/upload" method="post" novalidate>
+        <form action="/joint_divorce/co_applicant_postal_address" method="post" novalidate>
 
           <div class="govuk-form-group">
               
                   <h1 class="govuk-heading-l">
-                    How to apply for a financial order  
+                    Do you need your contact details kept private from your husband or wife?
                   </h1>
+                
                   
-                  <p class="govuk-body">
-                  You will need to complete another form (Form A) and pay an additional fee. You can apply at any time, so long as your husband or wife is still alive.    
-              </p>   
-              
-              <div class="govuk-inset-text">
-                  You will be given a link to more guidance and Form A after you have submitted this divorce application. You can get legal advice or ask a solicitor to draft a financial order for you. 
-              </div> 
-              
-              <p class="govuk-body">
-                  Continue with your divorce application   
-              </p>
+                <p>
+                    The court can keep your address, email address and phone number private from your husband or wife.   
+                  </p>
+                  
+                <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="address-private-1" name="address-private" type="radio" value="Keep my address private" {{ checked("address-private", "Keep my address private") }}>
+                        <label class="govuk-label govuk-radios__label" for="address-private-1">
+                          Keep my contact details private 
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="address-private-2" name="address-private" type="radio" value="I do not not need my address kept private" {{ checked("address-private", "I do not not need my address kept private") }}>
+                        <label class="govuk-label govuk-radios__label" for="address-private-2">
+                          I do not need my contact details kept private 
+                        </label>
+                      </div>
+                    </div>
+                  
               
             </div>
-              
+
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+            
         </form>
       </div>
     </div>

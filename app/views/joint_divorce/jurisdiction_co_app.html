@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Help paying the fee for your divorce - GOV.UK
+  Apply for a divorce - You can use the English or Welsh courts to get a divorce - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,37 +21,63 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/joint_divorce/broken_down_co_app">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/help_fees_co_app.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/jurisdiction_co_app" method="post" novalidate>
+        <form action="/joint_divorce/respondent_name" method="post" novalidate>
 
           <div class="govuk-form-group">
+              
+                  <h1 class="govuk-heading-l">
+                    Jurisdiction
+                  </h1>
+                
+                  <p class="govuk-body">
+                  Your husband's or wife's answers indicate that you can apply for a divorce in England or Wales because both of you are 'habitually resident'. 
+                  </p>
+                  
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Read more about habitual residence
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    If your life is mainly based in England or Wales then you're what is legally known as 'habitually resident'.
+                  </div>
+                  <div class="govuk-details__text">
+                    This may include working, owning property, having children in school, or your main family life taking place in England or Wales.
+                  </div>
+                  <div class="govuk-details__text">
+                    The examples above aren't a complete list of what makes up habitual residence, and just because some of them apply to you doesn't mean you're habitually resident. If you're not sure, you should get legal advice. 
+                  </div>
+              </details>
+              
+            </div>
+            
+            <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                      Help paying the fee for your divorce
+                  <h1 class="govuk-heading-m">
+                      Do you agree with the connection to England and Wales?
                   </h1>
                 </legend>
                   
-                <p>Your husband or wife has applied for Help With Fees. You need to apply and provide a Help With Fees reference number to receive help paying the fee for the divorce.</p>
- 
-                  
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-co-app" name="help-fees-co-app" type="radio" value="I need help paying the fee" {{ checked("help-fees-co-app", "I need help paying the fee") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-co-app">
-                      I have a help with fees reference number	
+                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="true" {{ checked("help-fees", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-1">
+                      I'm confident that connection is right	
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-co-app-1" name="help-fees-co-app" type="radio" value="I do not need help paying the fee" {{ checked("help-fees-co-app", "I do not need help paying the fee") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-co-app-1">
-                      I cannot provide a Help With Fees reference number  
+                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="false" {{ checked("help-fees", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-2">
+                      I want to change the connection
                     </label>
                   </div>
                 </div> 

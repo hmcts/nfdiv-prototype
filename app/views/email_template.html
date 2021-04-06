@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% block pageTitle %}
+  Email template
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+        <span class="govuk-caption-m">From</span>
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+        <p class="govuk-body">Divorce and Dissolution</p>
+      </div>
+    </div>
+  </div>
+</div>         
+ 
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    
+    <div class="govuk-grid-row govuk-!-margin-top-3">
+      <div class="govuk-grid-column-one-quarter">
+        <span class="govuk-caption-m">To</span>
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+        <p class="govuk-body">email@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    
+    <div class="govuk-grid-row govuk-!-margin-top-3">
+      <div class="govuk-grid-column-one-quarter">
+        <span class="govuk-caption-m">Subject</span>
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+        <p class="govuk-body">Your divorce application has been submitted</p>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+<p class="govuk-!-margin-top-8">Dear (first name) (last name),</p>
+
+<p>You have submitted your divorce application. Your reference number is ((reference number)).</p>
+
+<h1 class="govuk-heading-l">What happens next</h1>
+
+<p>Your application will be checked by court staff. You will receive an email notification by [date + 7 days] confirming whether it’s been accepted.</p>
+
+<p>You will receive more information on what happens next after your application has been checked.</p>
+
+<p>((relationship court header))</br>
+HM Courts & Tribunals Service</br>
+0300 303 0642 (Monday to Friday 8am to 8pm, Saturday 8am to 2pm)
+Email: ((court email))</p>
+
+<p>This is an automated message, please do not reply to this email.</p>
+
+<p>Your feedback helps improve this service for others: <a href="https://www.smartsurvey.co.uk/s/Divorce_Feedback/?pageurl=/email" class="govuk-link">https://www.smartsurvey.co.uk/s/Divorce_Feedback/?pageurl=/email</a>.</p>
+
+</div>
+</div>
+{% endblock %}

@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Help paying the fee for your divorce - GOV.UK
+  Apply for a divorce - Have you already applied for help with your divorce fee? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,7 +21,7 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/joint_divorce/broken_down_co_app">Back</a>
+<a class="govuk-back-link" href="/joint_divorce/help_fees_co_app">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -34,28 +34,42 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                      Help paying the fee for your divorce
+                      Have you already applied for help with your divorce fee?
                   </h1>
-                </legend>
+                </legend>  
                   
-                <p>Your husband or wife has applied for Help With Fees. You need to apply and provide a Help With Fees reference number to receive help paying the fee for the divorce.</p>
- 
-                  
-                <div class="govuk-radios">
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-co-app" name="help-fees-co-app" type="radio" value="I need help paying the fee" {{ checked("help-fees-co-app", "I need help paying the fee") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-co-app">
-                      I have a help with fees reference number	
+                    <input class="govuk-radios__input" id="help-fees-number-1" name="help-fees-number" type="radio" value="true" data-aria-controls="conditional-contact" {{ checked("help-fees-number", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-number-1">
+                      Yes
                     </label>
                   </div>
+                    
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                    <div class="govuk-form-group">
+                        
+                      <h2 class="govuk-heading-m">
+                            Enter your Help with Fees reference number: 
+                        </h2>    
+                        
+                      <label class="govuk-label" for="help-fees-input">
+                        You received this when you applied for help with your divorce fees. 
+                      </label>
+                      <div id="help-fee-number-hint" class="govuk-hint">
+                          For example, HWF-A1B-23C
+                        </div>    
+                      <input class="govuk-input govuk-!-width-one-third" id="help-fees-input" name="help-fees-input" type="hwf-number" spellcheck="false" value="{{ data['help-fees-input'] }}"></div>
+                  </div>
+                  
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-co-app-1" name="help-fees-co-app" type="radio" value="I do not need help paying the fee" {{ checked("help-fees-co-app", "I do not need help paying the fee") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-co-app-1">
-                      I cannot provide a Help With Fees reference number  
+                    <input class="govuk-radios__input" id="help-fees-number-2" name="help-fees-number" type="radio" value="false" {{ checked("help-fees-number", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-number-2">
+                      No 
                     </label>
                   </div>
-                </div> 
-                 
+                    
+                </div>                
               </fieldset>
             </div>
 
