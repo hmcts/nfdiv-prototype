@@ -34,36 +34,9 @@
       <h2 class="govuk-heading-m">About your marriage</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Who are you applying to divorce?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['husband-wife'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> who are you applying to divorcing</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Same-sex couples
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['same-sex'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> same-sex couples</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
             Has your marriage irretrievably broken down (it cannot be saved)?
           </dt>
           <dd class="govuk-summary-list__value">
@@ -75,52 +48,10 @@
               <span class="govuk-visually-hidden"> marriage irretrievably broken down</span>
             </a>
           </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            When did you get married?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['marriage-date-day'] }} / {{ data['marriage-date-month'] }} / {{ data['marriage-date-year'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> when did you get married</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Do you have your marriage certificate with you?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['marriage-certificate'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> marriage certificate</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How do you want to apply for the divorce?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['sole-joint'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> how do you want to apply for the divorce</span>
-            </a>
-          </dd>
         </div>   
       </dl>
         
-        <h2 class="govuk-heading-m">How the court will contact your husband or wife</h2>
+        <!-- <h2 class="govuk-heading-m">How the court will contact your husband or wife</h2>
         
     <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
         <div class="govuk-summary-list__row">
@@ -137,12 +68,12 @@
             </a>
           </dd>
         </div>
-      </dl>
+      </dl> -->
         
       <h2 class="govuk-heading-m">Your connections to England and Wales</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
+       <!-- <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
             Did you get married in the UK?
           </dt>
@@ -183,9 +114,9 @@
               <span class="govuk-visually-hidden"> husband's or wife's life mainly based in england or wales</span>
             </a>
           </dd>
-        </div> 
+        </div> -->
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
+          <dt class="govuk-summary-list__key" style="width:60%">
             How you're connected to England and Wales
           </dt>
           <dd class="govuk-summary-list__value">
@@ -224,34 +155,7 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key" style="width:60%">
-            Your name from the marriage certificate
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['app-name-cert'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> your name on cert</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Your husband's or wife's name from the marriage certificate
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['res-name-cert'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> husband or wife name on cert</span>
-            </a>
-          </dd>
-        </div>
+        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
             Have you changed your name since getting married?
@@ -370,7 +274,7 @@
           </dd>
         </div>
        </dl>
-       
+        
       <h2 class="govuk-heading-m">Your documents</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -379,7 +283,7 @@
             Uploaded documents
           </dt>
           <dd class="govuk-summary-list__value">
-            Marriage certifiate 
+            
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -475,7 +379,6 @@
             You could be fined or imprisoned if you deliberately submit false information.
           </strong>
         </div>
-          <h2 class="govuk-body-l">Your answers will be sent to your husband or wife to review before your joint application is submitted to the court. </h2>
             </div>
        </div>
 
@@ -484,7 +387,7 @@
         <input type="hidden" name="answers-checked" value="true">
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Send for review
+          Continue
         </button>
 
       </form>
