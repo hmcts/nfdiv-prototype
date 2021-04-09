@@ -31,38 +31,69 @@
         <form action="/joint_divorce/applicant_postal_address_v2" method="post" novalidate>
 
           <div class="govuk-form-group">
-              
+
                   <h1 class="govuk-heading-l">
                     Do you need your contact details kept private from your husband or wife?
                   </h1>
-                
-                  
+
+
                 <p>
-                    The court can keep your address, email address and phone number private from your husband or wife.   
+                    The court can keep your address, email address and phone number private from your husband or wife.
                   </p>
-                  
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        Keep my contact details private
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="contact-by-email">
+                          If you are suffering from domestic abuse, then there is <a class="govuk-link" href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help">support available</a>  
+                        </label>
+
+                      </div>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact2">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        I do not need my contact details kept private
+                      </label>
+                    </div>
+
+                  </div>
+
+
+
+<!--
+
                 <div class="govuk-radios govuk-radios--inline">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="address-private-1" name="address-private" type="radio" value="Keep my address private" {{ checked("address-private", "Keep my address private") }}>
                         <label class="govuk-label govuk-radios__label" for="address-private-1">
-                          Keep my contact details private 
+                          Keep my contact details private
                         </label>
                       </div>
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="address-private-2" name="address-private" type="radio" value="I do not not need my address kept private" {{ checked("address-private", "I do not not need my address kept private") }}>
                         <label class="govuk-label govuk-radios__label" for="address-private-2">
-                          I do not need my contact details kept private 
+                          I do not need my contact details kept private
                         </label>
                       </div>
                     </div>
-                  
-              
+
+                    -->
+
+
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-            
+
         </form>
       </div>
     </div>

@@ -30,33 +30,33 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Enter your name</h1>
 
-        <form action="/joint_divorce/names_on_cert" method="post" novalidate>
+        <form action="/joint_divorce/respondent_name" method="post" novalidate>
 
           <div class="govuk-form-group">
-            
-            <p>The court needs to know your full name. </p> 
-            
+
+            <p>The court needs to know your full name. </p>
+
               <div class="govuk-form-group">
            <label class="govuk-label" for="width-20">
                Your first name(s)
-            </label> 
+            </label>
             <input class="govuk-input govuk-input--width-20" id="app-first-name" name="app-first-name" type="text" value="{{ data['app-first-name'] }}">
             </div>
-            
+
             <div class="govuk-form-group">
             <label class="govuk-label" for="width-20">
                Your middle name(s)
-            </label> 
+            </label>
             <input class="govuk-input govuk-input--width-20" id="app-middle-name" name="app-middle-name" type="text" value="{{ data['app-middle-name'] }}">
             </div>
-            
+
             <div class="govuk-form-group">
             <label class="govuk-label" for="width-20">
                Your last name(s)
-            </label>  
+            </label>
             <input class="govuk-input govuk-input--width-20" id="app-last-name" name="app-last-name" type="text" value="{{ data['app-last-name'] }}">
-          </div> 
-            </div>  
+          </div>
+            </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue

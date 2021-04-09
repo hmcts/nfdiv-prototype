@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Enter your husband’s or wife’s name - GOV.UK
+  Apply for a divorce - Your names on your marriage certificate - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,41 +21,47 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/your_names_co_app.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Enter your husband’s or wife’s name </h1>
+        <h1 class="govuk-heading-l">Your names on your marriage certificate</h1>
 
-        <form action="/joint_divorce/names_on_cert" method="post" novalidate>
+        <form action="/joint_divorce/name_changed_co_app" method="post" novalidate>
+
+            <p class="govuk-body">
+                  These are the names you and your husband or wife used before you were married. They can sometimes be different from your current names. For example, if you or your wife had a maiden name.
+                  </p>
+
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                <div style="margin-top: -10px;">   Copy the marriage certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.</div>
+              </strong>
+            </div>
 
           <div class="govuk-form-group">
-
-            <p>The court needs to know your husband’s or wife’s full name. </p>
-
-              <div class="govuk-form-group">
-           <label class="govuk-label" for="width-20">
-               Your husband's or wife's first name(s)
+            <label class="govuk-label govuk-label--m" for="app-name-cert">
+              Copy your full name from the marriage certificate
             </label>
-            <input class="govuk-input govuk-input--width-20" id="res-first-name" name="res-first-name" type="text" value="{{ data['res-first-name'] }}">
+            <div id="app-name-cert-hint" class="govuk-hint">
+              Include all the text related to the name
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="app-name-cert" name="app-name-cert" type="text" aria-describedby="app-name-cert-hint" value="{{ data['app-name-cert'] }}">
             </div>
 
-            <div class="govuk-form-group">
-            <label class="govuk-label" for="width-20">
-               Your husband's or wife's middle name(s)
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="res-name-cert">
+              Copy your husband’s or wife's full name from the marriage certificate
             </label>
-            <input class="govuk-input govuk-input--width-20" id="res-middle-name" name="res-middle-name" type="text" value="{{ data['res-middle-name'] }}">
+            <div id="res-name-cert-hint" class="govuk-hint">
+              Include all the text related to the name
             </div>
-
-            <div class="govuk-form-group">
-            <label class="govuk-label" for="width-20">
-               Your husband's or wife's last name(s)
-            </label>
-            <input class="govuk-input govuk-input--width-20" id="res-last-name" name="res-last-name" type="text" value="{{ data['res-last-name'] }}">
-          </div>
+            <input class="govuk-input govuk-input--width-20" id="res-name-cert" name="res-name-cert" type="text" aria-describedby="res-name-cert-hint" value="{{ data['res-name-cert'] }}">
             </div>
 
           <button class="govuk-button" data-module="govuk-button">

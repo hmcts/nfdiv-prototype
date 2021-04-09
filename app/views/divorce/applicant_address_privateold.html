@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Enter your husband’s or wife’s name - GOV.UK
+  Apply for a divorce - Do you need your postal address kept private from your husband or wife? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,47 +21,48 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="your_names.html">Back</a>
+  <a class="govuk-back-link" href="english_welsh.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Enter your husband’s or wife’s name </h1>
-
-        <form action="/joint_divorce/names_on_cert" method="post" novalidate>
+        <form action="/divorce/applicant_postal_address_v2" method="post" novalidate>
 
           <div class="govuk-form-group">
-
-            <p>The court needs to know your husband’s or wife’s full name. </p>
-
-              <div class="govuk-form-group">
-           <label class="govuk-label" for="width-20">
-               Your husband's or wife's first name(s)
-            </label>
-            <input class="govuk-input govuk-input--width-20" id="res-first-name" name="res-first-name" type="text" value="{{ data['res-first-name'] }}">
-            </div>
-
-            <div class="govuk-form-group">
-            <label class="govuk-label" for="width-20">
-               Your husband's or wife's middle name(s)
-            </label>
-            <input class="govuk-input govuk-input--width-20" id="res-middle-name" name="res-middle-name" type="text" value="{{ data['res-middle-name'] }}">
-            </div>
-
-            <div class="govuk-form-group">
-            <label class="govuk-label" for="width-20">
-               Your husband's or wife's last name(s)
-            </label>
-            <input class="govuk-input govuk-input--width-20" id="res-last-name" name="res-last-name" type="text" value="{{ data['res-last-name'] }}">
-          </div>
+              
+                  <h1 class="govuk-heading-l">
+                    Do you need your contact details kept private from your husband or wife?
+                  </h1>
+                
+                  
+                <p>
+                    The court can keep your address, email address and phone number private from your husband or wife.   
+                  </p>
+                  
+                <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="address-private-1" name="address-private" type="radio" value="Keep my address private" {{ checked("address-private", "Keep my address private") }}>
+                        <label class="govuk-label govuk-radios__label" for="address-private-1">
+                          Keep my contact details private 
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="address-private-2" name="address-private" type="radio" value="I do not not need my address kept private" {{ checked("address-private", "I do not not need my address kept private") }}>
+                        <label class="govuk-label govuk-radios__label" for="address-private-2">
+                          I do not need my contact details kept private 
+                        </label>
+                      </div>
+                    </div>
+                  
+              
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-
+            
         </form>
       </div>
     </div>
