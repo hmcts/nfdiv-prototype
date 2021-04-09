@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - How to apply for a financial order - GOV.UK
+  Apply for a divorce - Pay your divorce fee - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,45 +21,37 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/financial_order.html">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/check_answers.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/upload" method="post" novalidate>
-
-          <div class="govuk-form-group">
-              
-                  <h1 class="govuk-heading-l">
-                    How to apply for a financial order  
+        <form action="/joint_divorce/confirmation" method="post" novalidate>
+            
+            <h1 class="govuk-heading-l">
+                    Your application has been sent to your husband or wife for review 
                   </h1>
-                  
-                  <p class="govuk-body">
-                  You will need to complete another form (Form A) and pay an additional fee. You can apply at any time, so long as your husband or wife is still alive.    
-              </p>   
-              
-              <div class="govuk-inset-text">
-                  You will be given a link to more guidance and Form A after you have submitted this divorce application. You can get legal advice or ask a solicitor to draft a financial order for you. 
-              </div> 
-              
-              <p class="govuk-body">
-                  Continue with your divorce application   
-              </p>
-              
-            </div>
-              
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
+
+          <p class="govuk-body">
+                  Your application has been sent to your husband or wife at the following email address: <b>email@gmail.com</b>
+                  </p>
+            
+            <p class="govuk-body">
+                  They need to review the information and confirm the joint application. Then the divorce fee of £550 will need to be paid. Either of you can pay the fee. 
+                  </p>
+            
+            <p class="govuk-body">
+                  You will receive an email when the application has been confirmed by your husband or wife. This will give you payment information and explain the next steps. 
+                  </p>
+            
+            
         </form>
       </div>
     </div>
 
 <p><a href="#">Save and sign out</a></p>
-
-<div class="govuk-!-padding-bottom-4"></div>
 
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">

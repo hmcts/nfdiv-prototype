@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - How to apply for a financial order - GOV.UK
+  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,38 +21,52 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/financial_order.html">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/co_applicant_phone_number.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/upload" method="post" novalidate>
+        <form action="/joint_divorce/co_applicant_address_private" method="post" novalidate>
 
           <div class="govuk-form-group">
               
                   <h1 class="govuk-heading-l">
-                    How to apply for a financial order  
+                    What language do you want to receive emails and documents in? 
                   </h1>
+               
                   
-                  <p class="govuk-body">
-                  You will need to complete another form (Form A) and pay an additional fee. You can apply at any time, so long as your husband or wife is still alive.    
-              </p>   
-              
-              <div class="govuk-inset-text">
-                  You will be given a link to more guidance and Form A after you have submitted this divorce application. You can get legal advice or ask a solicitor to draft a financial order for you. 
-              </div> 
-              
-              <p class="govuk-body">
-                  Continue with your divorce application   
-              </p>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="english-welsh" name="english-welsh" type="radio" value="English" {{ checked("english-welsh", "English") }}>
+                    <label class="govuk-label govuk-radios__label" for="english-welsh">
+                      English  
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="english-welsh-1" name="english-welsh" type="radio" value="Welsh" {{ checked("english-welsh", "Welsh") }}>
+                    <label class="govuk-label govuk-radios__label" for="english-welsh-1">
+                      Welsh 
+                    </label>
+                  </div>
+                </div> 
+                 
               
             </div>
-              
-          <button class="govuk-button" data-module="govuk-button">
+            
+            <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
+           <!-- <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a> 
+            
+            <a href="/divorce/applicant_address_private" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a> -->
+            
         </form>
       </div>
     </div>
