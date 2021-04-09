@@ -28,7 +28,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/jurisdiction_co_app" method="post" novalidate>
+        <form action="/joint_divorce/name_changed_co_app" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -37,25 +37,30 @@
                       Help paying the fee for your divorce
                   </h1>
                 </legend>
-                  
-                <p>Your husband or wife has applied for Help With Fees. You need to apply and provide a Help With Fees reference number to receive help paying the fee for the divorce.</p>
- 
-                  
+
+                <p>Your husband or wife has applied for Help With Fees and  provided a reference number. You may be able to get help paying the fee if you:</p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>are on certain benefits <i>or</i></li>
+                    <li>have a little or no savings <i>or</i></li>
+                    <li>have low income</li>
+                  </ul>
+
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-co-app" name="help-fees-co-app" type="radio" value="I need help paying the fee" {{ checked("help-fees-co-app", "I need help paying the fee") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-co-app">
-                      I have a help with fees reference number	
+                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="I need help paying the fee" {{ checked("help-fees", "I need help paying the fee") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-1">
+                      I need help paying the fee
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-co-app-1" name="help-fees-co-app" type="radio" value="I do not need help paying the fee" {{ checked("help-fees-co-app", "I do not need help paying the fee") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-co-app-1">
-                      I cannot provide a Help With Fees reference number  
+                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="I do not need help paying the fee" {{ checked("help-fees", "I do not need help paying the fee") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-2">
+                      I do not need help paying the fee
                     </label>
                   </div>
-                </div> 
-                 
+                </div>
+
               </fieldset>
             </div>
 

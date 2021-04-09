@@ -21,39 +21,55 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/co_applicant_postal_address.html">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/applicant_postal_address_v2_co_app.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/other_court_cases_co_app" method="post" novalidate>
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Enter your postal address</h1>
+
+    <form action="/joint_divorce/money_property_co_app" method="post" novalidate>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"> Postcode
+          </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-font-weight-bold" for="change-postcode">{{ data['address-postcode-v2'] }}</label>
+              <p class="postcode_change"><a class="govuk-link" href="/joint_divorce/applicant_postal_address_v2.html" aria-label="change postcode">Change</a></p>
+            </div>
 
           <div class="govuk-form-group">
+              <label class="govuk-label" for="address-select">
+              Select an address
+              </label>
+              <select class="govuk-select govuk-!-width-three-quarters" id="address-select" name="address-select">
+                <option>5 addresses found</option>
+                <option>1 Main Street, London, {{ data['address-postcode-v2'] }} </option>
+                <option>2 Main Street, London, {{ data['address-postcode-v2'] }} </option>
+                <option>3 Main Street, London, {{ data['address-postcode-v2'] }} </option>
+                <option>4 Main Street, London, {{ data['address-postcode-v2'] }} </option>
+                <option>5 Main Street, London, {{ data['address-postcode-v2'] }} </option>
+              </select>
+          </div>
 
-                  <h1 class="govuk-heading-l">
-                    Enter your postal address
-                  </h1>
-
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">
-                        Full address
-                      </label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
-                    </div>
-                </div>
-
-            <p class="govuk-body">
-              <a href="/joint_divorce/co_applicant_postal_address.html" class="govuk-link">Enter UK postcode</a>
+          <div class="govuk-form-group">
+            <p>
+              <a class="govuk-link" href="/joint_divorce/applicant_address_manual_v2.html">I cannot find the address in the list</a>
             </p>
-
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-        </form>
+          </div>
+        </fieldset>
       </div>
-    </div>
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+    </form>
+  </div>
+</div>
 
 <p><a href="/divorce/wrong_marriage_date">Save and sign out</a></p>
 

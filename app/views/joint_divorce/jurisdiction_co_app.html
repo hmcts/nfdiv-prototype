@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - You can use the English or Welsh courts to get a divorce - GOV.UK
+  Apply for a divorce - Check if you can get a divorce in England or Wales - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,68 +21,30 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/help_fees_co_app.html">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/marry_in_uk_co_app.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/respondent_name" method="post" novalidate>
+        <form action="/joint_divorce/life_based_in_uk_co_app" method="post" novalidate>
 
           <div class="govuk-form-group">
-              
+
                   <h1 class="govuk-heading-l">
-                    Jurisdiction
+                    Check if you can get a divorce in England or Wales
                   </h1>
-                
+
+
                   <p class="govuk-body">
-                  Your husband's or wife's answers indicate that you can apply for a divorce in England or Wales because both of you are 'habitually resident'. 
+                  You must have some connection to England or Wales for the courts to have the jurisdiction (the legal power) to grant you a divorce.
                   </p>
-                  
-              <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      Read more about habitual residence
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    If your life is mainly based in England or Wales then you're what is legally known as 'habitually resident'.
-                  </div>
-                  <div class="govuk-details__text">
-                    This may include working, owning property, having children in school, or your main family life taking place in England or Wales.
-                  </div>
-                  <div class="govuk-details__text">
-                    The examples above aren't a complete list of what makes up habitual residence, and just because some of them apply to you doesn't mean you're habitually resident. If you're not sure, you should get legal advice. 
-                  </div>
-              </details>
-              
-            </div>
-            
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-heading-m">
-                      Do you agree with the connection to England and Wales?
-                  </h1>
-                </legend>
-                  
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="true" {{ checked("help-fees", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-1">
-                      I'm confident that connection is right	
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="false" {{ checked("help-fees", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="help-fees-2">
-                      I want to change the connection
-                    </label>
-                  </div>
-                </div> 
-                 
-              </fieldset>
+
+                  <p class="govuk-body">
+                  The following questions will find out what connections you have to England or Wales.
+                  </p>
+
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
