@@ -1,0 +1,334 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Pay your divorce fee - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="/joint_divorce/check_answers_co_app.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Check your joint application</h1>
+<p class="govuk-body">
+        Please read and respond to each of the follow statements made by your husband
+        </p>
+
+        <br>
+
+        <!-- radio conditional block -->
+                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h1 class="govuk-fieldset__heading">
+                        We got married on 21st June 1994
+                      </h1>
+                    </legend>
+
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact2">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        Agree
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        Disagree
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-form-group">
+
+                        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+                            <div class="govuk-form-group">
+                              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                                Can you provide more detail?
+                              </label>
+                            </h1>
+                            <div id="with-hint-hint" class="govuk-hint">
+                              Do not include personal or financial information like your National Insurance number or credit card details.
+                            </div>
+                            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                          </div>
+
+                          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                            You can enter up to 200 characters
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <br><br>
+
+
+                <!-- radio conditional block -->
+                          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                              <h1 class="govuk-fieldset__heading">
+                                We are both habitually resident in England and Wales
+                              </h1>
+                            </legend>
+
+
+                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="contact2" name="contact2" type="radio" value="email" data-aria-controls="conditional-contact2">
+                              <label class="govuk-label govuk-radios__label" for="contact2">
+                                Agree
+                              </label>
+                            </div>
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="contact2" name="contact2" type="radio" value="email" data-aria-controls="conditional-contact2">
+                              <label class="govuk-label govuk-radios__label" for="contact2">
+                                Diagree
+                              </label>
+                            </div>
+
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact2">
+                              <div class="govuk-form-group">
+
+                                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+                                    <div class="govuk-form-group">
+                                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                                        Can you provide more detail?
+                                      </label>
+                                    </h1>
+                                    <div id="with-hint-hint" class="govuk-hint">
+                                      Do not include personal or financial information like your National Insurance number or credit card details.
+                                    </div>
+                                    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                  </div>
+
+                                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                    You can enter up to 200 characters
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+
+                        <br><br>
+
+
+                        <!-- radio conditional block -->
+                                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                      <h1 class="govuk-fieldset__heading">
+                                        Your name from the marriage certificate is: Kate Anne Flemming
+                                      </h1>
+                                    </legend>
+
+
+                                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="contact2" name="contact3" type="radio" value="email" data-aria-controls="conditional-contact3">
+                                      <label class="govuk-label govuk-radios__label" for="contact3">
+                                        Agree
+                                      </label>
+                                    </div>
+
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="contact3" name="contact3" type="radio" value="email" data-aria-controls="conditional-contact3">
+                                      <label class="govuk-label govuk-radios__label" for="contact3">
+                                        Diagree
+                                      </label>
+                                    </div>
+
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact3">
+                                      <div class="govuk-form-group">
+
+                                        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+                                            <div class="govuk-form-group">
+                                              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                                                Can you provide more detail?
+                                              </label>
+                                            </h1>
+                                            <div id="with-hint-hint" class="govuk-hint">
+                                              Do not include personal or financial information like your National Insurance number or credit card details.
+                                            </div>
+                                            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                          </div>
+
+                                          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                            You can enter up to 200 characters
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+
+                                <br><br>
+
+
+                                <!-- radio conditional block -->
+                                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                      <h1 class="govuk-fieldset__heading">
+                                        Your husband's name from the marriage certificate is: Steve John Arnott
+                                      </h1>
+                                    </legend>
+
+
+                                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="contact4" name="contact4" type="radio" value="email" data-aria-controls="conditional-contact4">
+                                      <label class="govuk-label govuk-radios__label" for="contact4">
+                                        Agree
+                                      </label>
+                                    </div>
+
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="contact4" name="contact4" type="radio" value="email" data-aria-controls="conditional-contact4">
+                                      <label class="govuk-label govuk-radios__label" for="contact4">
+                                        Diagree
+                                      </label>
+                                    </div>
+
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact4">
+                                      <div class="govuk-form-group">
+
+                                        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+                                            <div class="govuk-form-group">
+                                              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                                                Can you provide more detail?
+                                              </label>
+                                            </h1>
+                                            <div id="with-hint-hint" class="govuk-hint">
+                                              Do not include personal or financial information like your National Insurance number or credit card details.
+                                            </div>
+                                            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                          </div>
+
+                                          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                            You can enter up to 200 characters
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+
+                                <br><br>
+
+                                <!-- radio conditional block -->
+                                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                      <h1 class="govuk-fieldset__heading">
+                                        There are no current court cases involving either you, your property or children
+                                      </h1>
+                                    </legend>
+
+
+                                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="contact5" name="contact5" type="radio" value="email" data-aria-controls="conditional-contact5">
+                                      <label class="govuk-label govuk-radios__label" for="contact5">
+                                        Agree
+                                      </label>
+                                    </div>
+
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="contact5" name="contact5" type="radio" value="email" data-aria-controls="conditional-contact5">
+                                      <label class="govuk-label govuk-radios__label" for="contact5">
+                                        Diagree
+                                      </label>
+                                    </div>
+
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact5">
+                                      <div class="govuk-form-group">
+
+                                        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+                                            <div class="govuk-form-group">
+                                              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                                                Can you provide more detail?
+                                              </label>
+                                            </h1>
+                                            <div id="with-hint-hint" class="govuk-hint">
+                                              Do not include personal or financial information like your National Insurance number or credit card details.
+                                            </div>
+                                            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                          </div>
+
+                                          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                            You can enter up to 200 characters
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+
+                                <br><br>
+
+
+
+        <form action="/joint_divorce/confirm_co_app" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Confirm and continue
+          </button>
+
+        </form>
+
+
+
+<p><a href="/joint_divorce/sign_in">Save and sign out</a></p>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
