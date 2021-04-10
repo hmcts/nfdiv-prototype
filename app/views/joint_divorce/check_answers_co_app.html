@@ -21,7 +21,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/upload">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/upload_co_app">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -332,7 +332,7 @@
       <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-m">Confirm before continuing</h2>
 
-      <!--  <div class="govuk-form-group">
+       <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
@@ -355,7 +355,7 @@
                   This confirms what you are asking the court to do. It’s known as ‘the prayer’.
                   </p>
 
-        <div class="govuk-!-padding-bottom-4"></div> -->
+        <div class="govuk-!-padding-bottom-4"></div>
 
         <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
@@ -376,13 +376,13 @@
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
             <span class="govuk-warning-text__assistive">Warning</span>
-            You could be fined or imprisoned if you deliberately submit false information.
+          <div style="margin-top: -12px;">   You could be fined or imprisoned if you deliberately submit false information.</div>
           </strong>
         </div>
             </div>
        </div>
 
-      <form action="/joint_divorce/application_review" method="post" novalidate>
+      <form action="/joint_divorce/confirm_co_app" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 

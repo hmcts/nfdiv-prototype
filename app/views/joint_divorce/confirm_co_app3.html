@@ -1,0 +1,250 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Pay your divorce fee - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="/joint_divorce/check_answers_co_app.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Check your joint application</h1>
+<p class="govuk-body">
+        Please read and respond to each of the follow statements.
+        </p>
+
+        <br>
+
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                We got married on 21st June 1994
+              </h1>
+            </legend>
+        <!--    <div id="changed-name-hint" class="govuk-hint">
+              Hint text
+            </div> -->
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  I agree
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  I do not agree
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <br><br>
+
+
+
+
+
+
+
+
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                We got married in the UK
+              </h1>
+            </legend>
+        <!--    <div id="changed-name-hint" class="govuk-hint">
+              Hint text
+            </div> -->
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="uk" name="changed-name2" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="uk">
+                  I agree
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="uk-2" name="changed-name2" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="uk-2">
+                  I do not agree
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <br><br>
+
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                We are both habitually resident in England and Wales
+              </h1>
+            </legend>
+        <!--    <div id="changed-name-hint" class="govuk-hint">
+              Hint text
+            </div> -->
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="habit" name="changed-name3" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="habit">
+                  I agree
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="habit-2" name="changed-name3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="habit-2">
+                  I do not agree
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+
+          <br><br>
+
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Your name from the marriage certificate is:<br> Kate Anne Flemming
+              </h1>
+            </legend>
+        <!--    <div id="changed-name-hint" class="govuk-hint">
+              Hint text
+            </div> -->
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="kate" name="changed-name4" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="kate">
+                  I agree
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="kate-2" name="changed-name4" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="kate-2">
+                  I do not agree
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+
+          <br><br>
+
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Your husband's name from the marriage certificate is:<br> Steve John Arnott
+              </h1>
+            </legend>
+        <!--    <div id="changed-name-hint" class="govuk-hint">
+              Hint text
+            </div> -->
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="steve" name="changed-name5" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="steve">
+                  I agree
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="steve-2" name="changed-name5" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="steve-2">
+                  I do not agree
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+
+          <br><br>
+
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                There are no current court cases involving either you, your property or children
+              </h1>
+            </legend>
+        <!--    <div id="changed-name-hint" class="govuk-hint">
+              Hint text
+            </div> -->
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case" name="changed-name6" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="case">
+                  I agree
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-2" name="changed-name6" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="case-2">
+                  I do not agree
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+
+<br>
+        </div>
+
+        <form action="/joint_divorce/confirm_co_app" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Save and Submit
+          </button>
+
+        </form>
+
+
+
+<p><a href="/joint_divorce/sign_in">Save and sign out</a></p>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

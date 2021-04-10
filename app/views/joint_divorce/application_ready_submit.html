@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - How to apply for a financial order - GOV.UK
+  Apply for a divorce - Pay your divorce fee - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,45 +21,44 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/financial_order_co_app.html">Back</a>
+
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/upload_co_app" method="post" novalidate>
+        <form action="/joint_divorce/confirmation" method="post" novalidate>
 
-          <div class="govuk-form-group">
-
-                  <h1 class="govuk-heading-l">
-                    How to apply for a financial order
+            <h1 class="govuk-heading-l">
+                    Your application is ready to submit
                   </h1>
 
-                  <p class="govuk-body">
-                  You will need to complete another form (Form A) and pay an additional fee. You can apply at any time, so long as your husband or wife is still alive.
-              </p>
+          <p class="govuk-body">
+            Your joint application has been agreed by you and your husband or wife. The fee of £550 needs to be paid before it can be submitted.
+<br><br>
+You can pay and submit the application now, or save and sign out if your husband or wife is going to pay. They have also received an email confirming the application is ready, with information on how to pay.
+<br><br>
+Payment cannot be split between you. The application will be submitted as soon as one of you pays the fee.
+<br><br>
 
-              <div class="govuk-inset-text">
-                  You will be given a link to more guidance and Form A after you have submitted this divorce application. You can get legal advice or ask a solicitor to draft a financial order for you.
-              </div>
-
-              <p class="govuk-body">
-                  Continue with your divorce application
-              </p>
-
-            </div>
-
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
         </form>
       </div>
     </div>
 
-<p><a href="#">Save and sign out</a></p>
+    <form action="/joint_divorce/payment" method="post" novalidate>
 
-<div class="govuk-!-padding-bottom-4"></div>
+      <input type="hidden" name="answers-checked" value="true">
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Pay and submit application
+      </button>
+
+    </form>
+
+
+
+<p><a href="/joint_divorce/sign_in">Save and sign out</a></p>
 
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">

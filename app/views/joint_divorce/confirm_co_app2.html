@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Pay your divorce fee - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="/joint_divorce/check_answers_co_app.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+      <h1 class="govuk-heading-xl">
+        Check your joint application
+      </h1>
+
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 8 sections.</p>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Check before you start
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-status">
+                  Check eligibility
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-status">
+                  Read declaration
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Prepare application
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="company-information-status">
+                  Company information
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="company-information-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-status">
+                  Your contact details
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="list-convictions-status">
+                  List convictions
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Provide financial evidence
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Give medical information
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Apply
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Submit and pay
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+
+<p><a href="/joint_divorce/sign_in">Save and sign out</a></p>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
