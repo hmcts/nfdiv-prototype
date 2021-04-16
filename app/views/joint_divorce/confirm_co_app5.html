@@ -84,6 +84,57 @@
 
                 <br><br>
 
+                <!-- radio conditional block -->
+                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h1 class="govuk-fieldset__heading">
+                        We got married in the UK
+                      </h1>
+                    </legend>
+
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact4" name="contact4" type="radio" value="email" data-aria-controls="conditional-contact4">
+                      <label class="govuk-label govuk-radios__label" for="contact4">
+                        Agree
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact4" name="contact4" type="radio" value="email" data-aria-controls="conditional-contact4">
+                      <label class="govuk-label govuk-radios__label" for="contact4">
+                        Diagree
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact4">
+                      <div class="govuk-form-group">
+
+                        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+                            <div class="govuk-form-group">
+                              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                                Can you provide more detail?
+                              </label>
+                            </h1>
+                            <div id="with-hint-hint" class="govuk-hint">
+                              Do not include personal or financial information like your National Insurance number or credit card details.
+                            </div>
+                            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                          </div>
+
+                          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                            You can enter up to 200 characters
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <br><br>
+
 
                 <!-- radio conditional block -->
                           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
@@ -137,7 +188,10 @@
                         <br><br>
 
 
-                        <!-- radio conditional block -->
+
+
+<!--
+                        <!-- radio conditional block
                                   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
                                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                                       <h1 class="govuk-fieldset__heading">
@@ -189,7 +243,7 @@
                                 <br><br>
 
 
-                                <!-- radio conditional block -->
+                                <!-- radio conditional block
                                   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
                                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                                       <h1 class="govuk-fieldset__heading">
@@ -239,6 +293,7 @@
                                 </fieldset>
 
                                 <br><br>
+
 
                                 <!-- radio conditional block -->
                                   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint2">
@@ -293,7 +348,65 @@
 
 
 
-        <form action="/joint_divorce/confirm_co_app" method="post" novalidate>
+
+
+                                   <div class="govuk-grid-row">
+                                      <div class="govuk-grid-column-two-thirds">
+                                      <h2 class="govuk-heading-m">Confirm before continuing</h2>
+
+                                       <div class="govuk-form-group">
+                                                <div class="govuk-checkboxes">
+                                                  <div class="govuk-checkboxes__item">
+                                                    <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
+                                                    <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
+                                                      I confirm that I’m applying to the court to:
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                          <div class="govuk-form-group">
+                                                <ul class="govuk-list govuk-list--bullet" style="text-align: left">
+                                                    <li>dissolve my marriage (get a divorce) </li>
+                                                   <li>order my wife or husband to pay costs associated with the divorce </li>
+                                                    <li>decide how our money and property will be split (known as a financial order)</li>
+                                                  </ul>
+                                            </div>
+
+                                        <p class="govuk-body">
+                                                  This confirms what you are asking the court to do. It’s known as ‘the prayer’.
+                                                  </p>
+
+                                        <div class="govuk-!-padding-bottom-4"></div>
+
+                                        <div class="govuk-form-group">
+                                                <div class="govuk-checkboxes">
+                                                  <div class="govuk-checkboxes__item">
+                                                    <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked" {{ checked("statement-truth", "checked") }}>
+                                                    <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
+                                                      I believe that the facts stated in this application are true
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                        <p class="govuk-body">
+                                                  This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.
+                                                  </p>
+
+                                        <div class="govuk-warning-text">
+                                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                          <strong class="govuk-warning-text__text">
+                                            <span class="govuk-warning-text__assistive">Warning</span>
+                                          <div style="margin-top: -12px;">   You could be fined or imprisoned if you deliberately submit false information.</div>
+                                          </strong>
+                                        </div>
+                                            </div>
+                                       </div>
+
+
+
+        <form action="/joint_divorce/application_ready_submit" method="post" novalidate>
 
           <input type="hidden" name="answers-checked" value="true">
 
