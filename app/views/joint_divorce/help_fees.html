@@ -34,11 +34,11 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                      Do you and your husband or wife need help paying the fee for your divorce?
+                      Do you and your {{ data['husband-wife'] }} need help paying the fee for your divorce?
                   </h1>
                 </legend>
 
-                <p>This divorce application costs £550. You may be able to get help paying the fee if you and your husband or wife are:</p>
+                <p>This divorce application costs £550. You may be able to get help paying the fee if you and your {{ data['husband-wife'] }} are:</p>
 
                   <ul class="govuk-list govuk-list--bullet">
                     <li>are on certain benefits <i>or</i></li>
