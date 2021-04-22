@@ -1,12 +1,10 @@
 {% extends "layout.html" %}
-{% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Dividing your money and property - GOV.UK
+  Apply for a divorce - You cannot apply to get a divorce - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-
 <div class="govuk-phase-banner">
   <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -21,41 +19,33 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/joint_divorce/link_applicants">Back</a>
+
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/broken_down_co_app" method="post" novalidate>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-          <div class="govuk-form-group">
+      <h1 class="govuk-heading-xl">
+        This joint application has ended
+      </h1>
 
-                  <h1 class="govuk-heading-l">
-                    You need to review your joint application
-                  </h1>
-
-                  <p class="govuk-body">
-
-                  Your husband or wife has created a divorce application. They have indicated they want to submit the application jointly with you. A joint application is when you both review and submit the application together.
-                  </p>
-
-                  <p class="govuk-body">
-                  You need to review the application. If you confirm the application, then it can be submitted. If you do not confirm then you will be told what you can do next.<br><br> You will also be asked to provide some of your own information.
- </p>
+    <p>You have not confirmed this joint application for a divorce with your husband or wife. It has not been submitted and no further action will be taken. You and your husband or wife have been sent an email confirmation.
+<br><br>
+      Either of you can still make a <a href="#">sole application</a> for divorce.
+      </p>
 
 
-            </div>
 
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-        </form>
-      </div>
+
+
+
+
+      <p><a href="#">Sign out</a></p>
+
     </div>
-
-<p><a href="#">Save and sign out</a></p>
+  </div>
 
 <div class="govuk-!-padding-bottom-4"></div>
 
@@ -82,5 +72,4 @@
             </ul>
     </div>
 </details>
-
 {% endblock %}

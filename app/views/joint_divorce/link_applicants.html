@@ -31,7 +31,7 @@
         <h1 class="govuk-heading-l">Enter these details from the email</h1>
 
         <form action="/joint_divorce/joint_review" method="post" novalidate>
-            
+
             <p>Enter the reference number and access code from the court's email.</p>
 
           <div class="govuk-form-group">
@@ -42,14 +42,14 @@
               This is a 16-digit number
             </div>
             <input class="govuk-input govuk-input--width-20" id="joint-ref" name="joint-ref" type="text" aria-describedby="joint-ref-hint" value="{{ data['joint-ref'] }}">
-            </div> 
+            </div>
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="joint-access-code">
               Access code
             </label>
               <div id="joint-access-code-hint" class="govuk-hint">
-              Your code is 8 characters long 
+              Your code is 8 characters long
             </div>
             <input class="govuk-input govuk-input--width-20" id="joint-access-code" name="joint-access-code" type="text" aria-describedby="joint-access-code-hint" value="{{ data['joint-access-code'] }}">
             </div>
