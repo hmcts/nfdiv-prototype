@@ -30,6 +30,7 @@
     <div class="govuk-grid-column-full-from-desktop">
 
       <h1 class="govuk-heading-xl">Check your joint application</h1>
+ <p class="govuk-body">This is the information your husband or wife has provided for your joint application. Check it to make sure it is correct.</p>
 
       <h2 class="govuk-heading-m">About your marriage</h2>
 
@@ -40,7 +41,7 @@
             When did you get married?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['marriage-date-day'] }} / {{ data['marriage-date-month'] }} / {{ data['marriage-date-year'] }}
+            21/11/1996
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -55,7 +56,7 @@
             How do you want to apply for the divorce?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['sole-joint'] }}
+            Joint
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -249,6 +250,7 @@
       </dl>
 
 
+<!--
 
    <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -307,12 +309,15 @@
             </div>
        </div>
 
+       -->
+
+
       <form action="/joint_divorce/application_ready_submit" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Save and Submit
+          Continue
         </button>
 
       </form>
