@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Help paying the fee for your divorce - GOV.UK
+  Apply for a divorce - Do you need help paying the fee for your divorce? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,14 +21,14 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/joint_divorce/confirm_joint_detailsHWF">Back</a>
+<a class="govuk-back-link" href="sole_or_joint.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/your_names_co_app2" method="post" novalidate>
+        <form action="/divorce/marry_in_uk" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -37,33 +37,30 @@
                       Do you need help paying the fee for your divorce?
                   </h1>
                 </legend>
-
-                <p>This divorce application costs £550. Either of you can pay. Whoever pays may be able to get help paying the fee if both of you are:</p>
-
-              <!--  <p>Your husband or wife has applied for Help With Fees and  provided a reference number. You may be able to get help paying the fee if you:</p> -->
+                  
+                <p>This divorce application costs £550. You may be able to get help paying the fee if you:</p>
 
                   <ul class="govuk-list govuk-list--bullet">
                     <li>are on certain benefits <i>or</i></li>
                     <li>have a little or no savings <i>or</i></li>
                     <li>have low income</li>
-                  </ul>
-
-        <p>You both need to apply separately and be eligible.</p>
+                  </ul>  
+                  
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="I need help paying the fee" {{ checked("help-fees", "I need help paying the fee") }}>
                     <label class="govuk-label govuk-radios__label" for="help-fees-1">
-                      I need help paying the fee
+                      I need help paying the fee	
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="I do not need help paying the fee" {{ checked("help-fees", "I do not need help paying the fee") }}>
                     <label class="govuk-label govuk-radios__label" for="help-fees-2">
-                      I do not need help paying the fee
+                      I do not need help paying the fee  
                     </label>
                   </div>
-                </div>
-
+                </div> 
+                 
               </fieldset>
             </div>
 
