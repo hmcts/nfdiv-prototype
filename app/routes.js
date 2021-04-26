@@ -568,7 +568,7 @@ router.post('/joint_divorce/email_address', function (req, res) {
   }
 })
 
-router.post('/joint_divorce/help_fees', function (req, res) {
+router.post('/joint_divorce/help_fees3', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -578,7 +578,7 @@ router.post('/joint_divorce/help_fees', function (req, res) {
   if (over18 == 'I do not know their email address') {
     res.redirect('/joint_divorce/need_email_address')
   } else {
-    res.redirect('/joint_divorce/help_fees')
+    res.redirect('/joint_divorce/help_fees3')
   }
 })
 
