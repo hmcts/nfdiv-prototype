@@ -53,7 +53,7 @@
             Same-sex couples
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['same-sex'] }}
+            No
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -109,7 +109,9 @@
             How do you want to apply for the divorce?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['sole-joint'] }}
+        <!--    {{ data['sole-joint'] }} -->
+
+        I want to apply jointly, with my {{ data['husband-wife'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -120,7 +122,7 @@
         </div>
       </dl>
 
-        <h2 class="govuk-heading-m">How the court will contact your husband or wife</h2>
+        <h2 class="govuk-heading-m">How the court will contact your {{ data['husband-wife'] }}</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -207,7 +209,7 @@
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">About you and your husband or wife</h2>
+      <h2 class="govuk-heading-m">About you and your {{ data['husband-wife'] }}</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -248,7 +250,7 @@
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> husband or wife name on cert</span>
+              <span class="govuk-visually-hidden"> {{ data['husband-wife'] }} name on cert</span>
             </a>
           </dd>
         </div>
@@ -287,7 +289,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Do you need the court to keep your address private from your husband or wife?
+            Do you need the court to keep your address private from your {{ data['husband-wife'] }}?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['address-private'] }}
@@ -478,7 +480,7 @@
           <div style="margin-top: -12px;">  You could be fined or imprisoned if you deliberately submit false information.</div>
           </strong>
         </div>
-          <h2 class="govuk-body-l">Your answers will be sent to your husband or wife to review. If they confirm the application and pay the fee then the application will be submitted to the court. You will also be given the option of paying, once they have confirmed. </h2>
+          <h2 class="govuk-body-l">Your answers will be sent to your {{ data['husband-wife'] }} to review. If they confirm the application and pay the fee then the application will be submitted to the court. You will also be given the option of paying, once they have confirmed. </h2>
             </div>
        </div>
 

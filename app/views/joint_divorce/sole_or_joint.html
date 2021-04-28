@@ -31,45 +31,45 @@
         <form action="/joint_divorce/email_address" method="post" novalidate>
 
           <div class="govuk-form-group">
-              
+
                   <h1 class="govuk-heading-l">
-                    How do you want to apply for the divorce?  
+                    How do you want to apply for the divorce?
                   </h1>
-                
+
                   <p class="govuk-body">
-                  You can apply for the divorce on your own (as a ‘sole applicant’) or with your husband or wife (in a ‘joint application’).       
+                  You can apply for the divorce on your own (as a ‘sole applicant’) or with your {{ data['husband-wife'] }} (in a ‘joint application’).
                   </p>
-              
+
               <h2 class="govuk-heading-s">Applying as a sole applicant </h2>
-                  
+
                 <p class="govuk-body">
-                  If you apply as a sole applicant, your husband or wife responds to your divorce application after you have submitted it. You will be applying on your own.         
-                  </p> 
-                  
-                  <h2 class="govuk-heading-s">Applying jointly, with your husband or wife</h2>
-              
+                  If you apply as a sole applicant, your {{ data['husband-wife'] }} responds to your divorce application after you have submitted it. You will be applying on your own.
+                  </p>
+
+                  <h2 class="govuk-heading-s">Applying jointly, with your {{ data['husband-wife'] }}</h2>
+
               <p class="govuk-body">
-                  If you apply jointly, your husband or wife joins and reviews this online application before it’s submitted. You will be applying together.     
-                  </p> 
-              
+                  If you apply jointly, your {{ data['husband-wife'] }} joins and reviews this online application before it’s submitted. You will be applying together.
+                  </p>
+
                 <div class="govuk-inset-text">
-                  How you divide your money and property is dealt with separately. It should not affect your decision on whether to do a sole or a joint application.  
+                  How you divide your money and property is dealt with separately. It should not affect your decision on whether to do a sole or a joint application.
                 </div>
-                  
+
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="sole-joint" name="sole-joint" type="radio" value="I want to apply on my own, as a sole applicant" {{ checked("sole-joint", "I want to apply on my own, as a sole applicant") }}>
                         <label class="govuk-label govuk-radios__label" for="sole-joint">
-                          I want to apply on my own, as a sole applicant  
+                          I want to apply on my own, as a sole applicant
                         </label>
                       </div>
-                      
+
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="sole-joint-2" name="sole-joint" type="radio" value="I want to apply jointly, with my husband or wife"  {{ checked("sole-joint", "I want to apply jointly, with my husband or wife") }}>
                         <label class="govuk-label govuk-radios__label" for="sole-joint-2">
-                          I want to apply jointly, with my husband or wife 
+                          I want to apply jointly, with my {{ data['husband-wife'] }}
                         </label>
-                      </div>      
+                      </div>
             </div>
           </div>
 

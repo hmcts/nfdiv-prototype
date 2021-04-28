@@ -52,7 +52,7 @@
 
                   <ul class="govuk-list govuk-list--bullet">
                     <li>you do not have to proceed with the application for a financial order.</li>
-                    <li>you can proceed with the application for a financial order at any time, so long as your husband or wife is still alive. </li>
+                    <li>you can proceed with the application for a financial order at any time, so long as your {{ data['husband-wife'] }} is still alive. </li>
                   </ul>
 
                   <h2 class="govuk-heading-s">If you select no:</h2>
@@ -108,7 +108,7 @@
 
                       </div>
 
-                      
+
 
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="financial-order-2" name="financial-order" type="radio" value="No, I do not want to apply for a financial order" data-aria-controls="conditional-financial-order-2" {{ checked("financial-order", "No, I do not want to apply for a financial order") }}>
