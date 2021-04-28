@@ -31,17 +31,17 @@
       <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-l">Where your lives are based</h1>
-          
-          <p>The court needs to know whether you and your husband’s or wife’s lives are based in England or Wales. This may include working, owning property, having children in school, or your main family life taking place in England or Wales.</p>
+
+          <p>The court needs to know whether you and your {{ data['husband-wife'] }}’s lives are based in England or Wales. This may include working, owning property, having children in school, or your main family life taking place in England or Wales.</p>
 
         <form action="/joint_divorce/jurisdiction_confirmation" method="post" novalidate>
 
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="passport-number">
-              Is your life mainly based in England or Wales? 
+              Is your life mainly based in England or Wales?
             </label>
-            
+
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="life-based-uk-1" name="life-based-uk" type="radio" value="Yes" {{ checked("life-based-uk", "Yes") }}>
@@ -60,9 +60,9 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="passport-number">
-              Is your husband's or wife's life mainly based in England or Wales? 
+              Is your {{ data['husband-wife'] }}'s life mainly based in England or Wales?
             </label>
-            
+
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="life-based-uk-3" name="life-based-uk-partner" type="radio" value="Yes" {{ checked("life-based-uk-partner", "Yes") }}>

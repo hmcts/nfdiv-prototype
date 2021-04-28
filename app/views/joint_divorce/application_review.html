@@ -31,11 +31,11 @@
         <form action="/joint_divorce/confirmation" method="post" novalidate>
 
             <h1 class="govuk-heading-l">
-                    Your application has been sent to your husband or wife for review
+                    Your application has been sent to your {{ data['husband-wife'] }} for review
                   </h1>
 
           <p class="govuk-body">
-                  Your application has been sent to your husband or wife at the following email address: <b>email@gmail.com</b>
+                  Your application has been sent to your {{ data['husband-wife'] }} at the following email address: <b>email@gmail.com</b>
                   </p>
 
             <p class="govuk-body">
