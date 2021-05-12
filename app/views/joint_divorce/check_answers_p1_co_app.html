@@ -1,0 +1,263 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Other court cases relating your marriage, property or children - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="check_answers_combined_co_app">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="/joint_divorce/financial_order_co_app">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-from-desktop">
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+
+      <h2 class="govuk-heading-m">About your marriage</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Has your marriage irretrievably broken down (it cannot be saved)?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> marriage irretrievably broken down</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="govuk-heading-m">About you and your husband or wife</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Your full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            John Smith
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> your name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Have you changed your name since getting married?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> changed your name</span>
+            </a>
+          </dd>
+        </div>
+    </dl>
+
+          <h2 class="govuk-heading-m">How the court will contact you</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            What language do you want to receive emails and documents in?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            English
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> english or welsh</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you need the court to keep your address private from your husband or wife?
+          </dt>
+          <dd class="govuk-summary-list__value">
+          No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> address private</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            1 Main Street
+            <br>London
+            <br>{{ data['address-postcode-v2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            email@gmail.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> email address</span>
+            </a>
+          </dd>
+        </div>
+        </dl>
+
+
+    <!--
+      <h2 class="govuk-heading-m">Other court cases </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Other court cases
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['other-court-cases'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> other court cases</span>
+            </a>
+          </dd>
+        </div>
+        </dl>
+    -->
+
+      <h2 class="govuk-heading-m">Dividing your money and property</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Dividing your money and property
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No, I do not want to apply for a financial order
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> money and property</span>
+            </a>
+          </dd>
+        </div>
+       </dl>
+
+
+      <h2 class="govuk-heading-m">Your documents</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Uploaded documents
+          </dt>
+          <dd class="govuk-summary-list__value">
+            None
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> uploaded documents</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+
+      <form action="/joint_divorce/check_answers_p2_co_app" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+  <!--
+<button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled" data-module="govuk-button">
+  Confirm
+    </button>
+
+  -->
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+<p><a href="/joint_divorce/confirm_co_app5">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
