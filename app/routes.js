@@ -823,7 +823,7 @@ router.post('/joint_divorce/financial_order_details_co_app', function (req, res)
   const over18 = req.session.data['financial-order-co-app']
 
   if (over18 === 'No, I do not want to apply for a financial order') {
-    res.redirect('/joint_divorce/check_answers_combined_co_app')
+    res.redirect('/joint_divorce/check_answers_p1_co_app')
   } else {
     res.redirect('/joint_divorce/financial_order_details_co_app')
   }
