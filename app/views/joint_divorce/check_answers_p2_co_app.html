@@ -21,7 +21,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/financial_order_co_app">Back</a>
+  <a class="govuk-back-link" href="/joint_divorce/check_answers_p1_co_app">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -223,6 +223,10 @@
 
 
       <!-- confirm details widget -->
+
+
+      <form action="/joint_divorce/check_answers_p3_co_app" method="post" novalidate>
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -236,14 +240,14 @@
           <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <input class="govuk-radios__input" id="needchange" name="needchange" type="radio" value="Yes" data-aria-controls="conditional-contact" {{ checked("needchange", "Yes") }}>
                 <label class="govuk-label govuk-radios__label" for="contact">
                   Yes
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                <input class="govuk-radios__input" id="needchange-2" name="needchange" type="radio" value="No" data-aria-controls="conditional-contact-2" {{ checked("needchange", "No") }}>
                 <label class="govuk-label govuk-radios__label" for="contact-2">
                   No
                 </label>
@@ -287,7 +291,7 @@
 
 
 
-      <form action="/joint_divorce/application_changes_co_app" method="post" novalidate>
+
 
         <input type="hidden" name="answers-checked" value="true">
 
