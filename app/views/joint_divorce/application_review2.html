@@ -17,10 +17,9 @@
     </span>
   </p>
   <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
-      <a class="govuk-link" href="#">Cymraeg</a>
+      <a class="govuk-link" href="/joint_divorce/email_approve">Cymraeg</a>
   </p>
 </div>
-
 
 
 {% endblock %}
@@ -32,18 +31,21 @@
         <form action="/joint_divorce/confirmation" method="post" novalidate>
 
           <h1 class="govuk-heading-l">
-                Your comments have been sent to your husband or wife
+                  Your answers have been sent to your {{ data['husband-wife'] }} to review
                 </h1>
 
             <p class="govuk-body">
-              Your husband or wife has been sent an email telling them you believe some of the information in the joint application is incorrect. They will be able to see your comments. When they have changed the information then it will be sent back to you for review.
-.
+                    Your answers have been sent to your {{ data['husband-wife'] }} at the following email address: <b>name@gmail.com</b>.
 </p>
           <p class="govuk-body">
-        Your joint application cannot be submitted until you both agree on the information.
+            They need to review and provide some of their own information by <b>June 4th 2021</b>.
          </p>
 
+            <p class="govuk-body">
+              You will receive a notification to confirm when they have reviewed. If they do not review then you will be told what you can do to progress the application.
 
+
+                  </p>
 
 
 
@@ -54,7 +56,7 @@
     </div>
 <br>
 
-<p><a href="/joint_divorce/email_co_app_change">Save and sign out</a></p>
+<p><a href="/joint_divorce/email_approve">Save and sign out</a></p>
 
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
