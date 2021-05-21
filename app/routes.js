@@ -528,7 +528,7 @@ router.post('/joint_divorce/marriage_date', function (req, res) {
 
 
 
-router.post('/joint_divorce/check_answers_p3_co_app', function (req, res) {
+router.post('/joint_divorce/application_changes_co_app', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
