@@ -538,7 +538,7 @@ router.post('/joint_divorce/application_changes_co_app', function (req, res) {
   if (over18 === 'No') {
     res.redirect('/joint_divorce/application_changes_co_app')
   } else {
-    res.redirect('/joint_divorce/check_answers_p3_co_app')
+    res.redirect('/joint_divorce/check_answers_p2_co_app')
   }
 })
 
