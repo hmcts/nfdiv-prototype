@@ -38,7 +38,7 @@
 
 
 
-  <h1 class="govuk-heading-l">Sign in or create an account</h1>
+  <h1 class="govuk-heading-l">Create an account or sign in</h1>
 
       <div class="govuk-grid-row">
 
@@ -49,42 +49,55 @@
 <form action="/joint_divorce/link_applicants" method="post" novalidate>
 
 
-            <h2 class="govuk-heading-m">Sign in</h2>
+            <h2 class="govuk-heading-m">Create an account</h2>
 
           <div class="govuk-form-group">
               <label class="govuk-label" for="three-quarters">
-                Email address
+                First name
               </label>
               <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
             </div>
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="three-quarters">
-                Password
+                Last name
               </label>
               <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
             </div>
 
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="three-quarters">
+                  Email address
+                </label>
+                <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+              </div>
+
+              <p class="body-text">
+                            Read our
+                            <a href="https://hmcts-access.service.gov.uk/privacy-policy">privacy policy</a>
+                            and
+                            <a href="https://hmcts-access.service.gov.uk/terms-and-conditions">terms and conditions</a>
+                        </p>
 
 
-            <p class="govuk-body"><a href="#">Forgotten your password?</a></p>
+
 
           <button class="govuk-button" data-module="govuk-button">
-            Sign in
+          Continue
           </button>
 
         </form>
       </div>
 
       <div class="govuk-grid-column-one-half">
-          <h2 class="govuk-heading-m">Create an account</h2>
+          <h2 class="govuk-heading-m">Already have an account?</h2>
           <p>
-              You need to
 
-              <a href="/users/selfRegister?redirect_uri=https%3a%2f%2fwww.apply-divorce.service.gov.uk%2fauthenticated&client_id=divorce&state=ae031243-9b72-4f91-9cd8-c1c8149d4c46&scope=">
-                  create an account
+
+              <a href="sign_in">
+                  Sign in to your account
               </a>
-              to use this service.
+
           </p>
       </div>
 
