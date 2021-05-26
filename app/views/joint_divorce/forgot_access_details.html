@@ -21,43 +21,32 @@
   </p>
 </div>
 
-
+  <a class="govuk-back-link" href="/joint_divorce/link_applicants">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Enter your access details</h1>
+        <h1 class="govuk-heading-l">Resend your access details</h1>
 
-        <form action="/joint_divorce/joint_review" method="post" novalidate>
+        <form action="/joint_divorce/link_applicants_resent" method="post" novalidate>
 
-            <p>Your reference number and access code are in the email you received which invited you to this application.</p>
+            <p>Enter the email address where you received the invitation to join this divorce application. An access code and reference number will be resent to this email address.   </p>
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="joint-ref">
-              Your reference number
+              Email address
             </label>
               <div id="joint-ref-hint" class="govuk-hint">
-              This is a 16-digit number
+              Enter the email address where you received the invitation
             </div>
-            <input class="govuk-input govuk-input--width-20" id="joint-ref" name="joint-ref" type="text" aria-describedby="joint-ref-hint">
-            </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="joint-access-code">
-              Your access code
-            </label>
-              <div id="joint-access-code-hint" class="govuk-hint">
-              This is 8 characters
-            </div>
-            <input class="govuk-input govuk-input--width-20" id="joint-access-code" name="joint-access-code" type="text" aria-describedby="joint-access-code-hint">
+            <input class="govuk-input govuk-input--width-20" id="joint-ref" name="joint-ref" type="text" aria-describedby="joint-ref-hint" value="{{ data['joint-ref'] }}">
             </div>
 
-            <p><a href="forgot_access_details">I do not know my access details</a></p>
 
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Resend
           </button>
 
         </form>
