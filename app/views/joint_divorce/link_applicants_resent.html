@@ -32,7 +32,7 @@
 
         <form action="/joint_divorce/joint_review" method="post" novalidate>
 
-            <p>Your reference number and access code are in the email you received which invited you to this application.</p>
+            <p>Your access details have been re-sent to: {{ data['joint-ref'] }}</p>
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="joint-ref">
@@ -51,7 +51,7 @@
               <div id="joint-access-code-hint" class="govuk-hint">
               This is 8 characters
             </div>
-            <input class="govuk-input govuk-input--width-20" id="joint-access-code" name="joint-access-code" type="text" aria-describedby="joint-access-code-hint">
+            <input class="govuk-input govuk-input--width-20" id="joint-access-code" name="joint-access-code" type="text" aria-describedby="joint-access-code-hint" value="{{ data['joint-access-code'] }}">
             </div>
 
             <p><a href="forgot_access_details">I do not know my access details</a></p>
