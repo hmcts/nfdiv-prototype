@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Pay your divorce fee - GOV.UK
+  Apply for a divorce - Dividing your money and property - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@
     </span>
   </p>
   <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
-      <a class="govuk-link" href="application_ready_submit2">Cymraeg</a>
+      <a class="govuk-link" href="#">Cymraeg</a>
   </p>
 </div>
 
@@ -28,40 +28,33 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/joint_divorce/confirmation" method="post" novalidate>
+        <form action="/joint_divorce/husband_or_wife" method="post" novalidate>
 
-            <h1 class="govuk-heading-l">
-                    Start a new sole application
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                  This joint application has been ended
                   </h1>
 
-<p class="govuk-body">You can start a new sole application for divorce.</p>
+                  <p class="govuk-body">
+                Your husband or wife has ended this joint application.
+                  </p>
 
-<div class="govuk-warning-text">
-  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-  <strong class="govuk-warning-text__text">
-    <span class="govuk-warning-text__assistive">Warning</span>
-  <div style="margin-top: -12px;"> This will delete any information you have entered and notify your husband or wife that you are ending the joint application. </div>
-  </strong>
-</div>
+                  <p class="govuk-body">
+                You or your husband or wife can submit a new application.
+                  </p>
 
 
+            </div>
+
+          
         </form>
       </div>
     </div>
 
-    <form action="/joint_divorce/husband_or_wife" method="post" novalidate>
+<p><a href="#">Exit service</a></p>
 
-      <input type="hidden" name="answers-checked" value="true">
-
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Confirm
-      </button>
-
-    </form>
-
-
-
-<p><a href="/joint_divorce/sign_in">Cancel</a></p>
+<div class="govuk-!-padding-bottom-4"></div>
 
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
