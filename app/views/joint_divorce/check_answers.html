@@ -42,7 +42,7 @@
             My {{ data['husband-wife'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/husband_or_wife">
               Change
               <span class="govuk-visually-hidden"> who are you applying to divorcing</span>
             </a>
@@ -56,7 +56,7 @@
             No
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="="/joint_divorce/husband_or_wife">
               Change
               <span class="govuk-visually-hidden"> same-sex couples</span>
             </a>
@@ -70,7 +70,7 @@
             {{ data['broken-down'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/broken_down_irretrievably">
               Change
               <span class="govuk-visually-hidden"> marriage irretrievably broken down</span>
             </a>
@@ -84,7 +84,7 @@
             {{ data['marriage-date-day'] }} / {{ data['marriage-date-month'] }} / {{ data['marriage-date-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/marriage_date">
               Change
               <span class="govuk-visually-hidden"> when did you get married</span>
             </a>
@@ -98,7 +98,7 @@
             {{ data['marriage-certificate'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/marriage_certificate">
               Change
               <span class="govuk-visually-hidden"> marriage certificate</span>
             </a>
@@ -114,7 +114,7 @@
         I want to apply jointly, with my {{ data['husband-wife'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/sole_or_joint">
               Change
               <span class="govuk-visually-hidden"> how do you want to apply for the divorce</span>
             </a>
@@ -122,92 +122,137 @@
         </div>
       </dl>
 
-        <h2 class="govuk-heading-m">How the court will contact your {{ data['husband-wife'] }}</h2>
+      <h2 class="govuk-heading-m">How the court will contact your {{ data['husband-wife'] }}</h2>
 
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key" style="width:60%">
-            Your husband's or wife's email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['res-email'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> respondent email address</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" style="width:60%">
+          Your {{ data['husband-wife'] }}'s email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['res-email'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/joint_divorce/email_address">
+            Change
+            <span class="govuk-visually-hidden"> respondent email address</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
 
-      <h2 class="govuk-heading-m">Your connections to England and Wales</h2>
+
+      <h2 class="govuk-heading-m">Help with fees</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Did you get married in the UK?
+            Do you need help paying the fee for your divorce?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['marry-uk'] }}
+            {{ data['help-fees'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/help_fees3">
               Change
-              <span class="govuk-visually-hidden"> married in the uk</span>
+              <span class="govuk-visually-hidden"> help paying the fee</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Is your life mainly based in England or Wales?
+            Help with Fees number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['life-based-uk'] }}
+            {{ data['help-fees-input'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/help_fees3">
               Change
-              <span class="govuk-visually-hidden"> your life mainly based in england or wales</span>
+              <span class="govuk-visually-hidden"> help with fees number</span>
             </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Is your husband's or wife's life mainly based in England or Wales?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['life-based-uk-partner'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> husband's or wife's life mainly based in england or wales</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How you're connected to England and Wales
-          </dt>
-          <dd class="govuk-summary-list__value">
-            My partner and I are both habitually resident in England and Wales
-            <div class="govuk-!-padding-bottom-4"></div>
-            <details class="govuk-details" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  See the legal version
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                The Applicant and the Respondent are habitually resident in England and Wales
-              </div>
-            </details>
-          </dd>
-          <dd class="govuk-summary-list__actions">
           </dd>
         </div>
       </dl>
+
+
+
+
+
+            <h2 class="govuk-heading-m">Your connections to England and Wales</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key" style="width:60%">
+                  Did you get married in the UK?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['marry-uk'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="/joint_divorce/marry_in_uk">
+                    Change
+                    <span class="govuk-visually-hidden"> married in the uk</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Is your life mainly based in England or Wales?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['life-based-uk'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="/joint_divorce/life_based_in_uk">
+                    Change
+                    <span class="govuk-visually-hidden"> your life mainly based in england or wales</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Is your {{ data['husband-wife'] }}'s life mainly based in England or Wales?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['life-based-uk-partner'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="/joint_divorce/life_based_in_uk">
+                    Change
+                    <span class="govuk-visually-hidden"> {{ data['husband-wife'] }}'s life mainly based in england or wales</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  How you're connected to England and Wales
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  My {{ data['husband-wife'] }} and I are both habitually resident in England and Wales
+                  <div class="govuk-!-padding-bottom-4"></div>
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        See the legal version
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      The Applicant and the Respondent are habitually resident in England and Wales
+                    </div>
+                  </details>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+              </div>
+            </dl>
+
+
+
+
+
+
+
 
       <h2 class="govuk-heading-m">About you and your {{ data['husband-wife'] }}</h2>
 
@@ -220,7 +265,7 @@
             {{ data['app-first-name'] }} {{ data['app-last-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/your_names">
               Change
               <span class="govuk-visually-hidden"> your name</span>
             </a>
@@ -234,7 +279,7 @@
             {{ data['app-name-cert'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/names_on_cert">
               Change
               <span class="govuk-visually-hidden"> your name on cert</span>
             </a>
@@ -242,13 +287,13 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Your husband's or wife's name from the marriage certificate
+            Your {{ data['husband-wife'] }}'s name from the marriage certificate
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['res-name-cert'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/names_on_cert">
               Change
               <span class="govuk-visually-hidden"> {{ data['husband-wife'] }} name on cert</span>
             </a>
@@ -259,16 +304,18 @@
             Have you changed your name since getting married?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['changed-name'] }}
+            {{ data['part-of-your-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/name_changed">
               Change
               <span class="govuk-visually-hidden"> changed your name</span>
             </a>
           </dd>
         </div>
     </dl>
+
+
 
           <h2 class="govuk-heading-m">How the court will contact you</h2>
 
@@ -281,7 +328,7 @@
             {{ data['english-welsh'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/english_welsh">
               Change
               <span class="govuk-visually-hidden"> english or welsh</span>
             </a>
@@ -289,13 +336,13 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Do you need the court to keep your address private from your {{ data['husband-wife'] }}?
+            Do you need the court to keep your email address and phone number private from your {{ data['husband-wife'] }}?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['address-private'] }}
+            {{ data['private'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/applicant_address_private">
               Change
               <span class="govuk-visually-hidden"> address private</span>
             </a>
@@ -311,7 +358,7 @@
             <br>{{ data['address-postcode-v2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/applicant_postal_address_v2">
               Change
               <span class="govuk-visually-hidden"> address</span>
             </a>
@@ -322,10 +369,10 @@
             Your email address
           </dt>
           <dd class="govuk-summary-list__value">
-            email@gmail.com
+            {{ data['your-email'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/sign_in">
               Change
               <span class="govuk-visually-hidden"> email address</span>
             </a>
@@ -346,7 +393,7 @@
             {{ data['other-court-cases'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/other_court_cases">
               Change
               <span class="govuk-visually-hidden"> other court cases</span>
             </a>
@@ -362,10 +409,10 @@
             Dividing your money and property
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['money_property'] }}
+            {{ data['financial-order'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/financial_order">
               Change
               <span class="govuk-visually-hidden"> money and property</span>
             </a>
@@ -384,7 +431,7 @@
             Marriage certifiate
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/joint_divorce/upload">
               Change
               <span class="govuk-visually-hidden"> uploaded documents</span>
             </a>
@@ -392,38 +439,7 @@
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">Help with fees</h2>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key" style="width:60%">
-            Do you need help paying the fee for your divorce?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['help-fees'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> help paying the fee</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Help with Fees number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['help-fees-input'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> help with fees number</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
 
 
 <!--
@@ -501,7 +517,7 @@ Your answers will be sent to your {{ data['husband-wife'] }} to review. When the
 
 
 
-<p><a href="#">Save and sign out</a></p>
+<p><a href="/joint_divorce/sign_in">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 

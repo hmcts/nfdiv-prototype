@@ -46,7 +46,7 @@
             </p>
 
               <p class="govuk-body">
-              Emails will be sent to: <b>email@gmail.com</b>
+              Emails will be sent to: <b>{{ data['your-email'] }}</b>
             </p>
 
             <div class="govuk-form-group">
@@ -74,7 +74,7 @@
               <label class="govuk-label govuk-!-font-weight-bold" for="telephone-number">
                 Enter your phone number (optional)
               </label>
-              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel">
+              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel" value="{{ data['telephone-number'] }}">
               </div>
 
           </div>
