@@ -37,17 +37,22 @@
 
         <li class="hmcts-progress-bar__list-item" aria-current="step">
           <span class="hmcts-progress-bar__icon"></span>
-          <span class="hmcts-progress-bar__label">Application checked and issued</span>
+          <span class="hmcts-progress-bar__label">Conditional order application</span>
         </li>
 
         <li class="hmcts-progress-bar__list-item">
           <span class="hmcts-progress-bar__icon"></span>
-          <span class="hmcts-progress-bar__label">Conditional order</span>
+          <span class="hmcts-progress-bar__label">Conditional order granted</span>
         </li>
 
         <li class="hmcts-progress-bar__list-item">
           <span class="hmcts-progress-bar__icon"></span>
-          <span class="hmcts-progress-bar__label">Final order</span>
+          <span class="hmcts-progress-bar__label">Final order application</span>
+        </li>
+
+        <li class="hmcts-progress-bar__list-item">
+          <span class="hmcts-progress-bar__icon"></span>
+          <span class="hmcts-progress-bar__label">Divorced</span>
         </li>
 
         </ol>
@@ -63,7 +68,11 @@
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #E5F2EB; text-align: left;">
 
 
-  <p >You have submitted your joint application for divorce. It’s being checked by court staff.  You will recieve an email by 8th July, after it has been checked.</p>
+  <p >Your application for divorce has been submitted and checked by court staff. It has now been ‘served’ (sent out) to you and your {{ data['husband-wife'] }}. </p>
+
+  <p >The next step in the process is to apply for a 'conditional order'. This is a document that says that the court does not see any reason why you cannot divorce.</p>
+
+  <p >You have to wait until Friday 29 October until you can apply. You can use the time to decide how the money and property is divided. </p>
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
@@ -71,12 +80,16 @@
       </div>
 
       <br>
-      <h2 class="govuk-heading-m">Completed</h2>
+
+  <h2 class="govuk-heading-m">Completed</h2>
+
+        <div class="govuk-grid-column-one-quarter" style = "position:relative; right:15px;">
 
 
-        <div class="govuk-grid-column-one-quarter">
 
         <img src="/public/images/Completed.png">
+          <div class="govuk-!-padding-bottom-2"></div>
+      <p>14 June 2021</p>
 
         </div>
 
@@ -85,7 +98,7 @@
 
 <h3 class="govuk-heading-s">Joint application for divorce submitted </h3>
 
-<p>1 June 2021: You submitted a joint application for divorce</p>
+<p>Joint application for divorce submitted and checked</p>
 
 <p>What you submitted </p>
 
