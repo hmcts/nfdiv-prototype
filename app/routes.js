@@ -266,7 +266,7 @@ router.post('/divorce/financial_order_details', function (req, res) {
   const over18 = req.session.data['financial-order']
 
   if (over18 === 'No, I do not want to apply for a financial order') {
-    res.redirect('/divorce/claim_costs')
+    res.redirect('/divorce/upload')
   } else {
     res.redirect('/divorce/financial_order_details')
   }
