@@ -35,12 +35,12 @@
           <span class="hmcts-progress-bar__label">Application submitted</span>
         </li>
 
-        <li class="hmcts-progress-bar__list-item" aria-current="step">
-          <span class="hmcts-progress-bar__icon"></span>
+        <li class="hmcts-progress-bar__list-item">
+          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
           <span class="hmcts-progress-bar__label">Conditional order application</span>
         </li>
 
-        <li class="hmcts-progress-bar__list-item">
+        <li class="hmcts-progress-bar__list-item" aria-current="step">
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Conditional order granted</span>
         </li>
@@ -63,24 +63,26 @@
 
 
 
-      <h2 class="govuk-heading-m">Lastest update</h2>
+      <h2 class="govuk-heading-m">Latest update</h2>
 
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
 
 
+        <p >  Your application for divorce has been submitted and checked by court staff. It has now been ‘issued’ to you and your husband or wife by email.</p>
+
+        <p >You have to confirm that you have received and accept the application for divorce. This is known as ‘acknowledging service’.</p>
+
+        <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
 
 
 
+      <form action="/joint_divorce/hub2" method="post" novalidate>
+             <button type="submit" class="govuk-button" data-module="govuk-button">
+               I acknowledge service
+             </button>
 
-
-
-  <p >You have confirmed that you have received and accepted the divorce application. This is known as ‘acknowledging service’.</p>
-
-  <p >The next step in the process is to apply for a 'conditional order'. This is a document that says that the court does not see any reason why you cannot divorce.</p>
-
-  <p >You can apply for a conditional order on 14 October 2021. This is because you have to wait until 20 weeks from the date the divorce application was issued.</p>
-
+             </form>
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
@@ -91,7 +93,6 @@
 
       <h2 class="govuk-heading-m">Completed</h2>
 
-
       <!-- completed block -->
       <div class="govuk-grid-row">
         <div class="govuk-!-padding-left-8"></div>
@@ -100,14 +101,43 @@
 
           <p> <img src="/public/images/Completed.png" style="padding-right: 25px; padding-left: 15px; position: relative;  top: 50%; transform: translate(0,25%);">
 
-  <strong>16 June 2021:</strong> You acknowledged service for divorce</p>
+            <strong>24 October 2021 </strong> - Conditional order applied for</p>
 
-  </div>
+          </div>
 
+          <div class="govuk-grid-column-one-quarter"></div>
+      <div class="govuk-grid-column-three-quarters" style="padding-left: 125px;">
+
+        <h3 class="govuk-heading-s">What you submitted</h3>
+        <p>  <a href="">View your conditional order</a></p>
+      </div>
     </div>
 
+ <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:1px;">
 
-    <div class="govuk-!-padding-bottom-8"></div>
+
+      <!-- completed block -->
+      <div class="govuk-grid-row">
+        <div class="govuk-!-padding-left-8"></div>
+        <div style="vertical-align: middle;">
+          <p> <img src="/public/images/Completed.png" style="padding-right: 25px; padding-left: 15px; position: relative;  top: 50%; transform: translate(0,25%);">
+          <strong>21 June 2021 </strong> - Your wife acknowledged service for divorce</p>
+        </div>
+        </div>
+
+       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:1px;">
+
+
+      <!-- completed block -->
+      <div class="govuk-grid-row">
+        <div class="govuk-!-padding-left-8"></div>
+        <div style="vertical-align: middle;">
+          <p> <img src="/public/images/Completed.png" style="padding-right: 25px; padding-left: 15px; position: relative;  top: 50%; transform: translate(0,25%);">
+          <strong>18 June 2021 </strong> - You acknowledged service for divorce</p>
+        </div>
+        </div>
+
+       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:1px;">
 
 
 
@@ -119,21 +149,21 @@
 
                 <p> <img src="/public/images/Completed.png" style="padding-right: 25px; padding-left: 15px; position: relative;  top: 50%; transform: translate(0,25%);">
 
-        <strong>14 June 2021:</strong>Joint application for divorce submitted and checked</p>
+                  <strong>14 June 2021 </strong> - Joint application for divorce submitted and checked</p>
 
-        </div>
+                </div>
 
-      <div class="govuk-grid-column-one-quarter"></div>
-
+                <div class="govuk-grid-column-one-quarter"></div>
             <div class="govuk-grid-column-three-quarters" style="padding-left: 125px;">
 
               <h3 class="govuk-heading-s">What you submitted</h3>
-              <p><a href="">View your divorce application</a></p>
+              <p>  <a href="">View your divorce application</a></p>
+                <p>  <a href="">View your marriage certificate</a></p>
+                  <p>  <a href="">View your translation document</a></p>
             </div>
           </div>
 
 
-          <div class="govuk-!-padding-bottom-8"></div>
 
 
 

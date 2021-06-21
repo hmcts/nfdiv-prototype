@@ -35,12 +35,12 @@
           <span class="hmcts-progress-bar__label">Application submitted</span>
         </li>
 
-        <li class="hmcts-progress-bar__list-item" aria-current="step">
-          <span class="hmcts-progress-bar__icon"></span>
+        <li class="hmcts-progress-bar__list-item">
+          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
           <span class="hmcts-progress-bar__label">Conditional order application</span>
         </li>
 
-        <li class="hmcts-progress-bar__list-item">
+        <li class="hmcts-progress-bar__list-item" aria-current="step">
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Conditional order granted</span>
         </li>
@@ -63,9 +63,9 @@
 
 
 
-      <h2 class="govuk-heading-m">Lastest update</h2>
+      <h2 class="govuk-heading-m">Latest update</h2>
 
-      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #E5F2EB; text-align: left;">
+      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
 
 
@@ -77,20 +77,11 @@
 
   <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
 
-  <div class="govuk-form-group">
-           <div class="govuk-checkboxes">
-             <div class="govuk-checkboxes__item">
-               <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
-               <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
-                 I acknowledge service
-               </label>
-             </div>
-           </div>
-       </div>
+
 
 <form action="/joint_divorce/hub2" method="post" novalidate>
        <button type="submit" class="govuk-button" data-module="govuk-button">
-         Submit
+         I acknowledge service
        </button>
 
        </form>
@@ -104,18 +95,82 @@
 
   <h2 class="govuk-heading-m">Completed</h2>
 
+  <!-- completed block -->
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <h3 class="govuk-heading-s">14 June 2021</h3>
+  <img src="/public/images/Completed.png">
+    <div class="govuk-!-padding-bottom-2"></div>
+
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <h3 class="govuk-heading-s">Conditional order applied for</h3>
+
+  <p>  <a href="">Your conditional order application</a></p>
+
+  </div>
+</div>
+
+
+
+ <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:1px;">
+
+
+
+  <!-- completed block -->
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+      <h3 class="govuk-heading-s">21 June 2021</h3>
+  <img src="/public/images/Completed.png">
+    <div class="govuk-!-padding-bottom-2"></div>
+
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <h3 class="govuk-heading-s">Your wife acknowledged service for divorce</h3>
+
+  </div>
+ </div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:1px;">
+
 
         <!-- completed block -->
-        <div class="govuk-grid-column-one-quarter" style = "position:relative; right:15px;">
+          <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+            <h3 class="govuk-heading-s">18 June 2021</h3>
         <img src="/public/images/Completed.png">
           <div class="govuk-!-padding-bottom-2"></div>
-          <p>14 June 2021</p>
+
         </div>
 
         <div class="govuk-grid-column-three-quarters">
-          <h3 class="govuk-heading-s">Joint application for divorce submitted  and checked</h3>
-          <a href="">View your divorce application</a>
+          <h3 class="govuk-heading-s">You acknowledged service for divorce</h3>
+
         </div>
+       </div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:1px;">
+
+
+        <!-- completed block -->
+          <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <h3 class="govuk-heading-s">14 June 2021</h3>
+        <img src="/public/images/Completed.png">
+          <div class="govuk-!-padding-bottom-2"></div>
+
+        </div>
+
+        <div class="govuk-grid-column-three-quarters">
+          <h3 class="govuk-heading-s">Joint application for divorce submitted and checked</h3>
+            <p>What you submitted</p>
+        <p>  <a href="">Your divorce application</a></p>
+          <p>  <a href="">Your marriage certificate</a></p>
+            <p>  <a href="">Your translation document</a></p>
+        </div>
+      </div>
 
 
 
