@@ -56,61 +56,44 @@
                   How you divide your money and property is dealt with separately. It should not affect your decision on whether to do a sole or a joint application.
                 </div>
 
-                <!--
-                <p class="govuk-body">
-                If you need help paying the fee for the divorce, this works differently in a joint application.
-  </p>
-
-  <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        Find out more about paying the fees.
-      </span>
-    </summary>
-      <div class="govuk-details__text">
-      This divorce application costs £550. You have to pay the fee in a sole or a joint application because you are the first applicant. You and your {{ data['husband-wife'] }} should agree how to split the fee, but the payment system can only allow the first applicant to pay.
-
-  <br><br>
-        Help can be claimed to pay the fee, if the applicant:
-<br><br>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>is on certain benefits <i>or</i></li>
-  <li>has little or no savings <i>or</i></li>
-  <li>has low income</li>
-</ul>
-
-    <p class="govuk-body">      In a sole application, only you have to be eligible and claim help with fees. In a joint application, both you and your {{ data['husband-wife'] }} have to be eligible and claim help with fees separately.   </p>
-
-
-      </div>
-  </details>
-
+<!--
+                <div class="govuk-warning-text">
+                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                  <div style="margin-top: -20px;"> You have applied for Help With Fees. If you choose to do a joint application, then your {{ data['husband-wife'] }} must also apply for Help With Fees. In a sole application, only you needed to have applied.
+                  </div>
+                  </strong>
+                </div>
 
 -->
 
 
-<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="sole-joint" name="sole-joint" type="radio" value="I want to apply on my own, as a sole applicant" data-aria-controls="sole-jointdata" {{ checked("sole-joint", "I want to apply on my own, as a sole applicant") }}>
-      <label class="govuk-label govuk-radios__label" for="sole-joint">
-        I want to apply on my own, as a sole applicant
-      </label>
-    </div>
 
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="sole-joint-2" name="sole-joint" type="radio" value="I want to apply jointly, with my husband or wife"  data-aria-controls="sole-joint-2data" {{ checked("sole-joint", "I want to apply jointly, with my husband or wife") }}>
-      <label class="govuk-label govuk-radios__label" for="sole-joint-2">
-        I want to apply jointly, with my {{ data['husband-wife'] }}
-      </label>
-    </div>
 
-    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="sole-joint-2data">
 
-        <p>You should have already discussed this with your {{ data['husband-wife'] }}</p>
-    </div>
-  </div>
 
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sole-joint" name="sole-joint" type="radio" value="I want to apply on my own, as a sole applicant" data-aria-controls="sole-jointdata" {{ checked("sole-joint", "I want to apply on my own, as a sole applicant") }}>
+                        <label class="govuk-label govuk-radios__label" for="sole-joint">
+                          I want to apply on my own, as a sole applicant
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sole-joint-2" name="sole-joint" type="radio" value="I want to apply jointly, with my husband or wife"  data-aria-controls="sole-joint-2data" {{ checked("sole-joint", "I want to apply jointly, with my husband or wife") }}>
+                        <label class="govuk-label govuk-radios__label" for="sole-joint-2">
+                          I want to apply jointly, with my {{ data['husband-wife'] }}
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="sole-joint-2data">
+
+                          <p>  You have applied for Help With Fees. If you choose to do a joint application, then your {{ data['husband-wife'] }} must also apply for Help With Fees. In a sole application, only you needed to have applied.
+                            You should have already discussed this with your {{ data['husband-wife'] }}</p>
+                      </div>
+                    </div>
 
 
           </div>
