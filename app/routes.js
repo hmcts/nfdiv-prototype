@@ -600,7 +600,7 @@ router.post('/joint_divorce/email_address', function (req, res) {
   if (over18 === 'I want to apply jointly, with my husband or wife') {
     res.redirect('/joint_divorce/email_address')
   } else {
-    res.redirect('/divorce/help_fees')
+    res.redirect('/divorce/marry_in_uk')
   }
 })
 
@@ -618,7 +618,7 @@ router.post('/joint_divorce/help_fees3', function (req, res) {
   }
 })
 
-router.post('/joint_divorce/marry_in_uk', function (req, res) {
+router.post('/joint_divorce/sole_or_joint', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -628,7 +628,7 @@ router.post('/joint_divorce/marry_in_uk', function (req, res) {
   if (over18 === 'I need help paying the fee') {
     res.redirect('/joint_divorce/help_fees_number')
   } else {
-    res.redirect('/joint_divorce/marry_in_uk')
+    res.redirect('/joint_divorce/sole_or_joint')
   }
 })
 
@@ -659,7 +659,7 @@ router.post('/joint_divorce/help_fees_number', function (req, res) {
   if (over18 === 'false') {
     res.redirect('/joint_divorce/help_fees_apply')
   } else {
-    res.redirect('/joint_divorce/marry_in_uk')
+    res.redirect('/joint_divorce/sole_or_jointv2')
   }
 })
 
