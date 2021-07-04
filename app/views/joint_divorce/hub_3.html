@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Joe Bloggs & Joanne Bloggs
+    </h1>
+
+</div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">Reference Number: EZ111456</p>
+
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:1px;color:#1d70b8;background-color:#1d70b8;"">
+
+
+
+        <div class="govuk-!-padding-bottom-8"></div>
+
+        <div class="hmcts-progress-bar">
+        <ol class="hmcts-progress-bar__list">
+
+        <li class="hmcts-progress-bar__list-item">
+          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+          <span class="hmcts-progress-bar__label">Application submitted</span>
+        </li>
+
+        <li class="hmcts-progress-bar__list-item" aria-current="step">
+          <span class="hmcts-progress-bar__icon"></span>
+          <span class="hmcts-progress-bar__label">Conditional order application</span>
+        </li>
+
+        <li class="hmcts-progress-bar__list-item" >
+          <span class="hmcts-progress-bar__icon"></span>
+          <span class="hmcts-progress-bar__label">Conditional order granted</span>
+        </li>
+
+        <li class="hmcts-progress-bar__list-item">
+          <span class="hmcts-progress-bar__icon"></span>
+          <span class="hmcts-progress-bar__label">Final order application</span>
+        </li>
+
+        <li class="hmcts-progress-bar__list-item">
+          <span class="hmcts-progress-bar__icon"></span>
+          <span class="hmcts-progress-bar__label">Divorced</span>
+        </li>
+
+        </ol>
+        </div>
+
+
+        <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+      <h2 class="govuk-heading-m">Latest update</h2>
+
+      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
+
+
+
+        <p> You have confirmed receipt of the divorce application.</p>
+
+        <p>  The next step is to apply for a 'conditional order'. This is a document that says that the court does not see any reason why you cannot divorce. </p>
+
+        <p> You can apply for a conditional order on 2 November 2021. This is because you have to wait until 20 weeks from when the divorce application was issued. </p>
+
+        <p> You will receive an email to remind you. </p>
+
+
+        <!--
+
+
+
+  <p >  Your application for divorce has been submitted and checked by court staff. It has now been ‘issued’ to you and your husband or wife by email.</p>
+
+  <p >You have to confirm that you have received and accept the application for divorce. This is known as ‘acknowledging service’.</p>
+
+  <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
+
+
+
+<form action="/joint_divorce/hub2" method="post" novalidate>
+       <button type="submit" class="govuk-button" data-module="govuk-button">
+         Confirm receipt
+       </button>
+
+       </form>
+
+       -->
+
+<h3 class="govuk-heading-s">Helpful Information</h3>
+
+<p><a href="/joint_divorce/hub_4">Find out about dividing money and property </a></p>
+      </div>
+
+      <br>
+
+
+</div>
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+    <div class="govuk-!-padding-bottom-5"></div>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:5px;color:#1d70b8;background-color:#1d70b8;">
+
+
+      <h2 class="govuk-heading-s">I want to...</h2>
+
+      <p>  <a href="">View the divorce application</a></p>
+        <p>  <a href="">View the marriage certificate</a></p>
+
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <h2 class="govuk-heading-s">Contact us for help</h2>
+
+  <p class="govuk-body">Ask a question or get help in your language.</p>
+
+  <p class="govuk-body">Telephone<br>
+0300 123 1711</p>
+
+<p class="govuk-body">Monday to Friday, 8:30am to 5pm<br>
+
+
+<a href="#" class="govuk-link">Find out about call charges </a> <br>(opens in a new window)</p>
+
+
+<p class="govuk-body">Email<br>
+<a href="#" class="govuk-link">contactia@justice.gov.uk</a></p>
+
+<p class="govuk-body">We aim to get back to you within 5 days.</p>
+
+
+</div>
+
+
+  </div>
+
+{% endblock %}
