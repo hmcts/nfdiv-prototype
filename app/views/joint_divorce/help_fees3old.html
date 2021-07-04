@@ -17,50 +17,60 @@
     </span>
   </p>
   <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
-      <a class="govuk-link" href="#">Cymraeg</a>
+      <a class="govuk-link" href="/joint_divorce/help_fees">Cymraeg</a>
   </p>
 </div>
 
-<a class="govuk-back-link" href="sole_or_joint.html">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/marry_in_uk" method="post" novalidate>
+        <form action="/joint_divorce/sole_or_joint" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                      Do you need help paying the fee for your divorce?
+                      Help paying the divorce fee
                   </h1>
                 </legend>
-                  
-                <p>This divorce application costs £550. You may be able to get help paying the fee if you:</p>
+                <p>This divorce application costs £550. You have to pay the fee because you are the first applicant. You and your {{ data['husband-wife'] }} should agree how to split the fee, but the payment system can only allow the first applicant to pay.
+
+
+
+
+<p>Help can be claimed to pay the fee, if both of you:  </p>
 
                   <ul class="govuk-list govuk-list--bullet">
                     <li>are on certain benefits <i>or</i></li>
                     <li>have a little or no savings <i>or</i></li>
                     <li>have low income</li>
-                  </ul>  
-                  
+                  </ul>
+
+                  <p>Both of you have to be eligible and apply for help with fees separately in a joint application.</p>
+<h3 class="govuk-heading-m">Do you need help paying the fee?</h3>
+<p class="govuk-body">Do not answer this question on behalf of your {{ data['husband-wife'] }}. If you select that you need help paying the fee then they will also be asked if they need help.
+
+</p>
+
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="I need help paying the fee" {{ checked("help-fees", "I need help paying the fee") }}>
                     <label class="govuk-label govuk-radios__label" for="help-fees-1">
-                      I need help paying the fee	
+                      I need help paying the fee
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="I do not need help paying the fee" {{ checked("help-fees", "I do not need help paying the fee") }}>
                     <label class="govuk-label govuk-radios__label" for="help-fees-2">
-                      I do not need help paying the fee  
+                      I do not need help paying the fee
                     </label>
                   </div>
-                </div> 
-                 
+                </div>
+
               </fieldset>
             </div>
 
