@@ -21,7 +21,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="/joint_divorce/names_on_cert">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -29,24 +29,24 @@
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form action="/joint_divorce/applicant-phone-number" method="post" novalidate>
-            
+
              <div class="govuk-form-group">
-                  
+
                       <h1 class="govuk-heading-l">
-                        Changes to your name 
+                        Changes to your name
                       </h1>
-                    
-                    
+
+
                       <p class="govuk-body">The court needs to know if you have changed your name.</p>
 
                   <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="surname">
-              Did you change your last name when you got married?  
+              Did you change your last name when you got married?
             </label>
                       <div id="changed-name-hint" class="govuk-hint">
       For example, from a maiden name
     </div>
-            
+
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="surname-1" name="surname" type="radio" value="Yes" {{ checked("surname", "Yes") }}>
@@ -65,13 +65,13 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="part-of-your-name">
-              Have you changed any part of your name since getting married? 
+              Have you changed any part of your name since getting married?
             </label>
-              
+
               <div id="changed-name-hint" class="govuk-hint">
-      For example, by deed poll 
+      For example, by deed poll
     </div>
-            
+
             <div class="govuk-radios govuk-radios--inline">
                  <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="part-of-your-name-1" name="part-of-your-name" type="radio" value="Yes" {{ checked("part-of-your-name", "Yes") }}>
@@ -87,7 +87,7 @@
                 </div>
             </div>
           </div>
-         </div>           
+         </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
