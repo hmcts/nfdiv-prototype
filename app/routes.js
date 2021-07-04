@@ -614,7 +614,7 @@ router.post('/joint_divorce/marry_in_uk', function (req, res) {
   if (over18 == 'I do not know their email address') {
     res.redirect('/joint_divorce/need_email_address')
   } else {
-    res.redirect('/joint_divorce/help_fees3')
+    res.redirect('/joint_divorce/marry_in_uk')
   }
 })
 
