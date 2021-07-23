@@ -30,13 +30,13 @@
         <div class="hmcts-progress-bar">
         <ol class="hmcts-progress-bar__list">
 
-        <li class="hmcts-progress-bar__list-item" >
+        <li class="hmcts-progress-bar__list-item" aria-current="step">
           <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
           <span class="hmcts-progress-bar__label">Application submitted</span>
         </li>
 
-        <li class="hmcts-progress-bar__list-item" aria-current="step">
-          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+        <li class="hmcts-progress-bar__list-item" >
+          <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Response</span>
         </li>
 
@@ -49,7 +49,6 @@
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Final order</span>
         </li>
-
 
         <li class="hmcts-progress-bar__list-item" >
           <span class="hmcts-progress-bar__icon"></span>
@@ -78,14 +77,13 @@
 
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
+<p> Your application for divorce has been submitted and checked by court staff. It’s now been ‘served’ (sent) to your husband or wife  by email.  </p>
+
+        <p>  Your husband or wife should have responded to the divorce application by 2 August 2021. They can still respond and have been sent a reminder. You can also contact them to remind them if it’s safe to do so.   </p>
+
+        <p> If you think that they will not respond then you can xxxx </p>
 
 
-        <p> You have responded to the divorce application. You do not have to do anything further.  </p>
-
-        <p> The next step is for your husband or wife to apply for a 'conditional order'. This is a document that says that the court does not see any reason why you cannot divorce. </p>
-
-<p>Your husband or wife can apply for a conditional order on 24 November 2021.
-This is because they have to wait 20 weeks from when the divorce application was issued. You will both receive a reminder. </p>
 
         <!--
 
@@ -97,13 +95,20 @@ This is because they have to wait 20 weeks from when the divorce application was
 
   <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
 
--->
+
+
+<form action="AOS" method="post" novalidate>
+       <button type="submit" class="govuk-button" data-module="govuk-button">
+         Respond to the application
+       </button>
+
+       </form>
+
+       -->
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_3">Find out about dividing money and property </a></p>
-<p><a href="">Find out more about conditional orders</a></p>
-
+<p><a href="hub_2">Find out about dividing money and property </a></p>
       </div>
 
       <br>
