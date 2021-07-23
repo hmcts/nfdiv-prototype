@@ -28,18 +28,50 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="jurisdiction" method="post" novalidate>
+        <form action="review_application" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    You have to make a separate application to withdraw
+                    Do you still want to continue with your CO?
                   </h1>
                 </legend>
-</div>
+
+                <p>You can either accept the divorce application or dispute it. You can only dispute the application if: (one or both of the following)<p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                        <li>you do not think the courts of England and Wales have the legal power (jurisdiction) to grant the application</li>
+
+                        <li>you do not think your marriage is valid</li>
+                      </ul>
 
 
+
+<div class="govuk-!-padding-bottom-2"></div>
+
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agreeordispute" name="agreeordispute" type="radio" value="Agree" {{ checked("agreeordispute", "Agree") }}>
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute">
+                      I want to continue
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agreeordispute-1" name="agreeordispute" type="radio" value="Dispute" {{ checked("agreeordispute", "Dispute") }}>
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute-1">
+                      I do not want to continue
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
 
            <!-- <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
                 Continue
