@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Details of the other legal proceedings - GOV.UK
+  Apply for a divorce - Do you need your postal address kept private from your husband or wife? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,41 +28,52 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="applicant_address_private" method="post" novalidate>
+        <form action="applicant_address_check" method="post" novalidate>
 
           <div class="govuk-form-group">
 
                   <h1 class="govuk-heading-l">
-                    Details of the other legal proceedings
+                    Do you need your contact details kept private from your husband or wife?
                   </h1>
 
-                  <p class="govuk-body">
-                  The court needs to know the details of the other legal proceedings. Provide as much information as possible, such as:
+
+                <p>
+                    The court can keep your address, email address and phone number private from your husband or wife.
                   </p>
 
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>the names of the people involved</li>
-                        <li>the case number(s)</li>
-                        <li>if the proceedings are ongoing or if they’ve finished</li>
-                        <li>what the proceedings are about</li>
-                        <li>the name and address of the court, including the country</li>
-                        <li>the date the proceedings began</li>
-                        <li>the dates of any hearings that have been scheduled</li>
-                        <li>the details of any orders that have been made</li>
-                      </ul>
-
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">
-                        Provide details about the other legal proceedings.
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        Keep my contact details private
                       </label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
                     </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="contact-by-email">
+                            If you think you might be experiencing domestic abuse or you feel unsafe, then <a class="govuk-link" href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help">support is available</a>
+                        </label>
+
+                      </div>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact2">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        I do not need my contact details kept private
+                      </label>
+                    </div>
+
+                  </div>
+
+
 
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>

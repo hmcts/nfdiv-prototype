@@ -34,36 +34,67 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Do you still want to continue with your CO?
+                    Do you want to continue with your divorce?
                   </h1>
                 </legend>
 
-                <p>You can either accept the divorce application or dispute it. You can only dispute the application if: (one or both of the following)<p>
-
-                  <ul class="govuk-list govuk-list--bullet">
-                        <li>you do not think the courts of England and Wales have the legal power (jurisdiction) to grant the application</li>
-
-                        <li>you do not think your marriage is valid</li>
-                      </ul>
+                <p>The next step in the divorce process is to apply for a ‘conditional order’. This shows the court agrees that you can get a divorce.<p>
 
 
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Read more about the next steps
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
 
-<div class="govuk-!-padding-bottom-2"></div>
+                      <p>  You have to complete 2 more steps before you are legally divorced:<p>
 
+
+                        <ol class="govuk-list govuk-list--number">
+                          <li>Apply for a conditional order.</li>
+                        <p>  This shows that the court agrees that you’re entitled to get a divorce.</p>
+
+                          <li>Apply for a final order.</li>
+                          <p>This legally ends the marriage. You cannot apply for a final order until 6 weeks after the conditional order. </p>
+                        </ol>
+                    </div>
+                  </details>
+
+
+
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="agreeordispute" name="agreeordispute" type="radio" value="Agree" {{ checked("agreeordispute", "Agree") }}>
                     <label class="govuk-label govuk-radios__label" for="agreeordispute">
-                      I want to continue
+                      I want to continue with the divorce
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="agreeordispute-1" name="agreeordispute" type="radio" value="Dispute" {{ checked("agreeordispute", "Dispute") }}>
+                    <input class="govuk-radios__input" id="agreeordispute-1" name="agreeordispute" type="radio" value="Dispute" data-aria-controls="conditional-broken-down-2" {{ checked("agreeordispute", "Dispute") }}>
                     <label class="govuk-label govuk-radios__label" for="agreeordispute-1">
-                      I do not want to continue
+                      I do not want to continue with the divorce
                     </label>
                   </div>
+
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
+                    <div class="govuk-warning-text">
+                      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                      <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        Warning text
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
                 </div>
 
               </fieldset>

@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Details of the other legal proceedings - GOV.UK
+  Apply for a divorce - Enter your postal address - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,49 +17,42 @@
     </span>
   </p>
   <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
-      <a class="govuk-link" href="#">Cymraeg</a>
+      <a class="govuk-link" href="applicant_address_no_postcode_v2">Cymraeg</a>
   </p>
 </div>
 
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  <a class="govuk-back-link" href="applicant_address_select_v2.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="applicant_address_private" method="post" novalidate>
+        <form action="/divorce/other_court_cases" method="post" novalidate>
 
-          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Divorcing someone who lives outside of England and Wales
+                </h1>
+              </legend>
 
-                  <h1 class="govuk-heading-l">
-                    Details of the other legal proceedings
-                  </h1>
 
-                  <p class="govuk-body">
-                  The court needs to know the details of the other legal proceedings. Provide as much information as possible, such as:
-                  </p>
 
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>the names of the people involved</li>
-                        <li>the case number(s)</li>
-                        <li>if the proceedings are ongoing or if they’ve finished</li>
-                        <li>what the proceedings are about</li>
-                        <li>the name and address of the court, including the country</li>
-                        <li>the date the proceedings began</li>
-                        <li>the dates of any hearings that have been scheduled</li>
-                        <li>the details of any orders that have been made</li>
-                      </ul>
+  <p>The address you have provided for your husband or wife is outside of England and Wales.
+    That means you are responsible for ‘serving’ (sending) the court documents, which notify them about the divorce. The court cannot serve them because it does not have legal power (jurisdiction) in that country.
+</p>
 
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">
-                        Provide details about the other legal proceedings.
-                      </label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
-                    </div>
+<p>You can ‘serve’ (send) the documents to them by email. You will receive more information on how to do this after your application has been submitted and checked by court staff.  
 
-            </div>
+  </p>
+            </fieldset>
+<!--
+            <p class="govuk-body">
+              <a href="applicant_postal_address_v2.html" class="govuk-link">Enter UK postcode</a>
+            </p>
 
+-->
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
@@ -67,7 +60,7 @@
       </div>
     </div>
 
-<p><a href="#">Save and sign out</a></p>
+<p><a href="">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 
