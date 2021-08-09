@@ -28,43 +28,95 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="jurisdiction" method="post" novalidate>
+        <form action="other_court_cases" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    How do you want to respond to the application?
+                    Disputing the divorce application
                   </h1>
                 </legend>
 
-                <p>You can either accept the divorce application or dispute it. You can only dispute the application if: (one or both of the following)<p>
+                <p>Your answers indicate that you want to dispute the divorce application. This is because:
+
+</p>
 
                   <ul class="govuk-list govuk-list--bullet">
                         <li>you do not think the courts of England and Wales have the legal power (jurisdiction) to grant the application</li>
 
-                        <li>you do not think your marriage is valid</li>
+  <!--
+                        <li>you’re closely related to the person you married</li>
+                        <li>one or both of you were under 16 </li>
+
+                            <!--
+                        <li> you and your husband or wife were both last habitually resident in England or Wales and one of you still lives there </li>
+                        <li> both you and your husband are domiciled in England or Wales  </li>
+                        <li> you’re domiciled in England or Wales </li>
+                        <li> you’re domiciled and habitually resident in England or Wales and have lived there for at least 6 months </li>
+                        <li>your husband or wife is domiciled in England or Wales   </li>
+
+                        -->
+
                       </ul>
 
 
+                      <p>If you want to dispute the divorce application then you’ll have to submit another form (known as ‘the answer’) with your reason for disputing. This will cost you £245, unless you are eligible for Help With Fees.  </p>
+
+                      <p>You will have 21 days to submit the form, from the date that you fist signed into your divorce account. If you do not submit the form by the deadline, then your husband or wife will usually be able to continue with the divorce. </p>
 
 <div class="govuk-!-padding-bottom-2"></div>
 
 
+
+
+
+
+<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
                 <div class="govuk-radios">
+
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="agreeordispute" name="agreeordispute" type="radio" value="Agree" {{ checked("agreeordispute", "Agree") }}>
+                    <input class="govuk-radios__input" id="jurisdiction_agree" name="jurisdiction_agree" type="radio" value="Agree" data-aria-controls="conditional-contact" {{ checked("jurisdiction_agree", "Agree") }}>
                     <label class="govuk-label govuk-radios__label" for="agreeordispute">
-                      I accept the divorce 
+                      I confirm I want to dispute the divorce
                     </label>
                   </div>
+
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="agreeordispute-1" name="agreeordispute" type="radio" value="Dispute" {{ checked("agreeordispute", "Dispute") }}>
-                    <label class="govuk-label govuk-radios__label" for="agreeordispute-1">
-                      I want to dispute the divorce
+                    <input class="govuk-radios__input" id="jurisdiction_agree-1" name="jurisdiction_agree" type="radio" value="Dispute" data-aria-controls="conditional-contact2" {{ checked("jurisdiction_agree", "Dispute") }}>
+                    <label class="govuk-label govuk-radios__label" for="jurisdiction_agree">
+                      I want to go back and change my answers
                     </label>
                   </div>
+
+<!--
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact2">
+
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+
+                      <div class="govuk-form-group">
+                        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                          Explain why you think your marriage was not valid in the first place ?
+                        </label>
+                      </h1>
+                      <div id="with-hint-hint" class="govuk-hint">
+
+                      </div>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                    </div>
+
+
+                  </div>
+
                 </div>
+-->
+
+</div>
+                </div>
+
+
+
 
               </fieldset>
             </div>
