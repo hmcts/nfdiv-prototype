@@ -177,7 +177,12 @@
 
 
                   <div class="govuk-radios" data-module="govuk-radios">
-
+                    <div class="govuk-radios__item"">
+                      <input class="govuk-radios__input" id="how-changed-name" name="how-changed-name" type="radio" value="By sending my marriage certificate to the relevant authorities" {{ checked("how-changed-name", "By sending my marriage certificate to the relevant authorities") }}>
+                      <label class="govuk-label govuk-radios__label" for="how-changed-name">
+                        By sending off my marriage certificate
+                      </label>
+                    </div>
 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-changed-name-5" name="how-changed-name2" type="radio" value="By deed poll" data-aria-controls="conditional-how-changed-name-second" {{ checked("how-changed-name", "By deed poll") }}>
