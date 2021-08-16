@@ -132,20 +132,77 @@ children of the applicant and the respondent.</p>
 <p>I believe that the facts stated in this application are true.</p>
 
 
-<h2 class="govuk-heading-m">Your acknowledgement </h2>
+<div class="govuk-!-padding-bottom-8"></div>
+
+<!-- confirm details widget -->
+
+
+<form action="/joint_divorce/application_changes_co_app" method="post" novalidate>
 
 <div class="govuk-form-group">
-    <div class="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="app-email-address-1" name="app-email-address" type="checkbox" value="checked" {{ checked("app-email-address", "checked") }}>
-        <label class="govuk-label govuk-checkboxes__label" for="app-email-address-1">
-        I confirm that this application is still true
-        </label>
-      </div>
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Is the information in this application still correct?
+      </h1>
+
+    </legend>
+    <div id="contact-hint" class="govuk-hint">
+
+
     </div>
+
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="needchange" name="needchange" type="radio" value="Yes" data-aria-controls="conditional-contact" {{ checked("needchange", "Yes") }}>
+          <label class="govuk-label govuk-radios__label" for="contact">
+            Yes
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="needchange-2" name="needchange" type="radio" value="No" data-aria-controls="conditional-contact-2" {{ checked("needchange", "No") }}>
+          <label class="govuk-label govuk-radios__label" for="contact-2">
+            No
+          </label>
+        </div>
+
+<br><br><br>
+
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                What needs changing or adding?
+              </label>
+            </h1>
+
+            <p>You will need to pay a £95 fee to change any information in this application. The application will need to be sent to your husband or wife again. </p>
+            <div id="with-hint-hint" class="govuk-hint">
+              Provide details of what you need to change or add
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</fieldset>
 </div>
 
-<div class="govuk-!-padding-bottom-1"></div>
+  <input type="hidden" name="answers-checked" value="true">
+
+
 
 
           </div>

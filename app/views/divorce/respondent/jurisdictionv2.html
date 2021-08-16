@@ -34,7 +34,7 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    The legal power (jurisdiction) of the courts 
+                    The legal power (jurisdiction) of the courts
                   </h1>
                 </legend>
 
@@ -89,16 +89,52 @@
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="jurisdiction_agree" name="jurisdiction_agree" type="radio" value="Agree" data-aria-controls="conditional-contact" {{ checked("jurisdiction_agree", "Agree") }}>
                     <label class="govuk-label govuk-radios__label" for="agreeordispute">
-                      Yes, I agree the court has jurisdiction
+                    Yes, I agree the courts have jurisdiction
                     </label>
                   </div>
 
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="jurisdiction_agree-1" name="jurisdiction_agree" type="radio" value="Dispute" data-aria-controls="conditional-contact2" {{ checked("jurisdiction_agree", "Dispute") }}>
-                    <label class="govuk-label govuk-radios__label" for="jurisdiction_agree">
-                      No, I do not agree the court has jurisdiction
+                    <input class="govuk-radios__input" id="jurisdiction_agree" name="jurisdiction_agree" type="radio" value="Agree" data-aria-controls="conditional-contact1" >
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute">
+                      I agree the courts have jurisdiction, but I want to change the reason
                     </label>
                   </div>
+
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact1">
+
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+
+                      <div class="govuk-form-group">
+                        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                          How do you want to amend the jurisdiction?
+                        </label>
+                      </h1>
+                      <div id="with-hint-hint" class="govuk-hint">
+
+                      </div>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                    </div>
+
+                    <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                      You can enter up to 200 characters
+                    </div>
+                  </div>
+
+</div>
+
+
+
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="jurisdiction_agree-1" name="jurisdiction_agree" type="radio" value="Dispute" data-aria-controls="conditional-contact2" {{ checked("jurisdiction_agree", "Dispute") }}>
+                    <label class="govuk-label govuk-radios__label" for="jurisdiction_agree">
+                    No, I do not agree the courts have jurisdiction
+                    </label>
+                  </div>
+
+
 
 
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact2">

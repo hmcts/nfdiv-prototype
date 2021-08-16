@@ -30,29 +30,39 @@
         <div class="hmcts-progress-bar">
         <ol class="hmcts-progress-bar__list">
 
-        <li class="hmcts-progress-bar__list-item" >
-          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-          <span class="hmcts-progress-bar__label">Application submitted</span>
-        </li>
-
-        <li class="hmcts-progress-bar__list-item" >
-          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-          <span class="hmcts-progress-bar__label">Response</span>
-        </li>
-
         <li class="hmcts-progress-bar__list-item" aria-current="step">
+          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+          <span class="hmcts-progress-bar__label">Submitted</span>
+        </li>
+
+        <li class="hmcts-progress-bar__list-item" style="margin-top: -35px;">
+<span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14" style="margin-bottom: 5px;">2 weeks</span>
+          <span class="hmcts-progress-bar__icon"></span>
+<span class="hmcts-progress-bar__label">Response</span>
+
+
+        </li>
+
+
+        <li class="hmcts-progress-bar__list-item" style="margin-top: -35px;">
+<span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14" style="margin-bottom: 5px;">20 weeks</span>
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Conditional order</span>
+
         </li>
 
-        <li class="hmcts-progress-bar__list-item" >
+        <li class="hmcts-progress-bar__list-item" style="margin-top: -35px;">
+<span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14" style="margin-bottom: 5px;">6 weeks</span>
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Final order</span>
+      
         </li>
+
 
         <li class="hmcts-progress-bar__list-item" >
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Divorced</span>
+
         </li>
 <!--
         <li class="hmcts-progress-bar__list-item">
@@ -78,32 +88,10 @@
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
 
-<p> You can now apply for a ‘conditional order’. A conditional order is a document that says the court does not see any reason why you cannot get a divorce.</p>
 
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Read more about the next steps
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-      <p>  You have to complete 2 more steps before you are legally divorced: </p>
+        <p>  Your husband or wife has submitted an application for divorce.  </p>
 
-      <ol class="govuk-list govuk-list--number">
-  <li>Apply for a conditional order.</li>
-  <p>This shows that the court agrees that you’re entitled to get a divorce.</p>
-
-  <li>Apply for a final order.</li>
-  <p>This legally ends the marriage. You cannot apply for a final order until 6 weeks after the conditional order.</p>
-</ol>
-
-
-  </div>
-</details>
-
-
-
-
+        <p> You need to read the application and respond. </p>
 
 
 
@@ -117,21 +105,18 @@
 
   <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
 
-   -->
+-->
 
-<form action="read_response" method="post" novalidate>
+<form action="AOS" method="post" novalidate>
        <button type="submit" class="govuk-button" data-module="govuk-button">
-         Apply for conditional order
+         Respond to the application
        </button>
 
        </form>
 
-
-
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_4">Find out about dividing money and property </a></p>
-<p><a href="">Find out more about conditional orders </a></p>
+<p><a href="hub_2">Find out about dividing money and property </a></p>
       </div>
 
       <br>

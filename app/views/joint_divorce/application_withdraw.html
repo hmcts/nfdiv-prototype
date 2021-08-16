@@ -28,30 +28,63 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="jurisdiction" method="post" novalidate>
+        <form action="" method="post" novalidate>
+
+
+
+
 
           <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    You have to make a separate application to withdraw
-                  </h1>
-                </legend>
-</div>
+            <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What do you want to do?
+                </h1>
+              </legend>
+              <div id="sign-in-hint" class="govuk-hint">
+
+              </div>
+
+
+              <p>You can either withdraw your application, or continue with it on your own as a ‘sole applicant’. If you continue on your own then your husband or wife will be notified and they will become the ‘respondent’ to the divorce application.   </p>
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="sign-in">
+                    I want to withdraw my application
+                  </label>
+                  <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                    Choose this option if you and your husband or wife do not want to get divorced any more.
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                    I want to continue the application on my own
+                  </label>
+                  <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Choose this option if you want to continue to get divorced, but you want to apply on your own, as a sole applicant.
+                  </div>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
 
 
 
-           <!-- <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
-                Continue
-              </a>
 
-            <a href="/divorce/applicant_address_private" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
-                Continue
-              </a> -->
+          <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
 
-        </form>
-      </div>
+
+
+      </form>
     </div>
+  </div>
 
 <p><a href="#">Save and sign out</a></p>
 
