@@ -56,7 +56,7 @@ router.post('/joint_divorce/review_application', function (req, res) {
   const over18 = req.session.data['agreeordispute']
 
   if (over18 === 'Dispute') {
-    res.redirect('/joint_divorce/application_withdraw')
+    res.redirect('/joint_divorce/application_withdraw_joint')
   } else {
     res.redirect('/joint_divorce/review_application')
   }
