@@ -93,7 +93,7 @@ router.post('/divorce/respondent/hub_dispute', function (req, res) {
   if (over18 === 'Change') {
     res.redirect('/divorce/respondent/jurisdictionv2')
   } else {
-    res.redirect('/divorce/respondent/hub_dispute')
+    res.redirect('/divorce/respondent/other_court_cases')
   }
 })
 
