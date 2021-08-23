@@ -72,18 +72,25 @@ router.post('/divorce/respondent/wantdispute', function (req, res) {
   // However in JavaScript we can't use hyphens in variable names
 
   const over18 = req.session.data['jurisdiction_agree']
+  const valid = req.session.data['valid_agree']
 
-  if (over18 === 'Agree') {
+
+
+  if (over18 === 'Agree' && valid === 'Agree') {
     res.redirect('/divorce/respondent/other_court_cases')
-  } else {
+  } else if (over18 === 'Dispute' && valid === 'Dispute') {
     res.redirect('/divorce/respondent/wantdispute')
+  } else if (over18 === 'Dispute' && valid === 'Agree') {
+    res.redirect('/divorce/respondent/wantdispute_juris')
+  } else if (over18 === 'Agree' && valid === 'Dispute') {
+    res.redirect('/divorce/respondent/wantdispute_valid')
   }
 })
 
 
 
 
-router.post('/divorce/respondent/hub_dispute', function (req, res) {
+router.post('/divorce/respondent/other_court_cases', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
