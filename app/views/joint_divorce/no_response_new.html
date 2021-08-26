@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Pay your divorce fee - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="application_ready_submit2">Cymraeg</a>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/joint_divorce/confirmation" method="post" novalidate>
+
+            <h1 class="govuk-heading-l">
+                    Your husband or wife has not yet responded
+                  </h1>
+
+           <p>Your husband or wife has not yet responded. The quickest way to progress your application is to contact them and ask them to respond, if it’s safe to do so. They can still respond, even though the deadline has passed.  </p>
+
+
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      If you think they will not respond
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  <p>  If you think that your husband or wife will not respond then you can create a new ‘sole application’.</p>
+
+  <p> This means that you will submit the application on your own, and your husband or wife will respond to it after it has been submitted and checked by the court.</p>
+
+<p>You can <a href="/joint_divorce/sign_in">create a new application here</a>.</p>
+
+  </div>
+</details>
+
+
+
+
+<p><a href="/joint_divorce/sign_in">Save and sign out</a></p>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
