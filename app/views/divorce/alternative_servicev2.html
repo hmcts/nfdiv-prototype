@@ -4,16 +4,31 @@
   Confirmation page example
 {% endblock %}
 
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-two-thirds">
 
-
-
-
-  <!--  <a class="link-back" href="#" onclick="javascript:history.go(-1)">Back</a> -->
 
   <h1 class="govuk-heading-l">
 
@@ -43,7 +58,7 @@
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <strong class="govuk-warning-text__text">
       <span class="govuk-warning-text__assistive">Warning</span>
-    <div style="margin-top: -22px;">
+    <div style="margin-top: -22px; margin-left: 5px;">
       If it's safe to do so, usually the simplest way to proceed is to contact your husband/wife directly to find out why they haven't responded. They can still send in their response after the deadline has passed.
     </div>
     </strong>
@@ -75,21 +90,105 @@
 </details> -->
 
 
-<h2 class="govuk-heading-m">Which situation applies to you?</h2>
-<!-- <legend class="form-label-bold">Which situation applies to you?</legend>
--->
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+
+    <h2 class="govuk-heading-m">Which situation applies to you?</h2>
+
+
+        <div id="contact-hint" class="govuk-hint">
+          Select one option.
+        </div>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-radios__label" for="contact" style="margin-top: -12px;">
+              I have another address for my husband or wife (residential or solicitor’s)
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+
+              <p>Contact the Courts and Tribunals Service Centre to provide the new address for your husband or wife. You can phone, email or post it in, using the contact details in the ‘Getting help’ section at the top of this page.  </p>
+
+                <p>The address you provide for them can be UK or international.</p>
+                <p>You do not have to pay anything to have the application sent to a new residential address, or their solicitor’s address. </p>
+        </div>
+
+          </div>
+
+
+
+          <div class="govuk-!-padding-bottom-2"></div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+            <label class="govuk-label govuk-radios__label" for="contact-2" style="margin-top: -12px;">
+              I need to send the application to a non-residential address. For example, a work address
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+            <div class="govuk-form-group">
+
+                <p>You have to apply to the court for the application to be sent to a non-residential address, for example their work address. This costs an additional £50, unless you are eligible for <a class="govuk-link" href="#">Help With Fees</a>. </p>
+
+                <p>How to apply: Download and complete form D11. Send the completed form to to the Courts and Tribunals Service Centre by email or post: </p>
+
+                <p>Email: contactdivorce@justice.gov.uk</p>
+
+
+              </div>
+
+          </div>
+
+
+
+          <div class="govuk-!-padding-bottom-2"></div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
+            <label class="govuk-label govuk-radios__label" for="contact-3" style="margin-top: -12px;">
+              I need to send the application to a non-residential address. For example, a work address
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+            <div class="govuk-form-group">
+
+                <p>You have to apply to the court for the application to be sent to a non-residential address, for example their work address. This costs an additional £50, unless you are eligible for Help With Fees. </p>
+
+                <p>How to apply: Download and complete form D11. Send the completed form to to the Courts and Tribunals Service Centre by email or post: </p>
+
+                <p>Email: contactdivorce@justice.gov.uk</p>
+
+
+              </div>
+
+          </div>
+
+
+
+
+
+        </div>
+
+      </fieldset>
+    </div>
+
+
+
 <details role="group" class="exit-guidance" open="">
 <summary role="button" aria-controls="details-content-0" aria-expanded="false">
   <span class="summary">I have another residential address or a solicitor's address for my husband/wife (no fee)</span>
 </summary>
 
 
-  <p>
+  <p>Contact the Courts and Tribunals Service Centre to provide a different address for your husband/wife. This can be a UK or international address.</p>
 
-    Contact the Courts and Tribunals Service Centre to provide a different address for your husband/wife. This can be a UK or international address.</p>
-
-    <p>You don't have to pay anything extra to have the application sent to a different address.
-    </p>
+    <p>You don't have to pay anything extra to have the application sent to a different address.</p>
 <!-- <p >
     This can be either their:
   </p>
@@ -365,30 +464,23 @@ If you asked the court to order your husband/wife to pay your costs, then these 
 
 </div>
 
-</details></div>
+</details>
+
+</div>
 
 
 
-    <div class="govuk-grid-column-one-third">
-
-    <div class="govuk-!-padding-bottom-5"></div>
-
-  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:5px;color:#1d70b8;background-color:#1d70b8;">
 
 
-      <h2 class="govuk-heading-s">I want to...</h2>
-
-      <p>  <a href="">View the divorce application</a></p>
-        <p>  <a href="">View the marriage certificate</a></p>
+<div class="govuk-grid-column-one-third">
 
 
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-  <h2 class="govuk-heading-s">Contact us for help</h2>
+<h2 class="govuk-heading-s">Getting help</h2>
 
-  <p class="govuk-body">Ask a question or get help in your language.</p>
+<p class="govuk-body">Ask a question or get help in your language.</p>
 
-  <p class="govuk-body">Telephone<br>
+<p class="govuk-body">Telephone<br>
 0300 123 1711</p>
 
 <p class="govuk-body">Monday to Friday, 8:30am to 5pm<br>
@@ -409,8 +501,8 @@ If you asked the court to order your husband/wife to pay your costs, then these 
 
 
 
-
 </div>
+
 
 
 
