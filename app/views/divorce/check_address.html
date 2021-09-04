@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Details of the other legal proceedings - GOV.UK
+  Apply for a divorce - Enter your postal address - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,46 +28,46 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="check_contact_details" method="post" novalidate>
+        <form action="change_address_select" method="post" novalidate>
 
-          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Enter your address
+                </h1>
+              </legend>
+<div class="govuk-!-padding-bottom-4"></div>
 
-                  <h1 class="govuk-heading-l">
-                    Details of the other legal proceedings
-                  </h1>
+                          <form action="/divorce/applicant_address_select" method="post" novalidate>
 
-                  <p class="govuk-body">
-                  The court needs to know the details of the other legal proceedings. Provide as much information as possible, such as:
-                  </p>
+                            <div class="govuk-form-group">
 
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>the names of the people involved</li>
-                        <li>the case number(s)</li>
-                        <li>if the proceedings are ongoing or if they’ve finished</li>
-                        <li>what the proceedings are about</li>
-                        <li>the name and address of the court, including the country</li>
-                        <li>the date the proceedings began</li>
-                        <li>the dates of any hearings that have been scheduled</li>
-                        <li>the details of any orders that have been made</li>
-                      </ul>
+                             <label class="govuk-label" for="address-postcode">
+                                Enter a UK postcode
+                              </label>
+                                  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" value="{{ data['address-postcode'] }}">
+                              </div>
 
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">
-                        Provide details about the other legal proceedings.
-                      </label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
-                    </div>
+                            <button class="govuk-button" data-module="govuk-button">
+                              Find address
+                            </button>
 
-            </div>
+                              <p class="govuk-body">
+                                <a href="" class="govuk-link">I cannot enter a UK postcode</a>
+                              </p>
 
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
+                          </form>
+
+
+            </fieldset>
+
+
+
         </form>
       </div>
     </div>
 
-<p><a href="#">Save and sign out</a></p>
+<p><a href="/divorce/wrong_marriage_date">Save and sign out</a></p>
 
 <div class="govuk-!-padding-bottom-4"></div>
 

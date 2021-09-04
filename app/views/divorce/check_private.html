@@ -21,14 +21,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="english_welsh.html">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/applicant_postal_address_v2" method="post" novalidate>
+        <form action="check_contact_detailsv2" method="post" novalidate>
 
           <div class="govuk-form-group">
 
@@ -43,7 +43,7 @@
 
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="Keep my contact details private" data-aria-controls="conditional-contact" {{ checked("contact", "Keep my contact details private") }}>
                       <label class="govuk-label govuk-radios__label" for="contact">
                         Keep my contact details private
                       </label>
@@ -58,11 +58,12 @@
                     </div>
 
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact2">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="I do not need my contact details kept private" data-aria-controls="conditional-contact2"  {{ checked("contact", "I do not need my contact details kept private") }}>
                       <label class="govuk-label govuk-radios__label" for="contact">
                         I do not need my contact details kept private
                       </label>
                     </div>
+
                   </div>
 
 

@@ -87,12 +87,40 @@
 
       </dl>
 
+
+            <h2 class="govuk-heading-m">About your marriage</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key" style="width:60%">
+                  Was your marriage legally valid, to the best of your knowledge?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes, the marriage was valid
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden"> married in the uk</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+
+
+
+
+
+
+
       <h2 class="govuk-heading-m">Other court cases </h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Are there, or have there ever been, any other legal proceedings relating to your marriage, property or children?
+            Are there, or have there ever been, any other legal proceedings relating to your marriage?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['other-court-cases'] }}
@@ -116,10 +144,32 @@
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key" style="width:60%">
-          Your email address
+
+    Do you need your contact details kept private from your husband or wife?
+    </dt>
+    <dd class="govuk-summary-list__value">
+          {{ data['contact'] }}
+    </dd>
+
+    <dd class="govuk-summary-list__actions">
+      <a href="check_private">
+        Change
+        <span class="govuk-visually-hidden"> address</span>
+      </a>
+    </dd>
+  </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" style="width:60%">
+          Your postal address
         </dt>
         <dd class="govuk-summary-list__value">
-          email@gmail.com
+          2
+                            {{ data['address-selection'] }} Main Street<br>
+                            London<br>
+          EA124AJ
+                            {{ data['address-postcode'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="#">
@@ -254,7 +304,7 @@
                     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                     <strong class="govuk-warning-text__text">
                       <span class="govuk-warning-text__assistive">Warning</span>
-                    <div style="margin-top: -20px;">Proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement verified by a statement of truth without an honest belief in its truth.</div>
+                    <div style="margin-top: -22px; padding-left: 10px;">Proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement verified by a statement of truth without an honest belief in its truth.</div>
                     </strong>
                   </div>
 

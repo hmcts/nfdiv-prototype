@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Details of the other legal proceedings - GOV.UK
+  Apply for a divorce - Your names - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,41 +28,40 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Enter your name</h1>
+
         <form action="check_contact_details" method="post" novalidate>
 
           <div class="govuk-form-group">
 
-                  <h1 class="govuk-heading-l">
-                    Details of the other legal proceedings
-                  </h1>
+            <p>The court needs to know your full name. </p>
 
-                  <p class="govuk-body">
-                  The court needs to know the details of the other legal proceedings. Provide as much information as possible, such as:
-                  </p>
+              <div class="govuk-form-group">
+           <label class="govuk-label" for="width-20">
+               Your first name(s)
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="app-first-name" name="app-first-name" type="text" value="{{ data['app-first-name'] }}">
+            </div>
 
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>the names of the people involved</li>
-                        <li>the case number(s)</li>
-                        <li>if the proceedings are ongoing or if they’ve finished</li>
-                        <li>what the proceedings are about</li>
-                        <li>the name and address of the court, including the country</li>
-                        <li>the date the proceedings began</li>
-                        <li>the dates of any hearings that have been scheduled</li>
-                        <li>the details of any orders that have been made</li>
-                      </ul>
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="width-20">
+               Your middle name(s)
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="app-middle-name" name="app-middle-name" type="text" value="{{ data['app-middle-name'] }}">
+            </div>
 
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">
-                        Provide details about the other legal proceedings.
-                      </label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
-                    </div>
-
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="width-20">
+               Your last name(s)
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="app-last-name" name="app-last-name" type="text" value="{{ data['app-last-name'] }}">
+          </div>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>
