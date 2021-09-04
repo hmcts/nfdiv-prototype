@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Details of the other legal proceedings - GOV.UK
+  Apply for a divorce - How the court will contact you - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,41 +28,33 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Your phone number</h1>
+
+
         <form action="check_contact_details" method="post" novalidate>
+
 
           <div class="govuk-form-group">
 
-                  <h1 class="govuk-heading-l">
-                    Details of the other legal proceedings
-                  </h1>
 
-                  <p class="govuk-body">
-                  The court needs to know the details of the other legal proceedings. Provide as much information as possible, such as:
+              <p class="govuk-body">
+              Enter your phone number so court staff can contact you quickly, if they need to. You can choose to keep your phone number private from your {{ data['husband-wife'] }} later in this application.
                   </p>
 
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>the names of the people involved</li>
-                        <li>the case number(s)</li>
-                        <li>if the proceedings are ongoing or if they’ve finished</li>
-                        <li>what the proceedings are about</li>
-                        <li>the name and address of the court, including the country</li>
-                        <li>the date the proceedings began</li>
-                        <li>the dates of any hearings that have been scheduled</li>
-                        <li>the details of any orders that have been made</li>
-                      </ul>
+             <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-font-weight-bold" for="telephone-number">
+                Enter your phone number (optional)
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel" value="{{ data['telephone-number'] }}">
+              </div>
 
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">
-                        Provide details about the other legal proceedings.
-                      </label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
-                    </div>
-
-            </div>
+          </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>

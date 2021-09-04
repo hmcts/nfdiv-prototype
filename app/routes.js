@@ -360,7 +360,7 @@ router.post('/divorce/respondent/other_court_cases_details', function (req, res)
   if (over18 === 'Yes') {
     res.redirect('/divorce/respondent/other_court_cases_details')
   } else {
-    res.redirect('/divorce/respondent/applicant_address_private')
+    res.redirect('/divorce/respondent/check_contact_details')
   }
 })
 
