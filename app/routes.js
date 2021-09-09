@@ -74,11 +74,11 @@ router.post('/divorce/respondent/wantdispute', function (req, res) {
   const over18 = req.session.data['jurisdiction_agree']
   const valid = req.session.data['valid_agree']
 
-  if (over18 === 'Yes, I agree the courts have jurisdiction' && valid === 'Yes, the marriage was valid') {
+  if (over18 === 'Yes, I agree the courts have jurisdiction' && valid !== 'No, the marriage was not valid') {
     res.redirect('/divorce/respondent/other_court_cases')
   } else if (over18 === 'No, I do not agree the courts have jurisdiction' && valid === 'No, the marriage was not valid') {
     res.redirect('/divorce/respondent/wantdispute')
-  } else if (over18 === 'No, I do not agree the courts have jurisdiction' && valid === 'Yes, the marriage was valid') {
+  } else if (over18 === 'No, I do not agree the courts have jurisdiction' && valid !== 'No, the marriage was not valid') {
     res.redirect('/divorce/respondent/wantdispute_juris')
   } else if (over18 === 'Yes, I agree the courts have jurisdiction' && valid === 'No, the marriage was not valid') {
     res.redirect('/divorce/respondent/wantdispute_valid')
