@@ -67,7 +67,7 @@
             Has your marriage broken down irretrievably (it cannot be saved)?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['broken-down'] }}
+            My marriage has broken down irretrievably
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -477,17 +477,23 @@
       <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-m">Confirm before continuing</h2>
 
+<div class="govuk-!-padding-bottom-4"></div>
+
+
         <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
-                      I confirm that:
+                      <div style="margin-top: -20px;">  I confirm that I’m applying to the court to dissolve my marriage and make financial orders to decide how our money and property will be split.</div>
                     </label>
                   </div>
                 </div>
             </div>
 
+<p>This confirms what you are asking the court to do. It’s known as ‘the prayer’.</p>
+
+<!--
           <div class="govuk-form-group">
                 <ul class="govuk-list govuk-list--bullet" style="text-align: left">
                     <li>I’m applying to the court to dissolve my marriage (get a divorce) </li>
@@ -506,7 +512,7 @@
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked" {{ checked("statement-truth", "checked") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
-                      I believe that the facts stated in this application are true
+                      <div style="margin-top: 0px;">I believe that the facts stated in this application are true</div>
                     </label>
                   </div>
                 </div>
