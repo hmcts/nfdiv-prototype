@@ -3,6 +3,7 @@
 {% block pageTitle %}
   Confirmation page example
 {% endblock %}
+
 {% block beforeContent %}
 
 <div class="govuk-phase-banner">
@@ -45,45 +46,46 @@
 
         <div class="govuk-!-padding-bottom-8"></div>
 
+
+
+
         <div class="hmcts-progress-bar">
         <ol class="hmcts-progress-bar__list">
 
-        <li class="hmcts-progress-bar__list-item" >
+        <li class="hmcts-progress-bar__list-item">
           <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-          <span class="hmcts-progress-bar__label">Application submitted</span>
+          <span class="hmcts-progress-bar__label">Submitted</span>
         </li>
 
-        <li class="hmcts-progress-bar__list-item" aria-current="step">
-          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+        <li class="hmcts-progress-bar__list-item" style="margin-top: -10px;">
+         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14" style="position:relative; right:65px; top:10px; margin-bottom: 5px;"><strong> </strong></span>
+                 <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
           <span class="hmcts-progress-bar__label">Response</span>
         </li>
 
-        <li class="hmcts-progress-bar__list-item" >
-          <span class="hmcts-progress-bar__icon"></span>
+
+         <li class="hmcts-progress-bar__list-item" style="margin-top: -35px;">
+          <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14" style="position:relative; right:75px; top:10px; margin-bottom: 5px;"><strong>20 weeks</strong></span>
+          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
           <span class="hmcts-progress-bar__label">Conditional order</span>
+
         </li>
 
-        <li class="hmcts-progress-bar__list-item" >
+        <li class="hmcts-progress-bar__list-item" style="margin-top: -35px;" aria-current="step">
+<span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14" style="position:relative; right:75px; top:10px; margin-bottom: 5px;"><strong>6 weeks </strong> </span>
+
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Final order</span>
+
         </li>
 
 
         <li class="hmcts-progress-bar__list-item" >
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Divorced</span>
-        </li>
-<!--
-        <li class="hmcts-progress-bar__list-item">
-          <span class="hmcts-progress-bar__icon"></span>
-          <span class="hmcts-progress-bar__label">Final order application</span>
+
         </li>
 
-        <li class="hmcts-progress-bar__list-item">
-          <span class="hmcts-progress-bar__icon"></span>
-          <span class="hmcts-progress-bar__label">Divorced</span>
-        </li>
--->
         </ol>
         </div>
 
@@ -97,13 +99,14 @@
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
 
+        <p>You have changed the application to a ‘sole application’.</p>
 
-        <p> You have responded to the divorce application. You do not have to do anything further.  </p>
 
-        <p> The next step is for your husband or wife to apply for a 'conditional order'. This is a document that says that the court does not see any reason why you cannot divorce. </p>
+        <p> You have applied for a ‘conditional order’. The court will check your application and send it to a judge. If the judge agrees that there is no reason why you should not get a divorce, then they will ‘pronounce’ your conditional order in court.
+           You should receive an email by [date plus three weeks] with the time, date and court your conditional order will be pronounced.  </p>
+          <p>  After your conditional order is pronounced, you then have to apply for a ‘final order’. This will finalise your divorce. You have to wait 6 weeks until after your conditional order, to apply for the final order. </p>
 
-<p>Your husband or wife can apply for a conditional order on 9 February 2022.
-This is because they have to wait 20 weeks from when the divorce application was issued. You will both receive a reminder. </p>
+
 
         <!--
 
@@ -115,13 +118,17 @@ This is because they have to wait 20 weeks from when the divorce application was
 
   <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
 
--->
+   -->
+
+
+
+
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_1v3">Find out about dividing money and property </a></p>
-<p><a href="">Find out more about conditional orders</a></p>
-
+<p><a href="hub_4_switch">Find out about dividing money and property </a></p>
+<p><a href="">Find out more about conditional orders </a></p>
+<p><a href="">Find out more about final orders </a></p>
       </div>
 
       <br>
