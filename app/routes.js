@@ -86,21 +86,19 @@ router.post('/divorce/respondent/wantdispute', function (req, res) {
 })
 
 
-router.post('/divorce/respondent/check_answers', function (req, res) {
+router.post('/divorce/respondent/hub_2', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const over18 = req.session.data['jurisdiction_agree']
-  const valid = req.session.data['valid_agree']
+  const over18 = req.session.data['agreeordispute3']
 
-  if (over18 === 'Yes, I agree the courts have jurisdiction' && valid === 'Yes, the marriage was valid') {
-    res.redirect('/divorce/respondent/check_answers')
+  if (over18 === 'Agree') {
+    res.redirect('/divorce/respondent/hub_dispute')
   } else {
-    res.redirect('/divorce/respondent/check_answers_dispute')
+    res.redirect('/divorce/respondent/hub_2')
   }
 })
-
 
 
 

@@ -70,28 +70,15 @@
       <h2 class="govuk-heading-m">About your divorce</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key" style="width:60%">
-            Do you agree the courts of England and Wales have jurisdiction?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Yes, I agree the court has jurisdiction
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> married in the uk</span>
-            </a>
-          </dd>
-        </div>
 
 
+<!--
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key" style="width:60%">
-                  Was your marriage legally valid, to the best of your knowledge?
+                  How do you want to respond to the application?
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Yes, the marriage was valid
+                  {{ data['agreeordispute'] }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a href="#">
@@ -101,13 +88,26 @@
                 </dd>
               </div>
 
-            </dl>
+
+-->
 
 
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key" style="width:60%">
+                Do you agree the courts of England and Wales have jurisdiction?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes, I agree the court has jurisdiction
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="#">
+                  Change
+                  <span class="govuk-visually-hidden"> married in the uk</span>
+                </a>
+              </dd>
+            </div>
 
-
-
-
+    </dl>
 
 
       <h2 class="govuk-heading-m">Other court cases </h2>
