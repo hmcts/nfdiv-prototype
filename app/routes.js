@@ -91,9 +91,11 @@ router.post('/divorce/respondent/hub_2', function (req, res) {
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const over18 = req.session.data['agreeordispute3']
+  const over18 = req.session.data['agreeordispute']
+  const confirm = req.session.data['agreeordispute3']
 
-  if (over18 === 'Agree') {
+
+  if (over18 === 'I want to dispute the divorce' && confirm == 'Agree') {
     res.redirect('/divorce/respondent/hub_dispute')
   } else {
     res.redirect('/divorce/respondent/hub_2')
@@ -734,7 +736,7 @@ router.post('/divorce/respondent/jurisdiction', function (req, res) {
 
   const over18 = req.body['agreeordispute']
 
-  if (over18 == 'Dispute') {
+  if (over18 == 'I want to dispute the divorce') {
     res.redirect('/divorce/respondent/dispute')
   } else {
     res.redirect('/divorce/respondent/jurisdiction')
