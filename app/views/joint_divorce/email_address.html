@@ -26,26 +26,41 @@
 
 {% block content %}
 
+
+
+
+
+
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Enter your   {{ data['husband-wife'] }}'s  email address</h1>
+
+        <h1 class="govuk-heading-l">Enter your <span id='data1'>{{ data['husband-wife'] }}</span>'s email address</h1>
 
         <form action="/joint_divorce/marry_in_uk" method="post" novalidate>
 
           <div class="govuk-form-group">
 
             <p class="govuk-body">
-              It’s important you provide your {{ data['husband-wife'] }}'s email address so they can join and review your joint application before it’s submitted to the court.
+              It’s important you provide your <span id='data2'>{{ data['husband-wife'] }}</span>'s email address so they can join and review your joint application before it’s submitted to the court.
             </p>
 
+
+
+
+
+
               <div class="govuk-inset-text">
-                It should be their usual email address which they use for personal emails. If you use their work email address, you should ask their permission first. 
+                It should be their usual email address which they use for personal emails. If you use their work email address, you should ask their permission first.
                 </div>
 
            <label class="govuk-label" for="width-20">
-               Your  {{ data['husband-wife'] }}'s email address
+               Your <span id='data3'>{{ data['husband-wife'] }}</span>'s email address
 
             </label>
+
+
+
+
 
             <input class="govuk-input" id="res-email" name="res-email" value="{{ data['res-email'] }}" type="email" spellcheck="false" autocomplete="email">
 
@@ -99,5 +114,17 @@
             </ul>
     </div>
 </details>
+
+
+//script to set a default if no answer was given
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+    document.getElementById('data3').innerHTML="husband or wife";
+  }
+</script>
+
 
 {% endblock %}
