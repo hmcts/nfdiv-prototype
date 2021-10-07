@@ -87,9 +87,30 @@
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
 
-<p> You and your husband or wife have both applied for a conditional order.  </p>
+<p> You and your husband or wife have applied for a conditional order.  </p>
 
-<p> A judge will decide whether to grant your conditional order. You will receive an email notification by 5 December 2021 to confirm whether it’s been granted. </p>
+<p> The court will check your application and send it to a judge. If the judge agrees that there is no reason why you should not get a divorce, then they will ‘pronounce’ your conditional order in court.
+  You will receive an email by <span id='date-time'></span> after your application has been checked. This will have the time, date and court where your conditional order will be pronounced.  </p>
+
+<p>After your conditional order is pronounced, you then have to apply for a ‘final order’. This will finalise your divorce. You have to wait 6 weeks until after your conditional order, to apply for the final order. </p>
+
+
+<span id='date-time'></span>
+
+        <script>
+
+          var targetDate = new Date();
+          targetDate.setDate(targetDate.getDate() + 21);
+
+          var dd = targetDate.getDate();
+          var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+          var yyyy = targetDate.getFullYear();
+
+          const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          var dateString = dd + " " + months[mm]  + " " + yyyy;
+          document.getElementById('date-time').innerHTML=dateString;
+
+        </script>
 
 
         <!--
