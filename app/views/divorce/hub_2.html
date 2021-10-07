@@ -104,7 +104,23 @@
 
         <p>  The next step is for you to apply for a ‘conditional order’. A conditional order is a document that says the court does not see any reason why you cannot get a divorce.   </p>
 
-        <p> You can apply for a conditional order on 14 December 2021. This is because you have to wait until 20 weeks from when the divorce application was issued. You will receive an email to remind you. </p>
+        <p> You can apply for a conditional order on <span id='date-time'></span>. This is because you have to wait until 20 weeks from when the divorce application was issued. You will receive an email to remind you. </p>
+
+
+        <script>
+
+          var targetDate = new Date();
+          targetDate.setDate(targetDate.getDate() + 141);
+
+          var dd = targetDate.getDate();
+          var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+          var yyyy = targetDate.getFullYear();
+
+          const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          var dateString = dd + " " + months[mm]  + " " + yyyy;
+          document.getElementById('date-time').innerHTML=dateString;
+
+        </script>
 
 
         <details class="govuk-details" data-module="govuk-details">
@@ -177,7 +193,7 @@
       <p>  <a href="">View the divorce application (PDF)</a></p>
 
 <p>  <a href="">  View the response to the divorce application (PDF)</a></p>
-    
+
 
 
         <p>  <a href="check_contact_details">Review your contact details</a></p>

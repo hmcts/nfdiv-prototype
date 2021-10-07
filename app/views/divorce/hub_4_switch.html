@@ -95,8 +95,27 @@
 
 
         <p> You have applied for a ‘conditional order’. The court will check your application and send it to a judge. If the judge agrees that there is no reason why you should not get a divorce, then they will ‘pronounce’ your conditional order in court.
-           You should receive an email by [date plus three weeks] with the time, date and court your conditional order will be pronounced.  </p>
+
+          You will receive an email by <span id='date-time'></span> after your application has been checked. This will have the time, date and court your conditional order will be pronounced. </p>
           <p>  After your conditional order is pronounced, you then have to apply for a ‘final order’. This will finalise your divorce. You have to wait 6 weeks until after your conditional order, to apply for the final order. </p>
+
+
+
+
+                  <script>
+
+                    var targetDate = new Date();
+                    targetDate.setDate(targetDate.getDate() + 21);
+
+                    var dd = targetDate.getDate();
+                    var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+                    var yyyy = targetDate.getFullYear();
+
+                    const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    var dateString = dd + " " + months[mm]  + " " + yyyy;
+                    document.getElementById('date-time').innerHTML=dateString;
+
+                  </script>
 
 
 

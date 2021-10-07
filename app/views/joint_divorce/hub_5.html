@@ -93,7 +93,25 @@
 
 <p>They have been sent an email to remind them. </p>
 
-<p>If they do not apply by 7 October 2021 then you will be sent an email explaining how to progress the application. </p>
+<p>If they do not apply by <span id='date-time'></span> then you will be sent an email explaining how to progress the application. </p>
+
+
+
+        <script>
+
+          var targetDate = new Date();
+          targetDate.setDate(targetDate.getDate() + 14);
+
+          var dd = targetDate.getDate();
+          var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+          var yyyy = targetDate.getFullYear();
+
+          const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          var dateString = dd + " " + months[mm]  + " " + yyyy;
+          document.getElementById('date-time').innerHTML=dateString;
+
+        </script>
+
 
         <!--
 
