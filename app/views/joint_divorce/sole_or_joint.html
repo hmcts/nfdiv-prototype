@@ -37,19 +37,19 @@
                   </h1>
 
                   <p class="govuk-body">
-                  You can apply for the divorce on your own (as a ‘sole applicant’) or with your {{ data['husband-wife'] }} (in a ‘joint application’).
+                  You can apply for the divorce on your own (as a ‘sole applicant’) or with your <span id='data1'>{{ data['husband-wife'] }}</span> (in a ‘joint application’).
                   </p>
 
               <h2 class="govuk-heading-s">Applying as a sole applicant </h2>
 
                 <p class="govuk-body">
-                  If you apply as a sole applicant, your {{ data['husband-wife'] }} responds to your divorce application after you have submitted it. You will be applying on your own.
+                  If you apply as a sole applicant, your <span id='data2'>{{ data['husband-wife'] }}</span> responds to your divorce application after you have submitted it. You will be applying on your own.
                   </p>
 
-                  <h2 class="govuk-heading-s">Applying jointly, with your {{ data['husband-wife'] }}</h2>
+                  <h2 class="govuk-heading-s">Applying jointly, with your <span id='data3'>{{ data['husband-wife'] }}</span></h2>
 
               <p class="govuk-body">
-                  If you apply jointly, your {{ data['husband-wife'] }} joins and reviews this online application before it’s submitted. You will be applying together.
+                  If you apply jointly, your <span id='data4'>{{ data['husband-wife'] }}</span> joins and reviews this online application before it’s submitted. You will be applying together.
                   </p>
 
                 <div class="govuk-inset-text">
@@ -101,13 +101,13 @@
     <div class="govuk-radios__item">
       <input class="govuk-radios__input" id="sole-joint-2" name="sole-joint" type="radio" value="I want to apply jointly, with my husband or wife"  data-aria-controls="sole-joint-2data" {{ checked("sole-joint", "I want to apply jointly, with my husband or wife") }}>
       <label class="govuk-label govuk-radios__label" for="sole-joint-2">
-        I want to apply jointly, with my {{ data['husband-wife'] }}
+        I want to apply jointly, with my <span id='data5'>{{ data['husband-wife'] }}</span>
       </label>
     </div>
 
     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="sole-joint-2data">
 
-        <p>You should have already discussed this with your {{ data['husband-wife'] }}</p>
+        <p>You should have already discussed this with your <span id='data6'>{{ data['husband-wife'] }}</span></p>
     </div>
   </div>
 
@@ -149,5 +149,24 @@
             </ul>
     </div>
 </details>
+
+//script to set a default if no answer was given
+
+<!--
+
+<span id='data1'>{{ data['husband-wife'] }}</span>
+
+-->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+    document.getElementById('data3').innerHTML="husband or wife";
+    document.getElementById('data4').innerHTML="husband or wife";
+    document.getElementById('data5').innerHTML="husband or wife";
+    document.getElementById('data6').innerHTML="husband or wife";
+  }
+</script>
 
 {% endblock %}
