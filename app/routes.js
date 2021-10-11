@@ -331,7 +331,7 @@ router.post('/divorce/alternative_service', function (req, res) {
   const over18 = req.body['papers-served']
 
   if (over18 == 'checked') {
-    res.redirect('/divorce/alternative_service')
+    res.redirect('/divorce/alternative_service_no_email')
   } else {
     res.redirect('/divorce/respondent_postal_address')
   }
