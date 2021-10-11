@@ -3,7 +3,6 @@
 {% block pageTitle %}
   Confirmation page example
 {% endblock %}
-
 {% block beforeContent %}
 
 <div class="govuk-phase-banner">
@@ -48,17 +47,17 @@
         <div class="hmcts-progress-bar">
         <ol class="hmcts-progress-bar__list">
 
-        <li class="hmcts-progress-bar__list-item" >
+        <li class="hmcts-progress-bar__list-item" aria-current="step">
           <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
           <span class="hmcts-progress-bar__label">Application submitted</span>
         </li>
 
         <li class="hmcts-progress-bar__list-item" >
-          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+          <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Response</span>
         </li>
 
-        <li class="hmcts-progress-bar__list-item" aria-current="step">
+        <li class="hmcts-progress-bar__list-item" >
           <span class="hmcts-progress-bar__icon"></span>
           <span class="hmcts-progress-bar__label">Conditional order</span>
         </li>
@@ -91,40 +90,57 @@
 
 
 
-      <h2 class="govuk-heading-m">What you need to do</h2>
+      <h2 class="govuk-heading-m">Latest information</h2>
 
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
+<p> The court has decided that your divorce can continue without a response from your husband or wife. This is because the court has evidence that the application has been successfully ‘served’ to your husband or wife. You can view and download your <a href="#">‘certificate of service’</a>.  
 
-<p> You can now apply for a ‘conditional order’. A conditional order is a document that says the court does not see any reason why you cannot get a divorce.</p>
+ </p>
 
+        <p> The next step is for you to apply for a ‘conditional order’. A conditional order is a document that says the court does not see any reason why you cannot get a divorce.  </p>
 
-<p>The court has decided that your divorce can continue without a response from your husband or wife. This is because your application for deemed service was granted. So you will not see their ‘response’ to your application, when you apply for the conditional order. </p>
-
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Read more about the next steps
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-      <p>  You have to complete 2 more steps before you are legally divorced: </p>
-
-      <ol class="govuk-list govuk-list--number">
-  <li>Apply for a conditional order.</li>
-  <p>This shows that the court agrees that you’re entitled to get a divorce.</p>
-
-  <li>Apply for a final order.</li>
-  <p>This legally ends the marriage. You cannot apply for a final order until 6 weeks after the conditional order.</p>
-</ol>
+        <p>You can apply for a conditional order on <span id='date-time'></span>. This is because you have to wait until 20 weeks from when the divorce application was issued. You will receive an email to remind you. </p>
 
 
-  </div>
-</details>
+                <script>
+
+                  var targetDate = new Date();
+                  targetDate.setDate(targetDate.getDate() + 141);
+
+                  var dd = targetDate.getDate();
+                  var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+                  var yyyy = targetDate.getFullYear();
+
+                  const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                  var dateString = dd + " " + months[mm]  + " " + yyyy;
+                  document.getElementById('date-time').innerHTML=dateString;
+
+                </script>
 
 
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Read more about the next steps
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+              <p>  You have to complete 2 more steps before you are legally divorced: </p>
 
+              <ol class="govuk-list govuk-list--number">
+          <li>Apply for a conditional order.</li>
+          <p>This shows that the court agrees that you’re entitled to get a divorce.</p>
 
+          <li>Apply for a final order.</li>
+          <p>This legally ends the marriage. You cannot apply for a final order until 6 weeks after the conditional order.</p>
+        </ol>
+
+<p>You can use the time to decide how your money and property will be divided.
+  This is dealt with separately to the divorce application. <a href="">Find out more about dividing money and property </a></p>
+
+          </div>
+        </details>
 
 
 
@@ -138,21 +154,20 @@
 
   <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
 
-   -->
 
-<form action="continue_with_conditional_order" method="post" novalidate>
+
+<form action="AOS" method="post" novalidate>
        <button type="submit" class="govuk-button" data-module="govuk-button">
-         Apply for conditional order
+         Respond to the application
        </button>
 
        </form>
 
-
+       -->
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_4">Find out about dividing money and property </a></p>
-<p><a href="">Find out more about conditional orders </a></p>
+<p><a href="hub_2">Find out about dividing money and property </a></p>
       </div>
 
       <br>
@@ -173,28 +188,35 @@
       <h2 class="govuk-heading-s">I want to...</h2>
 
       <p>  <a href="">View the divorce application (PDF)</a></p>
-        <p>  <a href="check_contact_details">Review your contact details</a></p>
-
+  <p>  <a href="check_contact_details">Review your contact details</a></p>
 
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-  <h2 class="govuk-heading-s">Contact us for help</h2>
+  <h2 class="govuk-heading-s">Getting help</h2>
 
-  <p class="govuk-body">Ask a question or get help in your language.</p>
+  <p class="govuk-body"><strong>Phone</strong><br>
+    0300 303 0642<br>
+    (Monday to Friday, 8am to 8PM, Saturday 8AM to 2PM)</p>
 
-  <p class="govuk-body">Telephone<br>
-0300 123 1711</p>
-
+<!--
 <p class="govuk-body">Monday to Friday, 8:30am to 5pm<br>
 
 
 <a href="#" class="govuk-link">Find out about call charges </a> <br>(opens in a new window)</p>
 
+-->
 
-<p class="govuk-body">Email<br>
-<a href="#" class="govuk-link">contactia@justice.gov.uk</a></p>
+<p class="govuk-body"><strong>Email</strong><br>
+<a href="#" class="govuk-link">contactdivorce@justice.gov.uk</a></p>
 
-<p class="govuk-body">We aim to get back to you within 5 days.</p>
+
+<p class="govuk-body"><strong>Post</strong><br>
+
+Courts and Tribunals Service Centre<br>
+Digital Divorce<br>
+PO Box 12706<br>
+Harlow<br>
+CM20 9QT<br>
 
 
 </div>
