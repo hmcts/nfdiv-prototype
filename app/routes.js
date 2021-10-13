@@ -747,6 +747,23 @@ router.post('/divorce/respondent/jurisdiction', function (req, res) {
 
 
 
+
+//respondent fork
+router.post('/divorce/respondent/accept_dispute', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.body['agreeordispute3']
+
+  if (over18 == 'I confirm I want to dispute the divorce') {
+    res.redirect('/divorce/respondent/jurisdiction')
+  } else {
+    res.redirect('/divorce/respondent/accept_dispute')
+  }
+})
+
+
 router.post('/joint_divorce/sole_or_joint', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
