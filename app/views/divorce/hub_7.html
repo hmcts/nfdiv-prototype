@@ -65,7 +65,7 @@
         </li>
 
         <li class="hmcts-progress-bar__list-item" aria-current="step" >
-          <span class="hmcts-progress-bar__icon"></span>
+          <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
           <span class="hmcts-progress-bar__label">Final order</span>
         </li>
 
@@ -91,35 +91,33 @@
 
         <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
-    <p> You can now apply for a ‘final order’.
-      A final order is the document that will legally end your marriage. It’s the final step in the divorce process. </p>
+    <p> You have applied for a ‘final order’. Your application will be checked by court staff.
+      If there are no other applications that need to be completed then your divorce will be finalised.
+</p>
+
+
+<p>You will receive an email by <span id='date-time'></span> after your application has been checked.</p>
 
 
 
 
 
+          <script>
+
+            var targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 7);
+
+            var dd = targetDate.getDate();
+            var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+            var yyyy = targetDate.getFullYear();
+
+            const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var dateString = dd + " " + months[mm]  + " " + yyyy;
+            document.getElementById('date-time').innerHTML=dateString;
+
+          </script>
 
 
-
-
-          <!--
-
-
-
-    <p >  Your application for divorce has been submitted and checked by court staff. It has now been ‘issued’ to you and your husband or wife by email.</p>
-
-    <p >You have to confirm that you have received and accept the application for divorce. This is known as ‘acknowledging service’.</p>
-
-    <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
-
-     -->
-
-    <form action="final_order" method="post" novalidate>
-         <button type="submit" class="govuk-button" data-module="govuk-button">
-           Apply for final order
-         </button>
-
-         </form>
 
 
 
