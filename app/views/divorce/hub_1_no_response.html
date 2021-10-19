@@ -98,12 +98,25 @@
 
 
 
-        <p>  Your husband or wife should have responded to the divorce application by 30 October 2021. They can still respond and have been sent a reminder. You can also contact them to remind them if it’s safe to do so.   </p>
+        <p>  Your husband or wife should have responded to the divorce application by <span id='date-time'></span>. They can still respond and have been sent a reminder. You can also contact them to remind them if it’s safe to do so.   </p>
 
         <p> If you do not think they will respond then you can <a href="alternative_service" class="govuk-link">view the options for proceeding with your divorce</a>.</p>
 
 
+                <script>
 
+                  var targetDate = new Date();
+                  targetDate.setDate(targetDate.getDate() - 1);
+
+                  var dd = targetDate.getDate();
+                  var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+                  var yyyy = targetDate.getFullYear();
+
+                  const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                  var dateString = dd + " " + months[mm]  + " " + yyyy;
+                  document.getElementById('date-time').innerHTML=dateString;
+
+                </script>
 
 
         <!--
