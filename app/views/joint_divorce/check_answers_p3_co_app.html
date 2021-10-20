@@ -81,7 +81,7 @@
           When did you get married?
         </dt>
         <dd class="govuk-summary-list__value">
-          24th February 2012
+          24 February 2012
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="#">
@@ -508,19 +508,74 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Are there, or have there ever been, any other court proceedings relating to your marriage, property or children?
+            Applicant 1<br><br>
+            Are there, or have there ever been, any other court cases relating to this marriage?
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+          <br><br>Yes
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
 
-              <span class="govuk-visually-hidden"> other court cases</span>
+              <span class="govuk-visually-hidden"> money and property</span>
             </a>
           </dd>
         </div>
-        </dl>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+
+            Details of the other legal proceedings
+          </dt>
+          <dd class="govuk-summary-list__value">
+          This is the free text entered describing the other court cases
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+
+              <span class="govuk-visually-hidden"> money and property</span>
+            </a>
+          </dd>
+        </div>
+
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+            Applicant 2<br><br>
+            Are there, or have there ever been, any other court cases relating to this marriage?
+          </dt>
+          <dd class="govuk-summary-list__value">
+          <br><br>Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+
+              <span class="govuk-visually-hidden"> money and property</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+
+            Details of the other legal proceedings
+          </dt>
+          <dd class="govuk-summary-list__value">
+          This is the free text entered describing the other court cases
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+
+              <span class="govuk-visually-hidden"> money and property</span>
+            </a>
+          </dd>
+        </div>
+
+       </dl>
 
 
       <h2 class="govuk-heading-m">Dividing your money and property</h2>
@@ -528,11 +583,11 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Applicant 1<br>
+            Applicant 1<br><br>
             Do you want to apply for a financial order?
           </dt>
           <dd class="govuk-summary-list__value">
-          No
+          <br><br>No
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -541,14 +596,17 @@
             </a>
           </dd>
         </div>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="width:60%">
-            Applicant 2<br>
+            Applicant 2<br><br>
             Do you want to apply for a financial order?
           </dt>
           <dd class="govuk-summary-list__value">
-          Yes
+          <br><br>Yes
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -557,86 +615,71 @@
             </a>
           </dd>
         </div>
-
-
        </dl>
 
 
 
 
 
+<!-- confirm code -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <h2 class="govuk-heading-m">Confirm before continuing</h2>
+
+   <div class="govuk-form-group">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
+                  I confirm that I’m applying to the court to:
+                </label>
+              </div>
+            </div>
+        </div>
+
+      <div class="govuk-form-group">
+            <ul class="govuk-list govuk-list--bullet" style="text-align: left">
+                <li>dissolve my marriage (get a divorce) </li>
+                <li>decide how our money and property will be split (known as a financial order)</li>
+              </ul>
+        </div>
+
+    <p class="govuk-body">
+              This confirms what you are asking the court to do. It’s known as ‘the prayer’.
+              </p>
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <div class="govuk-form-group">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked" {{ checked("statement-truth", "checked") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
+                  I believe that the facts stated in this application are true
+                </label>
+              </div>
+            </div>
+        </div>
+
+    <p class="govuk-body">
+              This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.
+              </p>
+
+  <div class="govuk-!-padding-bottom-6"></div>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+      <div style="margin-top: -25px; margin-left: 10px;">Proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement verified by a statement of truth without an honest belief in its truth.</div>
+      </strong>
+    </div>
+  </div>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-m">Confirm before continuing</h2>
-
-                 <div class="govuk-form-group">
-                          <div class="govuk-checkboxes">
-                            <div class="govuk-checkboxes__item">
-                              <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
-                              <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
-                                I confirm that I’m applying to the court to:
-                              </label>
-                            </div>
-                          </div>
-                      </div>
-
-                    <div class="govuk-form-group">
-                          <ul class="govuk-list govuk-list--bullet" style="text-align: left">
-                              <li>dissolve my marriage (get a divorce) </li>
-                              <li>decide how our money and property will be split (known as a financial order)</li>
-                            </ul>
-                      </div>
-
-                  <p class="govuk-body">
-                            This confirms what you are asking the court to do. It’s known as ‘the prayer’.
-                            </p>
-
-                  <div class="govuk-!-padding-bottom-4"></div>
-
-                  <div class="govuk-form-group">
-                          <div class="govuk-checkboxes">
-                            <div class="govuk-checkboxes__item">
-                              <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked" {{ checked("statement-truth", "checked") }}>
-                              <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
-                                I believe that the facts stated in this application are true
-                              </label>
-                            </div>
-                          </div>
-                      </div>
-
-                  <p class="govuk-body">
-                            This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.
-                            </p>
-
-                  <div class="govuk-warning-text">
-                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                    <strong class="govuk-warning-text__text">
-                      <span class="govuk-warning-text__assistive">Warning</span>
-                    <div style="margin-top: -12px;">   You could be fined or imprisoned if you deliberately submit false information.</div>
-                    </strong>
-                  </div>
-
-                      </div>
-                 </div>
-
-
-
+<!-- confirm code end -->
 
 
 
