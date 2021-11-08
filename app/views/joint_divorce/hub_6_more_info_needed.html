@@ -22,7 +22,6 @@
 
 {% endblock %}
 
-
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -43,7 +42,6 @@
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:1px;color:#1d70b8;background-color:#1d70b8;"">
 
 
-
       <div class="govuk-!-padding-bottom-8"></div>
 
       <div class="hmcts-progress-bar">
@@ -54,13 +52,9 @@
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Submitted</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item">
-        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-        <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Response</span>
-      </li>
 
       <li class="hmcts-progress-bar__list-item" aria-current="step">
-        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+        <span class="hmcts-progress-bar__icon"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Conditional order</span>
       </li>
 
@@ -76,46 +70,43 @@
 
 
 
-
-
-
-
-
-
-      <h2 class="govuk-heading-m">Latest update</h2>
+      <h2 class="govuk-heading-m">What you need to do</h2>
 
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
-<p> Your application for a conditional order has now been granted.</p>
-<p> You now have to apply for a ‘final order’. This will finalise your divorce. You have to wait 6 weeks until after your conditional order, to apply for the final order. </p>
+
+<p> The court is not yet satisfied you are entitled to get divorced. You need to provide more information or documents, to continue with your application.</p>
 
 
+<h3 class="govuk-heading-s">The court’s feedback </h3>
+
+<p>"The image the marriage certificate is too small, so that when it is enlarged, it become blurred and cannot be read and checked. Please provide a new image of the marriage certificate."
+
+</p>
+
+<p>You can download a copy of the court’s full <a href="">Refusal Order (PDF)</a>.</p>
 
 
+<h3 class="govuk-heading-s">What you need to do next </h3>
+
+<p>You need to respond to the court’s feedback before your application can proceed. </p>
+
+<p>You will be able to upload or post documents to the court when you respond, if they have been requested. </p>
 
 
+<form action="respond_to_court" method="post" novalidate>
+       <button type="submit" class="govuk-button" data-module="govuk-button">
+         Respond to the court
+       </button>
 
-        <!--
-
-
-
-  <p >  Your application for divorce has been submitted and checked by court staff. It has now been ‘issued’ to you and your husband or wife by email.</p>
-
-  <p >You have to confirm that you have received and accept the application for divorce. This is known as ‘acknowledging service’.</p>
-
-  <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
-
-   -->
-
-
+       </form>
 
 
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_6">Find out about dividing money and property </a></p>
+<p><a href="hub_4_more_info_needed_v2">Find out about dividing money and property </a></p>
 <p><a href="">Find out more about conditional orders </a></p>
-<p><a href="">Find out more about final orders </a></p>
       </div>
 
       <br>
@@ -134,11 +125,9 @@
 
 
       <h2 class="govuk-heading-s">I want to...</h2>
+
       <p>  <a href="">View the divorce application (PDF)</a></p>
-
-  <p>  <a href="">View the response to the divorce application (PDF)</a></p>
-
-    <p>  <a href="">View the certificate of entitlement (PDF)</a></p>
+        <p>  <a href="">View the response to the divorce application (PDF)</a></p>
         <p>  <a href="check_contact_details">Review your contact details</a></p>
 
 

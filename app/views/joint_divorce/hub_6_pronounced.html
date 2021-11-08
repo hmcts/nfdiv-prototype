@@ -54,10 +54,6 @@
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Submitted</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item">
-        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-        <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Response</span>
-      </li>
 
       <li class="hmcts-progress-bar__list-item" aria-current="step">
         <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
@@ -81,18 +77,40 @@
 
 
 
-
       <h2 class="govuk-heading-m">Latest update</h2>
 
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
-<p> Your application for a conditional order has now been granted.</p>
-<p> You now have to apply for a ‘final order’. This will finalise your divorce. You have to wait 6 weeks until after your conditional order, to apply for the final order. </p>
+<p> You have been granted a ‘conditional order’ by the court. Your conditional order was formally pronounced (read out) by a judge at Fox Court, Holborn on 26 October 2021. Your husband or wife has also been notified.
+</p>
 
 
 
 
+<div class="govuk-inset-text">
+ You are not divorced yet. You still have to apply for a final order which will end the marriage.
+ You can apply for a final order on <span id='date-time'></span> . This will end your marriage.
+</div>
 
+
+
+
+          <script>
+
+            var targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 42);
+
+            var dd = targetDate.getDate();
+            var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+            var yyyy = targetDate.getFullYear();
+
+            const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var dateString = dd + " " + months[mm]  + " " + yyyy;
+            document.getElementById('date-time').innerHTML=dateString;
+
+          </script>
+
+          <p>You can <a href="#">view and download your ‘certificate of entitlement for a conditional order’</a>.  This is the document that says the court does not see any reason why you cannot get divorced.</p>
 
 
         <!--
@@ -134,11 +152,14 @@
 
 
       <h2 class="govuk-heading-s">I want to...</h2>
+
       <p>  <a href="">View the divorce application (PDF)</a></p>
 
   <p>  <a href="">View the response to the divorce application (PDF)</a></p>
 
     <p>  <a href="">View the certificate of entitlement (PDF)</a></p>
+
+
         <p>  <a href="check_contact_details">Review your contact details</a></p>
 
 

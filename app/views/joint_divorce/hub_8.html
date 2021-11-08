@@ -56,15 +56,10 @@
 
       <li class="hmcts-progress-bar__list-item">
         <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-        <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Response</span>
-      </li>
-
-      <li class="hmcts-progress-bar__list-item" aria-current="step">
-        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Conditional order</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item">
+      <li class="hmcts-progress-bar__list-item" aria-current="step">
         <span class="hmcts-progress-bar__icon"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Final order (Divorced)</span>
       </li>
@@ -75,37 +70,38 @@
       <div class="govuk-!-padding-bottom-4"></div>
 
 
+          <h2 class="govuk-heading-m">Latest update</h2>
+
+        <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
+
+    <p> You have applied for a ‘final order’. Your application will be checked by court staff.
+
+</p>
+
+
+<p>You will receive an email by <span id='date-time'></span> after your application has been checked.</p>
 
 
 
 
 
+          <script>
 
+            var targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 7);
 
-      <h2 class="govuk-heading-m">Latest update</h2>
+            var dd = targetDate.getDate();
+            var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+            var yyyy = targetDate.getFullYear();
 
-      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
+            const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var dateString = dd + " " + months[mm]  + " " + yyyy;
+            document.getElementById('date-time').innerHTML=dateString;
 
-<p> Your application for a conditional order has now been granted.</p>
-<p> You now have to apply for a ‘final order’. This will finalise your divorce. You have to wait 6 weeks until after your conditional order, to apply for the final order. </p>
-
-
-
-
-
-
-
-        <!--
+          </script>
 
 
 
-  <p >  Your application for divorce has been submitted and checked by court staff. It has now been ‘issued’ to you and your husband or wife by email.</p>
-
-  <p >You have to confirm that you have received and accept the application for divorce. This is known as ‘acknowledging service’.</p>
-
-  <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
-
-   -->
 
 
 
@@ -113,7 +109,7 @@
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_6">Find out about dividing money and property </a></p>
+<p><a href="">Find out about dividing money and property </a></p>
 <p><a href="">Find out more about conditional orders </a></p>
 <p><a href="">Find out more about final orders </a></p>
       </div>
@@ -134,6 +130,7 @@
 
 
       <h2 class="govuk-heading-s">I want to...</h2>
+
       <p>  <a href="">View the divorce application (PDF)</a></p>
 
   <p>  <a href="">View the response to the divorce application (PDF)</a></p>
