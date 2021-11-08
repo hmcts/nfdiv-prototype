@@ -32,7 +32,7 @@
 
         <h1 class="govuk-heading-l">Where your lives are based</h1>
 
-          <p>The court needs to know whether you and your {{ data['husband-wife'] }}’s lives are based in England or Wales. This may include working, owning property, having children in school, or your main family life taking place in England or Wales.</p>
+          <p>The court needs to know whether you and your <span id='data1'>{{ data['husband-wife'] }}</span>'s lives are based in England or Wales. This may include working, owning property, having children in school, or your main family life taking place in England or Wales.</p>
 
         <form action="/joint_divorce/jurisdiction_confirmation" method="post" novalidate>
 
@@ -60,7 +60,7 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="passport-number">
-              Is your {{ data['husband-wife'] }}'s life mainly based in England or Wales?
+              Is your <span id='data2'>{{ data['husband-wife'] }}</span>'s life mainly based in England or Wales?
             </label>
 
             <div class="govuk-radios govuk-radios--inline">
@@ -115,4 +115,12 @@
     </div>
 </details>
 
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+  }
+</script>
 {% endblock %}
