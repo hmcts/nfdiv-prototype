@@ -39,12 +39,12 @@
             Who are you applying to divorce?
           </dt>
           <dd class="govuk-summary-list__value">
-            My {{ data['husband-wife'] }}
+            My <span id='data0'>{{ data['husband-wife'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/joint_divorce/husband_or_wife">
               Change
-              <span class="govuk-visually-hidden"> who are you applying to divorcing</span>
+              <span class="govuk-visually-hidden"> who are you applying to divorce</span>
             </a>
           </dd>
         </div>
@@ -67,7 +67,7 @@
             Has your marriage broken down irretrievably (it cannot be saved)?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['broken-down'] }}
+            Yes
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/joint_divorce/broken_down_irretrievably">
@@ -95,7 +95,7 @@
             Do you have your marriage certificate with you?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['marriage-certificate'] }}
+            Yes
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/joint_divorce/marriage_certificate">
@@ -111,7 +111,7 @@
           <dd class="govuk-summary-list__value">
         <!--    {{ data['sole-joint'] }} -->
 
-        I want to apply jointly, with my {{ data['husband-wife'] }}
+        I want to apply jointly, with my <span id='data1'>{{ data['husband-wife'] }}</span>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/joint_divorce/sole_or_joint">
@@ -121,26 +121,6 @@
           </dd>
         </div>
       </dl>
-
-      <h2 class="govuk-heading-m">How the court will contact your {{ data['husband-wife'] }}</h2>
-
-  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key" style="width:60%">
-          Your {{ data['husband-wife'] }}'s email address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['res-email'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="/joint_divorce/email_address">
-            Change
-            <span class="govuk-visually-hidden"> respondent email address</span>
-          </a>
-        </dd>
-      </div>
-    </dl>
-
 
       <h2 class="govuk-heading-m">Help with fees</h2>
 
@@ -159,21 +139,30 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Help with Fees number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['help-fees-input'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/joint_divorce/help_fees3">
-              Change
-              <span class="govuk-visually-hidden"> help with fees number</span>
-            </a>
-          </dd>
-        </div>
+
       </dl>
+
+      <h2 class="govuk-heading-m">How the court will contact your <span id='data2'>{{ data['husband-wife'] }}</span></h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" style="width:60%">
+          Your <span id='data3'>{{ data['husband-wife'] }}</span>'s email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['res-email'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/joint_divorce/email_address">
+            Change
+            <span class="govuk-visually-hidden"> respondent email address</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+
 
 
 
@@ -212,7 +201,7 @@
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Is your {{ data['husband-wife'] }}'s life mainly based in England or Wales?
+                  Is your <span id='data4'>{{ data['husband-wife'] }}</span>'s life mainly based in England or Wales?
                 </dt>
                 <dd class="govuk-summary-list__value">
                   {{ data['life-based-uk-partner'] }}
@@ -229,16 +218,28 @@
                   How you're connected to England and Wales
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  My {{ data['husband-wife'] }} and I are both habitually resident in England and Wales
+                  Your answers indicate that you can apply for a divorce in England and Wales because both of you are habitually resident.
                   <div class="govuk-!-padding-bottom-4"></div>
                   <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                       <span class="govuk-details__summary-text">
-                        See the legal version
+                        Find out more
                       </span>
                     </summary>
                     <div class="govuk-details__text">
-                      The Applicant and the Respondent are habitually resident in England and Wales
+                      If your life is mainly based in England or
+      	Wales then you're what is legally known
+      	as 'habitually resident'.
+      This may include working, owning
+      	property, having children in school, or
+      	your main family life taking place in
+      	England or Wales.
+      The examples above aren't a complete
+      	list of what makes up habitual residence,
+      	and just because some of them apply to
+      	you doesn't mean you're habitually
+      	resident. If you're not sure, you should
+      	get legal advice.
                     </div>
                   </details>
                 </dd>
@@ -254,7 +255,7 @@
 
 
 
-      <h2 class="govuk-heading-m">About you and your {{ data['husband-wife'] }}</h2>
+      <h2 class="govuk-heading-m">About you and your <span id='data5'>{{ data['husband-wife'] }}</span></h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -287,7 +288,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Your {{ data['husband-wife'] }}'s name from the marriage certificate
+            Your <span id='data6'>{{ data['husband-wife'] }}</span>'s name from the marriage certificate
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['res-name-cert'] }}
@@ -336,7 +337,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Do you need the court to keep your email address and phone number private from your {{ data['husband-wife'] }}?
+            Do you need the court to keep your email address and phone number private from your <span id='data7'>{{ data['husband-wife'] }}</span>?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['private'] }}
@@ -499,7 +500,7 @@
         </div>
   -->
           <h2 class="govuk-body-l">
-Your answers will be sent to your {{ data['husband-wife'] }} to review. When they have reviewed and provided some of their own answers, the completed application will come back to you to review one final time before submitting.
+Your answers will be sent to your <span id='data8'>{{ data['husband-wife'] }}</span> to review. When they have reviewed and provided some of their own answers, the completed application will come back to you to review one final time before submitting.
           </h2>
 
 
@@ -546,5 +547,22 @@ Your answers will be sent to your {{ data['husband-wife'] }} to review. When the
 </details>
 
   </div>
+
+  <!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+  <script>
+    const datacheck = document.getElementById('data1').innerHTML
+    if (datacheck === '') {
+      document.getElementById('data0').innerHTML="husband or wife";
+      document.getElementById('data1').innerHTML="husband or wife";
+      document.getElementById('data2').innerHTML="husband or wife";
+      document.getElementById('data3').innerHTML="husband or wife";
+      document.getElementById('data4').innerHTML="husband or wife";
+      document.getElementById('data5').innerHTML="husband or wife";
+      document.getElementById('data6').innerHTML="husband or wife";
+      document.getElementById('data7').innerHTML="husband or wife";
+      document.getElementById('data8').innerHTML="husband or wife";
+    }
+  </script>
+
 
 {% endblock %}

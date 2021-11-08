@@ -37,7 +37,7 @@
                   </h1>
 
                   <p class="govuk-body">
-                  It’s usually more straightforward and less expensive if you agree with your {{ data['husband-wife'] }} on how to divide your savings, property, pensions and other assets. There are mediation services available to help you come to an agreement. You’ll be given links to more information after you have submitted this application.
+                  It’s usually more straightforward and less expensive if you agree with your <span id='data1'>{{ data['husband-wife'] }}</span> on how to divide your savings, property, pensions and other assets. There are mediation services available to help you come to an agreement. You’ll be given links to more information after you have submitted this application.
                   </p>
 
                 <h2 class="govuk-heading-m">If you agree about dividing money and property </h2>
@@ -57,7 +57,7 @@
                     </span>
                   </summary>
                   <div class="govuk-details__text">
-                    The court can only make financial orders for children under certain circumstances. You can come to an agreement with your {{ data['husband-wife'] }} and make it legally binding with a consent order, or you can use the Child Maintenance Service.
+                    The court can only make financial orders for children under certain circumstances. You can come to an agreement with your <span id='data2'>{{ data['husband-wife'] }}</span> and make it legally binding with a consent order, or you can use the Child Maintenance Service.
                   </div>
 
                 </details>
@@ -101,5 +101,15 @@
             </ul>
     </div>
 </details>
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+    document.getElementById('data3').innerHTML="husband or wife";
+  }
+</script>
 
 {% endblock %}
