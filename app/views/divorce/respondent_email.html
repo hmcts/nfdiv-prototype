@@ -28,7 +28,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Enter your husband's or wife’s email address</h1>
+        <h1 class="govuk-heading-l">Enter your <span id='data1'>{{ data['husband-wife'] }}</span>'s email address</h1>
 
         <form action="/divorce/respondent_address" method="post" novalidate>
 
@@ -41,12 +41,12 @@
             </p>
 
               <div class="govuk-inset-text">
-                Enter the usual email address which they actively use for personal emails. You should avoid using their work email address because it may not be private. 
+                Enter the usual email address which they actively use for personal emails. You should avoid using their work email address because it may not be private.
 
                 </div>
 
            <label class="govuk-label" for="width-20">
-               Your husband's or wife’s email address
+               Your <span id='data2'>{{ data['husband-wife'] }}</span>'s email address
 
             </label>
 
@@ -102,5 +102,16 @@
             </ul>
     </div>
 </details>
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+  }
+</script>
+
+
 
 {% endblock %}

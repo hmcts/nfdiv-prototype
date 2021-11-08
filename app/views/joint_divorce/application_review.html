@@ -35,11 +35,30 @@
                 </h1>
 
             <p class="govuk-body">
-                    Your answers have been sent to your {{ data['husband-wife'] }} at the following email address: <br><b>{{ data['res-email'] }}</b>.
+                    Your answers have been sent to your {{ data['husband-wife'] }} at the following email address: <b>{{ data['res-email'] }}</b>
 </p>
           <p class="govuk-body">
-             They should review them and provide some further information by: <br><b>June 26th 2021</b>.
+             They should review them and provide some further information by: <br><b><span id='date-time'></span></b>.
          </p>
+
+
+
+                 <script>
+
+                   var targetDate = new Date();
+                   targetDate.setDate(targetDate.getDate() + 14);
+
+                   var dd = targetDate.getDate();
+                   var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+                   var yyyy = targetDate.getFullYear();
+
+                   const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                   var dateString = dd + " " + months[mm]  + " " + yyyy;
+                   document.getElementById('date-time').innerHTML=dateString;
+
+                 </script>
+
+
 
             <p class="govuk-body">
               You will receive an email notification to confirm when they have reviewed. If they do not review then you will be told what you can do to progress the application.
