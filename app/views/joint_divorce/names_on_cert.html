@@ -33,11 +33,12 @@
         <form action="/joint_divorce/name_changed" method="post" novalidate>
 
             <p class="govuk-body">
-                  These are the names you and your <span id='data1'>{{ data['husband-wife'] }}</span> used before you were married. They can sometimes be different from your current names. For example, if you or your <span id='data1'>{{ data['husband-wife'] }}</span> had a maiden name.
+                  These are the names you and your <span id='data1'>{{ data['husband-wife'] }}</span> used before you were married. They can sometimes be different from your current names.
+                  For example, if you or your <span id='data2'>{{ data['husband-wife'] }}</span> had a maiden name.
                   </p>
 
             <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" style="margin-top: 15px;" aria-hidden="true">!</span>
+              <span class="govuk-warning-text__icon" style="margin-top: 5px;" aria-hidden="true">!</span>
               <strong class="govuk-warning-text__text">
                 <span class="govuk-warning-text__assistive">Warning</span>
                 <div>Copy the marriage certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that.</div>
@@ -56,7 +57,7 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="res-name-cert">
-              Copy your <span id='data1'>{{ data['husband-wife'] }}</span>'s full name from the marriage certificate
+              Copy your <span id='data3'>{{ data['husband-wife'] }}</span>'s full name from the marriage certificate
             </label>
             <div id="res-name-cert-hint" class="govuk-hint">
               Include all the text related to the name
@@ -99,9 +100,6 @@
             </ul>
     </div>
 </details>
-
-
-//script to set a default if no answer was given
 
 <!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
 <script>

@@ -31,11 +31,11 @@
         <form action="/joint_divorce/confirmation" method="post" novalidate>
 
           <h1 class="govuk-heading-l">
-                  Your answers have been sent to your {{ data['husband-wife'] }} to review
+                  Your answers have been sent to your <span id='data1'>{{ data['husband-wife'] }}</span> to review
                 </h1>
 
             <p class="govuk-body">
-                    Your answers have been sent to your {{ data['husband-wife'] }} at the following email address: <b>{{ data['res-email'] }}</b>
+                    Your answers have been sent to your <span id='data2'>{{ data['husband-wife'] }}</span> at the following email address: <b>{{ data['res-email'] }}</b>
 </p>
           <p class="govuk-body">
              They should review them and provide some further information by: <br><b><span id='date-time'></span></b>.
@@ -100,5 +100,15 @@
             </ul>
     </div>
 </details>
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+    document.getElementById('data3').innerHTML="husband or wife";
+  }
+</script>
 
 {% endblock %}

@@ -33,12 +33,13 @@
           <div class="govuk-form-group">
 
                   <h1 class="govuk-heading-l">
-                    Where should your <span id='data1'>{{ data['husband-wife'] }}</span>'s divorce papers be sent?
+                    Where should the court send your <span id='data1'>{{ data['husband-wife'] }}</span>'s divorce papers?
                   </h1>
 
 
                   <p class="govuk-body">
-                  If your <span id='data2'>{{ data['husband-wife'] }}</span> has given you a specific address to send their divorce papers to, you must use that address.
+                    The court needs to ‘serve’ (send) the divorce application to your  <span id='data2'>{{ data['husband-wife'] }}</span>.
+                    If they have told you they want to receive the papers at a specific address, then you should enter that address. For example, their solicitor’s address.
                   </p>
 
 
@@ -47,13 +48,19 @@
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="respondent-address-1" name="represented-address" type="radio" value="Yes, I have their address" {{ checked("represented-address", "Yes, I have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-1">
-                      Their address
+                      Their home address
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-2">
                       Their solicitor's address
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                      Another address
                     </label>
                   </div>
                 </div>
