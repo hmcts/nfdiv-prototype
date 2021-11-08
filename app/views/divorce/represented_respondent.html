@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Pay your divorce fee - GOV.UK
+  Apply for a divorce - Do you have your husband’s or wife’s postal address? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,30 +28,49 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/confirmation" method="post" novalidate>
+        <form action="represented_respondent_solicitor" method="post" novalidate>
 
-            <h1 class="govuk-heading-xl">
-                    Pay your divorce fee
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    Where should your <span id='data1'>{{ data['husband-wife'] }}</span>'s divorce papers be sent?
                   </h1>
 
-          <p class="govuk-body">
-                  The divorce application fee is £550. Your application will not be submitted until you have paid.
+
+                  <p class="govuk-body">
+                  If your <span id='data2'>{{ data['husband-wife'] }}</span> has given you a specific address to send their divorce papers to, you must use that address.
                   </p>
 
-            <p class="govuk-body">
-                  You’ll need a valid debit or credit card. If you cannot pay now, save the application and return to it when you are ready.
-                  </p>
 
-            <div class="govuk-!-padding-bottom-4"></div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-1" name="represented-address" type="radio" value="Yes, I have their address" {{ checked("represented-address", "Yes, I have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-1">
+                      Their address
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                      Their solicitor's address
+                    </label>
+                  </div>
+                </div>
+
+
+            </div>
 
           <button class="govuk-button" data-module="govuk-button">
-            Pay and submit application
+            Continue
           </button>
         </form>
       </div>
     </div>
 
 <p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
 
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
@@ -76,5 +95,15 @@
             </ul>
     </div>
 </details>
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+  }
+</script>
+
 
 {% endblock %}

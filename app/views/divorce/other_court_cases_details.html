@@ -21,7 +21,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="other_court_cases.html">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -31,15 +31,15 @@
         <form action="/divorce/money_property" method="post" novalidate>
 
           <div class="govuk-form-group">
-                      
+
                   <h1 class="govuk-heading-l">
                     Details of the other legal proceedings
                   </h1>
-                
+
                   <p class="govuk-body">
-                  The court needs to know the details of the other legal proceedings. Provide as much information as possible, such as: 
+                  The court needs to know the details of the other legal proceedings. Provide as much information as possible, such as:
                   </p>
-                
+
                     <ul class="govuk-list govuk-list--bullet">
                         <li>the names of the people involved</li>
                         <li>the case number(s)</li>
@@ -53,7 +53,7 @@
 
                   <div class="govuk-form-group">
                       <label class="govuk-label" for="more-detail">
-                        Provide details about the other legal proceedings. 
+                        Provide details about the other legal proceedings.
                       </label>
                       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
                     </div>

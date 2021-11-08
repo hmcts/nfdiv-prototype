@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Pay your divorce fee - GOV.UK
+  Apply for a divorce - Enter your husband’s or wife’s postal address - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,30 +28,31 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/confirmation" method="post" novalidate>
+        <h1 class="govuk-heading-l">Enter details of your <span id='data1'>{{ data['husband-wife'] }}</span>'s solicitor</h1>
 
-            <h1 class="govuk-heading-xl">
-                    Pay your divorce fee
-                  </h1>
+        <form action="represented_respondent_select" method="post" novalidate>
 
-          <p class="govuk-body">
-                  The divorce application fee is £550. Your application will not be submitted until you have paid.
-                  </p>
+          <div class="govuk-form-group">
 
-            <p class="govuk-body">
-                  You’ll need a valid debit or credit card. If you cannot pay now, save the application and return to it when you are ready.
-                  </p>
-
-            <div class="govuk-!-padding-bottom-4"></div>
+           <label class="govuk-label" for="address-postcode">
+              Enter the name of their solicitor's firm
+            </label>
+                <input class="govuk-input govuk-input--width-10" id="rep-address-postcode" name="rep-address-postcode" type="text" autocomplete="postal-code" value="{{ data['rep-address-postcode'] }}">
+            </div>
 
           <button class="govuk-button" data-module="govuk-button">
-            Pay and submit application
+            Search
           </button>
+
+
+
         </form>
       </div>
     </div>
 
 <p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
 
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
@@ -76,5 +77,14 @@
             </ul>
     </div>
 </details>
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+  }
+</script>
+
 
 {% endblock %}
