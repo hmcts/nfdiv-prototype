@@ -33,14 +33,14 @@
         <form action="/divorce/name_changed" method="post" novalidate>
 
             <p class="govuk-body">
-                  These are the names you and your husband or wife used before you were married. They can sometimes be different from your current names. For example, if you or your wife had a maiden name.
+                  These are the names you and your <span id='data1'>{{ data['husband-wife'] }}</span> used before you were married. They can sometimes be different from your current names. For example, if you or your <span id='data2'>{{ data['husband-wife'] }}</span> had a maiden name.
                   </p>
 
             <div class="govuk-warning-text">
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
               <strong class="govuk-warning-text__text">
                 <span class="govuk-warning-text__assistive">Warning</span>
-              <div style="margin-top: -12px;">   Copy the marriage certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that. </div>
+              <div style="margin-top: -12px;">Copy the marriage certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that. </div>
               </strong>
             </div>
 
@@ -56,7 +56,7 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--m" for="res-name-cert">
-              Copy your husband’s or wife's full name from the marriage certificate
+              Copy your <span id='data3'>{{ data['husband-wife'] }}</span>'s full name from the marriage certificate
             </label>
             <div id="res-name-cert-hint" class="govuk-hint">
               Include all the text related to the name
@@ -99,5 +99,17 @@
             </ul>
     </div>
 </details>
+
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+    document.getElementById('data3').innerHTML="husband or wife";
+  }
+</script>
+
 
 {% endblock %}

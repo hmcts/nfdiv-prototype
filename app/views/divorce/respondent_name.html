@@ -28,34 +28,34 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Enter your husband’s or wife’s name </h1>
+        <h1 class="govuk-heading-l">Enter your <span id='data1'>{{ data['husband-wife'] }}</span>'s name </h1>
 
         <form action="/divorce/names_on_cert" method="post" novalidate>
 
           <div class="govuk-form-group">
-            
-            <p>The court needs to know your husband’s or wife’s full name. </p> 
-            
+
+            <p>The court needs to know your <span id='data2'>{{ data['husband-wife'] }}</span>'s full name. </p>
+
               <div class="govuk-form-group">
            <label class="govuk-label" for="width-20">
-               Your husband's or wife's first name(s)
-            </label> 
+               Your <span id='data3'>{{ data['husband-wife'] }}</span>'s first name(s)
+            </label>
             <input class="govuk-input govuk-input--width-20" id="res-first-name" name="res-first-name" type="text" value="{{ data['res-first-name'] }}">
             </div>
-            
+
             <div class="govuk-form-group">
             <label class="govuk-label" for="width-20">
-               Your husband's or wife's middle name(s)
-            </label> 
+               Your <span id='data4'>{{ data['husband-wife'] }}</span>'s middle name(s)
+            </label>
             <input class="govuk-input govuk-input--width-20" id="res-middle-name" name="res-middle-name" type="text" value="{{ data['res-middle-name'] }}">
             </div>
-            
+
             <div class="govuk-form-group">
             <label class="govuk-label" for="width-20">
-               Your husband's or wife's last name(s)
-            </label>  
+               Your <span id='data5'>{{ data['husband-wife'] }}</span>'s last name(s)
+            </label>
             <input class="govuk-input govuk-input--width-20" id="res-last-name" name="res-last-name" type="text" value="{{ data['res-last-name'] }}">
-          </div> 
+          </div>
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
@@ -93,5 +93,19 @@
             </ul>
     </div>
 </details>
+
+//script to set a default if no answer was given
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+    document.getElementById('data3').innerHTML="husband or wife";
+    document.getElementById('data4').innerHTML="husband or wife";
+    document.getElementById('data5').innerHTML="husband or wife";
+  }
+</script>
 
 {% endblock %}

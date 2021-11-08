@@ -31,27 +31,27 @@
         <form action="/divorce/respondent_postal_address" method="post" novalidate>
 
           <div class="govuk-form-group">
-              
+
                   <h1 class="govuk-heading-l">
-                    Do you have your husband’s or wife’s postal address?
+                    Do you have your <span id='data1'>{{ data['husband-wife'] }}</span>'s postal address?
                   </h1>
-                
-                  
+
+
                   <p class="govuk-body">
-                  The court needs your husband’s or wife’s address, to notify them about the divorce.    
-                  </p> 
-                  
+                  The court needs your <span id='data2'>{{ data['husband-wife'] }}</span>'s address, to notify them about the divorce.    
+                  </p>
+
                   <div class="govuk-inset-text">
                       <p>It can be their home address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission. </p>
                       <p>
                       If you do not know their current address then you can use their last-known address.</p>
                     </div>
-                  
+
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="Yes, I have their address" {{ checked("respondent-address", "Yes, I have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-1">
-                      Yes, I have their address   
+                      Yes, I have their address
                     </label>
                   </div>
                   <div class="govuk-radios__item">
@@ -60,9 +60,9 @@
                       No, I do not have their address
                     </label>
                   </div>
-                </div> 
-                 
-              
+                </div>
+
+
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
@@ -99,5 +99,15 @@
             </ul>
     </div>
 </details>
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+  }
+</script>
+
 
 {% endblock %}
