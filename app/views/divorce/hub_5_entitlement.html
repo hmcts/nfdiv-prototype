@@ -86,46 +86,54 @@
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
 <p> Your application for a 'conditional order' has been accepted. The court agrees that you are entitled to get divorced.</p>
-<p> A judge will 'pronounce' (read out) your conditional order at a hearing. The hearing will take place at Fox Court, Holborn on 27 November 2021 at 3:35PM.</p>
+<p> A judge will 'pronounce' (read out) your conditional order at a hearing. The hearing will take place at Fox Court, Holborn on <span id='date-time0'></span> at 3:35PM.</p>
 
 
 <div class="govuk-inset-text">
   You do not need to come to the hearing, unless you want to object. You must contact the court by <span id='date-time1'></span> if you want to attend.
 </div>
 
-<script>
-
-  var targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 14);
-
-  var dd = targetDate.getDate();
-  var mm = targetDate.getMonth(); // 0 is January, so we must add 1
-  var yyyy = targetDate.getFullYear();
-
-  const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  var dateString = dd + " " + months[mm]  + " " + yyyy;
-  document.getElementById('date-time1').innerHTML=dateString;
-
-</script>
 
 
 
-<p>After your conditional order has been pronounced, you will then be able to apply for a 'final order' on <span id='date-time'></span>.
+<p>After your conditional order has been pronounced, you will then be able to apply for a 'final order' on <span id='date-time2'></span>.
   This is the final step in the divorce process and will legally end your marriage. </p>
 
 
  <script>
 
+   const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
    var targetDate = new Date();
-   targetDate.setDate(targetDate.getDate() + 43);
+   targetDate.setDate(targetDate.getDate() + 14);
 
    var dd = targetDate.getDate();
    var mm = targetDate.getMonth(); // 0 is January, so we must add 1
    var yyyy = targetDate.getFullYear();
-
-   const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
    var dateString = dd + " " + months[mm]  + " " + yyyy;
-   document.getElementById('date-time').innerHTML=dateString;
+
+   document.getElementById('date-time0').innerHTML=dateString;
+
+
+   targetDate = new Date();
+   targetDate.setDate(targetDate.getDate() + 7);
+
+   dd = targetDate.getDate();
+   mm = targetDate.getMonth(); // 0 is January, so we must add 1
+   yyyy = targetDate.getFullYear();
+   dateString = dd + " " + months[mm]  + " " + yyyy;
+
+   document.getElementById('date-time1').innerHTML=dateString;
+
+   targetDate = new Date();
+   targetDate.setDate(targetDate.getDate() + 56);
+
+   dd = targetDate.getDate();
+   mm = targetDate.getMonth(); // 0 is January, so we must add 1
+   yyyy = targetDate.getFullYear();
+   dateString = dd + " " + months[mm]  + " " + yyyy;
+
+   document.getElementById('date-time2').innerHTML=dateString;
 
  </script>
 

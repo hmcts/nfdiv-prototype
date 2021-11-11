@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Changes to your name - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="name_changed_v2">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/joint_divorce/applicant-phone-number" method="post" novalidate>
+
+             <div class="govuk-form-group">
+
+                      <h1 class="govuk-heading-l">
+                        Changes to your name
+                      </h1>
+
+
+                      <p class="govuk-body">The court needs to know if you have changed your name.</p>
+
+                  <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="surname">
+              Did you change your last name when you got married?
+            </label>
+                      <div id="changed-name-hint" class="govuk-hint">
+      For example, from a maiden name
+    </div>
+
+            <div class="govuk-radios govuk-radios--inline">
+                 <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="surname-1" name="surname" type="radio" value="Yes" {{ checked("surname", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="surname-1">
+                    Yes
+                    </label>
+                </div>
+                  <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="surname-2" name="surname" type="radio" value="No" {{ checked("surname", "No") }}>
+                     <label class="govuk-label govuk-radios__label" for="surname-2">
+                     No
+                     </label>
+                </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="part-of-your-name">
+              Have you changed any part of your name since getting married?
+            </label>
+
+              <div id="changed-name-hint" class="govuk-hint">
+      For example, by deed poll
+    </div>
+
+            <div class="govuk-radios govuk-radios--inline">
+                 <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="part-of-your-name-1" name="part-of-your-name" type="radio" value="Yes" {{ checked("part-of-your-name", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="part-of-your-name-1">
+                    Yes
+                    </label>
+                </div>
+                  <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="part-of-your-name-2" name="part-of-your-name" type="radio" value="No" {{ checked("part-of-your-name", "No") }}>
+                     <label class="govuk-label govuk-radios__label" for="part-of-your-name-2">
+                     No
+                     </label>
+                </div>
+            </div>
+          </div>
+         </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
