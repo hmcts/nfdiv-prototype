@@ -55,8 +55,9 @@
       </li>
 
 
+
       <li class="hmcts-progress-bar__list-item" aria-current="step">
-        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+        <span class="hmcts-progress-bar__icon"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Conditional order</span>
       </li>
 
@@ -72,68 +73,42 @@
 
 
 
-
-
-
-
-
-      <h2 class="govuk-heading-m">Latest update</h2>
+      <h2 class="govuk-heading-m">Latest information</h2>
 
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
-<p> You have been granted a ‘conditional order’ by the court. Your conditional order was formally pronounced (read out) by a judge at Fox Court, Holborn on 26 October 2021. Your husband or wife has also been notified.
-</p>
+<p> The court will review the additional information you have provided. You’ll receive an update by <span id='date-time'></span> after it’s been checked.  </p>
 
 
 
 
-<div class="govuk-inset-text">
- You are not divorced yet. You still have to apply for a final order which will end the marriage.
- You can apply for a final order on <span id='date-time'></span> . This will end your marriage.
-</div>
+<script>
 
+  var targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 14);
 
+  var dd = targetDate.getDate();
+  var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+  var yyyy = targetDate.getFullYear();
 
+  const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var dateString = dd + " " + months[mm]  + " " + yyyy;
+  document.getElementById('date-time').innerHTML=dateString;
 
-          <script>
+</script>
 
-            var targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 42);
+<!--
+<h3 class="govuk-heading-s">What happens next</h3>
 
-            var dd = targetDate.getDate();
-            var mm = targetDate.getMonth(); // 0 is January, so we must add 1
-            var yyyy = targetDate.getFullYear();
+<p>The court will check your updated application. If it passes the checks then it will be sent to your husband or wife. They will need to confirm they have received it.  </p>
 
-            const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            var dateString = dd + " " + months[mm]  + " " + yyyy;
-            document.getElementById('date-time').innerHTML=dateString;
-
-          </script>
-
-          <p>You can <a href="#">view and download your ‘certificate of entitlement for a conditional order’</a>.  This is the document that says the court does not see any reason why you cannot get divorced.</p>
-
-
-        <!--
-
-
-
-  <p >  Your application for divorce has been submitted and checked by court staff. It has now been ‘issued’ to you and your husband or wife by email.</p>
-
-  <p >You have to confirm that you have received and accept the application for divorce. This is known as ‘acknowledging service’.</p>
-
-  <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
-
-   -->
-
-
-
-
+<p>You will receive another update by 10 November 2021.</p>
+-->
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_7">Find out about dividing money and property </a></p>
+<p><a href="hub_3">Find out about dividing money and property </a></p>
 <p><a href="">Find out more about conditional orders </a></p>
-<p><a href="">Find out more about final orders </a></p>
       </div>
 
       <br>
@@ -155,9 +130,6 @@
 
       <p>  <a href="">View the divorce application (PDF)</a></p>
 
-
-
-    <p>  <a href="">View the certificate of entitlement (PDF)</a></p>
 
 
         <p>  <a href="check_contact_details">Review your contact details</a></p>
