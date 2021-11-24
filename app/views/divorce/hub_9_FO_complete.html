@@ -54,14 +54,18 @@
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Submitted</span>
       </li>
 
+      <li class="hmcts-progress-bar__list-item">
+        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+        <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Response</span>
+      </li>
 
-      <li class="hmcts-progress-bar__list-item" aria-current="step">
+      <li class="hmcts-progress-bar__list-item">
         <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Conditional order</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item">
-        <span class="hmcts-progress-bar__icon"></span>
+      <li class="hmcts-progress-bar__list-item" aria-current="step">
+        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Final order (Divorced)</span>
       </li>
 
@@ -71,26 +75,18 @@
       <div class="govuk-!-padding-bottom-4"></div>
 
 
+          <h2 class="govuk-heading-m">Latest update</h2>
 
+        <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
+    <p> Your final order has been granted. You are now legally divorced.
 
-
-
-
-      <h2 class="govuk-heading-m">Latest update</h2>
-
-      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
-
-<p> You have been granted a ‘conditional order’ by the court. Your conditional order was formally pronounced (read out) by a judge at Fox Court, Holborn on 26 October 2021. Your husband or wife has also been notified.
 </p>
 
 
+<p><<a href="#">Download a copy of your ‘final order’</a>. This is the document that shows your marriage is legally ended. You may need it so you should save a copy for your records.
+</p>
 
-
-<div class="govuk-inset-text">
- You are not divorced yet. You still have to apply for a final order which will end the marriage.
- You can apply for a final order on <span id='date-time'></span> . This will end your marriage.
-</div>
 
 
 
@@ -98,7 +94,7 @@
           <script>
 
             var targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 42);
+            targetDate.setDate(targetDate.getDate() + 7);
 
             var dd = targetDate.getDate();
             var mm = targetDate.getMonth(); // 0 is January, so we must add 1
@@ -110,20 +106,8 @@
 
           </script>
 
-          <p>You can <a href="#">view and download your ‘certificate of entitlement for a conditional order’</a>.  This is the document that says the court does not see any reason why you cannot get divorced.</p>
 
 
-        <!--
-
-
-
-  <p >  Your application for divorce has been submitted and checked by court staff. It has now been ‘issued’ to you and your husband or wife by email.</p>
-
-  <p >You have to confirm that you have received and accept the application for divorce. This is known as ‘acknowledging service’.</p>
-
-  <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
-
-   -->
 
 
 
@@ -131,7 +115,7 @@
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_7">Find out about dividing money and property </a></p>
+<p><a href="">Find out about dividing money and property </a></p>
 <p><a href="">Find out more about conditional orders </a></p>
 <p><a href="">Find out more about final orders </a></p>
       </div>
@@ -155,11 +139,9 @@
 
       <p>  <a href="">View the divorce application (PDF)</a></p>
 
-
+  <p>  <a href="">View the response to the divorce application (PDF)</a></p>
 
     <p>  <a href="">View the certificate of entitlement (PDF)</a></p>
-
-
         <p>  <a href="check_contact_details">Review your contact details</a></p>
 
 
