@@ -31,6 +31,21 @@ router.post('/divorce/marriage_date_2', function (req, res) {
 })
 
 
+router.post('/divorce/confirmation', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+
+  const over18 = req.session.data['papers-served-email']
+
+  if (over18 === 'checked') {
+    res.redirect('/divorce/confirmation_self_serve')
+  } else {
+    res.redirect('/divorce/confirmation')
+  }
+})
+
 
 
 
