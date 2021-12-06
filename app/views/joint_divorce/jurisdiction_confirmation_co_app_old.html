@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - You can use the English or Welsh courts to get a divorce - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="/joint_divorce/life_based_in_uk_co_app.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/joint_divorce/your_names_co_app" method="post" novalidate>
+
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    You can use the English or Welsh courts to get a divorce
+                  </h1>
+
+                  <p class="govuk-body">
+                  Your answers indicate that you can apply for a divorce in England or Wales because both of you are 'habitually resident'.
+                  </p>
+
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Read more about habitual residence
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    If your life is mainly based in England or Wales then you're what is legally known as 'habitually resident'.
+                  </div>
+                  <div class="govuk-details__text">
+                    This may include working, owning property, having children in school, or your main family life taking place in England or Wales.
+                  </div>
+                  <div class="govuk-details__text">
+                    The examples above aren't a complete list of what makes up habitual residence, and just because some of them apply to you doesn't mean you're habitually resident. If you're not sure, you should get legal advice.
+                  </div>
+              </details>
+
+            </div>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                      Do you want to add more connections to England and Wales?
+                  </h1>
+                </legend>
+
+                <p>You only need to do this if your husband or wife may disagree that both of you are habitually resident.</p>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="true" {{ checked("help-fees", "true") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-1">
+                      I'm confident that connection is right
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="false" {{ checked("help-fees", "false") }}>
+                    <label class="govuk-label govuk-radios__label" for="help-fees-2">
+                      I'm not sure, and I want to add more connections
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
