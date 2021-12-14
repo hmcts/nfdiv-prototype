@@ -74,12 +74,10 @@
 
         <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
-    <p> You have applied for a ‘final order’. Your application will be checked by court staff.
+          <p>You have applied for a ‘final order’. Your husband or wife also has to apply because this is a joint application. They have been sent an email reminder. </p>
 
-</p>
+<p>If they do not apply by <span id='date-time'></span> then you will be sent an email telling you how you can finalise your divorce. </p>
 
-
-<p>You will receive an email by <span id='date-time'></span> after your application has been checked.</p>
 
 
 
@@ -88,7 +86,7 @@
           <script>
 
             var targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 7);
+            targetDate.setDate(targetDate.getDate() + 14);
 
             var dd = targetDate.getDate();
             var mm = targetDate.getMonth(); // 0 is January, so we must add 1
@@ -109,8 +107,8 @@
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_9_FO_complete">Find out about dividing money and property </a></p>
-<p><a href="">Find out more about conditional orders </a></p>
+<p><a href="hub_8_second">Find out about dividing money and property </a></p>
+<p><a href="hub_8_no_second">Find out more about conditional orders </a></p>
 <p><a href="">Find out more about final orders </a></p>
       </div>
 

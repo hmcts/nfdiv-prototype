@@ -1,0 +1,207 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you have your husband’s or wife’s postal address? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/divorce/respondent_no_address_no_email" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Enter their solicitor’s details
+                  </h1>
+                </legend>
+
+
+                <p>The divorce application will be ‘served’ (sent) to your husband’s or wife’s solicitor.
+                  If you need to check the details then you can save and sign out and return to the application when you have got them.
+</p>
+
+<p>If you know you will not be able to get their solicitor’s details then you can select ‘I do not know their details’ before continuing. </p>
+
+                  <!-- <p class="govuk-body">
+                  It’s important you provide your husband’s or wife’s address. You did not provide their email address and the court needs a way to ‘serve’ (deliver) the divorce papers to them.
+                  </p>  -->
+
+                  <!-- <div class="govuk-inset-text">
+                      <p>It can be their home address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission. </p>
+
+                      <p>If you do not know their current address then you can use their last-known address. If they do not respond at the address you provide, then you will need to make a separate application to serve (deliver) the papers to them another way.</p>
+
+                    </div> -->
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="address-town">
+                        Solicitor name (optional)
+                      </label>
+                      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
+
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="address-town">
+                            Firm name
+                          </label>
+                          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="address-line-1">
+                            Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+                          </label>
+                          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1"></div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="address-line-2">
+                            <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+                          </label>
+                          <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2"></div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="address-town">
+                            Town or city
+                          </label>
+                          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="address-county">
+                            County
+                          </label>
+                          <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="address-postcode">
+                            Postcode
+                          </label>
+                          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-postcode">
+                              Solicitor email address
+                            </label>
+
+                            <div id="event-name-hint" class="govuk-hint">
+  The email address of the solicitor detailing with the case
+</div>
+
+
+                            <input class="govuk-input govuk-!-width-two-thirds" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+                          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                  I do not know their details
+                                </label>
+                              </div>
+
+                          </div>
+
+
+
+
+
+<!--
+
+
+
+                      <h3 class="govuk-heading-m">
+                        Where should the court send your husband or wife's divorce papers?
+                      </h3>
+
+
+                      <p class="govuk-body">
+                        The court needs to ‘serve’ (send) the divorce application to your  <span id='data2'>{{ data['husband-wife'] }}</span>.
+                        If they have told you they want to receive the papers at a specific address, then you should enter that address. For example, their solicitor’s address.
+                      </p>
+
+
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="respondent-address-1" name="represented-address" type="radio" value="Yes, I have their address" {{ checked("represented-address", "Yes, I have their address") }}>
+                        <label class="govuk-label govuk-radios__label" for="respondent-address-1">
+                          Their home address
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
+                        <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                          Their solicitor's address
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
+                        <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                          Another address
+                        </label>
+                      </div>
+                    </div>
+<div class="govuk-!-padding-bottom-12"></div>
+-->
+
+    </fieldset>
+
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
