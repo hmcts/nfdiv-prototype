@@ -21,14 +21,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_email.html">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/respondent_no_address_no_email" method="post" novalidate>
+        <form action="/divorce/respondent_solicitor_address_enter" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -57,104 +57,6 @@
                     <label class="govuk-label govuk-radios__label" for="respondent-address-3">
                       Yes
                     </label>
-                  </div>
-
-
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="known">
-
-
-                    <fieldset class="govuk-fieldset">
-
-
-                          <h3 class="govuk-heading-m">
-                              Enter your husband or wife's solicitor details
-                          </h3>
-
-
-
-
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="address-town">
-                            Firm name
-                          </label>
-                          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
-
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="address-line-1">
-                            Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-                          </label>
-                          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1"></div>
-
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="address-line-2">
-                            <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-                          </label>
-                          <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2"></div>
-
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="address-town">
-                            Town or city
-                          </label>
-                          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
-
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="address-county">
-                            County
-                          </label>
-                          <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
-
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="address-postcode">
-                            Postcode
-                          </label>
-                          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
-
-
-
-
-<!--
-
-
-
-                      <h3 class="govuk-heading-m">
-                        Where should the court send your husband or wife's divorce papers?
-                      </h3>
-
-
-                      <p class="govuk-body">
-                        The court needs to ‘serve’ (send) the divorce application to your  <span id='data2'>{{ data['husband-wife'] }}</span>.
-                        If they have told you they want to receive the papers at a specific address, then you should enter that address. For example, their solicitor’s address.
-                      </p>
-
-
-                    <div class="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="respondent-address-1" name="represented-address" type="radio" value="Yes, I have their address" {{ checked("represented-address", "Yes, I have their address") }}>
-                        <label class="govuk-label govuk-radios__label" for="respondent-address-1">
-                          Their home address
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
-                        <label class="govuk-label govuk-radios__label" for="respondent-address-2">
-                          Their solicitor's address
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
-                        <label class="govuk-label govuk-radios__label" for="respondent-address-2">
-                          Another address
-                        </label>
-                      </div>
-                    </div>
-<div class="govuk-!-padding-bottom-12"></div>
--->
-
-    </fieldset>
-
-
-
-
                   </div>
 
 
