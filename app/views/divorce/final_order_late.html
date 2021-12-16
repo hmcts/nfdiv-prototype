@@ -34,12 +34,12 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Late application for a final order
+                    Explain the delay
                   </h1>
                 </legend>
 
                 <p>You are making this application for a final order over one year from when the conditional order was made.
-                  Explain to the court why you have taken so long to make this application. Your answer will be reviewed as part of your application. </p>
+                  Explain to the court why you did not apply for a final order earlier. Your answer will be reviewed as part of your application. </p>
 
 
 <div class="govuk-form-group">
@@ -54,10 +54,23 @@
 </div>
 
 
-
-
               </fieldset>
+
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked" {{ checked("statement-truth", "checked") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
+                    I believe that the facts stated in this application are true
+                  </label>
+                </div>
+              </div>
             </div>
+
+            <p class="govuk-body">
+                      This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.
+                      </p>
+
+
 
             <button class="govuk-button" data-module="govuk-button">
             Submit

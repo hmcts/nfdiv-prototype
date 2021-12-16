@@ -34,20 +34,13 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Does your husband or wife have a solicitor?
+                    Has your husband or wife given you a specific address where they want the divorce papers to be ‘served’ (sent)?
                   </h1>
                 </legend>
 
-                  <!-- <p class="govuk-body">
-                  It’s important you provide your husband’s or wife’s address. You did not provide their email address and the court needs a way to ‘serve’ (deliver) the divorce papers to them.
-                  </p>  -->
+                <p>Your husband or wife may have given you an email or postal address where they want the divorce papers to be sent. For example, their solicitor’s address or an address which is not their home address. </p>
 
-                  <!-- <div class="govuk-inset-text">
-                      <p>It can be their home address or their solicitor’s address. It can be UK or international. If you use their work address, you need to ask their permission. </p>
-
-                      <p>If you do not know their current address then you can use their last-known address. If they do not respond at the address you provide, then you will need to make a separate application to serve (deliver) the papers to them another way.</p>
-
-                    </div> -->
+<p>If they have not, then you will be asked to provide their personal email and postal address, where the papers will be served (sent). </p>
 
 
 
@@ -55,26 +48,41 @@
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="respondent-address-3" name="respondent-address-no-email" data-aria-controls="known" type="radio" value="Yes, I have their address" {{ checked("respondent-address-no-email", "Yes, I have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-3">
-                      Yes
+                      Yes, they have given me a specific address
                     </label>
                   </div>
 
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="known">
 
+                      <div class="govuk-form-group">
+                        <div class="govuk-radios">
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="Yes, I have their address">
+                            <label class="govuk-label govuk-radios__label" for="another1">
+                              Their solicitor’s email or postal address
+                            </label>
+                          </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="No, I have their address">
+                            <label class="govuk-label govuk-radios__label" for="another1">
+                              Another email or postal address
+                            </label>
+                          </div>
+
+                          </div>
+                          </div>
+
+                    </div>
 
 
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="respondent-address-4" name="respondent-address-no-email" type="radio" value="No, I do not have their address" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-4">
-                      No
+                      No they have not
                     </label>
-                  </div>
-
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-4" name="respondent-address-no-email" type="radio" value="No, I do not have their address" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-4">
-                      I don't know
-                    </label>
-                  </div>
+                  </div
 
 
                 </div>

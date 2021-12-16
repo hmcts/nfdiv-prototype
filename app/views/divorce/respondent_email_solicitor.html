@@ -2,7 +2,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  Apply for a divorce - Do you have your husband’s or wife’s postal address? - GOV.UK
+  Apply for a divorce - Enter your {husband / wife’s} email address - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,52 +21,55 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_email.html">Back</a>
+  <a class="govuk-back-link" href="applicant_address_select_v2.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/respondent_postal_address" method="post" novalidate>
+        <h1 class="govuk-heading-l">Enter your <span id='data1'>{{ data['husband-wife'] }}</span>'s email address</h1>
+
+        <form action="/divorce/respondent_address" method="post" novalidate>
 
           <div class="govuk-form-group">
 
-                  <h1 class="govuk-heading-l">
-                    Do you have your <span id='data1'>{{ data['husband-wife'] }}</span>'s postal address?
-                  </h1>
+            <p class="govuk-body">
 
+It’s important you provide their email address so the court can contact them about the divorce, if they need to.
+            </p>
 
-                  <p class="govuk-body">
-                  The court needs your <span id='data2'>{{ data['husband-wife'] }}</span>'s address, to notify them about the divorce.
-                  </p>
+              <div class="govuk-inset-text">
+                 Enter the email address which they actively use for personal emails. You should avoid using their work email address because it may not be private.
 
-                  <div class="govuk-inset-text">
-                      <p>It should be an address where they can receive the letter. It can be UK or international. If you use their work address, you need to ask their permission. If you do not know their current address then you can use their last-known address.  </p>
-            
-                    </div>
+                </div>
 
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-1" name="respondent-address" type="radio" value="Yes, I have their address" {{ checked("respondent-address", "Yes, I have their address") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-1">
-                      Yes, I have their address
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-2" name="respondent-address" type="radio" value="No, I do not have their address" {{ checked("respondent-address", "No, I do not have their address") }}>
-                    <label class="govuk-label govuk-radios__label" for="respondent-address-2">
-                      No, I do not have their address
+           <label class="govuk-label" for="width-20">
+               Your <span id='data2'>{{ data['husband-wife'] }}</span>'s email address
+
+            </label>
+
+            <input class="govuk-input" id="res-email" name="res-email" value="{{ data['res-email'] }}" type="email" spellcheck="false" autocomplete="email">
+
+            </div>
+
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+
+                    <input class="govuk-checkboxes__input" id="no-email-1" name="no-email" type="checkbox" value="I do not know their email address" >
+                    <label class="govuk-label govuk-checkboxes__label" for="no-email-1">
+                      I do not know their email address
+
                     </label>
                   </div>
                 </div>
-
-
             </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>
@@ -107,6 +110,7 @@
     document.getElementById('data2').innerHTML="husband or wife";
   }
 </script>
+
 
 
 {% endblock %}
