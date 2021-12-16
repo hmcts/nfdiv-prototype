@@ -28,7 +28,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="respondent_email" method="post" novalidate>
+        <form action="respondent_email_solicitor" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -39,11 +39,10 @@
                 </legend>
 
 
-                <p>The divorce application will be ‘served’ (sent) to your husband’s or wife’s solicitor.
-                  If you need to check the details then you can save and sign out and return to the application when you have got them.
-</p>
+                <p>The divorce application will be ‘served’ (sent) to your husband’s or wife’s solicitor.</p>
 
-<p>If you know you will not be able to get their solicitor’s details then you can select ‘I do not know their details’ before continuing. </p>
+
+<p>If you need to get their solicitor’s details then you can save and sign out and return to the application when you have got them. </p>
 
                   <!-- <p class="govuk-body">
                   It’s important you provide your husband’s or wife’s address. You did not provide their email address and the court needs a way to ‘serve’ (deliver) the divorce papers to them.
@@ -64,12 +63,38 @@
                       </label>
                       <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
 
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-postcode">
+                          Solicitor email address
+                        </label>
+
+                        <div id="event-name-hint" class="govuk-hint">
+                        The email address of the solicitor detailing with the case
+                        </div>
+
+                        <input class="govuk-input govuk-!-width-two-thirds" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+
 
                         <div class="govuk-form-group">
                           <label class="govuk-label" for="address-town">
-                            Firm name
+                          Solicitor firm name
                           </label>
+
+                          <div id="event-name-hint" class="govuk-hint">
+                          The name of the organisation or firm
+                          </div>
+
                           <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
+<div class="govuk-!-padding-bottom-2"></div>
+
+                          <label class="govuk-label" for="address-town">Solicitor address    </label>
+
+                            <div id="event-name-hint" class="govuk-hint">
+                              The address where any correspondence will be sent
+                              </div>
+
+                              <div class="govuk-!-padding-bottom-2"></div>
 
                         <div class="govuk-form-group">
                           <label class="govuk-label" for="address-line-1">
@@ -101,18 +126,9 @@
                           </label>
                           <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
 
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="address-postcode">
-                              Solicitor email address
-                            </label>
-
-                            <div id="event-name-hint" class="govuk-hint">
-  The email address of the solicitor detailing with the case
-</div>
 
 
-                            <input class="govuk-input govuk-!-width-two-thirds" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
-
+<!--
                           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                               <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
