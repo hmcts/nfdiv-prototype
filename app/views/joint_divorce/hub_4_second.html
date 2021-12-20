@@ -3,6 +3,7 @@
 {% block pageTitle %}
   Confirmation page example
 {% endblock %}
+
 {% block beforeContent %}
 
 <div class="govuk-phase-banner">
@@ -20,6 +21,7 @@
 </div>
 
 {% endblock %}
+
 
 {% block content %}
 
@@ -42,48 +44,40 @@
 
 
 
+      <div class="govuk-!-padding-bottom-8"></div>
 
-                    <div class="govuk-!-padding-bottom-8"></div>
+      <div class="hmcts-progress-bar">
+      <ol class="hmcts-progress-bar__list">
 
-                    <div class="hmcts-progress-bar">
-                    <ol class="hmcts-progress-bar__list">
+      <li class="hmcts-progress-bar__list-item"  >
+        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+        <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Submitted</span>
+      </li>
 
-                    <li class="hmcts-progress-bar__list-item">
-                      <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-                      <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Submitted</span>
-                    </li>
+      <li class="hmcts-progress-bar__list-item" aria-current="step">
+        <span class="hmcts-progress-bar__icon"></span>
+        <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Conditional order</span>
+      </li>
 
-                    <li class="hmcts-progress-bar__list-item"  >
-                      <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-                      <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Response</span>
-                    </li>
+      <li class="hmcts-progress-bar__list-item">
+        <span class="hmcts-progress-bar__icon"></span>
+        <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Final order (Divorced)</span>
+      </li>
 
-                    <li class="hmcts-progress-bar__list-item" aria-current="step" >
-                      <span class="hmcts-progress-bar__icon"></span>
-                      <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Conditional order</span>
-                    </li>
+      </ol>
+      </div>
 
-                    <li class="hmcts-progress-bar__list-item">
-                      <span class="hmcts-progress-bar__icon"></span>
-                      <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Final order (Divorced)</span>
-                    </li>
-
-                    </ol>
-                    </div>
-
-                    <div class="govuk-!-padding-bottom-4"></div>
+      <div class="govuk-!-padding-bottom-4"></div>
 
 
 
-      <h2 class="govuk-heading-m">Latest update</h2>
+      <h2 class="govuk-heading-m">What you need to do</h2>
 
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
+<p> You can now apply for a ‘conditional order’. This is a document that says that the court does not see any reason why you cannot divorce.</p>
 
 
-        <p>You have responded to the divorce application. </p>
-
-        <p> Your husband or wife can now apply for a 'conditional order'. This is a document that says that the court does not see any reason why you cannot divorce. They have been sent an email reminder. </p>
 
 
         <!--
@@ -98,11 +92,19 @@
 
 -->
 
+<form action="continue_with_conditional_order_second" method="post" novalidate>
+       <button type="submit" class="govuk-button" data-module="govuk-button">
+         Apply for conditional order
+       </button>
+
+       </form>
+
+
+
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_4">Find out about dividing money and property </a></p>
-<p><a href="">Find out more about conditional orders</a></p>
-
+<p><a href="">Find out about dividing money and property</a></p>
+<p><a href="">Find out more about conditional orders<a></p>
       </div>
 
       <br>
@@ -123,7 +125,7 @@
       <h2 class="govuk-heading-s">I want to...</h2>
 
       <p>  <a href="">View the divorce application (PDF)</a></p>
-      <p>  <a href="check_contact_details">Review your contact details</a></p>
+        <p>  <a href="check_contact_details">Review your contact details</a></p>
 
 
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">

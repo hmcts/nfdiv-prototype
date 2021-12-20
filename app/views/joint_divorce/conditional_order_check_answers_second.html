@@ -1,0 +1,242 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Other court cases relating your marriage, property or children - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="width:60%">
+          Do you want to continue with your joint divorce?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> who are you divorcing</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+
+
+  Is the information in this application still correct?
+          </dt>
+          <dd class="govuk-summary-list__value">
+          Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> type of relationship</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+
+
+
+
+
+<!--
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Service type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          I agree that the divorce service can send me notifications and serve (deliver) court documents to me by email.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden"> email address</span>
+          </a>
+        </dd>
+      </div>
+
+      -->
+
+
+        <!--
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you need the court to keep your address private from your husband or wife?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-private'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> address private</span>
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            1 Main Street
+            <br>London
+            <br>{{ data['address-postcode-v2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+
+        -->
+
+
+
+
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Confirm before submitting</h2>
+
+<!--
+        <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
+                      I confirm that I’m applying to the court to:
+                    </label>
+                  </div>
+                </div>
+            </div>
+
+          <div class="govuk-form-group">
+                <ul class="govuk-list govuk-list--bullet" style="text-align: left">
+                    <li>dissolve my marriage (get a divorce)</li>
+                    <li>decide how our money and property will be split (known as a financial order) </li>
+                  </ul>
+            </div>
+
+        <p class="govuk-body">
+                  This confirms what you are asking the court to do. It’s known as ‘the prayer’.
+                  </p>
+-->
+
+                  <div class="govuk-form-group">
+                          <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
+                                I believe that the facts stated in this application are true
+                              </label>
+                            </div>
+                          </div>
+                      </div>
+
+                      <p class="govuk-body">
+                                This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.
+                                </p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+                                <div class="govuk-warning-text">
+                                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                  <strong class="govuk-warning-text__text">
+                                    <span class="govuk-warning-text__assistive">Warning</span>
+                                  <div style="margin-top: -20px;">  Proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement verified by a statement of truth without an honest belief in its truth.</div>
+                                  </strong>
+                                </div>
+
+
+
+
+
+
+            </div>
+  </div>
+
+
+      <form action="hub_6" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}
