@@ -28,7 +28,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/financial_order_details" method="post" novalidate>
+        <form action="financial_order_details" method="post" novalidate>
 
           <div class="govuk-form-group">
 
@@ -42,10 +42,10 @@
 
 
                   <div class="govuk-!-padding-bottom-2"></div>
-                  
+
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="financial-order" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order" {{ checked("financial-order", "Yes, I want to apply for a financial order") }}>
+                        <input class="govuk-radios__input" id="financial-order" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order">
                         <label class="govuk-label govuk-radios__label" for="financial-order" style="margin-top: -12px">
                           I agree with my husband or wife about how to divide our money and property. I want the court to make our agreement legally binding.
                         </label>
@@ -61,7 +61,7 @@
 <div class="govuk-!-padding-bottom-2"></div>
 
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="financial-order-2" name="financial-order" type="radio" value="No, I do not want to apply for a financial order" data-aria-controls="conditional-financial-order-2" {{ checked("financial-order", "No, I do not want to apply for a financial order") }}>
+                        <input class="govuk-radios__input" id="financial-order-2" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order-2">
                         <label class="govuk-label govuk-radios__label" for="financial-order-2" style="margin-top: -12px">
                            I disagree with my husband or wife about how to divide our money and property. I want the court to decide for us.
                         </label>
