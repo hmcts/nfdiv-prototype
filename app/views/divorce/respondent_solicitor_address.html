@@ -46,7 +46,7 @@
 
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-3" name="respondent-address-no-email" data-aria-controls="known" type="radio" value="Yes, I have their address" {{ checked("respondent-address-no-email", "Yes, I have their address") }}>
+                    <input class="govuk-radios__input" id="respondent-address-3" name="respondent-address-no-email" data-aria-controls="known" type="radio" value="Yes, I have their address">
                     <label class="govuk-label govuk-radios__label" for="respondent-address-3">
                       Yes, they have given me a specific address
                     </label>
@@ -58,14 +58,14 @@
                         <div class="govuk-radios">
 
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="Yes, I have their address">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="solicitor">
                             <label class="govuk-label govuk-radios__label" for="another1">
                               Their solicitor’s email or postal address
                             </label>
                           </div>
 
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="No, I have their address">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="another">
                             <label class="govuk-label govuk-radios__label" for="another1">
                               Another email or postal address
                             </label>
@@ -78,7 +78,7 @@
 
 
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-4" name="respondent-address-no-email" type="radio" value="No, I do not have their address" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
+                    <input class="govuk-radios__input" id="another1" name="respondent-address-no-email" type="radio" value="home" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-4">
                       No they have not
                     </label>

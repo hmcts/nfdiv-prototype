@@ -54,17 +54,17 @@
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Submitted</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item"  >
+      <li class="hmcts-progress-bar__list-item">
         <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Response</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item">
-        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+      <li class="hmcts-progress-bar__list-item" aria-current="step">
+        <span class="hmcts-progress-bar__icon"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Conditional order</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item"  aria-current="step" >
+      <li class="hmcts-progress-bar__list-item">
         <span class="hmcts-progress-bar__icon"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Final order (Divorced)</span>
       </li>
@@ -75,46 +75,54 @@
       <div class="govuk-!-padding-bottom-4"></div>
 
 
-        <h2 class="govuk-heading-m">Latest update</h2>
 
-        <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
+      <h2 class="govuk-heading-m">Latest information</h2>
 
-    <p>You have applied for permission to finalise the divorce.</p>
+      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
+
+<p> Post the documents requested by the court to:</p>
+
+<p class="govuk-body">
+  <strong>Courts and Tribunals Service Centre</strong>
+  <br>HMCTS Divorce and Dissolution service
+  <br>PO Box 12706
+  <br>Harlow
+  <br>CM20 9QT
+
+  </p>
 
 
-<p>You will receive an email by <span id='date-time'></span> after your application has been checked.</p>
-
-
-
-
-
-          <script>
-
-            var targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 14);
-
-            var dd = targetDate.getDate();
-            var mm = targetDate.getMonth(); // 0 is January, so we must add 1
-            var yyyy = targetDate.getFullYear();
-
-            const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            var dateString = dd + " " + months[mm]  + " " + yyyy;
-            document.getElementById('date-time').innerHTML=dateString;
-
-          </script>
+<p>You will receive an update when your documents have been received and checked. </p>
 
 
 
+<script>
 
+  var targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 14);
 
+  var dd = targetDate.getDate();
+  var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+  var yyyy = targetDate.getFullYear();
 
+  const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var dateString = dd + " " + months[mm]  + " " + yyyy;
+  document.getElementById('date-time').innerHTML=dateString;
 
+</script>
+
+<!--
+<h3 class="govuk-heading-s">What happens next</h3>
+
+<p>The court will check your updated application. If it passes the checks then it will be sent to your husband or wife. They will need to confirm they have received it.  </p>
+
+<p>You will receive another update by 10 November 2021.</p>
+-->
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="">Find out about dividing money and property </a></p>
+<p><a href="hub_3">Find out about dividing money and property </a></p>
 <p><a href="">Find out more about conditional orders </a></p>
-<p><a href="">Find out more about final orders </a></p>
       </div>
 
       <br>
@@ -135,6 +143,11 @@
       <h2 class="govuk-heading-s">I want to...</h2>
 
       <p>  <a href="">View the divorce application (PDF)</a></p>
+
+<p>  <a href="">  View the response to the divorce application (PDF)</a></p>
+
+
+
         <p>  <a href="check_contact_details">Review your contact details</a></p>
 
 

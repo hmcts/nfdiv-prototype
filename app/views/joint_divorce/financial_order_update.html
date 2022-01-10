@@ -56,9 +56,41 @@
                         <div class="govuk-body">
                           This is known as applying for a ‘financial order by consent’. The application is done separately and costs an additional £50. You do not have to go through with the application or pay if you select this option.
                           </div>
+
+                          <div class="govuk-form-group">
+
+                              <div class="govuk-!-padding-bottom-2"></div>
+
+                        <h2 class="govuk-heading-s">
+                              Who is the financial order for?
+                          </h2>
+
+                              <div id="changed-name-hint" class="govuk-hint">
+                                Select all that apply
                           </div>
 
-<div class="govuk-!-padding-bottom-2"></div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-type" name="financial-order-type" type="checkbox" value="Me" {{ checked("financial-order-type", "Me") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-type">
+                                Me
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-2" name="financial-order-type" type="checkbox" value="My children" {{ checked("financial-order-type", "My children") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-2">
+                                The children
+                              </label>
+                            </div>
+                          </div>
+                              <div class="govuk-!-padding-bottom-2"></div>
+
+                        </div>
+
+
+                          </div>
+
+                          <div class="govuk-!-padding-bottom-2"></div>
 
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="financial-order-2" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order-2">
@@ -71,6 +103,37 @@
                         <div class="govuk-body">
                         This is known as applying for a ‘contested financial order’. The application is done separately and costs an additional £255. You do not have to go through with the application or pay if you select this option.
                           </div>
+
+                          <div class="govuk-form-group">
+
+                              <div class="govuk-!-padding-bottom-2"></div>
+
+                        <h2 class="govuk-heading-s">
+                              Who is the financial order for?
+                          </h2>
+
+                              <div id="changed-name-hint" class="govuk-hint">
+                                Select all that apply
+                          </div>
+
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-type" name="financial-order-type" type="checkbox" value="Me" {{ checked("financial-order-type", "Me") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-type">
+                                Me
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-2" name="financial-order-type" type="checkbox" value="My children" {{ checked("financial-order-type", "My children") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-2">
+                                The children
+                              </label>
+                            </div>
+                          </div>
+                              <div class="govuk-!-padding-bottom-2"></div>
+
+                        </div>
+
                           </div>
 
 <div class="govuk-!-padding-bottom-2"></div>
