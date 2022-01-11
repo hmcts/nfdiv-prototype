@@ -58,12 +58,21 @@ router.post('/divorce/respondent_solicitor_address_enter', function (req, res) {
 
 
   const over18 = req.session.data['another']
+  const secondcheck = req.session.data['another2']
 
-  if (over18 === 'solicitor') {
-    res.redirect('/divorce/respondent_solicitor_address_enter')
+  if (secondcheck === 'yes') {
+
+    if (over18 === 'solicitor') {
+      res.redirect('/divorce/respondent_solicitor_address_enter')
+    } else {
+      res.redirect('/divorce/respondent_email')
+    }
+
   } else {
     res.redirect('/divorce/respondent_email')
   }
+
+
 })
 
 
