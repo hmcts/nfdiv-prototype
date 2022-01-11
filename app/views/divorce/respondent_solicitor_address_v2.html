@@ -34,13 +34,9 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Has your husband or wife given you a specific address where they want the divorce papers to be ‘served’ (sent)?
+                    Does your husband or wife have a solicitor who is representing them for the divorce?
                   </h1>
                 </legend>
-
-                <p>Your husband or wife may have given you an email or postal address where they want the divorce papers to be sent. For example, their solicitor’s address or an address which is not their home address. </p>
-
-<p>If they have not, then you will be asked to provide their personal email and postal address, where the papers will be served (sent). </p>
 
 
 
@@ -48,13 +44,13 @@
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="respondent-address-3" name="another2" data-aria-controls="known" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="respondent-address-3">
-                      Yes, they have given me a specific address
+                      Yes, they have a solicitor representing them
                     </label>
                   </div>
 
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="known">
 
-                    <p>What type of address is it?</p>
+                    <p>Do you know their solicitor’s details?</p>
 
                       <div class="govuk-form-group">
                         <div class="govuk-radios">
@@ -62,23 +58,17 @@
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="another1" name="another" type="radio" value="solicitor">
                             <label class="govuk-label govuk-radios__label" for="another1">
-                              Their solicitor’s address
+                              Yes
                             </label>
                           </div>
 
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="another1" name="another" type="radio" value="another">
                             <label class="govuk-label govuk-radios__label" for="another1">
-                              Their personal address
+                              No
                             </label>
                           </div>
 
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="another">
-                            <label class="govuk-label govuk-radios__label" for="another1">
-                              Another address
-                            </label>
-                          </div>
 
                           </div>
                           </div>
@@ -89,9 +79,16 @@
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="another1" name="another2" type="radio" value="no" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-4">
-                      No they have not
+                      No, they do not have a solicitor representing them
                     </label>
-                  </div
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="another1" name="another2" type="radio" value="no" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-4">
+                      I’m not sure
+                    </label>
+                  </div>
 
 
                 </div>
