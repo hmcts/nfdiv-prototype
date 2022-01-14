@@ -70,22 +70,48 @@
       <div class="govuk-!-padding-bottom-4"></div>
 
 
-          <h2 class="govuk-heading-m">Latest update</h2>
+        <h2 class="govuk-heading-m">Latest update</h2>
 
         <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
-          <p>Your husband or wife has still not applied for a final order. They also have to apply so your divorce application can be finalised jointly.</p>
+    <p> The court has notified your husband or wife by email that you are intending to apply for a final order as a sole applicant. You do not need to do anything further. </p>
+
+
+<p>If they do not object then you can apply for a final order from <span id='date-time'></span>.  </p>
 
 
 
-      <h2 class="govuk-heading-s">What you can do</h2>
+          <script>
 
-<p>You should contact your husband or wife and ask them to apply, if it’s safe to do so. </p>
+            var targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 14);
 
-<p>If you do not think they will confirm the application then you can <a href="final_order_switch_sole_digital">finalise your divorce as a sole applicant</a>.</p>
+            var dd = targetDate.getDate();
+            var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+            var yyyy = targetDate.getFullYear();
+
+            const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var dateString = dd + " " + months[mm]  + " " + yyyy;
+            document.getElementById('date-time').innerHTML=dateString;
+
+          </script>
 
 
 
+
+
+
+          <!--
+
+
+
+    <p >  Your application for divorce has been submitted and checked by court staff. It has now been ‘issued’ to you and your husband or wife by email.</p>
+
+    <p >You have to confirm that you have received and accept the application for divorce. This is known as ‘acknowledging service’.</p>
+
+    <p >Your divorce application cannot progress until both you and your husband or wife have ‘acknowledged service’.</p>
+
+     -->
 
 
 
@@ -96,8 +122,8 @@
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_9_FO_complete">Find out about dividing money and property </a></p>
-<p><a href="">Find out more about conditional orders </a></p>
+<p><a href="../divorce/hub_6">Find out about dividing money and property </a></p>
+<p><a href="hub_switch_delay">Find out more about conditional orders </a></p>
 <p><a href="">Find out more about final orders </a></p>
       </div>
 
@@ -122,6 +148,7 @@
 
 
     <p>  <a href="">View the certificate of entitlement (PDF)</a></p>
+
         <p>  <a href="check_contact_details">Review your contact details</a></p>
 
 
