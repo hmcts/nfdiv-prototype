@@ -54,12 +54,14 @@
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Submitted</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item">
-        <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+
+
+      <li class="hmcts-progress-bar__list-item" aria-current="step">
+        <span class="hmcts-progress-bar__icon"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Conditional order</span>
       </li>
 
-      <li class="hmcts-progress-bar__list-item" aria-current="step">
+      <li class="hmcts-progress-bar__list-item">
         <span class="hmcts-progress-bar__icon"></span>
         <span class="hmcts-progress-bar__label govuk-body govuk-!-font-size-14">Final order (Divorced)</span>
       </li>
@@ -70,35 +72,48 @@
       <div class="govuk-!-padding-bottom-4"></div>
 
 
-          <h2 class="govuk-heading-m">Latest update</h2>
 
-        <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
+      <h2 class="govuk-heading-m">Latest information</h2>
 
-          <p>Your husband or wife has still not applied for a final order. They also have to apply so your divorce application can be finalised jointly.</p>
-
+      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #F2F8F5; text-align: left;">
 
 
-      <h2 class="govuk-heading-s">What you can do</h2>
+    <p>
+      Your husband or wife has provided the information requested by the court. You’ll receive an email by <span id='date-time'></span> after the court has reviewed it.</p>
 
-<p>You should contact your husband or wife and ask them to apply, if it’s safe to do so. </p>
+<p>This was the court’s feedback, explaining the information which was needed: </p>
 
-<p>If you do not think they will confirm the application then you can <a href="final_order_switch_sole_digital">finalise your divorce as a sole applicant</a>.</p>
-
+<p>"The image the marriage certificate is too small, so that when it is enlarged, it become blurred and cannot be read and checked. Please provide a new image of the marriage certificate."</p>
 
 
 
+<script>
 
+  var targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 14);
 
+  var dd = targetDate.getDate();
+  var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+  var yyyy = targetDate.getFullYear();
 
+  const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var dateString = dd + " " + months[mm]  + " " + yyyy;
+  document.getElementById('date-time').innerHTML=dateString;
 
+</script>
 
+<!--
+<h3 class="govuk-heading-s">What happens next</h3>
 
+<p>The court will check your updated application. If it passes the checks then it will be sent to your husband or wife. They will need to confirm they have received it.  </p>
+
+<p>You will receive another update by 10 November 2021.</p>
+-->
 
 <h3 class="govuk-heading-s">Helpful Information</h3>
 
-<p><a href="hub_9_FO_complete">Find out about dividing money and property </a></p>
+<p><a href="hub_3">Find out about dividing money and property </a></p>
 <p><a href="">Find out more about conditional orders </a></p>
-<p><a href="">Find out more about final orders </a></p>
       </div>
 
       <br>
@@ -121,7 +136,7 @@
       <p>  <a href="">View the divorce application (PDF)</a></p>
 
 
-    <p>  <a href="">View the certificate of entitlement (PDF)</a></p>
+
         <p>  <a href="check_contact_details">Review your contact details</a></p>
 
 
