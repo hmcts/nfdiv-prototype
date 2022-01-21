@@ -34,10 +34,16 @@
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Does your husband or wife have a solicitor representing them? 
+                    Does your husband or wife have a solicitor representing them?
                   </h1>
                 </legend>
 
+                <div class="govuk-inset-text">
+
+                The court only needs to know if your husband or wife has a solicitor who is representing them for the divorce.
+                You do not need to tell the court about a solicitor they use for other purposes.
+
+              </div>
 
 
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -47,7 +53,7 @@
                       Yes, they have a solicitor representing them
                     </label>
                   </div>
-
+<!--
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="known">
 
                     <p>Do you know their solicitor’s details?</p>
@@ -75,7 +81,7 @@
 
                     </div>
 
-
+-->
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="another1" name="another2" type="radio" value="no" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
                     <label class="govuk-label govuk-radios__label" for="respondent-address-4">

@@ -62,11 +62,11 @@ router.post('/divorce/respondent_solicitor_address_enter', function (req, res) {
 
   if (secondcheck === 'yes') {
 
-    if (over18 === 'solicitor') {
+    //if (over18 === 'solicitor') {
       res.redirect('/divorce/respondent_solicitor_address_enter')
-    } else {
-      res.redirect('/divorce/respondent_email')
-    }
+    //} else {
+  //    res.redirect('/divorce/respondent_email')
+  //  }
 
   } else {
     res.redirect('/divorce/respondent_email')
