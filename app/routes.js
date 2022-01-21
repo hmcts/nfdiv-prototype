@@ -66,7 +66,7 @@ router.post('/divorce/respondent_solicitor_address_enter', function (req, res) {
       res.redirect('/divorce/respondent_solicitor_address_enter')
     //} else {
   //    res.redirect('/divorce/respondent_email')
-    }
+  //  }
 
   } else {
     res.redirect('/divorce/respondent_email')
