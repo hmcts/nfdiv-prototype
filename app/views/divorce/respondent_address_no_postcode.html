@@ -21,7 +21,7 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="respondent_postal_address.html">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -31,11 +31,11 @@
         <form action="/divorce/other_court_cases" method="post" novalidate>
 
           <div class="govuk-form-group">
-              
+
                   <h1 class="govuk-heading-l">
                     Enter your husband’s or wife’s postal address
                   </h1>
-                
+
                   <div class="govuk-form-group">
                       <label class="govuk-label" for="more-detail">
                         Full address
@@ -43,7 +43,7 @@
                       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
                     </div>
                 </div>
-            
+
             <p class="govuk-body">
               <a href="respondent_postal_address.html" class="govuk-link">Enter UK postcode</a>
             </p>
