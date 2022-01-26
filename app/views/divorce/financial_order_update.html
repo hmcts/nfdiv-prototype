@@ -13,7 +13,7 @@
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="financial_orderv2">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="financial_order">feedback</a> will help us to improve it.
     </span>
   </p>
   <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
@@ -21,14 +21,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="money_property.html">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/financial_order_details" method="post" novalidate>
+        <form action="financial_order_details" method="post" novalidate>
 
           <div class="govuk-form-group">
 
@@ -40,18 +40,15 @@
                   The court needs to know now if you want to apply for a financial order. Select the statement below which best applies to you.
                   </p>
 
-              <h2 class="govuk-heading-m">Do you want to apply for a financial order?</h2>
 
-
+                  <div class="govuk-!-padding-bottom-2"></div>
 
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="financial-order" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order" {{ checked("financial-order", "Yes, I want to apply for a financial order") }}>
-                        <label class="govuk-label govuk-radios__label" for="financial-order">
+                        <input class="govuk-radios__input" id="financial-order" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order">
+                        <label class="govuk-label govuk-radios__label" for="financial-order" style="margin-top: -12px">
                           I agree with my husband or wife about how to divide our money and property. I want the court to make our agreement legally binding.
                         </label>
-
-
                       </div>
 
 
@@ -59,53 +56,100 @@
                         <div class="govuk-body">
                           This is known as applying for a ‘financial order by consent’. The application is done separately and costs an additional £50. You do not have to go through with the application or pay if you select this option.
                           </div>
+
+                          <div class="govuk-form-group">
+
+                              <div class="govuk-!-padding-bottom-2"></div>
+
+                        <h2 class="govuk-heading-s">
+                              Who is the financial order for?
+                          </h2>
+
+                              <div id="changed-name-hint" class="govuk-hint">
+                                Select all that apply
                           </div>
 
-<!--
-                            <div class="govuk-!-padding-bottom-2"></div>
-
-                      <h2 class="govuk-heading-m">
-                            Who is the financial order for?
-                        </h2>
-
-                            <div id="changed-name-hint" class="govuk-hint">
-      Select all that apply
-    </div>
-
-                      <div class="govuk-checkboxes">
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="financial-order-type" name="financial-order-type" type="checkbox" value="Me" {{ checked("financial-order-type", "Me") }}>
-                            <label class="govuk-label govuk-checkboxes__label" for="financial-order-type">
-                              Me
-                            </label>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-type" name="financial-order-type" type="checkbox" value="Me" {{ checked("financial-order-type", "Me") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-type">
+                                Me
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-2" name="financial-order-type" type="checkbox" value="My children" {{ checked("financial-order-type", "My children") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-2">
+                                The children
+                              </label>
+                            </div>
                           </div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="financial-order-2" name="financial-order-type" type="checkbox" value="My children" {{ checked("financial-order-type", "My children") }}>
-                            <label class="govuk-label govuk-checkboxes__label" for="financial-order-2">
-                              The children
-                            </label>
-                          </div>
+                              <div class="govuk-!-padding-bottom-2"></div>
+
                         </div>
 
-                      </div>
 
-                      </div>
+                          </div>
 
-                      -->
+                          <div class="govuk-!-padding-bottom-2"></div>
 
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="financial-order-2" name="financial-order" type="radio" value="No, I do not want to apply for a financial order" data-aria-controls="conditional-financial-order-2" {{ checked("financial-order", "No, I do not want to apply for a financial order") }}>
-                        <label class="govuk-label govuk-radios__label" for="financial-order-2">
+                        <input class="govuk-radios__input" id="financial-order-2" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order-2">
+                        <label class="govuk-label govuk-radios__label" for="financial-order-2" style="margin-top: -12px">
                            I disagree with my husband or wife about how to divide our money and property. I want the court to decide for us.
                         </label>
                       </div>
 
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-financial-order-2">
+                        <div class="govuk-body">
+                        This is known as applying for a ‘contested financial order’. The application is done separately and costs an additional £255. You do not have to go through with the application or pay if you select this option.
+                          </div>
+
+                          <div class="govuk-form-group">
+
+                              <div class="govuk-!-padding-bottom-2"></div>
+
+                        <h2 class="govuk-heading-s">
+                              Who is the financial order for?
+                          </h2>
+
+                              <div id="changed-name-hint" class="govuk-hint">
+                                Select all that apply
+                          </div>
+
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-type" name="financial-order-type" type="checkbox" value="Me" {{ checked("financial-order-type", "Me") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-type">
+                                Me
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-2" name="financial-order-type" type="checkbox" value="My children" {{ checked("financial-order-type", "My children") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-2">
+                                The children
+                              </label>
+                            </div>
+                          </div>
+                              <div class="govuk-!-padding-bottom-2"></div>
+
+                        </div>
+
+                          </div>
+
+<div class="govuk-!-padding-bottom-2"></div>
+
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="financial-order-2" name="financial-order" type="radio" value="No, I do not want to apply for a financial order" data-aria-controls="conditional-financial-order-3" {{ checked("financial-order", "No, I do not want to apply for a financial order") }}>
-                        <label class="govuk-label govuk-radios__label" for="financial-order-2">
+                        <label class="govuk-label govuk-radios__label" for="financial-order-2" style="margin-top: -12px">
                            I do not want the court to make any order in relation to how we divide our money and property.
                         </label>
                       </div>
+
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-financial-order-3">
+                        <div class="govuk-body">
+                        This does not cost any additional money. If you change your mind you can still apply for a financial order after you have submitted this application.
+                          </div>
+                          </div>
 
 
             </div>
