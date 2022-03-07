@@ -34,7 +34,7 @@
         <ul id="navigation" class="govuk-header__navigation " aria-label="Navigation menu">
           <li class="govuk-header__navigation-item govuk-header__navigation-item--inactive">
             <a class="govuk-header__link" href="#1">
-              Sign out 
+              Sign out
             </a>
           </li>
         </ul>
@@ -89,10 +89,10 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Type of relationship
+          Same-sex couples
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['same-sex'] }}
+            We were not a same-sex couple when we formed our civil partnership
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -142,9 +142,9 @@
               <span class="govuk-visually-hidden"> marriage certificate</span>
             </a>
           </dd>
-        </div>  
+        </div>
       </dl>
-        
+
       <h2 class="govuk-heading-m">Your connections to England and Wales</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -189,7 +189,7 @@
               <span class="govuk-visually-hidden"> husband's or wife's life mainly based in england or wales</span>
             </a>
           </dd>
-        </div> 
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             How you're connected to England and Wales
@@ -206,13 +206,13 @@
               <div class="govuk-details__text">
                 The Applicant and the Respondent are habitually resident in England and Wales
               </div>
-            </details>  
+            </details>
           </dd>
           <dd class="govuk-summary-list__actions">
           </dd>
-        </div>   
-      </dl> 
-      
+        </div>
+      </dl>
+
       <h2 class="govuk-heading-m">About you and your civil partner</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -387,9 +387,9 @@
               <span class="govuk-visually-hidden"> respondent address</span>
             </a>
           </dd>
-        </div>  
+        </div>
       </dl>
-        
+
       <h2 class="govuk-heading-m">About your civil partnership</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -434,9 +434,9 @@
               <span class="govuk-visually-hidden"> claim costs from your husband or wifes</span>
             </a>
           </dd>
-        </div>    
-      </dl> 
-        
+        </div>
+      </dl>
+
       <h2 class="govuk-heading-m">Documents</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -445,7 +445,7 @@
             Uploaded documents
           </dt>
           <dd class="govuk-summary-list__value">
-            Civil partnership certifiate 
+            Civil partnership certifiate
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -454,8 +454,8 @@
             </a>
           </dd>
         </div>
-      </dl>    
-        
+      </dl>
+
       <h2 class="govuk-heading-m">Payment</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -487,7 +487,7 @@
             </a>
           </dd>
         </div>
-      </dl>    
+      </dl>
 
       <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -498,41 +498,41 @@
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" style="background-color: white" id="app-prayer" name="app-prayer" type="checkbox" value="checked" {{ checked("app-prayer", "checked") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="app-prayer">
-                      I confirm that I’m applying to the court to:  
+                      I confirm that I’m applying to the court to:
                     </label>
-                  </div>  
+                  </div>
                 </div>
-            </div>  
-        
+            </div>
+
           <div class="govuk-form-group">
                 <ul class="govuk-list govuk-list--bullet" style="text-align: left">
                     <li>end my civil partnership </li>
                    <li>order my civil partner to pay costs associated with ending my my civil partnership </li>
                     <li>decide how our money and property will be split (known as a financial order)</li>
-                  </ul> 
+                  </ul>
             </div>
-        
+
         <p class="govuk-body">
-                  This confirms what you are asking the court to do. It’s known as ‘the prayer’. 
+                  This confirms what you are asking the court to do. It’s known as ‘the prayer’.
                   </p>
-        
+
         <div class="govuk-!-padding-bottom-4"></div>
-        
+
         <div class="govuk-form-group">
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked" {{ checked("statement-truth", "checked") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
-                      I believe that the facts stated in this application are true   
+                      I believe that the facts stated in this application are true
                     </label>
-                  </div>  
+                  </div>
                 </div>
             </div>
-        
+
         <p class="govuk-body">
-                  This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.  
+                  This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.
                   </p>
-        
+
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
@@ -540,10 +540,10 @@
             You could be fined or imprisoned if you deliberately submit false information.
           </strong>
         </div>
-          
+
             </div>
   </div>
-        
+
         <div class="govuk-!-padding-bottom-4"></div>
 
       <form action="/civil_partnership/payment_cp" method="post" novalidate>
