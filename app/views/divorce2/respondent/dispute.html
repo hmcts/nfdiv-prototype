@@ -1,0 +1,175 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="accept_dispute" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Disputing the divorce application
+                  </h1>
+                </legend>
+
+                <p>If you want to dispute the application for divorce then you’ll have to submit another form (known as ‘the answer’) with your reason for disputing. This will cost you £245, unless you are eligible for Help With Fees.</p>
+
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Find out more about Help With Fees
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+
+
+                    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+
+                              <p>You may be able to get <a class="govuk-link" href="#">help paying the fee</a> if you (one or more of the following):</p>
+
+                                <ul class="govuk-list govuk-list--bullet">
+                                  <li>are on certain benefits</li>
+                                  <li>have a little or no savings</li>
+                                  <li>have low income</li>
+                                </ul>
+
+      </fieldset>
+      </div>
+
+                  </div>
+                </details>
+
+
+                  <p>You will have until 29 October 2021 to submit the form. If you do not submit the form by the deadline, then your husband or wife will usually be able to continue with the divorce.
+</p>
+
+                <p>The only valid reasons for disputing the divorce are because (one or both of the following): </p>
+
+
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>you do not think the courts of England and Wales have the legal power (jurisdiction) to grant the application</li>
+
+                    <li>you do not believe your marriage is legally valid. For example, if one of you was already married or in a civil partnership when you got married</li>
+
+                <li>  this marriage has already been legally ended  </li>
+                      </ul>
+
+
+
+<div class="govuk-!-padding-bottom-2"></div>
+
+  <h2 class="govuk-heading-m">Are you sure you want to dispute the application?</h2>
+
+
+<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agreeordispute3" name="agreeordispute3" type="radio" value="I confirm I want to dispute the divorce" data-aria-controls="conditional-broken-down-2" >
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute3">
+                      I confirm I want to dispute the divorce
+                    </label>
+                  </div>
+
+<!--
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
+                    <div class="govuk-warning-text">
+                      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                      <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        <div style="margin-top: 0px;">You are about to confirm your intention to dispute the divorce</div>
+                      </strong>
+                    </div>
+                  </div>
+
+-->
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agreeordispute3" name="agreeordispute3" type="radio" value="I do not want to dispute the divorce">
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute3">
+                      I do not want to dispute the divorce
+                    </label>
+                  </div>
+                </div>
+
+                </div>
+
+              </fieldset>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+           <!-- <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a>
+
+            <a href="/divorce/applicant_address_private" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a> -->
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

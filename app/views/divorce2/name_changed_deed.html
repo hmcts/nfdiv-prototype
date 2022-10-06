@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - How did you change your name? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="/divorce/name_changed">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/divorce/applicant_phone_number" method="post" novalidate>
+
+             <div class="govuk-form-group">
+
+                      <h1 class="govuk-heading-l">
+                        How did you change your name?
+                      </h1>
+
+                    <p class="govuk-body">The court needs to know how you changed your name so it knows which document to check.</p>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="how-changed-name" name="how-changed-name" type="checkbox" value="By sending my marriage certificate to the relevant authorities" {{ checked("how-changed-name", "By sending my marriage certificate to the relevant authorities") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="how-changed-name">
+                    By sending off my marriage certificate
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="how-changed-name-2" name="how-changed-name" type="checkbox" value="By deed poll" data-aria-controls="conditional-how-changed-name-2" {{ checked("how-changed-name", "By deed poll") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="how-changed-name-2">
+                    By deed poll or ‘statutory declaration’
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-how-changed-name-2">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="name-change-deed">
+                      The court needs to see the deed poll or ‘statutory declaration’ document. You can upload a photo or scan later in this application, or you can post it.
+                    </label>
+                    </div>
+
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="how-changed-name-4" name="how-changed-name" type="checkbox" value="Another way" data-aria-controls="conditional-how-changed-name-4" {{ checked("how-changed-name", "Another way") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="how-changed-name-4">
+                    Another way
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-how-changed-name-4">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="name-change-other">
+                      Provide details of when and how you changed your name. You will be asked to upload a photo or scan of the documents that prove you changed your name later in this application, or you can post them in. If you do not have any documents, explain why here.
+                    </label>
+                      <div class="govuk-!-padding-bottom-4"></div>
+                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+
+                </div>
+              </div>
+         
+
+
+
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

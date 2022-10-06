@@ -1,0 +1,199 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you want to apply for a financial order? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="AOSv2">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="accept_dispute" method="post" novalidate>
+
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    Review the divorce application
+                  </h1>
+
+                  <p>
+                  Review this application for divorce and confirm you have read it. You will be able to say whether you want to dispute it later.
+                  </p>
+
+                  <h2 class="govuk-heading-m">Divorce application</h2>
+
+                  <p><strong>Case reference number:</strong> EZ111456</p>
+                  <p><strong>Date of issue: </strong> 2 July 2021</p>
+                  <p>Joe Bloggs is applying to the court:<p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                          <li>for a final order of divorce from Joanne Bloggs </li>
+                          <li>to make a financial order</li>
+                        </ul>
+
+
+                  <h2 class="govuk-heading-s">Applicant</h2>
+                  <p>Joe Smith Bloggs<p>
+
+                    <h2 class="govuk-heading-s">Respondent</h2>
+                    <p>Joanne Anne Bloggs<p>
+
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            What this means
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          The applicant is the person who has applied for the divorce. The respondent is their husband or wife.
+                        </div>
+                      </details>
+
+
+                      <h2 class="govuk-heading-m">About the marriage</h2>
+
+                      <p>These details are copied directly from the marriage certificate, or the translation of the certificate. The names are the names the applicant and respondent used before the marriage. </p>
+
+                      <p>The marriage is between Joe Smith Bloggs and Joanne Anne Bloggs (as shown on the marriage certificate)</p>
+
+
+
+                        <p><strong>Date of marriage: </strong> 14 April 2011</p>
+
+
+                        <h2 class="govuk-heading-m">Why the court can deal with the case (jurisdiction)</h2>
+<p>The courts of England and Wales have the legal power (jurisdiction) to deal with this case because:</p>
+<ul class="govuk-list govuk-list--bullet">
+      <li>the applicant and respondent are habitually resident in England and Wales.</li>
+
+      <!--
+      <li>the applicant and respondent were last habitually resident in England and Wales and one of them still resides there.</li>
+      <li> the applicant is habitually resident in England and Wales and has resided there for at least a year immediately prior to the presentation of the application.</li>
+      <li>the applicant is domiciled and habitually resident in England and Wales and has resided there for at least six months immediately prior to the application.</li>
+      <li>the applicant and respondent are both domiciled in England and Wales. </li>
+      <li>no other court in any EU Member State has jurisdiction and either the Petitioner or the Respondent is domiciled in England and Wales; or (for same sex couples only) the Petitioner or the Respondent married each other in England and Wales, no other court in any EU Member State has jurisdiction, and it would be in the interests of justice for the any EU Member State has jurisdiction, and it would be in the interests of justice for the court to assume jurisdiction in this case.[ME6]
+
+ </li>
+
+ -->
+    </ul>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What this means
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p> If your life is mainly based in England or Wales then you’re what is legally known as 'habitually resident'.</p>
+
+      <p>This may include working, owning property, having children in school, and your main family life taking place in England or Wales.</p>
+
+      <p>These examples aren’t a complete list of what makes up habitual residence, and just because some of them apply to you doesn’t mean you’re habitually resident. If you’re not sure, you should get legal advice.</p>
+
+      </div>
+    </details>
+
+
+<h2 class="govuk-heading-m">Reason for the divorce</h2>
+
+<p>The marriage has irretrievably broken down (it cannot be saved).</p>
+
+
+<h2 class="govuk-heading-m">Financial order application</h2>
+
+<p>The applicant is also applying to the court for financial orders for the applicant, and for the
+children of the applicant and the respondent.</p>
+
+
+<h2 class="govuk-heading-m">Applicant’s correspondence address</h2>
+
+<p>[Applicant’s address]</p>
+
+
+<h2 class="govuk-heading-m">Respondent's postal address</h2>
+
+<p>[Respondent’s address]</p>
+
+
+
+<h2 class="govuk-heading-m">Statement of truth</h2>
+
+<p>I believe that the facts stated in this application are true.</p>
+
+
+<h2 class="govuk-heading-m">Your acknowledgement </h2>
+
+<div class="govuk-form-group">
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="app-email-address-1" name="app-email-address" type="checkbox" value="checked" {{ checked("app-email-address", "checked") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="app-email-address-1">
+        I have read the application for divorce
+        </label>
+      </div>
+    </div>
+</div>
+
+<div class="govuk-!-padding-bottom-1"></div>
+
+<p>You will be able to say whether you want to dispute it next.</p>
+
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

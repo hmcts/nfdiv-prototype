@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% block pageTitle %}
+  Sign in - HMCTS Access
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+  <h1 class="govuk-heading-l">Sign in or create an account</h1>
+
+      <div class="govuk-grid-row">
+
+
+
+      <div class="govuk-grid-column-one-half" style="border-right: 5px solid lightgray">
+
+<form action="/divorce/husband_or_wife" method="post" novalidate>
+
+    
+
+            <h2 class="govuk-heading-m">Sign in</h2>
+
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="three-quarters">
+                Email address
+              </label>
+              <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="three-quarters">
+                Password
+              </label>
+              <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+            </div>
+
+
+
+            <p class="govuk-body"><a href="#">Forgotten your password?</a></p>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Sign in
+          </button>
+
+        </form>
+      </div>
+
+      <div class="govuk-grid-column-one-half">
+          <h2 class="govuk-heading-m">Create an account</h2>
+          <p>
+              You need to
+
+              <a href="/users/selfRegister?redirect_uri=https%3a%2f%2fwww.apply-divorce.service.gov.uk%2fauthenticated&client_id=divorce&state=ae031243-9b72-4f91-9cd8-c1c8149d4c46&scope=">
+                  create an account
+              </a>
+              to use this service.
+          </p>
+      </div>
+
+
+    </div>
+
+
+
+{% endblock %}

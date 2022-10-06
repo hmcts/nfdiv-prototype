@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - The names on your marriage certificate - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="respondent_name.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">The names on your marriage certificate</h1>
+
+        <form action="/divorce/name_changed" method="post" novalidate>
+
+            <p class="govuk-body">
+                  These are the names you and your <span id='data1'>{{ data['husband-wife'] }}</span> used before you were married. They can sometimes be different from your current names. For example, if you or your <span id='data2'>{{ data['husband-wife'] }}</span> had a maiden name.
+                  </p>
+
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+              <div style="margin-top: -12px;">Copy the marriage certificate exactly. For example, if it says ‘Sarah Brown (formerly known as Sarah Smith)’, then enter that. </div>
+              </strong>
+            </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="app-name-cert">
+              Copy your full name from the marriage certificate
+            </label>
+            <div id="app-name-cert-hint" class="govuk-hint">
+              Include all the text related to the name
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="app-name-cert" name="app-name-cert" type="text" aria-describedby="app-name-cert-hint" value="{{ data['app-name-cert'] }}">
+            </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="res-name-cert">
+              Copy your <span id='data3'>{{ data['husband-wife'] }}</span>'s full name from the marriage certificate
+            </label>
+            <div id="res-name-cert-hint" class="govuk-hint">
+              Include all the text related to the name
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="res-name-cert" name="res-name-cert" type="text" aria-describedby="res-name-cert-hint" value="{{ data['res-name-cert'] }}">
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+    document.getElementById('data3').innerHTML="husband or wife";
+  }
+</script>
+
+
+{% endblock %}

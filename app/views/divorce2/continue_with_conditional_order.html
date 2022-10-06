@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="review_application" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you want to continue with your divorce?
+                  </h1>
+                </legend>
+
+                <p>The next step in the divorce process is to apply for a ‘conditional order’. This shows the court agrees that you can get a divorce.<p>
+
+
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Read more about the next steps
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+
+                      <p>  You have to complete 2 more steps before you are legally divorced:<p>
+
+
+                        <ol class="govuk-list govuk-list--number">
+                          <li>Apply for a conditional order.</li>
+                        <p>  This shows that the court agrees that you’re entitled to get a divorce.</p>
+
+                          <li>Apply for a final order.</li>
+                          <p>This legally ends the marriage. You cannot apply for a final order until 6 weeks after the conditional order. </p>
+                        </ol>
+                    </div>
+                  </details>
+
+
+
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agreeordispute" name="agreeordispute" type="radio" value="Agree" {{ checked("agreeordispute", "Agree") }}>
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute">
+                      I want to continue with the divorce
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agreeordispute-1" name="agreeordispute" type="radio" value="Dispute" data-aria-controls="conditional-broken-down-2" {{ checked("agreeordispute", "Dispute") }}>
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute-1">
+                      I do not want to continue with the divorce
+                    </label>
+                  </div>
+
+<!--
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-broken-down-2">
+                    <div class="govuk-warning-text">
+                      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                      <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        Warning text
+                      </strong>
+                    </div>
+                  </div>
+
+                  -->
+                </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+           <!-- <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a>
+
+            <a href="/divorce/applicant_address_private" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a> -->
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

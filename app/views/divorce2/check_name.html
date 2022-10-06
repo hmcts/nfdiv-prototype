@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Your names - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Enter your name</h1>
+
+        <form action="check_private" method="post" novalidate>
+
+          <div class="govuk-form-group">
+
+            <p>The court needs to know your full name. </p>
+
+              <div class="govuk-form-group">
+           <label class="govuk-label" for="width-20">
+               Your first name(s)
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="app-first-name" name="app-first-name" type="text" value="{{ data['app-first-name'] }}">
+            </div>
+
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="width-20">
+               Your middle name(s)
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="app-middle-name" name="app-middle-name" type="text" value="{{ data['app-middle-name'] }}">
+            </div>
+
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="width-20">
+               Your last name(s)
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="app-last-name" name="app-last-name" type="text" value="{{ data['app-last-name'] }}">
+          </div>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

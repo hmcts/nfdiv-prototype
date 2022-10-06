@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you need your postal address kept private from your husband or wife? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-full-from-desktop">
+        <form action="applicant_phone_number" method="post" novalidate>
+
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    Are the contact details we have for you correct?
+                  </h1>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-10">
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key" style="width:60%">
+
+                    Your address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    1 Main Street<br>
+                    London<br>
+                    W12 6AH<br>
+
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="#">
+                      Change
+                      <span class="govuk-visually-hidden"> address</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    email@gmail.com
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="#">
+                      Change
+                      <span class="govuk-visually-hidden"> email address</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+
+            </div>
+
+            <div class="govuk-!-padding-bottom-4"></div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

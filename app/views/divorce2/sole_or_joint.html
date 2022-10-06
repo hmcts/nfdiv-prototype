@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - How do you want to apply for the divorce? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="/divorce/marriage_certificate">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/joint_divorce/email_address" method="post" novalidate>
+
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    How do you want to apply for the divorce?
+                  </h1>
+
+                  <p class="govuk-body">
+                  You can apply for the divorce on your own (as a ‘sole applicant’) or with your {{ data['husband-wife'] }} (in a ‘joint application’).
+                  </p>
+
+              <h2 class="govuk-heading-s">Applying as a sole applicant </h2>
+
+                <p class="govuk-body">
+                  If you apply as a sole applicant, your {{ data['husband-wife'] }} responds to your divorce application after you have submitted it. You will be applying on your own.
+                  </p>
+
+                  <h2 class="govuk-heading-s">Applying jointly, with your {{ data['husband-wife'] }}</h2>
+
+              <p class="govuk-body">
+                  If you apply jointly, your {{ data['husband-wife'] }} joins and reviews this online application before it’s submitted. You will be applying together.
+                  </p>
+
+                <div class="govuk-inset-text">
+                  How you divide your money and property is dealt with separately. It should not affect your decision on whether to do a sole or a joint application.
+                </div>
+                <p class="govuk-body">
+                If you need help paying the fee for the divorce, this works differently in a joint application.
+  </p>
+
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Find out more about paying the fees.
+      </span>
+    </summary>
+      <div class="govuk-details__text">
+      This divorce application costs £550. You have to pay the fee in a sole or a joint application because you are the first applicant. You and your {{ data['husband-wife'] }} should agree how to split the fee, but the payment system can only allow the first applicant to pay.
+
+  <br><br>
+        Help can be claimed to pay the fee, if the applicant:
+<br><br>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>is on certain benefits <i>or</i></li>
+  <li>has little or no savings <i>or</i></li>
+  <li>has low income</li>
+</ul>
+
+    <p class="govuk-body">      In a sole application, only you have to be eligible and claim help with fees. In a joint application, both you and your {{ data['husband-wife'] }} have to be eligible and claim help with fees separately.   </p>
+
+
+      </div>
+  </details>
+
+
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sole-joint" name="sole-joint" type="radio" value="I want to apply on my own, as a sole applicant" {{ checked("sole-joint", "I want to apply on my own, as a sole applicant") }}>
+                        <label class="govuk-label govuk-radios__label" for="sole-joint">
+                          I want to apply on my own, as a sole applicant
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sole-joint-2" name="sole-joint" type="radio" value="I want to apply jointly, with my husband or wife"  {{ checked("sole-joint", "I want to apply jointly, with my husband or wife") }}>
+                        <label class="govuk-label govuk-radios__label" for="sole-joint-2">
+                          I want to apply jointly, with my {{ data['husband-wife'] }}
+                        </label>
+                      </div>
+            </div>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

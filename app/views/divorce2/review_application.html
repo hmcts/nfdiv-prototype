@@ -1,0 +1,275 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you want to apply for a financial order? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="conditional_order_check_answers" method="post" novalidate>
+
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    Review your divorce application
+                  </h1>
+
+                  <p>
+                Read your original application for divorce and confirm the information is still correct and true, to the best of your knowledge.
+                  </p>
+
+                  <h2 class="govuk-heading-m">Divorce application</h2>
+
+                  <p><strong>Case reference number:</strong> EZ111456</p>
+                  <p><strong>Date of issue: </strong> 2 July 2021</p>
+                  <p>Joanne Anne Bloggs is applying to the court:<p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                          <li>for a final order of divorce from Joe Richard Bloggs</li>
+                          <li>to make a financial order</li>
+                        </ul>
+
+
+                  <h2 class="govuk-heading-s">Applicant</h2>
+                  <p>Joanne Anne Bloggs<p>
+
+                    <h2 class="govuk-heading-s">Respondent</h2>
+                    <p>Joe Richard Bloggs<p>
+
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            What this means
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          The applicant is the person who has applied for the divorce. The respondent is their husband or wife.
+                        </div>
+                      </details>
+
+
+                      <h2 class="govuk-heading-m">About the marriage</h2>
+
+                      <p>These details are copied directly from the marriage certificate, or the translation of the certificate. The names are the names the applicant and respondent used before the marriage. </p>
+
+                      <p>The marriage is between Joe Smith Bloggs and Joanne Anne Bloggs (as shown on the marriage certificate)</p>
+
+
+
+                        <p><strong>Date of marriage: </strong> 14 April 2011</p>
+
+
+                        <h2 class="govuk-heading-m">Why the court can deal with the case (jurisdiction)</h2>
+<p>The courts of England and Wales have the legal power (jurisdiction) to deal with this case because:</p>
+<ul class="govuk-list govuk-list--bullet">
+      <li>the applicant and respondent are habitually resident in England and Wales.</li>
+
+      <!--
+      <li>the applicant and respondent were last habitually resident in England and Wales and one of them still resides there.</li>
+      <li> the applicant is habitually resident in England and Wales and has resided there for at least a year immediately prior to the presentation of the application.</li>
+      <li>the applicant is domiciled and habitually resident in England and Wales and has resided there for at least six months immediately prior to the application.</li>
+      <li>the applicant and respondent are both domiciled in England and Wales. </li>
+      <li>no other court in any EU Member State has jurisdiction and either the Petitioner or the Respondent is domiciled in England and Wales; or (for same sex couples only) the Petitioner or the Respondent married each other in England and Wales, no other court in any EU Member State has jurisdiction, and it would be in the interests of justice for the any EU Member State has jurisdiction, and it would be in the interests of justice for the court to assume jurisdiction in this case.[ME6]
+ </li>
+ -->
+    </ul>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What this means
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p> If your life is mainly based in England or Wales then you’re what is legally known as 'habitually resident'.</p>
+
+      <p>This may include working, owning property, having children in school, and your main family life taking place in England or Wales.</p>
+
+      <p>These examples aren’t a complete list of what makes up habitual residence, and just because some of them apply to you doesn’t mean you’re habitually resident. If you’re not sure, you should get legal advice.</p>
+
+      </div>
+    </details>
+
+
+<h2 class="govuk-heading-m">Reason for the divorce</h2>
+
+<p>The marriage has irretrievably broken down (it cannot be saved).</p>
+
+
+<h2 class="govuk-heading-m">Financial order application</h2>
+
+<p>The applicant is also applying to the court for financial orders for the applicant, and for the
+children of the applicant and the respondent.</p>
+
+
+
+
+
+<h2 class="govuk-heading-m">Statement of truth</h2>
+
+<p>I believe that the facts stated in this application are true.</p>
+    <p>Joanne Anne Bloggs<p>
+
+<div class="govuk-!-padding-bottom-8"></div>
+
+<!-- confirm details widget -->
+
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Is the information in this application still correct?
+      </h1>
+
+    </legend>
+    <div id="contact-hint" class="govuk-hint">
+
+
+    </div>
+
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="needchange" name="needchange" type="radio" value="Yes" data-aria-controls="conditional-contact" {{ checked("needchange", "Yes") }}>
+          <label class="govuk-label govuk-radios__label" for="contact">
+            Yes
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="needchange-2" name="needchange" type="radio" value="No" data-aria-controls="conditional-contact-2" {{ checked("needchange", "No") }}>
+          <label class="govuk-label govuk-radios__label" for="contact-2">
+            No
+          </label>
+        </div>
+
+<br><br><br>
+
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+
+
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+
+              </label>
+            </h1>
+
+            <br><p><strong>Changing your contact details</strong><br>
+
+            You can update your email address, phone number and postal address in the <a href="hub_4">contact details section of your divorce account</a>. There is no cost for this. </p>
+
+            <br><p><strong>Changing any other information</strong><br>
+
+                        If you want to change any other information then you should provide details below. The court will review it and you may need to pay a £95 fee. This is because the application will need to be updated and may need to be sent to your husband or wife again. </p>
+                        <div id="with-hint-hint" class="govuk-hint">
+                          Provide details of any other information that needs updating. Do not tell the court about updates to contact details here.
+                        </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+
+          </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+</fieldset>
+</div>
+
+  <input type="hidden" name="answers-checked" value="true">
+
+
+
+
+<!--
+
+
+<h2 class="govuk-heading-m">Your acknowledgement </h2>
+
+<div class="govuk-form-group">
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="app-email-address-1" name="app-email-address" type="checkbox" value="checked" {{ checked("app-email-address", "checked") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="app-email-address-1">
+        I confirm that this original application is still true
+        </label>
+      </div>
+    </div>
+</div>
+
+<div class="govuk-!-padding-bottom-1"></div>
+
+-->
+
+
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

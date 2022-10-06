@@ -1,0 +1,456 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+  <h1 class="govuk-heading-l">
+
+  How to proceed with your divorce
+
+    </h1>
+
+
+  <!-- <p >
+
+    The divorce application was sent to the following address:
+  </p>
+
+  <ul class="list">
+    23 Stanley Street	<br>
+    Farnborough <br>
+    UK <br>
+    FO54 3RD <br>
+  </ul> -->
+
+  <p>
+    The court usually needs to hear from both parties in a marriage before it can grant a divorce.
+
+    It’s therefore important that your husband or wife responds to your application.
+
+  </p>
+
+<br>
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+    <div style="margin-top: -22px; margin-left: 5px;">
+  The simplest way to proceed is for you to contact your husband or wife and ask them to respond, if it’s safe to do so.  They can still respond, even though the deadline has passed.
+
+    </div>
+    </strong>
+  </div>
+
+
+
+<!--
+ <p>
+  If you cannot get in contact with your husband or wife, you may want to consider asking their family, friends and workplace if they have a new address.  Then send that to the court, using the contact details in the ‘Getting help’ section on this page.
+</p>
+-->
+
+  <p>
+If they still do not respond then you can choose one of the following options to progress your application, depending on your situation.
+  </p>
+
+
+
+
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+
+    <h2 class="govuk-heading-m">Which situation applies to you?</h2>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          I have another email address or postal address for my husband or wife
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>Provide their new email address or postal address to the court. You can phone, email or post it using the contact details in the ‘Getting help’ section at the top of this page.  </p>
+
+          <p>Postal addresses can be UK or international. It can be their home address or their solicitor’s address. You should avoid using their work address but if you have to then you should ask their permission first. </p>
+
+          <p>You do not have to pay anything to update their email or postal address.  </p>
+      </div>
+    </details>
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            I have their email address but not their postal address
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>If you have their email address but not their postal address, then you can apply to the court to only send the application to their email address. This application costs an additional £50, unless you are eligible for <a class="govuk-link" href="#">Help With Fees</a>. </p>
+
+        <p><strong>How to apply: </strong> Download and complete <a class="govuk-link" href="#">form D11</a>. Send the form to the Courts and Tribunals Service Centre by email or post.  </p>
+
+        <p>Email: contactdivorce@justice.gov.uk</p>
+
+        <p class="govuk-body">
+          <strong>Courts and Tribunals Service Centre  </strong>
+          <br>HMCTS Divorce and Dissolution service
+          <br>PO Box 12706
+          <br>Harlow
+          <br>CM20 9QT
+
+          </p>
+
+      </div>
+    </details>
+
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            I need to search government records for my husband’s or wife’s postal address
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>You can apply to search government records for your husband or wife’s address, for example the electoral register. They must live in England or Wales. The application costs an additional £50, unless you are eligible for <a class="govuk-link" href="#">Help With Fees</a>. </p>
+
+        <p><strong>How to apply: </strong> Call the Courts and Tribunals Service Centre on 0300 303 0642 and ask for the form to be sent to you. </p>
+
+        <p><strong>How to pay: </strong>Call the Courts and Tribunals Service Centre on 0300 303 0642 to make the £50 payment by card (between 8.30am and 5pm). If you're eligible for Help With Fees then you'll need to apply again and get a new reference number.</p>
+
+
+
+
+      </div>
+    </details>
+
+
+<!--
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          I need to send the application to my husband’s or wife's email address
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>You can ask for the application to be delivered to them by email. This application costs an additional £50, unless you are eligible for <a class="govuk-link" href="#">Help With Fees</a>. </p>
+
+        <p><strong>How to apply: </strong> Download and complete <a class="govuk-link" href="#">form D11</a>. Send the completed form to to the Courts and Tribunals Service Centre by email or post: </p>
+
+
+        <p>Email: contactdivorce@justice.gov.uk</p>
+
+        <p class="govuk-body">
+            <strong>Courts and Tribunals Service Centre  </strong>
+            <br>c/o East Midlands Regional Divorce and Dissolution Centre
+            <br>PO Box 10447
+            <br>Nottingham
+            <br>NG2 9QN
+
+          </p>
+
+          <p><strong>How to pay: </strong>Call the Courts and Tribunals Service Centre on 0300 303 0642 to make the £50 payment by card (between 8.30am and 5pm). If you're eligible for Help With Fees then you'll need to apply again and get a new reference number.</p>
+
+      </div>
+    </details>
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          I have another email address for my husband’s or wife's email address
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>Contact the Courts and Tribunals Service Centre to provide the new email address for your husband or wife. You can phone, email or post it in, using the contact details in the ‘Getting help’ section at the top of this page.   </p>
+
+        <p>You should provide their usual email address, which they use for personal contact. Not a work email address.  </p>
+
+
+        <p>You do not have to pay anything to have the application sent to a new email address. </p>
+
+
+      </div>
+    </details>
+
+-->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          I think my husband or wife is receiving the application but is choosing not to respond
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>If you think that your husband or wife is deliberately not responding then you can pay a professional to ‘serve’ (deliver) the divorce papers to them.
+ </p>
+
+<p>If the application is delivered successfully, they will give you a letter as evidence that your husband or wife has received the application. This is known as an ‘certificate of service'. </p>
+<p>If your husband or wife does not respond within 14 days of being ‘served’ the application, you can use this ‘certificate of service’ to continue your divorce without their response.
+</p>
+<p>You can either hire a professional to ‘serve’ (deliver) the documents, or apply to use the court bailiffs. Using a privately-hired professional is usually quicker. </p>
+
+<!--
+<ul class="govuk-list govuk-list--bullet">
+  <li>process server (a privately hired professional)</li>
+  <li>court bailiff (an employee of the courts)</li>
+</ul>
+-->
+
+        <p><strong>Serving using a privately-hired professional</strong></p>
+
+        <p>You can pay a professional to serve (deliver) the court documents to your husband or wife. These professionals are known as ‘process servers’. If the process server successfully delivers the documents then they will provide you with a document as evidence, called a ‘certificate of service’.
+          You can use this certificate to continue with your divorce.
+</p>
+
+<p>Using a process server is usually quicker than using a court bailiff. You should arrange service by <span id='date-time'></span>, or you will need to apply to the court to have the time extended. </p>
+
+  <script>
+
+    var targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 28);
+
+    var dd = targetDate.getDate();
+    var mm = targetDate.getMonth(); // 0 is January, so we must add 1
+    var yyyy = targetDate.getFullYear();
+
+    const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var dateString = dd + " " + months[mm]  + " " + yyyy;
+    document.getElementById('date-time').innerHTML=dateString;
+
+  </script>
+
+
+
+<p>If you are going to use a process server then you need to complete the following steps:  </p>
+
+
+<ol class="govuk-list govuk-list--number">
+  <li>Contact the court, using the contact details below. The court will provide you with a pack of documents to ‘serve’ on your husband or wife.</li>
+  <li>Find a process server by searching online, or contacting a solicitor.</li>
+  <li>When the process server has successfully served the documents then they will provide you with a ‘certificate of service’. Send the certificate to the court by email or post.</li>
+</ol>
+
+
+
+<p>Email: contactdivorce@justice.gov.uk</p>
+
+
+  <p class="govuk-body">
+      <strong>Courts and Tribunals Service Centre  </strong>
+      <br>HMCTS Divorce and Dissolution service
+      <br>PO Box 12706
+      <br>Harlow
+      <br>CM20 9QT
+
+    </p>
+
+        <p><strong>Serving using the court bailiffs</strong></p>
+        <p>The bailiff service can only be used at addresses in England and Wales where delivery by post has already failed. If you have a new address for your husband or wife,
+          you’ll have to get it delivered by post to that address, before you can apply for the bailiff service.
+          Using the court bailiff service costs an additional £110, unless you are eligible for <a class="govuk-link" href="#">Help With Fees</a>. </p>
+
+<!--
+<p>If the bailiff succeeds in delivering the application, you'll be given a letter as evidence that your husband or wife has received the application. This is known as an ‘endorsement of service'. </p>
+
+<p>If your husband or wife does not respond within 14 days of getting the application, you can use this letter to continue your divorce without their response.</p>
+-->
+
+  <p><strong>How to apply: </strong> Download and complete <a class="govuk-link" href="#">form D89</a>. You'll also need to send: </p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>a photo of your husband or wife</li>
+    <li>a copy of your divorce application</li>
+  </ul>
+
+
+<p>Send the completed form to to the Courts and Tribunals Service Centre by email or post: </p>
+
+
+  <p>Email: contactdivorce@justice.gov.uk</p>
+
+  <p class="govuk-body">
+    <strong>Courts and Tribunals Service Centre  </strong>
+    <br>HMCTS Divorce and Dissolution service
+    <br>PO Box 12706
+    <br>Harlow
+    <br>CM20 9QT
+
+    </p>
+
+    <p><strong>How to pay: </strong>Call the Courts and Tribunals Service Centre on 0300 303 0642 to make the £50 payment by card (between 8.30am and 5pm). If you're eligible for Help With Fees then you'll need to apply again and get a new reference number.</p>
+
+      </div>
+    </details>
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+        I have evidence that my husband or wife has received the application, but will not or cannot respond
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>If you know your husband or wife has received the application, but will not or cannot respond, you can apply to the court for a ‘deemed service’.
+          This means that the court will decide that your husband or wife has received the application, and that you can continue without their response. This application costs an additional £50, unless you are eligible for <a class="govuk-link" href="#">Help With Fees</a>. </p>
+
+        <p>You will need to be able to prove that your husband or wife received the application. For example, you have a text message from your husband or wife saying they have received it </p>
+
+
+        <p><strong>How to apply: </strong> Download and complete <a class="govuk-link" href="#">form D11</a>. Send the completed form to to the Courts and Tribunals Service Centre by email or post: </p>
+
+
+        <p>Email: contactdivorce@justice.gov.uk</p>
+
+        <p class="govuk-body">
+          <strong>Courts and Tribunals Service Centre  </strong>
+          <br>HMCTS Divorce and Dissolution service
+          <br>PO Box 12706
+          <br>Harlow
+          <br>CM20 9QT
+
+          </p>
+
+          <p><strong>How to pay: </strong>Call the Courts and Tribunals Service Centre on 0300 303 0642 to make the £50 payment by card (between 8.30am and 5pm). If you're eligible for Help With Fees then you'll need to apply again and get a new reference number.</p>
+
+
+
+      </div>
+    </details>
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+        I’ve tried every possible way of delivering the application
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>Under exceptional circumstances, you can ask the court to ‘dispense with service’.
+          This means the court decides the court documents do not have to be ‘served’ (delivered) to your husband or wife because it’s impossible to locate them. </p>
+
+          <p>You will have to show that you have done everything you can to find your husband or wife and ‘serve’ (deliver) the application to them.
+            For example by contacting their relatives, friends and last-known employer and searching government databases for their address. </p>
+
+        <p>  This application costs an additional £50, unless you are eligible for <a class="govuk-link" href="#">Help With Fees</a>. </p>
+
+<!--
+        <p>It’s up to the court to decide whether to grant this. Before it can be considered, you’ll need to show that you’ve done everything you can to find them by contacting their: </p>
+
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>relatives (including children)</li>
+          <li>friends</li>
+          <li>last known employer</li>
+          <li>trade union or professional organisation</li>
+
+        </ul>
+
+<p>You'll also need to have tried to find their address by searching for it on government databases.</p>
+
+-->
+
+        <p><strong>How to apply: </strong> Download and complete <a class="govuk-link" href="#">form D11</a> and <a class="govuk-link" href="#">form D13b</a>. Send the forms to the Courts and Tribunals Service Centre by email or post:
+ </p>
+
+
+        <p>Email: contactdivorce@justice.gov.uk</p>
+
+        <p class="govuk-body">
+          <strong>Courts and Tribunals Service Centre  </strong>
+          <br>HMCTS Divorce and Dissolution service
+          <br>PO Box 12706
+          <br>Harlow
+          <br>CM20 9QT
+
+          </p>
+
+          <p><strong>How to pay: </strong>Call the Courts and Tribunals Service Centre on 0300 303 0642 to make the £50 payment by card (between 8.30am and 5pm). If you're eligible for Help With Fees then you'll need to apply again and get a new reference number.</p>
+
+
+
+      </div>
+    </details>
+
+
+      </fieldset>
+
+
+
+    </div>
+
+    <p><a href="#">Save and sign out</a></p>
+
+
+</div>
+
+
+<div class="govuk-grid-column-one-third">
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="height:5px;color:#1d70b8;background-color:#1d70b8;">
+
+
+
+<h2 class="govuk-heading-s">Getting help</h2>
+
+<p class="govuk-body">Ask a question or get help in your language.</p>
+
+<p class="govuk-body">Telephone<br>
+0300 123 1711</p>
+
+<p class="govuk-body">Monday to Friday, 8:30am to 5pm<br>
+
+
+<a href="#" class="govuk-link">Find out about call charges </a> <br>(opens in a new window)</p>
+
+
+<p class="govuk-body">Email<br>
+<a href="#" class="govuk-link">contactia@justice.gov.uk</a></p>
+
+<p class="govuk-body">We aim to get back to you within 5 days.</p>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

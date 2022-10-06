@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you have your husband’s or wife’s postal address? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/divorce/respondent_solicitor_address_enter" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Has your husband or wife given you a specific address where they want the divorce papers to be ‘served’ (sent)?
+                  </h1>
+                </legend>
+
+                <p>Your husband or wife may have given you an email or postal address where they want the divorce papers to be sent. For example, their solicitor’s address or an address which is not their home address. </p>
+
+<p>If they have not, then you will be asked to provide their personal email and postal address, where the papers will be served (sent). </p>
+
+
+
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-3" name="another2" data-aria-controls="known" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-3">
+                      Yes, they have given me a specific address
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="known">
+
+                    <p>What type of address is it?</p>
+
+                      <div class="govuk-form-group">
+                        <div class="govuk-radios">
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="solicitor">
+                            <label class="govuk-label govuk-radios__label" for="another1">
+                              Their solicitor’s address
+                            </label>
+                          </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="personal">
+                            <label class="govuk-label govuk-radios__label" for="another1">
+                              Their personal address
+                            </label>
+                          </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="another">
+                            <label class="govuk-label govuk-radios__label" for="another1">
+                              Another address
+                            </label>
+                          </div>
+
+                          </div>
+                          </div>
+
+                    </div>
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="another1" name="another2" type="radio" value="no" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-4">
+                      No they have not
+                    </label>
+                  </div
+
+
+                </div>
+
+
+
+              </fieldset>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

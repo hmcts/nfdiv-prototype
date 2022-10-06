@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you have your husband’s or wife’s postal address? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/divorce/respondent_solicitor_address_enter" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your husband or wife have a solicitor representing them?
+                  </h1>
+                </legend>
+
+                <div class="govuk-inset-text">
+
+                The court only needs to know if your husband or wife has a solicitor who is representing them for the divorce.
+                You do not need to tell the court about a solicitor they use for other purposes.
+
+              </div>
+
+
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-3" name="another2" data-aria-controls="known" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-3">
+                      Yes, they have a solicitor representing them
+                    </label>
+                  </div>
+<!--
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="known">
+
+                    <p>Do you know their solicitor’s details?</p>
+
+                      <div class="govuk-form-group">
+                        <div class="govuk-radios">
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="solicitor">
+                            <label class="govuk-label govuk-radios__label" for="another1">
+                              Yes
+                            </label>
+                          </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="another1" name="another" type="radio" value="another">
+                            <label class="govuk-label govuk-radios__label" for="another1">
+                              No
+                            </label>
+                          </div>
+
+
+                          </div>
+                          </div>
+
+                    </div>
+
+-->
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="another1" name="another2" type="radio" value="no" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-4">
+                      No, they do not have a solicitor representing them
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="another1" name="another2" type="radio" value="no" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-4">
+                      I’m not sure
+                    </label>
+                  </div>
+
+
+                </div>
+
+
+
+              </fieldset>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

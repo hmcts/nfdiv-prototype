@@ -1,0 +1,511 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+  <h1 class="govuk-heading-l">
+
+  How you can proceed with your divorce
+
+    </h1>
+
+
+  <!-- <p >
+
+    The divorce application was sent to the following address:
+  </p>
+
+  <ul class="list">
+    23 Stanley Street	<br>
+    Farnborough <br>
+    UK <br>
+    FO54 3RD <br>
+  </ul> -->
+
+  <p >
+    The court usually needs to hear from both parties in a marriage before it can grant a divorce.
+  </p>
+
+<br>
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+    <div style="margin-top: -22px; margin-left: 5px;">
+      If it's safe to do so, usually the simplest way to proceed is to contact your husband/wife directly to find out why they haven't responded. They can still send in their response after the deadline has passed.
+    </div>
+    </strong>
+  </div>
+
+
+
+
+ <p>
+  If you can't get in contact with your husband/wife, you may want to consider asking their family, friends and workplace if they have a new address, and provide that to the court.</p>
+
+  <p>
+    If there's still no response using the original address, you have the following options available to you, depending on your situation.
+  </p>
+
+<!--  <details>
+  <summary><span class="summary">Paying extra fees</span></summary>
+  <div class="panel panel-border-narrow">
+
+    <p >
+      If you're eligible for help with fees you'll need to apply again and <a href="https://www.gov.uk/get-help-with-court-fees">get a new reference number</a>.
+    </p>
+
+    <p >
+     If you asked the court to order your husband/wife to pay your costs, then these extra costs will also be taken into account.
+   </p>
+
+ </div>
+</details> -->
+
+
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+
+    <h2 class="govuk-heading-m">Which situation applies to you?</h2>
+
+
+        <div id="contact-hint" class="govuk-hint">
+          Select one option.
+        </div>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-radios__label" for="contact" style="margin-top: -12px;">
+              I have another address for my husband or wife (residential or solicitor’s)
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+
+              <p>Contact the Courts and Tribunals Service Centre to provide the new address for your husband or wife. You can phone, email or post it in, using the contact details in the ‘Getting help’ section at the top of this page.  </p>
+
+                <p>The address you provide for them can be UK or international.</p>
+                <p>You do not have to pay anything to have the application sent to a new residential address, or their solicitor’s address. </p>
+        </div>
+
+          </div>
+
+
+
+          <div class="govuk-!-padding-bottom-2"></div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+            <label class="govuk-label govuk-radios__label" for="contact-2" style="margin-top: -12px;">
+              I need to send the application to a non-residential address. For example, a work address
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+            <div class="govuk-form-group">
+
+                <p>You have to apply to the court for the application to be sent to a non-residential address, for example their work address. This costs an additional £50, unless you are eligible for <a class="govuk-link" href="#">Help With Fees</a>. </p>
+
+                <p>How to apply: Download and complete form D11. Send the completed form to to the Courts and Tribunals Service Centre by email or post: </p>
+
+                <p>Email: contactdivorce@justice.gov.uk</p>
+
+
+              </div>
+
+          </div>
+
+
+
+          <div class="govuk-!-padding-bottom-2"></div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
+            <label class="govuk-label govuk-radios__label" for="contact-3" style="margin-top: -12px;">
+              I need to send the application to a non-residential address. For example, a work address
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+            <div class="govuk-form-group">
+
+                <p>You have to apply to the court for the application to be sent to a non-residential address, for example their work address. This costs an additional £50, unless you are eligible for Help With Fees. </p>
+
+                <p>How to apply: Download and complete form D11. Send the completed form to to the Courts and Tribunals Service Centre by email or post: </p>
+
+                <p>Email: contactdivorce@justice.gov.uk</p>
+
+
+              </div>
+
+          </div>
+
+
+
+
+
+        </div>
+
+      </fieldset>
+    </div>
+
+
+
+<details role="group" class="exit-guidance" open="">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false">
+  <span class="summary">I have another residential address or a solicitor's address for my husband/wife (no fee)</span>
+</summary>
+
+
+  <p>Contact the Courts and Tribunals Service Centre to provide a different address for your husband/wife. This can be a UK or international address.</p>
+
+    <p>You don't have to pay anything extra to have the application sent to a different address.</p>
+<!-- <p >
+    This can be either their:
+  </p>
+
+<ul class="list list-bullet text">
+<li>residential address</li>
+  <li>solicitor's address</li>
+</ul> -->
+
+  <form method="POST" accept-charset="utf-8" class="form" id="form" enctype="application/x-www-form-urlencoded">
+
+<!--     <div class="form-group">
+    <input id="continue-button" type="submit" class="button" value="Continue">
+  </div>
+
+</form>
+
+</div>
+--></form></details>
+
+<details role="group" class="exit-guidance">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false">
+  <span class="summary">
+   I need to send the application to a non-residential address, eg a work address (£50)
+ </span>
+</summary>
+<div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+
+<p >
+ You can ask for the application to be sent to a non-residential address.
+</p>
+
+<p >
+ <strong class="bold-small">How to apply</strong>: Download and complete <a href="http://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=98" target="_blank">form D11</a>. <!-- In answer to question 3 write: "I need to send my application for divorce to my husband/wife's work address because it can't be sent to a residential address." --> Send the form to the Courts and Tribunals Service Centre.
+</p>
+
+<p >
+ <strong class="bold-small">How to pay</strong>: Call the service centre to make the £50 payment by card (between 8.30am and 5pm) or include a cheque with your form.
+</p>
+
+<p >
+If you're eligible for help with fees you'll need to apply again and <a href="https://www.gov.uk/get-help-with-court-fees">get a new reference number</a>.
+</p>
+
+<p >
+If you asked the court to order your husband/wife to pay your costs, then these extra costs will also be taken into account.
+</p>
+
+</div>
+</details>
+
+
+
+<details role="group" class="exit-guidance">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false">
+  <span class="summary">I need to search government records for my husband/wife’s address (£50)</span>
+</summary>
+<div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+  <p >
+   You can apply for a search of government databases (eg the electoral role) for your husband/wife’s address. Your husband/wife must live in England or Wales.
+ </p>
+
+ <p >
+   <strong class="bold-small">How to apply</strong>: Contact the Courts and Tribunals Service Centre and ask for the form to be sent to you.
+ </p>
+
+ <p >
+   <strong class="bold-small">How to pay</strong>: Call the service centre to make the £50 payment by card (between 8.30am and 5pm) or include a cheque with your form.
+ </p>
+
+ <p >
+  If you're eligible for help with fees you'll need to apply again and <a href="https://www.gov.uk/get-help-with-court-fees">get a new reference number</a>.
+</p>
+
+<p >
+ If you asked the court to order your husband/wife to pay your costs, then these extra costs will also be taken into account.
+</p>
+
+</div>
+</details>
+
+<details role="group" class="exit-guidance">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false">
+  <span class="summary">
+   I need to send the application to my husband/wife's email address  (£50)
+ </span>
+</summary>
+<div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+
+<p >
+ You can ask for the application to be delivered by email.
+</p>
+
+<p >
+ <strong class="bold-small">How to apply</strong>: Download and complete <a href="http://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=98" target="_blank">form D11</a>. <!-- In answer to question 3 write: "I need to send my application for divorce to my husband/wife’s electronic address because I can't send it to a residential address." --> Send the form to the Courts and Tribunals Service Centre.
+</p>
+
+<p >
+ <strong class="bold-small">How to pay</strong>: Call the service centre to make the £50 payment by card (between 8.30am and 5pm) or include a cheque with your form.
+</p>
+
+<p >
+If you're eligible for help with fees you'll need to apply again and <a href="https://www.gov.uk/get-help-with-court-fees">get a new reference number</a>.
+</p>
+
+<p >
+If you asked the court to order your husband/wife to pay your costs, then these extra costs will also be taken into account.
+</p>
+
+</div>
+</details>
+
+
+<details role="group" class="exit-guidance">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false">
+  <span class="summary">
+   I believe my husband/wife lives at that address, but chose not to respond (£110)
+ </span>
+</summary>
+<div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+
+<p >
+ If you think that your husband/wife is deliberately not responding you can pay a professional to deliver (serve) the divorce papers directly to them.
+
+</p><p >
+You can do this by using either a:
+</p>
+
+<ul class="list list-bullet text">
+<li>Process server (a privately hired professional)</li>
+<li>Court bailiff (an employee of the courts)</li>
+</ul>
+
+<strong class="bold-small">Process servers</strong>
+
+<p >
+Contact a local solicitor who should be able to give you the contact details for a local company.
+</p>
+
+<strong class="bold-small">Court bailiffs</strong>
+
+<p >
+ The bailiff service can only be used at addresses in England and Wales where delivery by post has already failed. If you have a new address for your husband/wife, you’ll have to get it delivered by post before you can apply for the bailiff service.
+</p>
+
+<p >
+ If the bailiff succeeds in delivering the application, you'll be given a letter as evidence that your husband/wife has received the application. This is known as an ‘endorsement of service'. If your husband/wife doesn’t respond within 14 days of getting the application, you can use this letter to continue your divorce without their response.
+</p>
+
+
+<!--
+<p >
+ <strong class="bold-small">How to apply</strong>: Fill in <a href="https://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=156" target="_blank">form D89</a>.
+</p>
+-->
+
+<p >
+<strong class="bold-small">How to apply</strong>: Download and complete <a href="https://www.gov.uk/government/publications/form-d89-request-for-personal-service-by-a-court-bailiff">form D89</a>.
+</p>
+
+<p>
+</p><p>
+You'll also need to send the following:
+</p>
+
+<ul class="list list-bullet text">
+<li>a photo of your husband/wife</li>
+<li>a copy of your divorce application</li>
+</ul>
+
+<p>
+Send the form to the Courts and Tribunals Service Centre.
+</p>
+
+<p >
+ <strong class="bold-small">How to pay</strong>: Call the service centre to make the £110 payment by card (between 8.30am and 5pm) or include a cheque with your form.
+</p>
+
+<p >
+If you're eligible for help with fees you'll need to apply again and <a href="https://www.gov.uk/get-help-with-court-fees">get a new reference number</a>.
+</p>
+
+<p >
+If you asked the court to order your husband/wife to pay your costs, then these extra costs will also be taken into account.
+</p>
+
+</div>
+</details>
+
+
+<details role="group" class="exit-guidance">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false">
+  <span class="summary">
+   I have evidence that my husband/wife received the application, but can't or won't respond (£50)
+ </span>
+</summary>
+<div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+<p >
+  If you know your husband/wife received the application, but can’t or won’t respond, you can apply to the court for a ‘deemed service’. This means that the court will decide that your husband/wife has received the application, and that you can continue without their response.
+</p>
+<p >
+  You need to be able to prove that your husband/wife received the application (eg, you have a text message from husband/wife saying they received it).
+</p>
+
+
+
+
+<p >
+  <strong class="bold-small">How to apply</strong>: Download and complete <a href="http://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=98" target="_blank">form D11</a>. Send the form and documents to the Courts and Tribunals Service Centre.
+</p>
+
+<p ><strong class="bold-small">How to pay</strong>: Call the service centre to make the £50 payment by card (between 8.30am and 5pm) or include a cheque with your form.
+</p>
+
+<p >
+  If you're eligible for help with fees you'll need to apply again and <a href="https://www.gov.uk/get-help-with-court-fees">get a new reference number</a>.
+</p>
+
+<p >
+ If you asked the court to order your husband/wife to pay your costs, then these extra costs will also be taken into account.
+</p>
+</div>
+</details>
+
+
+
+
+
+<details role="group" class="exit-guidance">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false">
+  <span class="summary">
+   I’ve tried every possible way of delivering the application  (£50)
+ </span>
+</summary>
+<div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+
+<p >
+  Under exceptional circumstances, you can ask the court to ‘dispense with service’ (decide your husband/wife doesn’t have to be served the divorce application).
+</p>
+
+<p >
+  It’s up to the court to decide whether to grant this. Before it can be considered, you’ll need to show that you’ve done everything you can to find them by contacting their:
+
+  </p><ul class="list list-bullet text">
+    <li>relatives (including children)</li>
+    <li>friends</li>
+    <li>last known employer</li>
+    <li>trade union or professional organisation</li>
+  </ul>
+
+  <p >
+    You'll also need to have tried to find their address by searching for it on government databases.
+  </p>
+
+
+
+
+
+  <p >
+    <strong class="bold-small">How to apply</strong>: Download and complete <a href="http://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=98" target="_blank">form D11</a> and <a href="https://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=1112" target="_blank">form D13b</a>. Send the forms to the Courts and Tribunals Service Centre.
+  </p>
+
+  <p ><strong class="bold-small">How to pay</strong>: Call the service centre to make the £50 payment by card (between 8.30am and 5pm) or include a cheque with your form.
+  </p>
+
+  <p >
+    If you're eligible for help with fees you'll need to apply again and <a href="https://www.gov.uk/get-help-with-court-fees">get a new reference number</a>.
+  </p>
+
+  <p >
+   If you asked the court to order your husband/wife to pay your costs, then these extra costs will also be taken into account.
+ </p>
+
+</div>
+
+</details>
+
+</div>
+
+
+
+
+
+<div class="govuk-grid-column-one-third">
+
+
+
+<h2 class="govuk-heading-s">Getting help</h2>
+
+<p class="govuk-body">Ask a question or get help in your language.</p>
+
+<p class="govuk-body">Telephone<br>
+0300 123 1711</p>
+
+<p class="govuk-body">Monday to Friday, 8:30am to 5pm<br>
+
+
+<a href="#" class="govuk-link">Find out about call charges </a> <br>(opens in a new window)</p>
+
+
+<p class="govuk-body">Email<br>
+<a href="#" class="govuk-link">contactia@justice.gov.uk</a></p>
+
+<p class="govuk-body">We aim to get back to you within 5 days.</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

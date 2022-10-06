@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you have your husband’s or wife’s postal address? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="represented_respondent_solicitor" method="post" novalidate>
+
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    Where should the court send your <span id='data1'>{{ data['husband-wife'] }}</span>'s divorce papers?
+                  </h1>
+
+
+                  <p class="govuk-body">
+                    The court needs to ‘serve’ (send) the divorce application to your  <span id='data2'>{{ data['husband-wife'] }}</span>.
+                    If they have told you they want to receive the papers at a specific address, then you should enter that address. For example, their solicitor’s address.
+                  </p>
+
+
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-1" name="represented-address" type="radio" value="Yes, I have their address" {{ checked("represented-address", "Yes, I have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-1">
+                      Their home address
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                      Their solicitor's address
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="respondent-address-2" name="represented-address" type="radio" value="No, I do not have their address" {{ checked("represented-address", "No, I do not have their address") }}>
+                    <label class="govuk-label govuk-radios__label" for="respondent-address-2">
+                      Another address
+                    </label>
+                  </div>
+                </div>
+
+
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+  }
+</script>
+
+
+{% endblock %}

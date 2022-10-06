@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you have your marriage certificate with you now? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="marriage_date.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/divorce/sole_or_joint" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you have your marriage certificate with you?
+                  </h1>
+                </legend>
+                  
+                  <p class="govuk-body">
+                  You’ll be asked to upload a digital photo of the certificate later in this application. You can use your phone to take the picture, if it has a camera.   
+                  </p> 
+                  
+                  <div class="govuk-inset-text">
+                      <p>It must be a photo of the original marriage certificate or a certified copy. You can <a class="govuk-link" href="https://www.gov.uk/order-copy-birth-death-marriage-certificate" rel="noreferrer noopener" target="_blank">order a certified copy online (opens in a new tab)</a>, if you got married in England or Wales. </p>
+                      <p>If the original certificate is not in English, you’ll need to provide a <a class="govuk-link" href="https://www.gov.uk/certifying-a-document#certifying-a-translation">certified translation</a>.</p>
+                    </div>
+                  
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="marriage-certificate-1" name="marriage-certificate" type="radio" value="Yes, I have my marriage certificate with me" {{ checked("marriage-certificate", "Yes, I have my marriage certificate with me") }}>
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate-1">
+                      Yes, I have my marriage certificate with me 
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="marriage-certificate-2" name="marriage-certificate" type="radio" value="No, I do not have my marriage certificate with me" {{ checked("marriage-certificate", "No, I do not have my marriage certificate with me") }}>
+                    <label class="govuk-label govuk-radios__label" for="marriage-certificate-2">
+                      No, I do not have my marriage certificate with me 
+                    </label>
+                  </div>
+                </div> 
+                 
+              </fieldset>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

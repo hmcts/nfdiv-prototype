@@ -1,0 +1,210 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you need your postal address kept private from your husband or wife? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<script type='text/javascript'>
+
+  window.addEventListener( "pageshow", function ( event ) {
+    var historyTraversal = event.persisted ||
+                           ( typeof window.performance != "undefined" &&
+                                window.performance.navigation.type === 2 );
+    if ( historyTraversal ) {
+      // Handle page restore.
+      window.location.reload();
+    }
+  });
+
+</script>
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-full-from-desktop">
+        <form action="hub_1" method="post" novalidate>
+
+
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    Review your contact details
+                  </h1>
+
+                  <!--
+<div class="govuk-!-padding-bottom-6"></div>
+
+                  <h2 class="govuk-heading-s">
+                    Do you need your contact details kept private from your husband or wife?
+                  </h2>
+
+
+                <p>
+                    The court can keep your address, email address and phone number private from your husband or wife.
+                  </p>
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="Keep my contact details private" data-aria-controls="conditional-contact"  {{ checked("contact", "Keep my contact details private") }}>
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        Keep my contact details private
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="contact-by-email">
+                            If you think you might be experiencing domestic abuse or you feel unsafe, then <a class="govuk-link" href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help">support is available</a>
+                        </label>
+
+                      </div>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="I do not need my contact details kept private" data-aria-controls="conditional-contact2"  {{ checked("contact", "I do not need my contact details kept private") }}>
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        I do not need my contact details kept private
+                      </label>
+                    </div>
+                  </div>
+
+<div class="govuk-!-padding-bottom-6"></div>
+-->
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-10">
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key" style="width:60%">
+<!--
+                    Your name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Joe David Bloggs
+                        {{ data['app-first-name'] }}   {{ data['app-middle-name'] }} {{ data['app-last-name'] }}
+                  </dd>
+
+                  <dd class="govuk-summary-list__actions">
+                    <a href="check_name">
+                      Change
+                      <span class="govuk-visually-hidden"> address</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+
+                    -->
+                    Your address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+                  {{ data['address-selection'] }} Main Street<br>
+                  London<br>
+
+                  {{ data['address-postcode'] }}
+
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="check_address">
+                      Change
+                      <span class="govuk-visually-hidden"> email address</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your phone number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['telephone-number'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="check_phone">
+                      Change
+                      <span class="govuk-visually-hidden"> email address</span>
+                    </a>
+                  </dd>
+                </div>
+
+<!--
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    name@googlemail.com
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="check_phone">
+                      Change
+                      <span class="govuk-visually-hidden"> email address</span>
+                    </a>
+                  </dd>
+                </div>
+-->
+
+
+            </div>
+
+            <div class="govuk-!-padding-bottom-4"></div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

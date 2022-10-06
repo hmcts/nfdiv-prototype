@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="jurisdiction" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    How do you want to respond to the application?
+                  </h1>
+                </legend>
+
+                <p>You can only dispute the application if: (one or more of the following)<p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                        <li>you do not think the courts of England and Wales have the legal power (jurisdiction) to grant the application</li>
+
+                        <li>you do not believe your marriage is legally valid. For example, if one of you was already married or in a civil partnership when you got married</li>
+
+                    <li>  this marriage has already been legally ended  </li>
+
+                      </ul>
+
+
+
+<div class="govuk-!-padding-bottom-2"></div>
+
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agreeordispute" name="agreeordispute" type="radio" value="Continue without disputing the divorce">
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute">
+                      Continue without disputing the divorce
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agreeordispute-1" name="agreeordispute" type="radio" value="I want to dispute the divorce">
+                    <label class="govuk-label govuk-radios__label" for="agreeordispute-1">
+                      I want to dispute the divorce
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+           <!-- <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a>
+
+            <a href="/divorce/applicant_address_private" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a> -->
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

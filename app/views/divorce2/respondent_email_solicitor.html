@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Enter your {husband / wife’s} email address - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Enter your <span id='data1'>{{ data['husband-wife'] }}</span>'s email address</h1>
+
+        <form action="/divorce/respondent_address" method="post" novalidate>
+
+          <div class="govuk-form-group">
+
+            <p class="govuk-body">
+
+              It’s important you provide their email address because the court may need to ‘serve’ (deliver) documents to them online.
+              If you do not provide an email address, the divorce papers will need to be served (delivered) by post.
+              The emails will also contain information and updates relating to the divorce.
+            </p>
+
+              <div class="govuk-inset-text">
+                 Enter the email address which they actively use for personal emails. You should avoid using their work email address because it may not be private.
+
+                </div>
+
+           <label class="govuk-label" for="width-20">
+               Your <span id='data2'>{{ data['husband-wife'] }}</span>'s email address
+
+            </label>
+
+            <input class="govuk-input" id="res-email" name="res-email" value="{{ data['res-email'] }}" type="email" spellcheck="false" autocomplete="email">
+
+            </div>
+
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+
+                    <input class="govuk-checkboxes__input" id="no-email-1" name="no-email" type="checkbox" value="I do not know their email address" >
+                    <label class="govuk-label govuk-checkboxes__label" for="no-email-1">
+                      I do not know their email address
+
+                    </label>
+                  </div>
+                </div>
+            </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+<!-- <span id='data1'>{{ data['husband-wife'] }}</span>'s -->
+<script>
+  const datacheck = document.getElementById('data1').innerHTML
+  if (datacheck === '') {
+    document.getElementById('data1').innerHTML="husband or wife";
+    document.getElementById('data2').innerHTML="husband or wife";
+  }
+</script>
+
+
+
+{% endblock %}

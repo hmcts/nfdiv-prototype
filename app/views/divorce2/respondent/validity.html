@@ -1,0 +1,207 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="wantdispute" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    About your marriage
+                  </h1>
+                </legend>
+
+                <p>You cannot get a divorce if your marriage was not legally valid in the first place, for example:
+
+</p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                        <li>one of you was already married or in a civil partnership</li>
+
+
+                        <li>you’re closely related to the person you married</li>
+                        <li>one or both of you were under 16 </li>
+
+                            <!--
+                        <li> you and your husband or wife were both last habitually resident in England or Wales and one of you still lives there </li>
+                        <li> both you and your husband are domiciled in England or Wales  </li>
+                        <li> you’re domiciled in England or Wales </li>
+                        <li> you’re domiciled and habitually resident in England or Wales and have lived there for at least 6 months </li>
+                        <li>your husband or wife is domiciled in England or Wales   </li>
+
+                        -->
+
+                      </ul>
+
+
+
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            If you believe your marriage is not valid
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+
+
+                          <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+    <p>If a marriage was never legally valid, the law says that it never existed.</p>
+
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="valid_agree" name="valid_agree" type="checkbox" value="No, the marriage was not valid">
+        <label class="govuk-label govuk-checkboxes__label" for="valid_agree">
+          I do not think my marriage is valid
+        </label>
+      </div>
+
+  </fieldset>
+</div>
+
+                        </div>
+                      </details>
+
+<p>If your marriage is valid then you can continue. </p>
+
+
+<!--
+
+                    <h2 class="govuk-heading-s">Was your marriage legally valid, to the best of your knowledge? </h2>
+
+<div class="govuk-!-padding-bottom-2"></div>
+
+
+
+
+
+
+<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="valid_agree" name="valid_agree" type="radio" value="Yes, the marriage was valid" data-aria-controls="conditional-contact" >
+                    <label class="govuk-label govuk-radios__label" for="valid_agree">
+                      Yes, the marriage was valid
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="valid_agree" name="valid_agree" type="radio" value="No, the marriage was not valid" data-aria-controls="conditional-contact2">
+                    <label class="govuk-label govuk-radios__label" for="valid_agree">
+                      No, the marriage was not valid
+                    </label>
+                  </div>
+
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact2">
+
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+
+                      <div class="govuk-form-group">
+                        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                          Explain why you think your marriage was not valid in the first place
+                        </label>
+                      </h1>
+                      <div id="with-hint-hint" class="govuk-hint">
+
+                      </div>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                    </div>
+
+
+                  </div>
+
+
+
+
+
+
+                </div>
+
+
+</div>
+                </div>
+
+
+
+    -->
+              </fieldset>
+            </div>
+
+
+            <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+           <!-- <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a>
+
+            <a href="/divorce/applicant_address_private" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a> -->
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you need emails and letters in English or Welsh? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="other_court_cases" method="post" novalidate>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Disputing the divorce application
+                  </h1>
+                </legend>
+
+                <p>Your answers indicate that you want to dispute the divorce application. This is because:
+
+</p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                          <li>you do not think your marriage is valid</li>
+
+  <!--
+                        <li>you’re closely related to the person you married</li>
+                        <li>one or both of you were under 16 </li>
+
+                            <!--
+                        <li> you and your husband or wife were both last habitually resident in England or Wales and one of you still lives there </li>
+                        <li> both you and your husband are domiciled in England or Wales  </li>
+                        <li> you’re domiciled in England or Wales </li>
+                        <li> you’re domiciled and habitually resident in England or Wales and have lived there for at least 6 months </li>
+                        <li>your husband or wife is domiciled in England or Wales   </li>
+
+                        -->
+
+                      </ul>
+
+
+                      <p>If you want to dispute the divorce application then you’ll have to submit another form (known as ‘the answer’) with your reason for disputing. This will cost you £245, unless you are eligible for Help With Fees.  </p>
+
+                      <p>You will have until [21 days from the expiry of the 14 days] to submit the form. If you do not submit the form by the deadline, then your husband or wife will usually be able to continue with the divorce. </p>
+
+<div class="govuk-!-padding-bottom-2"></div>
+
+
+
+
+
+
+<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="dispute_agree" name="dispute_agree" type="radio" value="Dispute" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-radios__label" for="dispute_agree">
+                      I confirm I want to dispute the divorce
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                    <div class="govuk-warning-text">
+                      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                      <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        <div style="margin-top: -12px;">You are about to dispute the divorce. Click continue to confirm.</div>
+                      </strong>
+                    </div>
+                  </div>
+
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="dispute_agree" name="dispute_agree" type="radio" value="Change" data-aria-controls="conditional-contact2">
+                    <label class="govuk-label govuk-radios__label" for="dispute_agree">
+                      I want to go back and change my answers
+                    </label>
+                  </div>
+
+<!--
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact2">
+
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+
+                      <div class="govuk-form-group">
+                        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="with-hint">
+                          Explain why you think your marriage was not valid in the first place ?
+                        </label>
+                      </h1>
+                      <div id="with-hint-hint" class="govuk-hint">
+
+                      </div>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                    </div>
+
+
+                  </div>
+
+                </div>
+-->
+
+</div>
+                </div>
+
+
+
+
+              </fieldset>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+           <!-- <a href="/divorce/applicant_postal_address" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a>
+
+            <a href="/divorce/applicant_address_private" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+                Continue
+              </a> -->
+
+        </form>
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+{% endblock %}

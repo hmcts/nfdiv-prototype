@@ -1,0 +1,261 @@
+{% extends "layout.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Apply for a divorce - Do you want to apply for a financial order? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p style="display: inline; position: relative;" class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="financial_order_update">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  <p style="display: inline-block; position: relative; float: right;" class="govuk-phase-banner__content">
+      <a class="govuk-link" href="#">Cymraeg</a>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="money_property.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+          <div class="govuk-form-group">
+
+                  <h1 class="govuk-heading-l">
+                    Dividing your money and property 
+                  </h1>
+
+                  <p>
+                  It’s important that you settle how to divide your money and property before the end of the divorce process. Otherwise you or your husband could make financial claims against each other, after the marriage is ended. Even if you have kept your finances separate during the marriage. The way to settle your finances is by applying to the court for a ‘financial order’.
+                  </p>
+
+                  <p>
+                  A financial order is a legal document that describes how you are going to split your money, property, pensions and other assets. You need a financial order whether you can reach agreement with your husband or whether you want the court to decide for you. 
+                  </p>
+
+                  <p>
+                  You need to apply for a financial order separately to the divorce application. The court will deal with it separately to the main divorce process. You will probably need legal advice when you apply for a financial order. 
+                  </p>
+
+
+                  <p>
+                  For legal reasons, the court needs confirmation now that you want to apply. You will receive an email with more information after you have submitted this application for divorce.
+                  </p>
+
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="financial-order" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order" >
+                        <label class="govuk-label govuk-radios__label" for="financial-order">
+                          Yes, I want to apply for a financial order
+                        </label>
+                      </div>
+
+
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-financial-order">
+                        <div class="govuk-form-group">
+
+                            <div class="govuk-!-padding-bottom-2"></div>
+
+                            <h2 class="govuk-heading-m">
+                                  Who is the financial order for?
+                            </h2>
+
+                            <div id="changed-name-hint" class="govuk-hint">
+                              Select all that apply
+                            </div>
+
+                          <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-type" name="financial-order-type" type="checkbox" value="Me" {{ checked("financial-order-type", "Me") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-type">
+                                Me
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="financial-order-2" name="financial-order-type" type="checkbox" value="My children" {{ checked("financial-order-type", "My children") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="financial-order-2">
+                                The children
+                              </label>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="financial-order-3" name="financial-order" type="radio" value="No, I do not want to apply for a financial order" data-aria-controls="conditional-financial-order-3">
+                        <label class="govuk-label govuk-radios__label" for="financial-order-3">
+                           No, I do not want to apply for a financial order 
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-financial-order-3">
+                        <div class="govuk-form-group">
+
+                          <p>
+                          It’s important to have a financial order in place by the time your divorce is finalised. Otherwise you or your husband could make claims on each other’s finances after the marriage is ended. Even if you have kept your finances separate during the marriage. If you select yes, then you do not have to go ahead with the application or pay any additional fees. It just gives you the option to apply later in the process.
+                          </p>
+
+                      </div>
+
+                      </div>
+
+
+
+                <!--
+
+                  <h1 class="govuk-heading-l">
+                    Applying for a financial order
+                  </h1>
+
+                  <p>
+                  You’ll need to apply for a financial order if you:
+                  </p>
+              <ul class="govuk-list govuk-list--bullet">
+                    <li>agree on dividing your money and property and want to make your agreement legally binding (this is known as a financial order by consent)</li>
+                    <li>disagree on dividing your money and property and want the court to decide (this is known as a contested financial order) </li>
+                    <li>have nothing to split but want to make your financial separation final</li>
+                  </ul>
+              <p>
+                Applying to the court for a ‘financial order by consent’ costs an additional £50. Asking the court to decide for you and make a ‘contested financial order’ costs an additional £255. The court needs to know now if you want to apply for either.
+                  </p>
+
+              <h2 class="govuk-heading-s">If you select yes: </h2>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>you do not have to proceed with the application for a financial order.</li>
+                    <li>you can proceed with the application for a financial order at any time, so long as your husband or wife is still alive. </li>
+                  </ul>
+
+                  <h2 class="govuk-heading-s">If you select no:</h2>
+
+              <ul class="govuk-list govuk-list--bullet">
+                    <li>you’ll only be able to apply until you remarry or form a new civil partnership (this does not apply to pension sharing or pension compensation orders, which can be applied at any time)</li>
+                  </ul>
+
+              <h2 class="govuk-heading-m">Do you want to apply for a financial order?</h2>
+
+              <div class="govuk-inset-text">
+                   If you want to apply for either a ‘financial order by consent’ or a ‘contested financial order’ then select yes. You will not do the application now, this is only asking if you intend on applying.
+                </div>
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="financial-order" name="financial-order" type="radio" value="Yes, I want to apply for a financial order" data-aria-controls="conditional-financial-order" {{ checked("financial-order", "Yes, I want to apply for a financial order") }}>
+                        <label class="govuk-label govuk-radios__label" for="financial-order">
+                          Yes, I want to apply for a financial order
+                        </label>
+                      </div>
+
+
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-financial-order">
+                        <div class="govuk-form-group">
+
+                            <div class="govuk-!-padding-bottom-2"></div>
+
+                      <h2 class="govuk-heading-m">
+                            Who is the financial order for?
+                        </h2>
+
+                            <div id="changed-name-hint" class="govuk-hint">
+                              Select all that apply
+                            </div>
+
+                      <div class="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="financial-order-type" name="financial-order-type" type="checkbox" value="Me" {{ checked("financial-order-type", "Me") }}>
+                            <label class="govuk-label govuk-checkboxes__label" for="financial-order-type">
+                              Me
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="financial-order-2" name="financial-order-type" type="checkbox" value="My children" {{ checked("financial-order-type", "My children") }}>
+                            <label class="govuk-label govuk-checkboxes__label" for="financial-order-2">
+                              The children
+                            </label>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      </div>
+
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="financial-order-2" name="financial-order" type="radio" value="No, I do not want to apply for a financial order" data-aria-controls="conditional-financial-order-2" {{ checked("financial-order", "No, I do not want to apply for a financial order") }}>
+                        <label class="govuk-label govuk-radios__label" for="financial-order-2">
+                           No, I do not want to apply for a financial order
+                        </label>
+                      </div>
+
+                    -->
+
+
+            </div>
+          </div>
+
+
+        <div class="govuk-button-group">
+          <a href="" onclick='myFunction()' id="link" style="text-decoration: none;"><button class="govuk-button" data-module="govuk-button" style="display:flex;vertical-align:middle;">Continue</button></a>
+        </div>
+
+      </div>
+    </div>
+
+<p><a href="#">Save and sign out</a></p>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Contact us for help
+    </span>
+  </summary>
+    <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">Web chat</h2>
+            <ul class="govuk-list">
+                <li>No agents are available, please try again later.</li>
+            </ul>
+        <h2 class="govuk-heading-m">Send us a message</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">Send us a message</a></li>
+                <li>We aim to get back to you within 5 working days</li>
+            </ul>
+        <h2 class="govuk-heading-m">Telephone</h2>
+            <ul class="govuk-list">
+                <li>0300 303 0742</li>
+                <li>Monday to Friday, 8am to 8pm, Saturday, 8am to 2pm</li>
+            </ul>
+    </div>
+</details>
+
+
+
+<script>
+    function myFunction() {
+   
+        if(document.getElementById('financial-order').checked) {
+            document.getElementById('link').href = "financial_order_details.html";
+        }
+        if(document.getElementById('financial-order-3').checked) {
+            document.getElementById('link').href = "upload.html";
+        }
+    }
+</script>
+
+
+{% endblock %}
