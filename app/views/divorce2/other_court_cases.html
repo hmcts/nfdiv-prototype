@@ -28,7 +28,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce2/financial_order" method="post" novalidate>
+
 
           <div class="govuk-form-group">
 
@@ -50,7 +50,7 @@
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other-court-cases" name="other-court-cases" type="radio" value="Yes" data-aria-controls="conditional-other-court-cases" {{ checked("other-court-cases", "Yes") }}>
+                  <input class="govuk-radios__input" id="option1" name="other-court-cases" type="radio" value="Yes" data-aria-controls="conditional-other-court-cases">
                   <label class="govuk-label govuk-radios__label" for="other-court-cases">
                     Yes
                   </label>
@@ -98,7 +98,7 @@ Select all that apply
 -->
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other-court-cases-2" name="other-court-cases" type="radio" value="No" data-aria-controls="conditional-other-court-cases-2" {{ checked("other-court-cases", "No") }}>
+                  <input class="govuk-radios__input" id="option2" name="other-court-cases" type="radio" value="No" data-aria-controls="conditional-other-court-cases-2">
                   <label class="govuk-label govuk-radios__label" for="other-court-cases-2">
                     No
                   </label>
@@ -108,10 +108,10 @@ Select all that apply
 
       </div>
     </div>
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-        </form>
+          <div class="govuk-button-group">
+          <a href="" onclick='myFunction()' id="link" style="text-decoration: none;"><button class="govuk-button" data-module="govuk-button" style="display:flex;vertical-align:middle;">Continue</button></a>
+        </div>
+
       </div>
     </div>
 
@@ -142,5 +142,20 @@ Select all that apply
             </ul>
     </div>
 </details>
+
+
+<script>
+    function myFunction() {
+   
+        if(document.getElementById('option1').checked) {
+            document.getElementById('link').href = "/divorce2/other_court_cases_details";
+        }
+        if(document.getElementById('option2').checked) {
+            document.getElementById('link').href = "/divorce2/financial_order";
+        }
+    }
+</script>
+
+
 
 {% endblock %}
