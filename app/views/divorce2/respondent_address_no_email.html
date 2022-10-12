@@ -28,7 +28,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce/respondent_no_address_no_email" method="post" novalidate>
+        
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -51,13 +51,13 @@
 
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-3" name="respondent-address-no-email" type="radio" value="Yes, I have their address" {{ checked("respondent-address-no-email", "Yes, I have their address") }}>
+                    <input class="govuk-radios__input" id="option1" name="respondent-address-no-email" type="radio" value="Yes, I have their address">
                     <label class="govuk-label govuk-radios__label" for="respondent-address-3">
                       Yes, I have their address
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="respondent-address-4" name="respondent-address-no-email" type="radio" value="No, I do not have their address" {{ checked("respondent-address-no-email", "No, I do not have their address") }}>
+                    <input class="govuk-radios__input" id="option2" name="respondent-address-no-email" type="radio" value="No, I do not have their address">
                     <label class="govuk-label govuk-radios__label" for="respondent-address-4">
                       No, I do not have their address
                     </label>
@@ -67,10 +67,11 @@
               </fieldset>
             </div>
 
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-        </form>
+            <div class="govuk-button-group">
+              <a href="" onclick='myFunction()' id="link" style="text-decoration: none;"><button class="govuk-button" data-module="govuk-button" style="display:flex;vertical-align:middle;">Continue</button></a>
+            </div>
+
+
       </div>
     </div>
 
@@ -101,5 +102,22 @@
             </ul>
     </div>
 </details>
+
+
+<script>
+    function myFunction() {
+   
+        if(document.getElementById('option1').checked) {
+            document.getElementById('link').href = "respondent_postal_address.html";
+        }
+        if(document.getElementById('option2').checked) {
+            document.getElementById('link').href = "respondent_no_address_2.html";
+        }
+    }
+</script>
+
+
+
+
 
 {% endblock %}
