@@ -21,14 +21,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="marry_in_uk.html">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce2/where_you_married_2" method="post" novalidate>
+        <form action="/english-certificate" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -45,13 +45,13 @@
                   
                   <div class="govuk-radios govuk-radios--inline">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-certificate-1" name="english-certificate" type="radio" value="true" {{ checked("english-certificate", "true") }}>
+                    <input class="govuk-radios__input" id="english-certificate-1" name="english-certificate" type="radio" value="Yes">
                     <label class="govuk-label govuk-radios__label" for="english-certificate-1">
                       Yes  
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="english-certificate-2" name="english-certificate" type="radio" value="false" {{ checked("english-certificate", "false") }}>
+                    <input class="govuk-radios__input" id="english-certificate-2" name="english-certificate" type="radio" value="false">
                     <label class="govuk-label govuk-radios__label" for="english-certificate-2">
                       No 
                     </label>
