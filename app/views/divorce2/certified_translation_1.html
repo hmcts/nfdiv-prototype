@@ -21,14 +21,14 @@
   </p>
 </div>
 
-  <a class="govuk-back-link" href="english_cert.html">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/divorce2/where_you_married_1" method="post" novalidate>
+        <form action="/certified-translation" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -44,14 +44,14 @@
                   
                   <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="cert-translation-1" name="cert-translation-no" type="radio" value="true" {{ checked("cert-translation-no", "true") }}>
-                    <label class="govuk-label govuk-radios__label" for="cert-translation-1">
+                    <input class="govuk-radios__input" id="certified-translation-1" name="certified-translation" type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="certified-translation-1">
                       Yes, I have a certified translation  
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="cert-translation-2" name="cert-translation-no" type="radio" value="false" {{ checked("cert-translation-no", "false") }}>
-                    <label class="govuk-label govuk-radios__label" for="cert-translation-2">
+                    <input class="govuk-radios__input" id="certified-translation-2" name="certified-translation" type="radio" value="false">
+                    <label class="govuk-label govuk-radios__label" for="certified-translation-2">
                       No, I do not have a certified translation  
                     </label>
                   </div>
