@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layout.html" %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {% block pageTitle %}
@@ -82,8 +82,8 @@
           <p>
               You need to
 
-              <a href="/divorce2/create_account">
-              create an account
+              <a href="/users/selfRegister?redirect_uri=https%3a%2f%2fwww.apply-divorce.service.gov.uk%2fauthenticated&client_id=divorce&state=ae031243-9b72-4f91-9cd8-c1c8149d4c46&scope=">
+                  create an account
               </a>
               to use this service.
           </p>
