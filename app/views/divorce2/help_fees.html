@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layout.html" %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
@@ -21,14 +21,14 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="marriage_certificate.html">Back</a>
+<a class="govuk-back-link" href="sole_or_joint.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/fees-answer" method="post" novalidate>
+        <form action="/divorce2/marry_in_uk" method="post" novalidate>
 
           <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
@@ -48,13 +48,13 @@
                   
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="I need help paying the fee">
+                    <input class="govuk-radios__input" id="help-fees-1" name="help-fees" type="radio" value="I need help paying the fee" {{ checked("help-fees", "I need help paying the fee") }}>
                     <label class="govuk-label govuk-radios__label" for="help-fees-1">
                       I need help paying the fee	
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="I do not need help paying the fee">
+                    <input class="govuk-radios__input" id="help-fees-2" name="help-fees" type="radio" value="I do not need help paying the fee" {{ checked("help-fees", "I do not need help paying the fee") }}>
                     <label class="govuk-label govuk-radios__label" for="help-fees-2">
                       I do not need help paying the fee  
                     </label>
